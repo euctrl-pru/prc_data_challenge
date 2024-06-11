@@ -10,20 +10,8 @@ to the challenge in order to compete to develop an **open** model using suitable
 techniques.
 
 ## The Data
-The data sets for the challenge are:
+See the [Data page](data.html) for more details.
 
-* flight list for flown flights in Europe in 2023
-* associated (\acr{ADS-B} based) flown trajectories augmented with wind information[^1]
-
-[^1]: from [Google's Analysis-Ready, Cloud Optimized (ARCO) ERA5][google-era5]:  
-ERA5 is the fifth generation of the [\acr{ECMWF}][ecmwf]
-Atmospheric Reanalysis, providing hourly estimates of a large number of atmospheric, land, and oceanic climate variables.  
-The Google Cloud Public Dataset Program hosts ERA5 data that spans from 1940 to recent days,
-covering the Earth on a 30 km grid and resolves the atmosphere using 137 levels from
-the surface up to a height of 80 km.
-
-[google-era5]: <https://cloud.google.com/storage/docs/public-datasets/era5> "Google's ERA5"
-[ecmwf]: <https://www.ecmwf.int/>
 
 ## The why of Why
 

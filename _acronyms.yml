@@ -41,6 +41,8 @@ acronyms:
       longname: OpenSky Network
     - shortname: PRC
       longname: Performance Review Commission
+    - shortname: TOW
+      longname: TakeOff Weight
     - shortname: WTC
       longname: Wake Turbulence Category
 ---

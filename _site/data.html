@@ -115,10 +115,11 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
-  <ul>
-  <li><a href="#flight-list" id="toc-flight-list" class="nav-link active" data-scroll-target="#flight-list">Flight List</a></li>
-  <li><a href="#trajectory" id="toc-trajectory" class="nav-link" data-scroll-target="#trajectory">Trajectory</a></li>
-  <li><a href="#rationale-for-the-data-sets" id="toc-rationale-for-the-data-sets" class="nav-link" data-scroll-target="#rationale-for-the-data-sets">Rationale for the data sets</a></li>
+  <ul class="collapse">
+  <li><a href="#data-for-modeling" id="toc-data-for-modeling" class="nav-link active" data-scroll-target="#data-for-modeling">Data for modeling</a></li>
+  <li><a href="#data-for-submission" id="toc-data-for-submission" class="nav-link" data-scroll-target="#data-for-submission">Data for submission</a></li>
+  <li><a href="#ranking" id="toc-ranking" class="nav-link" data-scroll-target="#ranking">Ranking</a></li>
+  <li><a href="#acronyms_HEADER_LOA" id="toc-acronyms_HEADER_LOA" class="nav-link" data-scroll-target="#acronyms_HEADER_LOA">List of Acronyms</a></li>
   </ul>
 </nav>
     </div>
@@ -144,52 +145,123 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="data-for-modeling" class="level2">
+<h2 class="anchored" data-anchor-id="data-for-modeling">Data for modeling</h2>
 <p>We propose two data sets:</p>
 <ol type="1">
-<li>a flight list for flights flown in Europe in 2023</li>
+<li>a flight list of (a subset of) flights flown in Europe in 2023</li>
 <li>the relevant trajectories for the above flights</li>
 </ol>
+<p>The data sets for the challenge are organized as follows:</p>
+<pre class="text"><code>data/flights
+├── 2023-01-01
+│   ├── 258079060.parquet
+│   ├── 258081025.parquet
+│   ├── 258091625.parquet
+│   ├── ...
+│   └── flights.csv
+└── 2023-01-02
+│   ├── ...
+│   └── flights.csv
+└── ...</code></pre>
+<p>and for each date they consist of</p>
+<ul>
+<li>flight list of (a subset of) flown flights of the day, i.e.&nbsp;<code>flights.csv</code></li>
+<li>associated (<a href="#acronyms_ADS-B">Automatic Dependent Surveillance–Broadcast (ADS-B)</a> based) flown trajectories augmented with wind information<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, i.e.&nbsp;<code>258081025.parquet</code></li>
+</ul>
 <section id="flight-list" class="level3">
 <h3 class="anchored" data-anchor-id="flight-list">Flight List</h3>
 <p>The flight list provides details such as</p>
 <ul>
-<li>flight identification: unique ID, callsign</li>
-<li>origin/destination: ADEP, ADES and ancillary info (NAME and ISO2C COUNTRY code)</li>
-<li>timing: AOBT from NM, ARVT from NM</li>
-<li>aircraft: aircraft type (ICAO), wake turbulence category, registration</li>
-<li>airline: AO code (ICAO), (and callsign, which embeds AO identification)</li>
-<li>operational values: flight duration, taxi time, route length, (estimated) takeoff weight</li>
+<li>flight identification: unique ID, <del>(obfuscated) callsign</del></li>
+<li>origin/destination: <a href="#acronyms_ADEP">Aerodrome of DEParture (ADEP)</a>, <a href="#acronyms_ADES">Aerodrome of DEStination (ADES)</a> and ancillary info (NAME and ISO2C COUNTRY code)</li>
+<li>timing: <a href="#acronyms_AOBT">Actual Off-Block Time (AOBT)</a>, <a href="#acronyms_ARVT">ARriVal Time (ARVT)</a>; both from <a href="#acronyms_NM">Network Manager (NM)</a></li>
+<li>aircraft: aircraft type (ICAO), <a href="#acronyms_WTC">Wake Turbulence Category (WTC)</a></li>
+<li>airline: <a href="#acronyms_AO">Aircraft Operator (AO)</a> code (ICAO),</li>
+<li>operational values: flight duration, taxi time, route length, (estimated) <a href="#acronyms_TOW">TakeOff Weight (TOW)</a></li>
 </ul>
 </section>
 <section id="trajectory" class="level3">
 <h3 class="anchored" data-anchor-id="trajectory">Trajectory</h3>
 <p>The trajectory contains</p>
 <ul>
-<li>flight identification: unique ID, callsign</li>
+<li>flight identification: unique ID</li>
 <li>4D position: longitude, latitude, altitude, timestamp,</li>
-<li>speed: ground speed</li>
+<li>speed: ground speed, track</li>
 <li>wind speed</li>
 </ul>
 </section>
 <section id="rationale-for-the-data-sets" class="level3">
 <h3 class="anchored" data-anchor-id="rationale-for-the-data-sets">Rationale for the data sets</h3>
-<p>Our gut feelings say that ATOW depends in some forms from:</p>
+<p>Our gut feelings say that <a href="#acronyms_ATOW">Actual TakeOff Weight (ATOW)</a> depends in some forms from:</p>
 <ul>
 <li>origin/destination: the great circle distance is of course a factor in terms of how much fuel you will have to tank and hence the take-off weight.<br>
-Also ADEP or ADES are important because of specific local procedures.<br>
-ADEP/ADES could also be important because different AOs plan and execute flights differently for/to the same airport.</li>
+Also <a href="#acronyms_ADEP">ADEP</a> or <a href="#acronyms_ADES">ADES</a> are important because of specific local procedures.<br>
+<a href="#acronyms_ADEP">ADEP</a>/<a href="#acronyms_ADES">ADES</a> could also be important because different <a href="#acronyms_AO">AO</a>s plan and execute flights differently for/to the same airport.</li>
 <li>timing: when you execute a flight, i.e.&nbsp;morning/evening, weekly patterns, seasonal trends, local time (?), flight duration calculation, could be a factor to consider</li>
 <li>aircraft: of course the (ICAO) type will imply different amounts of fuel needed, but also specific aircraft (hence REGISTRATION) could be singled out</li>
 <li>airline: policies varies, for example for same city-pair an airline could select different alternates according to their technical support facilities/contracts.<br>
-Also AOs have different tanking policies.</li>
-<li>operational: flown route length (different from great circle distance) could better refine ATOW estimation; same for taxing duration</li>
-<li>trajectory: The ADS-B trajectory can help to classify the way a flight has been flown and hence refine the ATOW estimate</li>
+Also <a href="#acronyms_AO">AO</a>s have different tanking policies.</li>
+<li>operational: flown route length (different from great circle distance) could better refine <a href="#acronyms_ATOW">ATOW</a> estimation; same for taxing duration</li>
+<li>trajectory: The <a href="#acronyms_ADS-B">ADS-B</a> trajectory can help to classify the way a flight has been flown and hence refine the <a href="#acronyms_ATOW">ATOW</a> estimate</li>
 </ul>
+</section>
+</section>
+<section id="data-for-submission" class="level2">
+<h2 class="anchored" data-anchor-id="data-for-submission">Data for submission</h2>
+<p>The data sets for the submission are organized as follows:</p>
+<pre class="text"><code>data/submission
+├── 258079011.parquet
+├── 258081111.parquet
+├── 258097425.parquet
+├── ...
+└── submission.csv
+</code></pre>
+<p>and consist of</p>
+<ul>
+<li><p>(CSV) list of flight IDs and to-be-estimated TOW, <code>submission.csv</code>, i.e.</p>
+<pre><code>id, TOW
+258081039,
+258081111,
+...</code></pre></li>
+</ul>
+</section>
+<section id="ranking" class="level2">
+<h2 class="anchored" data-anchor-id="ranking">Ranking</h2>
+<p>For ranking you’ll need to upload your</p>
+<ol type="1">
+<li><code>submission_&lt;team&gt;.csv</code> with the estimated TOWs</li>
+<li>the URL of the tagged (public) repository of the model used to estimate TOW</li>
+</ol>
 
 
 </section>
+<section id="acronyms_HEADER_LOA" class="level1 loa unnumbered">
+<h1 class="loa unnumbered">List of Acronyms</h1>
+<div>
+<p><strong><span id="acronyms_ADEP">ADEP</span></strong>: Aerodrome of DEParture</p>
+<p><strong><span id="acronyms_ADES">ADES</span></strong>: Aerodrome of DEStination</p>
+<p><strong><span id="acronyms_ADS-B">ADS-B</span></strong>: Automatic Dependent Surveillance–Broadcast</p>
+<p><strong><span id="acronyms_AO">AO</span></strong>: Aircraft Operator</p>
+<p><strong><span id="acronyms_AOBT">AOBT</span></strong>: Actual Off-Block Time</p>
+<p><strong><span id="acronyms_ARVT">ARVT</span></strong>: ARriVal Time</p>
+<p><strong><span id="acronyms_ATOW">ATOW</span></strong>: Actual TakeOff Weight</p>
+<p><strong><span id="acronyms_ECMWF">ECMWF</span></strong>: European Centre for Medium-Range Weather Forecasts</p>
+<p><strong><span id="acronyms_NM">NM</span></strong>: Network Manager</p>
+<p><strong><span id="acronyms_TOW">TOW</span></strong>: TakeOff Weight</p>
+<p><strong><span id="acronyms_WTC">WTC</span></strong>: Wake Turbulence Category</p>
+</div>
+</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>from <a href="https://cloud.google.com/storage/docs/public-datasets/era5" title="Google's ERA5">Google’s Analysis-Ready, Cloud Optimized (ARCO) ERA5</a>:<br>
+ERA5 is the fifth generation of the <a href="https://www.ecmwf.int/"><span>European Centre for Medium-Range Weather Forecasts (ECMWF)</span></a> Atmospheric Reanalysis, providing hourly estimates of a large number of atmospheric, land, and oceanic climate variables.<br>
+The Google Cloud Public Dataset Program hosts ERA5 data that spans from 1940 to recent days, covering the Earth on a 30 km grid and resolves the atmosphere using 137 levels from the surface up to a height of 80 km.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

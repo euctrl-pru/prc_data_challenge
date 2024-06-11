@@ -1,30 +1,85 @@
 ---
 title: "Data"
+format:
+  html: 
+    toc: true
+    toc-depth: 2
 acronyms:
-  insert_loa: false
+  loa_title: "List of Acronyms"
+  include_unused: false
+  insert_loa: "end"
+  insert_links: true
+  id_prefix: "acronyms_"
+  sorting: "alphabetical"
+  non_existing: "key"
+  # style: "long-short"
+  loa_format: '`**{shortname}**: {longname}`{=raw}'
+  loa_header_classes:
+  - unnumbered
+  fromfile:
+    - _acronyms.yml
 ---
+
+## Data for modeling
+
 We propose two data sets:
 
-1. a flight list for flights flown in Europe in 2023
+1. a flight list of (a subset of) flights flown in Europe in 2023
 1. the relevant trajectories for the above flights
+
+The data sets for the challenge are organized as follows:
+
+```text
+data/flights
+├── 2023-01-01
+│   ├── 258079060.parquet
+│   ├── 258081025.parquet
+│   ├── 258091625.parquet
+│   ├── ...
+│   └── flights.csv
+└── 2023-01-02
+│   ├── ...
+│   └── flights.csv
+└── ...
+```
+
+and for each date they consist of
+
+* flight list of (a subset of) flown flights of the day, i.e. `flights.csv`
+* associated (\acr{ADS-B} based) flown trajectories augmented with wind information[^1],
+  i.e. `258081025.parquet`
+
+[^1]: from [Google's Analysis-Ready, Cloud Optimized (ARCO) ERA5][google-era5]:  
+ERA5 is the fifth generation of the [\acr{ECMWF}][ecmwf]
+Atmospheric Reanalysis, providing hourly estimates of a large number of atmospheric, land, and oceanic climate variables.  
+The Google Cloud Public Dataset Program hosts ERA5 data that spans from 1940 to recent days,
+covering the Earth on a 30 km grid and resolves the atmosphere using 137 levels from
+the surface up to a height of 80 km.
+
+[google-era5]: <https://cloud.google.com/storage/docs/public-datasets/era5> "Google's ERA5"
+[ecmwf]: <https://www.ecmwf.int/>
+
+
 
 ### Flight List
 The flight list provides details such as
 
-* flight identification: unique ID, callsign
+* flight identification: unique ID, ~~(obfuscated) callsign~~
 * origin/destination: \acr{ADEP}, \acr{ADES} and ancillary info (NAME and ISO2C COUNTRY code)
-* timing: \acr{AOBT} from \acr{NM}, \acr{ARVT} from \acr{NM}
-* aircraft: aircraft type (ICAO), wake turbulence category, registration
-* airline: \acr{AO} code (ICAO), (and callsign, which embeds \acr{AO} identification)
-* operational values: flight duration, taxi time, route length, (estimated) takeoff weight
+* timing: \acr{AOBT}, \acr{ARVT}; both from \acr{NM}
+* aircraft: aircraft type (ICAO), \acr{WTC}
+* airline: \acr{AO} code (ICAO), 
+* operational values: flight duration, taxi time, route length, (estimated) \acr{TOW}
 
 ### Trajectory
 The trajectory contains
 
-* flight identification: unique ID, callsign
+* flight identification: unique ID
 * 4D position: longitude, latitude, altitude, timestamp, 
-* speed: ground speed
+* speed: ground speed, track
 * wind speed
+
+
 
 ### Rationale for the data sets
 
@@ -46,3 +101,34 @@ Our gut feelings say that \acr{ATOW} depends in some forms from:
   \acr{ATOW} estimation; same for taxing duration
 * trajectory: The \acr{ADS-B} trajectory can help to classify the way a flight has been flown and
   hence refine the \acr{ATOW} estimate
+
+
+## Data for submission
+
+The data sets for the submission are organized as follows:
+
+```text
+data/submission
+├── 258079011.parquet
+├── 258081111.parquet
+├── 258097425.parquet
+├── ...
+└── submission.csv
+
+```
+
+and consist of 
+
+* (CSV) list of flight IDs and to-be-estimated TOW, `submission.csv`, i.e.
+  ```
+  id, TOW
+  258081039,
+  258081111,
+  ...
+  ```
+
+## Ranking
+For ranking you'll need to upload your
+
+1. `submission_<team>.csv` with the estimated TOWs
+2. the URL of the tagged (public) repository of the model used to estimate TOW
