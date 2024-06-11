@@ -1,0 +1,41 @@
+---
+title: "PRC Data Challenge"
+keep-md: true
+---
+
+The \acr{PRC} Data Challenge aims at engaging data scientists to
+build a model able to accurately infer the \acr{ATOW} of a flown flight.
+
+We look for data scientist teams, even without Aviation background, to participate
+to the challenge in order to compete to develop an **open** model using suitable \acr{ML}
+techniques.
+
+## The Data
+The data sets for the challenge are:
+
+* flight list for flown flights in Europe in 2023
+* associated (\acr{ADS-B} based) flown trajectories augmented with wind information (from Copernicus/ERA5)
+
+
+## The why of Why
+
+We got many questions about this challenge. We grouped and answered them as follows:
+
+* Why is the challenge focusing on \acr{ATOW}?  
+  \acr{ATOW} is an important input to fuel burnt and gaseous emissions models.
+  The current lack of \acr{ATOW} is typically compensated by assuming it to be equal to a certain
+  percentage of the \acr{MTOW}. With this challenge we aim at making available a better way to
+  estimate \acr{ATOW}.
+
+* Why an Open model?  
+  The \acr{PRC} (and many other Organizations, industrial actors and academia by the way) is interested
+  in studies assessing the impact of Aviation to Climate Change.
+  To this extent the availability of an open model allows for reproducibility, transparency of
+  the results presented and in the end to trust.  
+
+* Why via a Challenge?  
+  The \acr{PRC} thinks that there is a great pool of Data Scientists that could help to define
+  the open model of the Challenge, but above that it is the importance to have a "white box" approach
+  to the way the model is being built that drove the decision to setup a Data Challenge.
+  This transparency is a way to build trust, reproducibility and eventually evolve a collaboration
+  to improve the understanding of the impact of Aviation to the environment.

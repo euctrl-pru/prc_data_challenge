@@ -1,0 +1,48 @@
+---
+title: "Data"
+acronyms:
+  insert_loa: false
+---
+We propose two data sets:
+
+1. a flight list for flights flown in Europe in 2023
+1. the relevant trajectories for the above flights
+
+### Flight List
+The flight list provides details such as
+
+* flight identification: unique ID, callsign
+* origin/destination: \acr{ADEP}, \acr{ADES} and ancillary info (NAME and ISO2C COUNTRY code)
+* timing: \acr{AOBT} from \acr{NM}, \acr{ARVT} from \acr{NM}
+* aircraft: aircraft type (ICAO), wake turbulence category, registration
+* airline: \acr{AO} code (ICAO), (and callsign, which embeds \acr{AO} identification)
+* operational values: flight duration, taxi time, route length, (estimated) takeoff weight
+
+### Trajectory
+The trajectory contains
+
+* flight identification: unique ID, callsign
+* 4D position: longitude, latitude, altitude, timestamp, 
+* speed: ground speed
+* wind speed
+
+### Rationale for the data sets
+
+Our gut feelings say that \acr{ATOW} depends in some forms from:
+
+* origin/destination: the great circle distance is of course a factor in terms of how much fuel
+  you will have to tank and hence the take-off weight.  
+  Also \acr{ADEP} or \acr{ADES} are important because of specific local procedures.  
+  \acr{ADEP}/\acr{ADES} could also be important because different
+  \acr{AO}s plan and execute flights differently for/to the same airport.
+* timing: when you execute a flight, i.e. morning/evening, weekly patterns, seasonal trends, local time (?),
+  flight duration calculation, could be a factor to consider
+* aircraft: of course the (ICAO) type will imply different amounts of fuel needed, but also specific
+  aircraft (hence REGISTRATION) could be singled out
+* airline: policies varies, for example for same city-pair an airline could select different
+  alternates according to their technical support facilities/contracts.  
+  Also \acr{AO}s have different tanking policies.
+* operational: flown route length (different from great circle distance) could better refine
+  \acr{ATOW} estimation; same for taxing duration
+* trajectory: The \acr{ADS-B} trajectory can help to classify the way a flight has been flown and
+  hence refine the \acr{ATOW} estimate
