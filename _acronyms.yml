@@ -19,6 +19,10 @@ acronyms:
       longname: EUROCONTROL
     - shortname: EC
       longname: European Commission
+    - shortname: ECMWF
+      longname: European Centre for Medium-Range Weather Forecasts
+    - shortname: ERA5
+      longname: ECMWF's fifth generation of Atmospheric Reanalysis
     - shortname: EU
       longname: European Union
     - shortname: FIR

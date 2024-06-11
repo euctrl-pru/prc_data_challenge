@@ -11,7 +11,7 @@
     "href": "index.html#the-why-of-why",
     "title": "PRC Data Challenge",
     "section": "The why of Why",
-    "text": "The why of Why\nWe got many questions about this challenge. We grouped and answered them as follows:\n\nWhy is the challenge focusing on ATOW?\nATOW is an important input to fuel burnt and gaseous emissions models. The current lack of ATOW is typically compensated by assuming it to be equal to a certain percentage of the Maximum TakeOff Weight (MTOW). With this challenge we aim at making available a better way to estimate ATOW.\nWhy an Open model?\nThe PRC (and many other Organizations, industrial actors and academia by the way) is interested in studies assessing the impact of Aviation to Climate Change. To this extent the availability of an open model allows for reproducibility, transparency of the results presented and in the end to trust.\nWhy via a Challenge?\nThe PRC thinks that there is a great pool of Data Scientists that could help to define the open model of the Challenge, but above that it is the importance to have a “white box” approach to the way the model is being built that drove the decision to setup a Data Challenge. This transparency is a way to build trust, reproducibility and eventually evolve a collaboration to improve the understanding of the impact of Aviation to the environment."
+    "text": "The why of Why\nWe got many questions about this challenge. We grouped and answered them as follows:\n\nWhy is the challenge focusing on ATOW?\nATOW is an important input to fuel burnt and gaseous emissions models. The current lack of ATOW is typically compensated by assuming it to be equal to a certain percentage of the Maximum TakeOff Weight (MTOW) for the relevant aircraft model.\nWith this challenge we aim at making available a better way to estimate ATOW.\nWhy an Open model?\nThe PRC (and many other Organizations, industrial actors and academia by the way) is interested in studies assessing the impact of Aviation to Climate Change. To this extent the availability of an open model allows for reproducibility, transparency of the results presented and in the end to trust.\nWhy via a Challenge?\nThe PRC thinks that there is a great pool of Data Scientists that could help to define the open model of the Challenge, but above that it is the importance to have a “white box” approach to the way the model is being built that drove the decision to setup a Data Challenge. This transparency is a way to build trust, reproducibility and eventually evolve a collaboration to improve the understanding of the impact of Aviation to the environment."
   },
   {
     "objectID": "about.html",
@@ -25,7 +25,7 @@
     "href": "index.html#the-data",
     "title": "PRC Data Challenge",
     "section": "The Data",
-    "text": "The Data\nThe data sets for the challenge are:\n\nflight list for flown flights in Europe in 2023\nassociated (Automatic Dependent Surveillance–Broadcast (ADS-B) based) flown trajectories augmented with wind information (from Copernicus/ERA5)"
+    "text": "The Data\nThe data sets for the challenge are:\n\nflight list for flown flights in Europe in 2023\nassociated (Automatic Dependent Surveillance–Broadcast (ADS-B) based) flown trajectories augmented with wind information1"
   },
   {
     "objectID": "data.html",
@@ -33,5 +33,12 @@
     "title": "Data",
     "section": "",
     "text": "We propose two data sets:\n\na flight list for flights flown in Europe in 2023\nthe relevant trajectories for the above flights\n\n\nFlight List\nThe flight list provides details such as\n\nflight identification: unique ID, callsign\norigin/destination: ADEP, ADES and ancillary info (NAME and ISO2C COUNTRY code)\ntiming: AOBT from NM, ARVT from NM\naircraft: aircraft type (ICAO), wake turbulence category, registration\nairline: AO code (ICAO), (and callsign, which embeds AO identification)\noperational values: flight duration, taxi time, route length, (estimated) takeoff weight\n\n\n\nTrajectory\nThe trajectory contains\n\nflight identification: unique ID, callsign\n4D position: longitude, latitude, altitude, timestamp,\nspeed: ground speed\nwind speed\n\n\n\nRationale for the data sets\nOur gut feelings say that ATOW depends in some forms from:\n\norigin/destination: the great circle distance is of course a factor in terms of how much fuel you will have to tank and hence the take-off weight.\nAlso ADEP or ADES are important because of specific local procedures.\nADEP/ADES could also be important because different AOs plan and execute flights differently for/to the same airport.\ntiming: when you execute a flight, i.e. morning/evening, weekly patterns, seasonal trends, local time (?), flight duration calculation, could be a factor to consider\naircraft: of course the (ICAO) type will imply different amounts of fuel needed, but also specific aircraft (hence REGISTRATION) could be singled out\nairline: policies varies, for example for same city-pair an airline could select different alternates according to their technical support facilities/contracts.\nAlso AOs have different tanking policies.\noperational: flown route length (different from great circle distance) could better refine ATOW estimation; same for taxing duration\ntrajectory: The ADS-B trajectory can help to classify the way a flight has been flown and hence refine the ATOW estimate"
+  },
+  {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "PRC Data Challenge",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nfrom Google’s Analysis-Ready, Cloud Optimized (ARCO) ERA5:\nERA5 is the fifth generation of the European Centre for Medium-Range Weather Forecasts (ECMWF) Atmospheric Reanalysis, providing hourly estimates of a large number of atmospheric, land, and oceanic climate variables.\nThe Google Cloud Public Dataset Program hosts ERA5 data that spans from 1940 to recent days, covering the Earth on a 30 km grid and resolves the atmosphere using 137 levels from the surface up to a height of 80 km.↩︎"
   }
 ]
