@@ -24,30 +24,21 @@ acronyms:
 
 We propose two data sets:
 
-1. a flight list of (a subset of) flights flown in Europe in 2023
+1. a flight list of (a subset of) flights flown in Europe in 2022
 1. the relevant trajectories for the above flights
 
 The data sets for the challenge are organized as follows:
 
 ```text
-data/flights
-├── 2023-01-01
-│   ├── 258079060.parquet
-│   ├── 258081025.parquet
-│   ├── 258091625.parquet
-│   ├── ...
-│   └── flights.csv
-└── 2023-01-02
-│   ├── ...
-│   └── flights.csv
+competition-data/
+├── challenge_set.csv
+├── 2022-01-01.parquet
+├── 2022-01-02.parquet
 └── ...
 ```
 
-and for each date they consist of
-
-* flight list of (a subset of) flown flights of the day, i.e. `flights.csv`
-* associated (\acr{ADS-B} based) flown trajectories augmented with wind information[^1],
-  i.e. `258081025.parquet`
+Each daily trajectory file contains (\acr{ADS-B} based) flown trajectories
+augmented with meteo information[^1].
 
 [^1]: from [Google's Analysis-Ready, Cloud Optimized (ARCO) ERA5][google-era5]:  
 ERA5 is the fifth generation of the [\acr{ECMWF}][ecmwf]
@@ -62,24 +53,28 @@ the surface up to a height of 80 km.
 
 
 ### Flight List
-The flight list provides details such as
+The flight list provides details such as (`column names` in parenthesis):
 
-* flight identification: unique ID, ~~(obfuscated) callsign~~
-* origin/destination: \acr{ADEP}, \acr{ADES} and ancillary info (NAME and ISO2C COUNTRY code)
-* timing: \acr{AOBT}, \acr{ARVT}; both from \acr{NM}
-* aircraft: aircraft type (ICAO), \acr{WTC}
-* airline: \acr{AO} code (ICAO), 
-* operational values: flight duration, taxi time, route length, (estimated) \acr{TOW}
+* flight identification: unique ID (`fuid`), (obfuscated) callsign (`callsign`)
+* origin/destination: \acr{ADEP} (`adep`), \acr{ADES} (`ades`) and ancillary info
+  (NAME [`name_adep`, `name_ades`] and ISO2C COUNTRY code [`country_code_adep`, `country_code_ades`])
+* timing: date of flight (`date`), \acr{AOBT} (`actual_offblock_time`), \acr{ARVT} (`arrival_time`);
+  \acr{AOBT} and \acr{ARVT} from \acr{NM}
+* aircraft: (ICAO) aircraft type code (`aircraft_type`), \acr{WTC} (`wtc`)
+* airline: (obfuscated) \acr{AO} code (`airline`), 
+* operational values: flight duration (`flight_duration`) [min], taxi-out time (`taxiout_time`) [min],
+  route length (`flown_distance`) [nm], (estimated) \acr{TOW} (`tow`) [kg]
 
 ### Trajectory
 The trajectory contains
 
-* flight identification: unique ID
-* 4D position: longitude, latitude, altitude, timestamp, 
-* speed: ground speed, track
-* wind speed
-
-
+* flight identification: unique ID (`fuid`, same as for flight list)
+* 4D position: `longitude` and `latitude` (decimal degrees), `altitude`, `timestamp`
+* speed: ground speed (`groundspeed`), track angle (`track` and `track_unwrapped`),
+  vertical rate of climb/descent (`vertical_rate`)
+* (optionally) meteo info at 4D position:
+  - wind (`u_component_of_wind` and `v_component_of_wind`) [$m s^{-1}$]
+  - `temperature` [$K$, kelvin]
 
 ### Rationale for the data sets
 
@@ -90,15 +85,15 @@ Our gut feelings say that \acr{ATOW} depends in some forms from:
   Also \acr{ADEP} or \acr{ADES} are important because of specific local procedures.  
   \acr{ADEP}/\acr{ADES} could also be important because different
   \acr{AO}s plan and execute flights differently for/to the same airport.
-* timing: when you execute a flight, i.e. morning/evening, weekly patterns, seasonal trends, local time (?),
+* timing: when you execute a flight, i.e. morning/evening/night, weekly patterns,
+  seasonal trends, local time (?),
   flight duration calculation, could be a factor to consider
-* aircraft: of course the (ICAO) type will imply different amounts of fuel needed, but also specific
-  aircraft (hence REGISTRATION) could be singled out
+* aircraft: of course the (ICAO) type will imply different amounts of fuel needed,
 * airline: policies varies, for example for same city-pair an airline could select different
   alternates according to their technical support facilities/contracts.  
   Also \acr{AO}s have different tanking policies.
 * operational: flown route length (different from great circle distance) could better refine
-  \acr{ATOW} estimation; same for taxing duration
+  \acr{ATOW} estimation; same for taxi-out duration
 * trajectory: The \acr{ADS-B} trajectory can help to classify the way a flight has been flown and
   hence refine the \acr{ATOW} estimate
 
