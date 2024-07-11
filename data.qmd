@@ -53,27 +53,38 @@ the surface up to a height of 80 km.
 
 
 ### Flight List
-The flight list provides details such as (`column names` in parenthesis):
+The flight list provides details such as (`column names` in parenthesis, [_units_]
+in italic in square brackets when appropriate):
 
-* flight identification: unique ID (`fuid`), (obfuscated) callsign (`callsign`)
-* origin/destination: \acr{ADEP} (`adep`), \acr{ADES} (`ades`) and ancillary info
-  (NAME [`name_adep`, `name_ades`] and ISO2C COUNTRY code [`country_code_adep`, `country_code_ades`])
-* timing: date of flight (`date`), \acr{AOBT} (`actual_offblock_time`), \acr{ARVT} (`arrival_time`);
+* flight identification: unique ID (`flight_id`), (obfuscated) callsign (`callsign`)
+* origin/destination: \acr{ADEP} (`adep` [_ICAO code_]), \acr{ADES} (`ades` [_ICAO code_])
+  and ancillary info, i.e. airport name (`name_adep`, `name_ades`) and country code 
+  (`country_code_adep`, `country_code_ades` [_ISO2C_])
+* timing: date of flight (`date` [_ISO 8601 UTC date_]),
+  \acr{AOBT} (`actual_offblock_time` [_ISO 8601 UTC date and time_]),
+  \acr{ARVT} (`arrival_time` [_ISO 8601 UTC date and time_);
   \acr{AOBT} and \acr{ARVT} from \acr{NM}
-* aircraft: (ICAO) aircraft type code (`aircraft_type`), \acr{WTC} (`wtc`)
+* aircraft: aircraft type code (`aircraft_type` [_ICAO aircraft type_]),
+  \acr{WTC} (`wtc`); see [ICAO aircraft type designator page][act_type]
 * airline: (obfuscated) \acr{AO} code (`airline`), 
-* operational values: flight duration (`flight_duration`) [min], taxi-out time (`taxiout_time`) [min],
-  route length (`flown_distance`) [nm], (estimated) \acr{TOW} (`tow`) [kg]
+* operational values: flight duration (`flight_duration` [_min_]) , 
+  taxi-out time (`taxiout_time` [_min_]),
+  route length (`flown_distance` [_nmi_]) , (estimated) \acr{TOW} (`tow` [_kg_]) 
+
+[act_type]: <https://www.icao.int/publications/DOC8643/Pages/Search.aspx> "Aircraft type"
 
 ### Trajectory
 The trajectory contains
 
-* flight identification: unique ID (`fuid`, same as for flight list)
-* 4D position: `longitude` and `latitude` (decimal degrees), `altitude`, `timestamp`
-* speed: ground speed (`groundspeed`), track angle (`track` and `track_unwrapped`),
-  vertical rate of climb/descent (`vertical_rate`)
+* flight identification: unique ID (`flight_id`, same as for flight list)
+* 4D position: `longitude` [_DD_, decimal degrees in -90/90 range] and
+  `latitude` [_DD_, decimal degrees in -180/180 range],
+  `altitude` [_ft_], `timestamp` [_timestamp with time zone_]
+* speed: ground speed (`groundspeed` [_kt_]), 
+  track angle (`track` and `track_unwrapped` [_decimal degrees_]),
+  vertical rate of climb/descent (`vertical_rate` [_ft/min_])
 * (optionally) meteo info at 4D position:
-  - wind (`u_component_of_wind` and `v_component_of_wind`) [$m s^{-1}$]
+  - wind (`u_component_of_wind` and `v_component_of_wind`) [_m/s_]
   - `temperature` [$K$, kelvin]
 
 ### Rationale for the data sets
@@ -125,5 +136,14 @@ and consist of
 ## Ranking
 For ranking you'll need to upload your
 
-1. `submission_<team>.csv` with the estimated TOWs
-2. the URL of the tagged (public) repository of the model used to estimate TOW
+> `<team>_submission_<posix timestamp>.csv` with the estimated TOWs
+
+## Eligibility for Prize
+
+The winning solutions will only be eligible for the awards if all source code
+and additional data sets used to generate the results from the measurement data
+will be made available to be published under the GNU GPLv3 license on the
+OpenSky Network's github account.
+
+In addition, sufficient documentation must be provided to understand and
+reproduce the results.

@@ -148,6 +148,7 @@ window.Quarto = {
   <li><a href="#data-for-modeling" id="toc-data-for-modeling" class="nav-link active" data-scroll-target="#data-for-modeling">Data for modeling</a></li>
   <li><a href="#data-for-submission" id="toc-data-for-submission" class="nav-link" data-scroll-target="#data-for-submission">Data for submission</a></li>
   <li><a href="#ranking" id="toc-ranking" class="nav-link" data-scroll-target="#ranking">Ranking</a></li>
+  <li><a href="#eligibility-for-prize" id="toc-eligibility-for-prize" class="nav-link" data-scroll-target="#eligibility-for-prize">Eligibility for Prize</a></li>
   <li><a href="#acronyms_HEADER_LOA" id="toc-acronyms_HEADER_LOA" class="nav-link" data-scroll-target="#acronyms_HEADER_LOA">List of Acronyms</a></li>
   </ul>
 </nav>
@@ -190,26 +191,26 @@ window.Quarto = {
 <p>Each daily trajectory file contains (<a href="#acronyms_ADS-B">Automatic Dependent Surveillance–Broadcast (ADS-B)</a> based) flown trajectories augmented with meteo information<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
 <section id="flight-list" class="level3">
 <h3 class="anchored" data-anchor-id="flight-list">Flight List</h3>
-<p>The flight list provides details such as (<code>column names</code> in parenthesis):</p>
+<p>The flight list provides details such as (<code>column names</code> in parenthesis, [<em>units</em>] in italic in square brackets when appropriate):</p>
 <ul>
-<li>flight identification: unique ID (<code>fuid</code>), (obfuscated) callsign (<code>callsign</code>)</li>
-<li>origin/destination: <a href="#acronyms_ADEP">Aerodrome of DEParture (ADEP)</a> (<code>adep</code>), <a href="#acronyms_ADES">Aerodrome of DEStination (ADES)</a> (<code>ades</code>) and ancillary info (NAME [<code>name_adep</code>, <code>name_ades</code>] and ISO2C COUNTRY code [<code>country_code_adep</code>, <code>country_code_ades</code>])</li>
-<li>timing: date of flight (<code>date</code>), <a href="#acronyms_AOBT">Actual Off-Block Time (AOBT)</a> (<code>actual_offblock_time</code>), <a href="#acronyms_ARVT">ARriVal Time (ARVT)</a> (<code>arrival_time</code>); <a href="#acronyms_AOBT">AOBT</a> and <a href="#acronyms_ARVT">ARVT</a> from <a href="#acronyms_NM">Network Manager (NM)</a></li>
-<li>aircraft: (ICAO) aircraft type code (<code>aircraft_type</code>), <a href="#acronyms_WTC">Wake Turbulence Category (WTC)</a> (<code>wtc</code>)</li>
+<li>flight identification: unique ID (<code>flight_id</code>), (obfuscated) callsign (<code>callsign</code>)</li>
+<li>origin/destination: <a href="#acronyms_ADEP">Aerodrome of DEParture (ADEP)</a> (<code>adep</code> [<em>ICAO code</em>]), <a href="#acronyms_ADES">Aerodrome of DEStination (ADES)</a> (<code>ades</code> [<em>ICAO code</em>]) and ancillary info, i.e.&nbsp;airport name (<code>name_adep</code>, <code>name_ades</code>) and country code (<code>country_code_adep</code>, <code>country_code_ades</code> [<em>ISO2C</em>])</li>
+<li>timing: date of flight (<code>date</code> [<em>ISO 8601 UTC date</em>]), <a href="#acronyms_AOBT">Actual Off-Block Time (AOBT)</a> (<code>actual_offblock_time</code> [<em>ISO 8601 UTC date and time</em>]), <a href="#acronyms_ARVT">ARriVal Time (ARVT)</a> (<code>arrival_time</code> [<em>ISO 8601 UTC date and time</em>); <a href="#acronyms_AOBT">AOBT</a> and <a href="#acronyms_ARVT">ARVT</a> from <a href="#acronyms_NM">Network Manager (NM)</a></li>
+<li>aircraft: aircraft type code (<code>aircraft_type</code> [<em>ICAO aircraft type</em>]), <a href="#acronyms_WTC">Wake Turbulence Category (WTC)</a> (<code>wtc</code>); see <a href="https://www.icao.int/publications/DOC8643/Pages/Search.aspx" title="Aircraft type">ICAO aircraft type designator page</a></li>
 <li>airline: (obfuscated) <a href="#acronyms_AO">Aircraft Operator (AO)</a> code (<code>airline</code>),</li>
-<li>operational values: flight duration (<code>flight_duration</code>) [min], taxi-out time (<code>taxiout_time</code>) [min], route length (<code>flown_distance</code>) [nm], (estimated) <a href="#acronyms_TOW">TakeOff Weight (TOW)</a> (<code>tow</code>) [kg]</li>
+<li>operational values: flight duration (<code>flight_duration</code> [<em>min</em>]) , taxi-out time (<code>taxiout_time</code> [<em>min</em>]), route length (<code>flown_distance</code> [<em>nmi</em>]) , (estimated) <a href="#acronyms_TOW">TakeOff Weight (TOW)</a> (<code>tow</code> [<em>kg</em>])</li>
 </ul>
 </section>
 <section id="trajectory" class="level3">
 <h3 class="anchored" data-anchor-id="trajectory">Trajectory</h3>
 <p>The trajectory contains</p>
 <ul>
-<li>flight identification: unique ID (<code>fuid</code>, same as for flight list)</li>
-<li>4D position: <code>longitude</code> and <code>latitude</code> (decimal degrees), <code>altitude</code>, <code>timestamp</code></li>
-<li>speed: ground speed (<code>groundspeed</code>), track angle (<code>track</code> and <code>track_unwrapped</code>), vertical rate of climb/descent (<code>vertical_rate</code>)</li>
+<li>flight identification: unique ID (<code>flight_id</code>, same as for flight list)</li>
+<li>4D position: <code>longitude</code> [<em>DD</em>, decimal degrees in -90/90 range] and <code>latitude</code> [<em>DD</em>, decimal degrees in -180/180 range], <code>altitude</code> [<em>ft</em>], <code>timestamp</code> [<em>timestamp with time zone</em>]</li>
+<li>speed: ground speed (<code>groundspeed</code> [<em>kt</em>]), track angle (<code>track</code> and <code>track_unwrapped</code> [<em>decimal degrees</em>]), vertical rate of climb/descent (<code>vertical_rate</code> [<em>ft/min</em>])</li>
 <li>(optionally) meteo info at 4D position:
 <ul>
-<li>wind (<code>u_component_of_wind</code> and <code>v_component_of_wind</code>) [<span class="math inline">\(m s^{-1}\)</span>]</li>
+<li>wind (<code>u_component_of_wind</code> and <code>v_component_of_wind</code>) [<em>m/s</em>]</li>
 <li><code>temperature</code> [<span class="math inline">\(K\)</span>, kelvin]</li>
 </ul></li>
 </ul>
@@ -252,10 +253,14 @@ Also <a href="#acronyms_AO">AO</a>s have different tanking policies.</li>
 <section id="ranking" class="level2">
 <h2 class="anchored" data-anchor-id="ranking">Ranking</h2>
 <p>For ranking you’ll need to upload your</p>
-<ol type="1">
-<li><code>submission_&lt;team&gt;.csv</code> with the estimated TOWs</li>
-<li>the URL of the tagged (public) repository of the model used to estimate TOW</li>
-</ol>
+<blockquote class="blockquote">
+<p><code>&lt;team&gt;_submission_&lt;posix timestamp&gt;.csv</code> with the estimated TOWs</p>
+</blockquote>
+</section>
+<section id="eligibility-for-prize" class="level2">
+<h2 class="anchored" data-anchor-id="eligibility-for-prize">Eligibility for Prize</h2>
+<p>The winning solutions will only be eligible for the awards if all source code and additional data sets used to generate the results from the measurement data will be made available to be published under the GNU GPLv3 license on the OpenSky Network’s github account.</p>
+<p>In addition, sufficient documentation must be provided to understand and reproduce the results.</p>
 
 
 </section>
