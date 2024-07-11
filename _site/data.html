@@ -235,7 +235,7 @@ Also <a href="#acronyms_AO">AO</a>s have different tanking policies.</li>
 </section>
 <section id="dataset-for-submission" class="level2">
 <h2 class="anchored" data-anchor-id="dataset-for-submission">Dataset for submission</h2>
-<p>The submission template file, <code>submission_set.csv</code>, contains the list of flight IDs for which to estimate the TOW; it is .</p>
+<p>The submission template file, <code>competition-data/submission_set.csv</code>, contains the list of flight IDs for which to estimate the TOW; it is .</p>
 <pre><code>flight_id, tow
 258081039,
 258081111,
@@ -245,11 +245,11 @@ Also <a href="#acronyms_AO">AO</a>s have different tanking policies.</li>
 <section id="where-to-get-the-datasets" class="level2">
 <h2 class="anchored" data-anchor-id="where-to-get-the-datasets">Where to get the Datasets</h2>
 <p>The dataset files are hosted on <a href="#acronyms_OSN">OpenSky Network (OSN)</a> infrastructure.<br>
-Upon registration of your team you should have received the relevant <code>ACCESS_KEY</code> and <code>SECRET_KEY</code>.</p>
-<p>Below you can find the details to access the data sets and submit your results for ranking.</p>
+Upon registration of your team you should have received the relevant * team name/ID, i.e.&nbsp;<code>cucu</code> * <code>ACCESS_KEY</code> and <code>SECRET_KEY</code>.</p>
+<p>Below you can find the details on how to access the data sets and submit your results for ranking.</p>
 <section id="pre-requisites" class="level3">
 <h3 class="anchored" data-anchor-id="pre-requisites">Pre-requisites</h3>
-<p>The steps below have been executed on a MBR/macOS machine but it should easy to apply it to other unix-like environments (we did similarly on MS Windows via Git Bash.)</p>
+<p>The steps below have been executed on a MBR/macOS machine but it should be easy to apply them to other Unix-like environments (we did similarly on MS Windows via Git Bash.)</p>
 <ol type="1">
 <li><p>Install <a href="https://min.io/docs/minio/linux/reference/minio-mc.html#" title="MinIO Client">MinIO Client</a> for your <a href="https://min.io/docs/minio/linux/reference/minio-mc.html#install-mc" title="mc install">OS/environment</a>:</p>
 <pre><code>$ brew install minio/stable/mc</code></pre></li>
@@ -292,10 +292,8 @@ $ mc ls dc24/competition-data/
 </section>
 <section id="ranking" class="level2">
 <h2 class="anchored" data-anchor-id="ranking">Ranking</h2>
-<p>For ranking you’ll need to upload your</p>
-<blockquote class="blockquote">
-<p><code>&lt;team&gt;_submission_&lt;posix timestamp&gt;.csv</code> with the estimated TOWs</p>
-</blockquote>
+<p>For ranking you’ll need to upload your <code>&lt;team&gt;_submission_&lt;posix timestamp&gt;.csv</code> file with the estimated TOWs.</p>
+<p>The RANKING PAGE will be automatically updated after few instants.</p>
 </section>
 <section id="eligibility-for-prize" class="level2">
 <h2 class="anchored" data-anchor-id="eligibility-for-prize">Eligibility for Prize</h2>
