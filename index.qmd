@@ -40,17 +40,23 @@ We got many questions about this challenge. We grouped and answered them as foll
 
 ## Acknowledgements
 
-We would like to praise the participation of the following organisations, companies
-and individuals for their support in the provision of the data and infrastructure
-for the challenge:
+We would like to praise the following organisations, companies
+and individuals for their participation and support in the provision of
+advise,  data and infrastructure for the challenge:
 
 * Airlines:
   - Austrian Airlines
   - Swiss
   - Vueling
 * Opensky Network: \acr{ADS-B} trajectories, hosting of the challenge infrastructure.
-  (John, Allan, Martin, Vincent)
-* TU Delft (Prof Junzi Sun): for wisely pre-process, enhance and store OSN 
-  trajectories made available for the challenge
-* EUROCONTROL: flight list (network Manager) and estimating \acr{TOW}
-  (Aviation Intelligence Unit).
+  (John Fitzgerald, Allan Tart, Martin Strohmeier, Vincent Lender)
+* TU Delft (Prof Junzi Sun): for wisely pre-processing, enhancing (meteo via
+  [fastmeteo][fm]), locally storing OSN trajectories and then making them
+  available for the challenge
+* ONERA (Dr Xavier Olive): for advise and the invaluable [traffic][traffic] library
+* EUROCONTROL: for providing the relevant flight list (via Network Manager) and
+               estimating \acr{TOW} (Aviation Intelligence Unit).
+
+
+[fm]: <https://github.com/open-aviation/fastmeteo> "fastmeteo Python library"
+[traffic]: <https://github.com/open-aviation/fastmeteo> "traffic Python library"

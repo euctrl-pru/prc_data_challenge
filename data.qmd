@@ -32,12 +32,13 @@ The data sets for the challenge are organized as follows:
 ```text
 competition-data/
 ├── challenge_set.csv
+├── submission_set.csv
 ├── 2022-01-01.parquet
 ├── 2022-01-02.parquet
 └── ...
 ```
 
-Each daily trajectory file contains (\acr{ADS-B} based) flown trajectories
+Each daily trajectory parquet file contains (\acr{ADS-B} based) flown trajectories
 augmented with meteo information[^1].
 
 [^1]: from [Google's Analysis-Ready, Cloud Optimized (ARCO) ERA5][google-era5]:  
@@ -109,29 +110,23 @@ Our gut feelings say that \acr{ATOW} depends in some forms from:
   hence refine the \acr{ATOW} estimate
 
 
-## Data for submission
+## Dataset for submission
 
-The data sets for the submission are organized as follows:
-
-```text
-data/submission
-├── 258079011.parquet
-├── 258081111.parquet
-├── 258097425.parquet
-├── ...
-└── submission.csv
-
-```
-
-and consist of 
-
-* (CSV) list of flight IDs and to-be-estimated TOW, `submission.csv`, i.e.
+The submission template file, `submission_set.csv`, contains the list of flight IDs
+for which to estimate the TOW; it is .
   ```
   flight_id, tow
   258081039,
   258081111,
   ...
   ```
+  
+The relevant trajectories are part of the ones provided in the Trajectory
+dataset.
+
+## Where to get the Datasets
+
+TEXT for DESCRIBING WHERE/HOW to ACCESS the DATA on OSN/TRINO
 
 ## Ranking
 For ranking you'll need to upload your

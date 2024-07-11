@@ -146,7 +146,8 @@ window.Quarto = {
    
   <ul class="collapse">
   <li><a href="#data-for-modeling" id="toc-data-for-modeling" class="nav-link active" data-scroll-target="#data-for-modeling">Data for modeling</a></li>
-  <li><a href="#data-for-submission" id="toc-data-for-submission" class="nav-link" data-scroll-target="#data-for-submission">Data for submission</a></li>
+  <li><a href="#dataset-for-submission" id="toc-dataset-for-submission" class="nav-link" data-scroll-target="#dataset-for-submission">Dataset for submission</a></li>
+  <li><a href="#where-to-get-the-datasets" id="toc-where-to-get-the-datasets" class="nav-link" data-scroll-target="#where-to-get-the-datasets">Where to get the Datasets</a></li>
   <li><a href="#ranking" id="toc-ranking" class="nav-link" data-scroll-target="#ranking">Ranking</a></li>
   <li><a href="#eligibility-for-prize" id="toc-eligibility-for-prize" class="nav-link" data-scroll-target="#eligibility-for-prize">Eligibility for Prize</a></li>
   <li><a href="#acronyms_HEADER_LOA" id="toc-acronyms_HEADER_LOA" class="nav-link" data-scroll-target="#acronyms_HEADER_LOA">List of Acronyms</a></li>
@@ -185,10 +186,11 @@ window.Quarto = {
 <p>The data sets for the challenge are organized as follows:</p>
 <pre class="text"><code>competition-data/
 ├── challenge_set.csv
+├── submission_set.csv
 ├── 2022-01-01.parquet
 ├── 2022-01-02.parquet
 └── ...</code></pre>
-<p>Each daily trajectory file contains (<a href="#acronyms_ADS-B">Automatic Dependent Surveillance–Broadcast (ADS-B)</a> based) flown trajectories augmented with meteo information<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<p>Each daily trajectory parquet file contains (<a href="#acronyms_ADS-B">Automatic Dependent Surveillance–Broadcast (ADS-B)</a> based) flown trajectories augmented with meteo information<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
 <section id="flight-list" class="level3">
 <h3 class="anchored" data-anchor-id="flight-list">Flight List</h3>
 <p>The flight list provides details such as (<code>column names</code> in parenthesis, [<em>units</em>] in italic in square brackets when appropriate):</p>
@@ -231,24 +233,14 @@ Also <a href="#acronyms_AO">AO</a>s have different tanking policies.</li>
 </ul>
 </section>
 </section>
-<section id="data-for-submission" class="level2">
-<h2 class="anchored" data-anchor-id="data-for-submission">Data for submission</h2>
-<p>The data sets for the submission are organized as follows:</p>
-<pre class="text"><code>data/submission
-├── 258079011.parquet
-├── 258081111.parquet
-├── 258097425.parquet
-├── ...
-└── submission.csv
-</code></pre>
-<p>and consist of</p>
-<ul>
-<li><p>(CSV) list of flight IDs and to-be-estimated TOW, <code>submission.csv</code>, i.e.</p>
-<pre><code>flight_id, tow
-258081039,
-258081111,
-...</code></pre></li>
-</ul>
+<section id="dataset-for-submission" class="level2">
+<h2 class="anchored" data-anchor-id="dataset-for-submission">Dataset for submission</h2>
+<p>The submission template file, <code>submission_set.csv</code>, contains the list of flight IDs for which to estimate the TOW; it is . <code>flight_id, tow   258081039,   258081111,   ...</code></p>
+<p>The relevant trajectories are part of the ones provided in the Trajectory dataset.</p>
+</section>
+<section id="where-to-get-the-datasets" class="level2">
+<h2 class="anchored" data-anchor-id="where-to-get-the-datasets">Where to get the Datasets</h2>
+<p>TEXT for DESCRIBING WHERE/HOW to ACCESS the DATA on OSN/TRINO</p>
 </section>
 <section id="ranking" class="level2">
 <h2 class="anchored" data-anchor-id="ranking">Ranking</h2>
