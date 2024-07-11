@@ -256,7 +256,7 @@ The RANKING PAGE will be automatically updated after few instants.
 
 The winning solutions will only be eligible for the awards if all source code
 and additional data sets used to generate the results from the measurement data
-will be made available to be published under the GNU GPLv3 license on the
+will be made available to be published under the **GNU GPLv3 license** on the
 OpenSky Network's github account.
 
 In addition, sufficient documentation must be provided to understand and
