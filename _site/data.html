@@ -284,9 +284,9 @@ $ mc ls dc24/competition-data/
 <pre><code>$ mc cp --recursive dc24/competition-data/2022-01 my-local-directory/</code></pre></li>
 <li><p>copy all files from the (read-only) <code>competition-data/</code> bucket</p>
 <pre><code>$ mc cp --recursive dc24/competition-data/  my-local-directory/</code></pre></li>
-<li><p>Write your team’s submission (assuming team name <code>cucu</code>) to the <code>submissions/</code> bucket</p></li>
+<li><p>Write your team’s submission (assuming team name <code>cucu</code>) to the <code>submissions/</code> bucket</p>
+<pre><code>$ mc cp ./my_submission.csv  dc24/submissions/"cucu_submission_$(date +%s).csv"</code></pre></li>
 </ol>
-<pre><code>$ mc cp ./my_submission.csv  dc24/submissions/"cucu_submission_$(date +%s).csv"</code></pre>
 <p><strong>NOTE</strong>: no team can list the content of the <code>submissions/</code> bucket; and team <code>cucu</code> can only submit files in the format <code>cucu_submission_&lt;posix timestamp&gt;.csv</code></p>
 </section>
 </section>

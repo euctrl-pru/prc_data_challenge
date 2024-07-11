@@ -196,9 +196,9 @@ From the command line you can
 1. Write your team's submission (assuming team name `cucu`) to the
   `submissions/` bucket
   
-  ```
-  $ mc cp ./my_submission.csv  dc24/submissions/"cucu_submission_$(date +%s).csv"
-  ```
+    ```
+    $ mc cp ./my_submission.csv  dc24/submissions/"cucu_submission_$(date +%s).csv"
+    ```
 
 **NOTE**: no team can list the content of the `submissions/` bucket; and team `cucu` 
 can only submit files in the format `cucu_submission_<posix timestamp>.csv`
