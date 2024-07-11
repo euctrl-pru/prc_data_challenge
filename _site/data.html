@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -147,7 +181,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#data-for-modeling" id="toc-data-for-modeling" class="nav-link active" data-scroll-target="#data-for-modeling">Data for modeling</a></li>
   <li><a href="#dataset-for-submission" id="toc-dataset-for-submission" class="nav-link" data-scroll-target="#dataset-for-submission">Dataset for submission</a></li>
-  <li><a href="#where-to-get-the-datasets" id="toc-where-to-get-the-datasets" class="nav-link" data-scroll-target="#where-to-get-the-datasets">Where to get the Datasets</a></li>
+  <li><a href="#wherehow-to-get-the-datasets" id="toc-wherehow-to-get-the-datasets" class="nav-link" data-scroll-target="#wherehow-to-get-the-datasets">Where/How to get the Datasets</a></li>
   <li><a href="#ranking" id="toc-ranking" class="nav-link" data-scroll-target="#ranking">Ranking</a></li>
   <li><a href="#eligibility-for-prize" id="toc-eligibility-for-prize" class="nav-link" data-scroll-target="#eligibility-for-prize">Eligibility for Prize</a></li>
   <li><a href="#acronyms_HEADER_LOA" id="toc-acronyms_HEADER_LOA" class="nav-link" data-scroll-target="#acronyms_HEADER_LOA">List of Acronyms</a></li>
@@ -242,13 +276,15 @@ Also <a href="#acronyms_AO">AO</a>s have different tanking policies.</li>
 ...</code></pre>
 <p>The relevant trajectories are part of the ones provided in the Trajectory dataset.</p>
 </section>
-<section id="where-to-get-the-datasets" class="level2">
-<h2 class="anchored" data-anchor-id="where-to-get-the-datasets">Where to get the Datasets</h2>
+<section id="wherehow-to-get-the-datasets" class="level2">
+<h2 class="anchored" data-anchor-id="wherehow-to-get-the-datasets">Where/How to get the Datasets</h2>
 <p>The dataset files are hosted on <a href="#acronyms_OSN">OpenSky Network (OSN)</a> infrastructure.<br>
 Upon registration of your team you should have received the relevant * team name/ID, i.e.&nbsp;<code>cucu</code> * <code>ACCESS_KEY</code> and <code>SECRET_KEY</code>.</p>
 <p>Below you can find the details on how to access the data sets and submit your results for ranking.</p>
-<section id="pre-requisites" class="level3">
-<h3 class="anchored" data-anchor-id="pre-requisites">Pre-requisites</h3>
+<section id="using-minio-client" class="level3">
+<h3 class="anchored" data-anchor-id="using-minio-client">Using MinIO Client</h3>
+<section id="pre-requisites" class="level4">
+<h4 class="anchored" data-anchor-id="pre-requisites">Pre-requisites</h4>
 <p>The steps below have been executed on a MBR/macOS machine but it should be easy to apply them to other Unix-like environments (we did similarly on MS Windows via Git Bash.)</p>
 <ol type="1">
 <li><p>Install <a href="https://min.io/docs/minio/linux/reference/minio-mc.html#" title="MinIO Client">MinIO Client</a> for your <a href="https://min.io/docs/minio/linux/reference/minio-mc.html#install-mc" title="mc install">OS/environment</a>:</p>
@@ -259,8 +295,8 @@ Upon registration of your team you should have received the relevant * team name
   ACCESS_KEY SECRET_KEY</code></pre></li>
 </ol>
 </section>
-<section id="readwrite-data" class="level3">
-<h3 class="anchored" data-anchor-id="readwrite-data">Read/Write data</h3>
+<section id="readwrite-data" class="level4">
+<h4 class="anchored" data-anchor-id="readwrite-data">Read/Write data</h4>
 <p>From the command line you can</p>
 <ol type="1">
 <li><p>Listed the competition buckets</p>
@@ -288,6 +324,32 @@ $ mc ls dc24/competition-data/
 <pre><code>$ mc cp ./my_submission.csv  dc24/submissions/"cucu_submission_$(date +%s).csv"</code></pre></li>
 </ol>
 <p><strong>NOTE</strong>: no team can list the content of the <code>submissions/</code> bucket; and team <code>cucu</code> can only submit files in the format <code>cucu_submission_&lt;posix timestamp&gt;.csv</code></p>
+</section>
+</section>
+<section id="using-python" class="level3">
+<h3 class="anchored" data-anchor-id="using-python">Using Python</h3>
+<section id="pre-requisites-1" class="level4">
+<h4 class="anchored" data-anchor-id="pre-requisites-1">Pre-requisites</h4>
+<p>You need to have <a href="https://github.com/open-aviation/pyopensky" title="pyopensky Python library"><code>pyopensky</code></a> installed as detailed <a href="https://open-aviation.github.io/pyopensky/installation.html" title="Installation of pyopensky">here</a>.</p>
+<p>Also your configuration files should contain the relevant values for <code>ACCESS_KEY</code> and <code>SECRET_KEY</code></p>
+<pre><code>[default]
+username = your_osn_user
+password = ...
+
+access_key = ACCESS_KEY
+secret_key = SECRET_KEY</code></pre>
+</section>
+<section id="readwrite-data-1" class="level4">
+<h4 class="anchored" data-anchor-id="readwrite-data-1">Read/Write Data</h4>
+<p>The following code allows to download the challenge files</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyopensky.s3 <span class="im">import</span> S3Client</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>s3 <span class="op">=</span> S3Client()</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> obj <span class="kw">in</span> s3.s3client.list_objects(<span class="st">"competition-data"</span>, recursive<span class="op">=</span><span class="va">True</span>):</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>     <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>obj<span class="sc">.</span>bucket_name<span class="op">=</span><span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>obj<span class="sc">.</span>object_name<span class="op">=</span><span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>     s3.download_object(obj)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
 </section>
 </section>
 <section id="ranking" class="level2">

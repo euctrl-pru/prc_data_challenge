@@ -125,7 +125,10 @@ the list of flight IDs for which to estimate the TOW; it is .
 The relevant trajectories are part of the ones provided in the Trajectory
 dataset.
 
-## Where to get the Datasets
+
+
+## Where/How to get the Datasets
+
 The dataset files are hosted on \acr{OSN} infrastructure.  
 Upon registration of your team you should have received the relevant
   * team name/ID, i.e. `cucu`
@@ -134,8 +137,9 @@ Upon registration of your team you should have received the relevant
 Below you can find the details on how to access the data sets and submit your
 results for ranking.
 
+### Using MinIO Client
 
-### Pre-requisites
+#### Pre-requisites
 The steps below have been executed on a MBR/macOS machine but it should be easy
 to apply them to other Unix-like environments (we did similarly on MS Windows via
 Git Bash.)
@@ -154,7 +158,7 @@ Git Bash.)
       ACCESS_KEY SECRET_KEY
     ```
 
-### Read/Write data
+#### Read/Write data
 From the command line you can
 
 1. Listed the competition buckets
@@ -206,6 +210,41 @@ From the command line you can
 
 [mc]: <https://min.io/docs/minio/linux/reference/minio-mc.html#> "MinIO Client"
 [install]: <https://min.io/docs/minio/linux/reference/minio-mc.html#install-mc> "mc install"
+
+
+### Using Python
+
+#### Pre-requisites
+You need to have [`pyopensky`][posn] installed as detailed [here][posninstall].
+
+Also your configuration files should contain the relevant values for 
+`ACCESS_KEY` and `SECRET_KEY`
+
+```
+[default]
+username = your_osn_user
+password = ...
+
+access_key = ACCESS_KEY
+secret_key = SECRET_KEY
+```
+
+[posn]: <https://github.com/open-aviation/pyopensky> "pyopensky Python library"
+[posninstall]: <https://open-aviation.github.io/pyopensky/installation.html> "Installation of pyopensky"
+
+
+#### Read/Write Data
+The following code allows to download the challenge files
+
+```python
+from pyopensky.s3 import S3Client
+
+s3 = S3Client()
+
+for obj in s3.s3client.list_objects("competition-data", recursive=True):
+     print(f"{obj.bucket_name=}, {obj.object_name=}")
+     s3.download_object(obj)
+```
 
 ## Ranking
 For ranking you'll need to upload your
