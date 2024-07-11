@@ -53,7 +53,7 @@
     "href": "data.html#data-for-submission",
     "title": "Data",
     "section": "Data for submission",
-    "text": "Data for submission\nThe data sets for the submission are organized as follows:\ndata/submission\n├── 258079011.parquet\n├── 258081111.parquet\n├── 258097425.parquet\n├── ...\n└── submission.csv\n\nand consist of\n\n(CSV) list of flight IDs and to-be-estimated TOW, submission.csv, i.e.\nid, TOW\n258081039,\n258081111,\n..."
+    "text": "Data for submission\nThe data sets for the submission are organized as follows:\ndata/submission\n├── 258079011.parquet\n├── 258081111.parquet\n├── 258097425.parquet\n├── ...\n└── submission.csv\n\nand consist of\n\n(CSV) list of flight IDs and to-be-estimated TOW, submission.csv, i.e.\nflight_id, tow\n258081039,\n258081111,\n..."
   },
   {
     "objectID": "data.html#ranking",

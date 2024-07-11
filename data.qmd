@@ -127,7 +127,7 @@ and consist of
 
 * (CSV) list of flight IDs and to-be-estimated TOW, `submission.csv`, i.e.
   ```
-  id, TOW
+  flight_id, tow
   258081039,
   258081111,
   ...
