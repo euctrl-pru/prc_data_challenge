@@ -19,20 +19,38 @@ We got many questions about this challenge. We grouped and answered them as foll
 
 * Why is the challenge focusing on \acr{ATOW}?  
   \acr{ATOW} is an important input to fuel burnt and gaseous emissions models.
-  The current lack of \acr{ATOW} is typically compensated by assuming it to be equal to a certain
-  percentage of the \acr{MTOW} for the relevant aircraft model.  
+  The current lack of openly available \acr{ATOW} is typically compensated by
+  assuming it to be equal to a certain percentage of the \acr{MTOW} for the
+  relevant aircraft model.  
   With this challenge we aim at making available a better way to
-  estimate \acr{ATOW}.
+  estimate \acr{ATOW}, i.e. an \acr{ETOW}.
 
 * Why an Open model?  
   The \acr{PRC} (and many other Organizations, industrial actors and academia by the way) is interested
   in studies assessing the impact of Aviation to Climate Change.
   To this extent the availability of an open model allows for reproducibility, transparency of
-  the results presented and in the end to trust.  
+  the results presented and in the end to trust in the work performed.  
 
 * Why via a Challenge?  
   The \acr{PRC} thinks that there is a great pool of Data Scientists that could help to define
-  the open model of the Challenge, but above that it is the importance to have a "white box" approach
+  the open model of the Challenge, but above that, it is the importance to have a "white box" approach
   to the way the model is being built that drove the decision to setup a Data Challenge.
   This transparency is a way to build trust, reproducibility and eventually evolve a collaboration
   to improve the understanding of the impact of Aviation to the environment.
+
+## Acknowledgements
+
+We would like to praise the participation of the following organisations, companies
+and individuals for their support in the provision of the data and infrastructure
+for the challenge:
+
+* Airlines:
+  - Austrian Airlines
+  - Swiss
+  - Vueling
+* Opensky Network: \acr{ADS-B} trajectories, hosting of the challenge infrastructure.
+  (John, Allan, Martin, Vincent)
+* TU Delft (Prof Junzi Sun): for wisely pre-process, enhance and store OSN 
+  trajectories made available for the challenge
+* EUROCONTROL: flight list (network Manager) and estimating \acr{TOW}
+  (Aviation Intelligence Unit).

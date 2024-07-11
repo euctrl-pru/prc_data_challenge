@@ -23,6 +23,8 @@ acronyms:
       longname: European Centre for Medium-Range Weather Forecasts
     - shortname: ERA5
       longname: ECMWF's fifth generation of Atmospheric Reanalysis
+    - shortname: ETOW
+      longname: Estimated TakeOff Weight
     - shortname: EU
       longname: European Union
     - shortname: FIR

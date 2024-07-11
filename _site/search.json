@@ -11,7 +11,7 @@
     "href": "index.html#the-why-of-why",
     "title": "PRC Data Challenge",
     "section": "The why of Why",
-    "text": "The why of Why\nWe got many questions about this challenge. We grouped and answered them as follows:\n\nWhy is the challenge focusing on ATOW?\nATOW is an important input to fuel burnt and gaseous emissions models. The current lack of ATOW is typically compensated by assuming it to be equal to a certain percentage of the Maximum TakeOff Weight (MTOW) for the relevant aircraft model.\nWith this challenge we aim at making available a better way to estimate ATOW.\nWhy an Open model?\nThe PRC (and many other Organizations, industrial actors and academia by the way) is interested in studies assessing the impact of Aviation to Climate Change. To this extent the availability of an open model allows for reproducibility, transparency of the results presented and in the end to trust.\nWhy via a Challenge?\nThe PRC thinks that there is a great pool of Data Scientists that could help to define the open model of the Challenge, but above that it is the importance to have a “white box” approach to the way the model is being built that drove the decision to setup a Data Challenge. This transparency is a way to build trust, reproducibility and eventually evolve a collaboration to improve the understanding of the impact of Aviation to the environment."
+    "text": "The why of Why\nWe got many questions about this challenge. We grouped and answered them as follows:\n\nWhy is the challenge focusing on ATOW?\nATOW is an important input to fuel burnt and gaseous emissions models. The current lack of openly available ATOW is typically compensated by assuming it to be equal to a certain percentage of the Maximum TakeOff Weight (MTOW) for the relevant aircraft model.\nWith this challenge we aim at making available a better way to estimate ATOW, i.e. an Estimated TakeOff Weight (ETOW).\nWhy an Open model?\nThe PRC (and many other Organizations, industrial actors and academia by the way) is interested in studies assessing the impact of Aviation to Climate Change. To this extent the availability of an open model allows for reproducibility, transparency of the results presented and in the end to trust in the work performed.\nWhy via a Challenge?\nThe PRC thinks that there is a great pool of Data Scientists that could help to define the open model of the Challenge, but above that, it is the importance to have a “white box” approach to the way the model is being built that drove the decision to setup a Data Challenge. This transparency is a way to build trust, reproducibility and eventually evolve a collaboration to improve the understanding of the impact of Aviation to the environment."
   },
   {
     "objectID": "about.html",
@@ -68,5 +68,12 @@
     "title": "Data",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nfrom Google’s Analysis-Ready, Cloud Optimized (ARCO) ERA5:\nERA5 is the fifth generation of the European Centre for Medium-Range Weather Forecasts (ECMWF) Atmospheric Reanalysis, providing hourly estimates of a large number of atmospheric, land, and oceanic climate variables.\nThe Google Cloud Public Dataset Program hosts ERA5 data that spans from 1940 to recent days, covering the Earth on a 30 km grid and resolves the atmosphere using 137 levels from the surface up to a height of 80 km.↩︎"
+  },
+  {
+    "objectID": "index.html#acknowledgements",
+    "href": "index.html#acknowledgements",
+    "title": "PRC Data Challenge",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\nWe would like to praise the participation of the following organisations, companies and individuals for their support in the provision of the data and infrastructure for the challenge:\n\nAirlines:\n\nAustrian Airlines\nSwiss\nVueling\n\nOpensky Network: Automatic Dependent Surveillance–Broadcast (ADS-B) trajectories, hosting of the challenge infrastructure. (John, Allan, Martin, Vincent)\nTU Delft (Prof Junzi Sun): for wisely pre-process, enhance and store OSN trajectories made available for the challenge\nEUROCONTROL: flight list (network Manager) and estimating TakeOff Weight (TOW) (Aviation Intelligence Unit)."
   }
 ]
