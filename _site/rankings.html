@@ -175,14 +175,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>TODO</p>
-<p>for now reading data from Github (this could be ok)</p>
+<p>for now reading data from Github…when committing there the webpage just works</p>
 <div class="cell">
 <div class="sourceCode cell-code hidden" id="cb1" data-startfrom="15" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 14;"><span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>d3 <span class="op">=</span> <span class="pp">require</span>(<span class="st">'d3'</span>)</span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>ranks <span class="op">=</span> <span class="cf">await</span> d3<span class="op">.</span><span class="fu">csv</span>(</span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="st">"https://raw.githubusercontent.com/euctrl-pru/prc_data_challenge/202306-release/rankings.csv"</span></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(ranks)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(ranks<span class="op">,</span> { <span class="dt">sort</span><span class="op">:</span> <span class="st">"ranks"</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-1-1" data-nodetype="declaration">
@@ -210,7 +210,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImQzID0gcmVxdWlyZSgnZDMnKVxucmFua3MgPSBhd2FpdCBkMy5jc3YoXG4gIFwiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2V1Y3RybC1wcnUvcHJjX2RhdGFfY2hhbGxlbmdlLzIwMjMwNi1yZWxlYXNlL3JhbmtpbmdzLmNzdlwiXG4pXG5cbklucHV0cy50YWJsZShyYW5rcylcbiJ9XX0=
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImQzID0gcmVxdWlyZSgnZDMnKVxucmFua3MgPSBhd2FpdCBkMy5jc3YoXG4gIFwiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2V1Y3RybC1wcnUvcHJjX2RhdGFfY2hhbGxlbmdlLzIwMjMwNi1yZWxlYXNlL3JhbmtpbmdzLmNzdlwiXG4pXG5cbklucHV0cy50YWJsZShyYW5rcywgeyBzb3J0OiBcInJhbmtzXCJ9KVxuIn1dfQ==
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }

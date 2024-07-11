@@ -8,7 +8,7 @@ acronyms:
 ---
 TODO
 
-for now reading data from Github (this could be ok)
+for now reading data from Github...when committing there the webpage just works
 
 ```{ojs}
 //| echo: false
@@ -17,6 +17,6 @@ ranks = await d3.csv(
   "https://raw.githubusercontent.com/euctrl-pru/prc_data_challenge/202306-release/rankings.csv"
 )
 
-Inputs.table(ranks)
+Inputs.table(ranks, { sort: "ranks"})
 ```
 

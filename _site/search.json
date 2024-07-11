@@ -137,6 +137,6 @@
     "href": "rankings.html",
     "title": "Rankings",
     "section": "",
-    "text": "TODO\nfor now reading data from Github (this could be ok)\n\nd3 = require('d3')\nranks = await d3.csv(\n  \"https://raw.githubusercontent.com/euctrl-pru/prc_data_challenge/202306-release/rankings.csv\"\n)\n\nInputs.table(ranks)"
+    "text": "TODO\nfor now reading data from Github…when committing there the webpage just works\n\nd3 = require('d3')\nranks = await d3.csv(\n  \"https://raw.githubusercontent.com/euctrl-pru/prc_data_challenge/202306-release/rankings.csv\"\n)\n\nInputs.table(ranks, { sort: \"ranks\"})"
   }
 ]
