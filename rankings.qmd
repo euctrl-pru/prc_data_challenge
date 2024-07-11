@@ -6,5 +6,17 @@ format:
 acronyms:
   insert_loa: false
 ---
+TODO
 
-TO DO
+for now reading data from Github (this could be ok)
+
+```{ojs}
+//| echo: false
+d3 = require('d3')
+ranks = await d3.csv(
+  "https://raw.githubusercontent.com/euctrl-pru/prc_data_challenge/202306-release/rankings.csv"
+)
+
+Inputs.table(ranks)
+```
+
