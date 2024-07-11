@@ -128,7 +128,7 @@ dataset.
 ## Where to get the Datasets
 The dataset files are hosted on \acr{OSN} infrastructure.  
 Upon registration of your team you should have received the relevant
-`ACCESS_KEY` and `SECRET_KEY`.
+`ACCESS_KEY` and `SECRET_KEY`.  
 
 Below you can find the details to access the data sets and submit your
 results for ranking.
@@ -141,36 +141,67 @@ Git Bash.)
 
 1. Install [MinIO Client][mc] for your [OS/environment][install]:  
   
+    ```
+    $ brew install minio/stable/mc
+    ```
+
+1. Set an alias up for the challenge data location:
+  
+    ```
+    $ mc alias set dc24 \
+      https://s3.opensky-network.org/ \
+      ACCESS_KEY SECRET_KEY
+    ```
+
+### Read/Write data
+From the command line you can
+
+1. Listed the competition buckets
+  
+    ```
+    $ mc ls dc24
+    [2024-07-05 04:05:29 CEST]     0B competition-data/
+    [2024-07-08 06:10:23 CEST]     0B submissions/
+    $ mc ls dc24/competition-data/
+    [2024-07-10 10:58:23 CEST]  12MiB STANDARD 2022-01-01.parquet
+    [2024-07-10 10:58:34 CEST]  19MiB STANDARD 2022-01-02.parquet
+    ...
+    [2024-07-11 12:41:20 CEST] 164MiB STANDARD challenge_set.csv
+    [2024-07-11 12:42:43 CEST] 1.1MiB STANDARD submission_set.csv
+    ```
+
+1. list the content of the (read-only) `competition-data/` bucket
+  
+    ```
+    $ mc ls dc24/competition-data/
+    [2024-07-10 10:58:23 CEST]  12MiB STANDARD 2022-01-01.parquet
+    [2024-07-10 10:58:34 CEST]  19MiB STANDARD 2022-01-02.parquet
+    ...
+    [2024-07-11 12:41:20 CEST] 164MiB STANDARD challenge_set.csv
+    [2024-07-11 12:42:43 CEST] 1.1MiB STANDARD submission_set.csv
+    ```
+
+1. copy Jan 2022 trajectory files from the (read-only) `competition-data/` bucket
+  
+    ```
+    $ mc cp --recursive dc24/competition-data/2022-01 my-local-directory/
+    ```
+
+1. copy all files from the (read-only) `competition-data/` bucket
+  
+    ```
+    $ mc cp --recursive dc24/competition-data/  my-local-directory/
+    ```
+
+1. Write your team's submission (assuming team name `cucu`) to the
+  `submissions/` bucket
+  
   ```
-  $ brew install minio/stable/mc
+  $ mc cp ./my_submission.csv  dc24/submissions/"cucu_submission_$(date +%s).csv"
   ```
 
-1. Set an alias up for the challenge data location:  
-  
-  ```
-  $ mc alias set dc24 https://s3.opensky-network.org/ ACCESS_KEY SECRET_KEY
-  ```
-  
-1. Listed/read files in the buckets  
-  
-  ```
-  $ mc ls dc24
-  [2024-07-05 04:05:29 CEST]     0B competition-data/
-  [2024-07-08 06:10:23 CEST]     0B submissions/
-  $ mc ls dc24/competition-data/
-  [2024-07-10 10:58:23 CEST]  12MiB STANDARD 2022-01-01.parquet
-  [2024-07-10 10:58:34 CEST]  19MiB STANDARD 2022-01-02.parquet
-  ...
-  [2024-07-11 12:41:20 CEST] 164MiB STANDARD challenge_set.csv
-  [2024-07-11 12:42:43 CEST] 1.1MiB STANDARD submission_set.csv
-  ```
-
-1. Write to the bucket 
-  
-  ```
-  $ mc cp ./my_submission.csv  dc24/submissions/"myteam_submission_$(date +%s).csv"
-  ```
-
+**NOTE**: no team can list the content of the `submissions/` bucket; and team `cucu` 
+can only submit files in the format `cucu_submission_<posix timestamp>.csv`
 
 [mc]: <https://min.io/docs/minio/linux/reference/minio-mc.html#> "MinIO Client"
 [install]: <https://min.io/docs/minio/linux/reference/minio-mc.html#install-mc> "mc install"
