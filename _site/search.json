@@ -109,7 +109,7 @@
     "href": "data.html#where-to-get-the-datasets",
     "title": "Data",
     "section": "Where to get the Datasets",
-    "text": "Where to get the Datasets\nTEXT for DESCRIBING WHERE/HOW to ACCESS the DATA on OSN/TRINO"
+    "text": "Where to get the Datasets\nThe dataset files are hosted on OpenSky Network (OSN) infrastructure.\nUpon registration of your team you should have received the relevant ACCESS_KEY and SECRET_KEY.\nBelow you can find the details to access the data sets and submit your results for ranking.\n\nPre-requisites\nThe steps below have been executed on a MBR/macOS machine but it should easy to apply it to other unix-like environments (we did similarly on MS Windows via Git Bash.)\n\nInstall MinIO Client for your OS/environment:\n\n$ brew install minio/stable/mc\n\nSet an alias up for the challenge data location:\n\n$ mc alias set dc24 https://s3.opensky-network.org/ ACCESS_KEY SECRET_KEY\n\nListed/read files in the buckets\n\n$ mc ls dc24\n[2024-07-05 04:05:29 CEST]     0B competition-data/\n[2024-07-08 06:10:23 CEST]     0B submissions/\n$ mc ls dc24/competition-data/\n[2024-07-10 10:58:23 CEST]  12MiB STANDARD 2022-01-01.parquet\n[2024-07-10 10:58:34 CEST]  19MiB STANDARD 2022-01-02.parquet\n...\n[2024-07-11 12:41:20 CEST] 164MiB STANDARD challenge_set.csv\n[2024-07-11 12:42:43 CEST] 1.1MiB STANDARD submission_set.csv\n\nWrite to the bucket\n\n$ mc cp ./my_submission.csv  dc24/submissions/\"myteam_submission_$(date +%s).csv\""
   },
   {
     "objectID": "index.html#eligibility-for-participation",

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -244,7 +244,37 @@ Also <a href="#acronyms_AO">AO</a>s have different tanking policies.</li>
 </section>
 <section id="where-to-get-the-datasets" class="level2">
 <h2 class="anchored" data-anchor-id="where-to-get-the-datasets">Where to get the Datasets</h2>
-<p>TEXT for DESCRIBING WHERE/HOW to ACCESS the DATA on OSN/TRINO</p>
+<p>The dataset files are hosted on <a href="#acronyms_OSN">OpenSky Network (OSN)</a> infrastructure.<br>
+Upon registration of your team you should have received the relevant <code>ACCESS_KEY</code> and <code>SECRET_KEY</code>.</p>
+<p>Below you can find the details to access the data sets and submit your results for ranking.</p>
+<section id="pre-requisites" class="level3">
+<h3 class="anchored" data-anchor-id="pre-requisites">Pre-requisites</h3>
+<p>The steps below have been executed on a MBR/macOS machine but it should easy to apply it to other unix-like environments (we did similarly on MS Windows via Git Bash.)</p>
+<ol type="1">
+<li>Install <a href="https://min.io/docs/minio/linux/reference/minio-mc.html#" title="MinIO Client">MinIO Client</a> for your <a href="https://min.io/docs/minio/linux/reference/minio-mc.html#install-mc" title="mc install">OS/environment</a>:</li>
+</ol>
+<pre><code>$ brew install minio/stable/mc</code></pre>
+<ol type="1">
+<li>Set an alias up for the challenge data location:</li>
+</ol>
+<pre><code>$ mc alias set dc24 https://s3.opensky-network.org/ ACCESS_KEY SECRET_KEY</code></pre>
+<ol type="1">
+<li>Listed/read files in the buckets</li>
+</ol>
+<pre><code>$ mc ls dc24
+[2024-07-05 04:05:29 CEST]     0B competition-data/
+[2024-07-08 06:10:23 CEST]     0B submissions/
+$ mc ls dc24/competition-data/
+[2024-07-10 10:58:23 CEST]  12MiB STANDARD 2022-01-01.parquet
+[2024-07-10 10:58:34 CEST]  19MiB STANDARD 2022-01-02.parquet
+...
+[2024-07-11 12:41:20 CEST] 164MiB STANDARD challenge_set.csv
+[2024-07-11 12:42:43 CEST] 1.1MiB STANDARD submission_set.csv</code></pre>
+<ol type="1">
+<li>Write to the bucket</li>
+</ol>
+<pre><code>$ mc cp ./my_submission.csv  dc24/submissions/"myteam_submission_$(date +%s).csv"</code></pre>
+</section>
 </section>
 <section id="ranking" class="level2">
 <h2 class="anchored" data-anchor-id="ranking">Ranking</h2>
@@ -272,6 +302,7 @@ Also <a href="#acronyms_AO">AO</a>s have different tanking policies.</li>
 <p><strong><span id="acronyms_ATOW">ATOW</span></strong>: Actual TakeOff Weight</p>
 <p><strong><span id="acronyms_ECMWF">ECMWF</span></strong>: European Centre for Medium-Range Weather Forecasts</p>
 <p><strong><span id="acronyms_NM">NM</span></strong>: Network Manager</p>
+<p><strong><span id="acronyms_OSN">OSN</span></strong>: OpenSky Network</p>
 <p><strong><span id="acronyms_TOW">TOW</span></strong>: TakeOff Weight</p>
 <p><strong><span id="acronyms_WTC">WTC</span></strong>: Wake Turbulence Category</p>
 </div>
