@@ -38,6 +38,19 @@ We got many questions about this challenge. We grouped and answered them as foll
   This transparency is a way to build trust, reproducibility and eventually evolve a collaboration
   to improve the understanding of the impact of Aviation to the environment.
 
+## Eligibility for Participation
+
+Any data science and/or aviation enthusiast team or individual can participate
+to the challenge.
+
+Please send you team name and list of members to
+
+  ADDRESS TO WHICH REQUEST TEAM CREATION
+
+**NOTE**: Anyone affiliate with OpenSky or EUROCONTROL is not eligible to
+participate to the challenge.
+
+
 ## Acknowledgements
 
 We would like to praise the following organisations, companies

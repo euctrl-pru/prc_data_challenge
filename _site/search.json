@@ -110,5 +110,12 @@
     "title": "Data",
     "section": "Where to get the Datasets",
     "text": "Where to get the Datasets\nTEXT for DESCRIBING WHERE/HOW to ACCESS the DATA on OSN/TRINO"
+  },
+  {
+    "objectID": "index.html#eligibility-for-participation",
+    "href": "index.html#eligibility-for-participation",
+    "title": "PRC Data Challenge",
+    "section": "Eligibility for Participation",
+    "text": "Eligibility for Participation\nAny data science and/or aviation enthusiast team or individual can participate to the challenge.\nPlease send you team name and list of members to\nADDRESS TO WHICH REQUEST TEAM CREATION\nNOTE: Anyone affiliate with OpenSky or EUROCONTROL is not eligible to participate to the challenge."
   }
 ]
