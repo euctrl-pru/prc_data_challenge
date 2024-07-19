@@ -36,10 +36,16 @@ competition-data/
 ├── 2022-01-01.parquet
 ├── 2022-01-02.parquet
 └── ...
+submissions/
+├── baba_submission_1720622222.csv.gz
+├── cucu_submission_1720690111.csv.gz
+└── ...
 ```
 
 Each daily trajectory parquet file contains (\acr{ADS-B} based) flown trajectories
 augmented with meteo information[^1].
+
+The `competition-data` is the S3 bucket as set up by \acr{OSN} for the Challenge.
 
 [^1]: from [Google's Analysis-Ready, Cloud Optimized (ARCO) ERA5][google-era5]:  
 ERA5 is the fifth generation of the [\acr{ECMWF}][ecmwf]
@@ -147,7 +153,8 @@ Upon registration of your team you should have received the relevant
   * `ACCESS_KEY` and `SECRET_KEY`.  
 
 Below you can find the details on how to access the data sets and submit your
-results for ranking.
+results for ranking.  
+The S3 buckets as 
 
 ### Using MinIO Client
 
@@ -260,9 +267,22 @@ for obj in s3.s3client.list_objects("competition-data", recursive=True):
 
 ## Ranking
 For ranking you'll need to upload your
-`<team>_submission_<posix timestamp>.csv`  file with the estimated TOWs.
+`<team>_submission_<POSIX timestamp>.csv`  file with the estimated TOWs.
 
-The RANKING PAGE will be automatically updated after few instants.
+The [RANKING PAGE][ranking] will be automatically updated every 30 minutes.
+Please eventually manually **reload it**.
+
+You can also get a JSON file with the rankings as:
+
+```
+$ curl -X 'GET' \
+  'https://datacomp.opensky-network.org/api/rankings' \
+  -H 'accept: application/json'
+[{"mse":9.752328117373766E9,"rank":1,"competitor_id":"team1","file_name":"team1_submission_1720690930.csv.gz"},{"mse":9.752339084652348E9,"rank":2,"competitor_id":"team2","file_name":"team2_submission_1720690929.csv.gz"}]
+```
+
+[ranking]: <https://datacomp.opensky-network.org/results> "PRC Data Challenge ranking page"
+[rankingAPI]: <https://datacomp.opensky-network.org/> ""
 
 ## Eligibility for Prize
 

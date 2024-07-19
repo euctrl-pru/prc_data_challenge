@@ -227,8 +227,13 @@ window.Quarto = {
 ├── submission_set.csv
 ├── 2022-01-01.parquet
 ├── 2022-01-02.parquet
+└── ...
+submissions/
+├── baba_submission_1720622222.csv.gz
+├── cucu_submission_1720690111.csv.gz
 └── ...</code></pre>
 <p>Each daily trajectory parquet file contains (<a href="#acronyms_ADS-B">Automatic Dependent Surveillance–Broadcast (ADS-B)</a> based) flown trajectories augmented with meteo information<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<p>The <code>competition-data</code> is the S3 bucket as set up by <a href="#acronyms_OSN">OSN</a> for the Challenge.</p>
 <section id="flight-list" class="level3">
 <h3 class="anchored" data-anchor-id="flight-list">Flight List</h3>
 <p>The flight list provides details such as (<code>column names</code> in parenthesis, [<em>units</em>] in italic in square brackets when appropriate):</p>
@@ -290,7 +295,8 @@ Upon registration of your team you should have received the relevant</p>
 <li>team name/ID, i.e.&nbsp;<code>cucu</code></li>
 <li><code>ACCESS_KEY</code> and <code>SECRET_KEY</code>.</li>
 </ul>
-<p>Below you can find the details on how to access the data sets and submit your results for ranking.</p>
+<p>Below you can find the details on how to access the data sets and submit your results for ranking.<br>
+The S3 buckets as</p>
 <section id="using-minio-client" class="level3">
 <h3 class="anchored" data-anchor-id="using-minio-client">Using MinIO Client</h3>
 <section id="pre-requisites" class="level4">
@@ -364,8 +370,13 @@ secret_key = SECRET_KEY</code></pre>
 </section>
 <section id="ranking" class="level2">
 <h2 class="anchored" data-anchor-id="ranking">Ranking</h2>
-<p>For ranking you’ll need to upload your <code>&lt;team&gt;_submission_&lt;posix timestamp&gt;.csv</code> file with the estimated TOWs.</p>
-<p>The RANKING PAGE will be automatically updated after few instants.</p>
+<p>For ranking you’ll need to upload your <code>&lt;team&gt;_submission_&lt;POSIX timestamp&gt;.csv</code> file with the estimated TOWs.</p>
+<p>The <a href="https://datacomp.opensky-network.org/results" title="PRC Data Challenge ranking page">RANKING PAGE</a> will be automatically updated every 30 minutes. Please eventually manually <strong>reload it</strong>.</p>
+<p>You can also get a JSON file with the rankings as:</p>
+<pre><code>$ curl -X 'GET' \
+  'https://datacomp.opensky-network.org/api/rankings' \
+  -H 'accept: application/json'
+[{"mse":9.752328117373766E9,"rank":1,"competitor_id":"team1","file_name":"team1_submission_1720690930.csv.gz"},{"mse":9.752339084652348E9,"rank":2,"competitor_id":"team2","file_name":"team2_submission_1720690929.csv.gz"}]</code></pre>
 </section>
 <section id="eligibility-for-prize" class="level2">
 <h2 class="anchored" data-anchor-id="eligibility-for-prize">Eligibility for Prize</h2>
