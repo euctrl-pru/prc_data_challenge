@@ -160,6 +160,10 @@ window.Quarto = {
 <span class="menu-text">Data</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./rankings.html"> 
+<span class="menu-text">Rankings</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
@@ -214,8 +218,8 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="data-for-modeling">Data for modeling</h2>
 <p>We propose two data sets:</p>
 <ol type="1">
-<li>a flight list of (a subset of) flights flown in Europe in 2022</li>
-<li>the relevant trajectories for the above flights</li>
+<li>a flight list of (a subset of) flights (partially) flown in Europe in 2022</li>
+<li>the relevant trajectories for the above flights as recorded/processed by <a href="#acronyms_OSN">OpenSky Network (OSN)</a></li>
 </ol>
 <p>The data sets for the challenge are organized as follows:</p>
 <pre class="text"><code>competition-data/
@@ -239,7 +243,7 @@ window.Quarto = {
 </section>
 <section id="trajectory" class="level3">
 <h3 class="anchored" data-anchor-id="trajectory">Trajectory</h3>
-<p>The trajectory contains</p>
+<p>The daily trajectory files contain:</p>
 <ul>
 <li>flight identification: unique ID (<code>flight_id</code>, same as for flight list)</li>
 <li>4D position: <code>longitude</code> [<em>DD</em>, decimal degrees in -90/90 range] and <code>latitude</code> [<em>DD</em>, decimal degrees in -180/180 range], <code>altitude</code> [<em>ft</em>], <code>timestamp</code> [<em>timestamp with time zone</em>]</li>
@@ -250,6 +254,8 @@ window.Quarto = {
 <li><code>temperature</code> [<span class="math inline">\(K\)</span>, kelvin]</li>
 </ul></li>
 </ul>
+<p>The daily file <code>&lt;yyyy-mm-dd&gt;.parquet</code> includes all position reports on (UTC) <code>&lt;yyyy-mm-dd&gt;</code> date, it then can happen that flight portions be present in consecutive files, i.e.&nbsp;the same <code>flight_id</code> will occur in more than one daily file.</p>
+<p><strong>NOTE</strong>: trajectories are not necessarily complete with respect to what reported in the flight list. This is due to the possibly limited/partial <a href="#acronyms_ADS-B">ADS-B</a> coverage in some parts (or some lower altitudes) of the world.</p>
 </section>
 <section id="rationale-for-the-data-sets" class="level3">
 <h3 class="anchored" data-anchor-id="rationale-for-the-data-sets">Rationale for the data sets</h3>
@@ -257,13 +263,13 @@ window.Quarto = {
 <ul>
 <li>origin/destination: the great circle distance is of course a factor in terms of how much fuel you will have to tank and hence the take-off weight.<br>
 Also <a href="#acronyms_ADEP">ADEP</a> or <a href="#acronyms_ADES">ADES</a> are important because of specific local procedures.<br>
-<a href="#acronyms_ADEP">ADEP</a>/<a href="#acronyms_ADES">ADES</a> could also be important because different <a href="#acronyms_AO">AO</a>s plan and execute flights differently for/to the same airport.</li>
+<a href="#acronyms_ADEP">ADEP</a>/<a href="#acronyms_ADES">ADES</a> could also be important because different <a href="#acronyms_AO">AO</a>s plan and execute flights differently from/to the same airport.</li>
 <li>timing: when you execute a flight, i.e.&nbsp;morning/evening/night, weekly patterns, seasonal trends, local time (?), flight duration calculation, could be a factor to consider</li>
 <li>aircraft: of course the (ICAO) type will imply different amounts of fuel needed,</li>
-<li>airline: policies varies, for example for same city-pair an airline could select different alternates according to their technical support facilities/contracts.<br>
+<li>airline: policies varies, for example for same city-pair one airline could select different alternates from another airline depending on their technical support facilities/contracts.<br>
 Also <a href="#acronyms_AO">AO</a>s have different tanking policies.</li>
 <li>operational: flown route length (different from great circle distance) could better refine <a href="#acronyms_ATOW">ATOW</a> estimation; same for taxi-out duration</li>
-<li>trajectory: The <a href="#acronyms_ADS-B">ADS-B</a> trajectory can help to classify the way a flight has been flown and hence refine the <a href="#acronyms_ATOW">ATOW</a> estimate</li>
+<li>trajectory: The <a href="#acronyms_ADS-B">ADS-B</a> trajectory can help to classify the way a flight has been flown (rate of climb/descent, maximum en-route flight level, …) and hence refine the <a href="#acronyms_ATOW">ATOW</a> estimate.</li>
 </ul>
 </section>
 </section>
@@ -278,8 +284,12 @@ Also <a href="#acronyms_AO">AO</a>s have different tanking policies.</li>
 </section>
 <section id="wherehow-to-get-the-datasets" class="level2">
 <h2 class="anchored" data-anchor-id="wherehow-to-get-the-datasets">Where/How to get the Datasets</h2>
-<p>The dataset files are hosted on <a href="#acronyms_OSN">OpenSky Network (OSN)</a> infrastructure.<br>
-Upon registration of your team you should have received the relevant * team name/ID, i.e.&nbsp;<code>cucu</code> * <code>ACCESS_KEY</code> and <code>SECRET_KEY</code>.</p>
+<p>The dataset files are hosted on <a href="#acronyms_OSN">OSN</a> infrastructure.<br>
+Upon registration of your team you should have received the relevant</p>
+<ul>
+<li>team name/ID, i.e.&nbsp;<code>cucu</code></li>
+<li><code>ACCESS_KEY</code> and <code>SECRET_KEY</code>.</li>
+</ul>
 <p>Below you can find the details on how to access the data sets and submit your results for ranking.</p>
 <section id="using-minio-client" class="level3">
 <h3 class="anchored" data-anchor-id="using-minio-client">Using MinIO Client</h3>

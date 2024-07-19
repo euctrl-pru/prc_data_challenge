@@ -24,8 +24,8 @@ acronyms:
 
 We propose two data sets:
 
-1. a flight list of (a subset of) flights flown in Europe in 2022
-1. the relevant trajectories for the above flights
+1. a flight list of (a subset of) flights (partially) flown in Europe in 2022
+1. the relevant trajectories for the above flights as recorded/processed by \acr{OSN}
 
 The data sets for the challenge are organized as follows:
 
@@ -75,7 +75,7 @@ in italic in square brackets when appropriate):
 [act_type]: <https://www.icao.int/publications/DOC8643/Pages/Search.aspx> "Aircraft type"
 
 ### Trajectory
-The trajectory contains
+The daily trajectory files contain:
 
 * flight identification: unique ID (`flight_id`, same as for flight list)
 * 4D position: `longitude` [_DD_, decimal degrees in -90/90 range] and
@@ -88,6 +88,15 @@ The trajectory contains
   - wind (`u_component_of_wind` and `v_component_of_wind`) [_m/s_]
   - `temperature` [$K$, kelvin]
 
+The daily file `<yyyy-mm-dd>.parquet` includes all position reports on
+(UTC) `<yyyy-mm-dd>` date, it then can happen that flight portions be present
+in consecutive files, i.e. the same `flight_id` will occur in more than one 
+daily file.
+
+**NOTE**: trajectories are not necessarily complete with respect to what
+reported in the flight list. This is due to the possibly limited/partial 
+\acr{ADS-B} coverage in some parts (or some lower altitudes) of the world.
+
 ### Rationale for the data sets
 
 Our gut feelings say that \acr{ATOW} depends in some forms from:
@@ -96,18 +105,20 @@ Our gut feelings say that \acr{ATOW} depends in some forms from:
   you will have to tank and hence the take-off weight.  
   Also \acr{ADEP} or \acr{ADES} are important because of specific local procedures.  
   \acr{ADEP}/\acr{ADES} could also be important because different
-  \acr{AO}s plan and execute flights differently for/to the same airport.
+  \acr{AO}s plan and execute flights differently from/to the same airport.
 * timing: when you execute a flight, i.e. morning/evening/night, weekly patterns,
   seasonal trends, local time (?),
   flight duration calculation, could be a factor to consider
 * aircraft: of course the (ICAO) type will imply different amounts of fuel needed,
-* airline: policies varies, for example for same city-pair an airline could select different
-  alternates according to their technical support facilities/contracts.  
+* airline: policies varies, for example for same city-pair one airline could select
+  different alternates from another airline depending on their technical support
+  facilities/contracts.  
   Also \acr{AO}s have different tanking policies.
-* operational: flown route length (different from great circle distance) could better refine
-  \acr{ATOW} estimation; same for taxi-out duration
-* trajectory: The \acr{ADS-B} trajectory can help to classify the way a flight has been flown and
-  hence refine the \acr{ATOW} estimate
+* operational: flown route length (different from great circle distance) could
+  better refine \acr{ATOW} estimation; same for taxi-out duration
+* trajectory: The \acr{ADS-B} trajectory can help to classify the way a flight
+  has been flown (rate of climb/descent, maximum en-route flight level, ...) and
+  hence refine the \acr{ATOW} estimate.
 
 
 ## Dataset for submission
@@ -131,6 +142,7 @@ dataset.
 
 The dataset files are hosted on \acr{OSN} infrastructure.  
 Upon registration of your team you should have received the relevant
+
   * team name/ID, i.e. `cucu`
   * `ACCESS_KEY` and `SECRET_KEY`.  
 
