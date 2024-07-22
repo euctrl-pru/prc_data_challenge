@@ -315,7 +315,7 @@ The S3 buckets as</p>
 <h4 class="anchored" data-anchor-id="readwrite-data">Read/Write data</h4>
 <p>From the command line you can</p>
 <ol type="1">
-<li><p>Listed the competition buckets</p>
+<li><p>list the competition buckets</p>
 <pre><code>$ mc ls dc24
 [2024-07-05 04:05:29 CEST]     0B competition-data/
 [2024-07-08 06:10:23 CEST]     0B submissions/
@@ -332,9 +332,9 @@ $ mc ls dc24/competition-data/
 ...
 [2024-07-11 12:41:20 CEST] 164MiB STANDARD challenge_set.csv
 [2024-07-11 12:42:43 CEST] 1.1MiB STANDARD submission_set.csv</code></pre></li>
-<li><p>copy Jan 2022 trajectory files from the (read-only) <code>competition-data/</code> bucket</p>
+<li><p>copy Jan 2022 trajectory files from the (read-only) <code>competition-data/</code> bucket to a local directory</p>
 <pre><code>$ mc cp --recursive dc24/competition-data/2022-01 my-local-directory/</code></pre></li>
-<li><p>copy all files from the (read-only) <code>competition-data/</code> bucket</p>
+<li><p>copy all files from the (read-only) <code>competition-data/</code> bucket to a local directory</p>
 <pre><code>$ mc cp --recursive dc24/competition-data/  my-local-directory/</code></pre></li>
 <li><p>Write your team’s submission (assuming team name <code>cucu</code>) to the <code>submissions/</code> bucket</p>
 <pre><code>$ mc cp ./my_submission.csv  dc24/submissions/"cucu_submission_$(date +%s).csv"</code></pre></li>
@@ -366,6 +366,9 @@ secret_key = SECRET_KEY</code></pre>
 <span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>     <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>obj<span class="sc">.</span>bucket_name<span class="op">=</span><span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>obj<span class="sc">.</span>object_name<span class="op">=</span><span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>     s3.download_object(obj)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
+</section>
+<section id="using-traffic" class="level3">
+<h3 class="anchored" data-anchor-id="using-traffic">Using <code>traffic</code></h3>
 </section>
 </section>
 <section id="ranking" class="level2">

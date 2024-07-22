@@ -180,7 +180,7 @@ Git Bash.)
 #### Read/Write data
 From the command line you can
 
-1. Listed the competition buckets
+1. list the competition buckets
   
     ```
     $ mc ls dc24
@@ -206,12 +206,14 @@ From the command line you can
     ```
 
 1. copy Jan 2022 trajectory files from the (read-only) `competition-data/` bucket
+   to a local directory
   
     ```
     $ mc cp --recursive dc24/competition-data/2022-01 my-local-directory/
     ```
 
-1. copy all files from the (read-only) `competition-data/` bucket
+1. copy all files from the (read-only) `competition-data/` bucket to a local
+   directory
   
     ```
     $ mc cp --recursive dc24/competition-data/  my-local-directory/
@@ -264,6 +266,9 @@ for obj in s3.s3client.list_objects("competition-data", recursive=True):
      print(f"{obj.bucket_name=}, {obj.object_name=}")
      s3.download_object(obj)
 ```
+
+
+### Using `traffic`
 
 ## Ranking
 For ranking you'll need to upload your
