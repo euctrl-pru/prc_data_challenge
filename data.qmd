@@ -65,25 +65,38 @@ in italic in square brackets when appropriate):
 
 * flight identification: unique ID (`flight_id`), (obfuscated) callsign (`callsign`)
 * origin/destination: \acr{ADEP} (`adep` [_ICAO code_]), \acr{ADES} (`ades` [_ICAO code_])
-  and ancillary info, i.e. airport name (`name_adep`, `name_ades`) and country code 
-  (`country_code_adep`, `country_code_ades` [_ISO2C_])
+  and ancillary info, i.e. airport name (`name_adep`, `name_ades`) and 
+  country code (`country_code_adep`, `country_code_ades` [_ISO2C_])
 * timing: date of flight (`date` [_ISO 8601 UTC date_]),
   \acr{AOBT} (`actual_offblock_time` [_ISO 8601 UTC date and time_]),
   \acr{ARVT} (`arrival_time` [_ISO 8601 UTC date and time_);
   \acr{AOBT} and \acr{ARVT} from \acr{NM}
 * aircraft: aircraft type code (`aircraft_type` [_ICAO aircraft type_]),
-  \acr{WTC} (`wtc`); see [ICAO aircraft type designator page][act_type]
+  \acr{WTC} (`wtc`)
 * airline: (obfuscated) \acr{AO} code (`airline`), 
 * operational values: flight duration (`flight_duration` [_min_]) , 
   taxi-out time (`taxiout_time` [_min_]),
   route length (`flown_distance` [_nmi_]) , (estimated) \acr{TOW} (`tow` [_kg_]) 
 
+
+Further info material:
+
+* Airport codes, and more:  [OurAirports][oa], [OA on Observable][oaob]
+* ISO 2-character country codes: [ISO2C][iso2c]
+* (meaningful) Time and dates formats: [ISO 8601][iso8601]
+* ICAO aircraft type designator, \acr{WTC} and more: [ICAO aircraft type designator page][act_type]
+
+[iso8601]: <https://en.wikipedia.org/wiki/ISO_8601> "ISO 8601 date and time format"
+[oa]: <https://ourairports.com/> "OurAirports"
+[oaob]: <https://observablehq.com/@openaviation/airports> "Airports around the world"
 [act_type]: <https://www.icao.int/publications/DOC8643/Pages/Search.aspx> "Aircraft type"
+[iso2c]: <https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2> "ISO 2-character Contry code"
 
 ### Trajectory
 The daily trajectory files contain:
 
-* flight identification: unique ID (`flight_id`, same as for flight list)
+* flight identification: unique ID (`flight_id`, same as for flight list), 
+  (obfuscated) ICAO 24-bit address (`icao24`, same value as `flight_id`)
 * 4D position: `longitude` [_DD_, decimal degrees in -90/90 range] and
   `latitude` [_DD_, decimal degrees in -180/180 range],
   `altitude` [_ft_], `timestamp` [_timestamp with time zone_]
@@ -97,18 +110,28 @@ The daily trajectory files contain:
 The daily file `<yyyy-mm-dd>.parquet` includes all position reports on
 (UTC) `<yyyy-mm-dd>` date, it then can happen that flight portions be present
 in consecutive files, i.e. the same `flight_id` will occur in more than one 
-daily file.
+daily file because the flight took place across the (UTC) midnight.
 
-**NOTE**: trajectories are not necessarily complete with respect to what
-reported in the flight list. This is due to the possibly limited/partial 
-\acr{ADS-B} coverage in some parts (or some lower altitudes) of the world.
+**NOTE**: trajectories are not necessarily complete/overlapping with respect to
+what reported in the flight list in `actual_offblock_time` or `arrival_time`.
+This is due to the possibly limited/partial  \acr{ADS-B} coverage in some parts
+(or some lower altitudes) of the world.
+
+
+Further info material:
+
+* Track in aviation: [SkyBrary page][track]
+* Ground speed: [SkyBrary page][gs]
+
+[track]: <https://skybrary.aero/articles/heading-track-and-radial> "Heading, Track and Radial"
+[gs]: <https://skybrary.aero/articles/ground-speed> "Ground speed"
 
 ### Rationale for the data sets
 
 Our gut feelings say that \acr{ATOW} depends in some forms from:
 
-* origin/destination: the great circle distance is of course a factor in terms of how much fuel
-  you will have to tank and hence the take-off weight.  
+* origin/destination: the [great circle distance][gcd] is of course a factor in terms
+  of how much fuel you will have to tank and hence the take-off weight.  
   Also \acr{ADEP} or \acr{ADES} are important because of specific local procedures.  
   \acr{ADEP}/\acr{ADES} could also be important because different
   \acr{AO}s plan and execute flights differently from/to the same airport.
@@ -126,6 +149,8 @@ Our gut feelings say that \acr{ATOW} depends in some forms from:
   has been flown (rate of climb/descent, maximum en-route flight level, ...) and
   hence refine the \acr{ATOW} estimate.
 
+
+[gcd]: <https://en.wikipedia.org/wiki/Great-circle_distance> "Great Circle Distance"
 
 ## Dataset for submission
 

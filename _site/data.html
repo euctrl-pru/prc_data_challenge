@@ -241,16 +241,23 @@ submissions/
 <li>flight identification: unique ID (<code>flight_id</code>), (obfuscated) callsign (<code>callsign</code>)</li>
 <li>origin/destination: <a href="#acronyms_ADEP">Aerodrome of DEParture (ADEP)</a> (<code>adep</code> [<em>ICAO code</em>]), <a href="#acronyms_ADES">Aerodrome of DEStination (ADES)</a> (<code>ades</code> [<em>ICAO code</em>]) and ancillary info, i.e.&nbsp;airport name (<code>name_adep</code>, <code>name_ades</code>) and country code (<code>country_code_adep</code>, <code>country_code_ades</code> [<em>ISO2C</em>])</li>
 <li>timing: date of flight (<code>date</code> [<em>ISO 8601 UTC date</em>]), <a href="#acronyms_AOBT">Actual Off-Block Time (AOBT)</a> (<code>actual_offblock_time</code> [<em>ISO 8601 UTC date and time</em>]), <a href="#acronyms_ARVT">ARriVal Time (ARVT)</a> (<code>arrival_time</code> [<em>ISO 8601 UTC date and time</em>); <a href="#acronyms_AOBT">AOBT</a> and <a href="#acronyms_ARVT">ARVT</a> from <a href="#acronyms_NM">Network Manager (NM)</a></li>
-<li>aircraft: aircraft type code (<code>aircraft_type</code> [<em>ICAO aircraft type</em>]), <a href="#acronyms_WTC">Wake Turbulence Category (WTC)</a> (<code>wtc</code>); see <a href="https://www.icao.int/publications/DOC8643/Pages/Search.aspx" title="Aircraft type">ICAO aircraft type designator page</a></li>
+<li>aircraft: aircraft type code (<code>aircraft_type</code> [<em>ICAO aircraft type</em>]), <a href="#acronyms_WTC">Wake Turbulence Category (WTC)</a> (<code>wtc</code>)</li>
 <li>airline: (obfuscated) <a href="#acronyms_AO">Aircraft Operator (AO)</a> code (<code>airline</code>),</li>
 <li>operational values: flight duration (<code>flight_duration</code> [<em>min</em>]) , taxi-out time (<code>taxiout_time</code> [<em>min</em>]), route length (<code>flown_distance</code> [<em>nmi</em>]) , (estimated) <a href="#acronyms_TOW">TakeOff Weight (TOW)</a> (<code>tow</code> [<em>kg</em>])</li>
+</ul>
+<p>Further info material:</p>
+<ul>
+<li>Airport codes, and more: <a href="https://ourairports.com/" title="OurAirports">OurAirports</a>, <a href="https://observablehq.com/@openaviation/airports" title="Airports around the world">OA on Observable</a></li>
+<li>ISO 2-character country codes: <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2" title="ISO 2-character Contry code">ISO2C</a></li>
+<li>(meaningful) Time and dates formats: <a href="https://en.wikipedia.org/wiki/ISO_8601" title="ISO 8601 date and time format">ISO 8601</a></li>
+<li>ICAO aircraft type designator, <a href="#acronyms_WTC">WTC</a> and more: <a href="https://www.icao.int/publications/DOC8643/Pages/Search.aspx" title="Aircraft type">ICAO aircraft type designator page</a></li>
 </ul>
 </section>
 <section id="trajectory" class="level3">
 <h3 class="anchored" data-anchor-id="trajectory">Trajectory</h3>
 <p>The daily trajectory files contain:</p>
 <ul>
-<li>flight identification: unique ID (<code>flight_id</code>, same as for flight list)</li>
+<li>flight identification: unique ID (<code>flight_id</code>, same as for flight list), (obfuscated) ICAO 24-bit address (<code>icao24</code>, same value as <code>flight_id</code>)</li>
 <li>4D position: <code>longitude</code> [<em>DD</em>, decimal degrees in -90/90 range] and <code>latitude</code> [<em>DD</em>, decimal degrees in -180/180 range], <code>altitude</code> [<em>ft</em>], <code>timestamp</code> [<em>timestamp with time zone</em>]</li>
 <li>speed: ground speed (<code>groundspeed</code> [<em>kt</em>]), track angle (<code>track</code> and <code>track_unwrapped</code> [<em>decimal degrees</em>]), vertical rate of climb/descent (<code>vertical_rate</code> [<em>ft/min</em>])</li>
 <li>(optionally) meteo info at 4D position:
@@ -259,14 +266,19 @@ submissions/
 <li><code>temperature</code> [<span class="math inline">\(K\)</span>, kelvin]</li>
 </ul></li>
 </ul>
-<p>The daily file <code>&lt;yyyy-mm-dd&gt;.parquet</code> includes all position reports on (UTC) <code>&lt;yyyy-mm-dd&gt;</code> date, it then can happen that flight portions be present in consecutive files, i.e.&nbsp;the same <code>flight_id</code> will occur in more than one daily file.</p>
-<p><strong>NOTE</strong>: trajectories are not necessarily complete with respect to what reported in the flight list. This is due to the possibly limited/partial <a href="#acronyms_ADS-B">ADS-B</a> coverage in some parts (or some lower altitudes) of the world.</p>
+<p>The daily file <code>&lt;yyyy-mm-dd&gt;.parquet</code> includes all position reports on (UTC) <code>&lt;yyyy-mm-dd&gt;</code> date, it then can happen that flight portions be present in consecutive files, i.e.&nbsp;the same <code>flight_id</code> will occur in more than one daily file because the flight took place across the (UTC) midnight.</p>
+<p><strong>NOTE</strong>: trajectories are not necessarily complete/overlapping with respect to what reported in the flight list in <code>actual_offblock_time</code> or <code>arrival_time</code>. This is due to the possibly limited/partial <a href="#acronyms_ADS-B">ADS-B</a> coverage in some parts (or some lower altitudes) of the world.</p>
+<p>Further info material:</p>
+<ul>
+<li>Track in aviation: <a href="https://skybrary.aero/articles/heading-track-and-radial" title="Heading, Track and Radial">SkyBrary page</a></li>
+<li>Ground speed: <a href="https://skybrary.aero/articles/ground-speed" title="Ground speed">SkyBrary page</a></li>
+</ul>
 </section>
 <section id="rationale-for-the-data-sets" class="level3">
 <h3 class="anchored" data-anchor-id="rationale-for-the-data-sets">Rationale for the data sets</h3>
 <p>Our gut feelings say that <a href="#acronyms_ATOW">Actual TakeOff Weight (ATOW)</a> depends in some forms from:</p>
 <ul>
-<li>origin/destination: the great circle distance is of course a factor in terms of how much fuel you will have to tank and hence the take-off weight.<br>
+<li>origin/destination: the <a href="https://en.wikipedia.org/wiki/Great-circle_distance" title="Great Circle Distance">great circle distance</a> is of course a factor in terms of how much fuel you will have to tank and hence the take-off weight.<br>
 Also <a href="#acronyms_ADEP">ADEP</a> or <a href="#acronyms_ADES">ADES</a> are important because of specific local procedures.<br>
 <a href="#acronyms_ADEP">ADEP</a>/<a href="#acronyms_ADES">ADES</a> could also be important because different <a href="#acronyms_AO">AO</a>s plan and execute flights differently from/to the same airport.</li>
 <li>timing: when you execute a flight, i.e.&nbsp;morning/evening/night, weekly patterns, seasonal trends, local time (?), flight duration calculation, could be a factor to consider</li>

@@ -2,12 +2,12 @@
 title: "PRC Data Challenge"
 ---
 
-The \acr{PRC} Data Challenge aims at engaging data scientists to
-build a model able to accurately infer the \acr{ATOW} of a flown flight.
+The \acr{PRC} Data Challenge aims at engaging with data scientists, even without
+Aviation background, to create teams and compete to
+build an **open** \acr{ML} model able to accurately infer the \acr{ATOW} of a
+flown flight.
 
-We look for data scientist teams, even without Aviation background, to participate
-to the challenge in order to compete to develop an **open** model using suitable \acr{ML}
-techniques.
+
 
 ## The Data
 See the [Data page](data.html) for more details.
@@ -21,7 +21,8 @@ DETAILS HERE
 We got many questions about this challenge. We grouped and answered them as follows:
 
 * Why is the challenge focusing on \acr{ATOW}?  
-  \acr{ATOW} is an important input to fuel burnt and gaseous emissions models.
+  \acr{ATOW} is an important input for models estimating fuel burnt and derived
+  gaseous emissions.  
   The current lack of openly available \acr{ATOW} is typically compensated by
   assuming it to be equal to a certain percentage of the \acr{MTOW} for the
   relevant aircraft model.  
@@ -29,29 +30,44 @@ We got many questions about this challenge. We grouped and answered them as foll
   estimate \acr{ATOW}, i.e. an \acr{ETOW}.
 
 * Why an Open model?  
-  The \acr{PRC} (and many other Organizations, industrial actors and academia by the way) is interested
-  in studies assessing the impact of Aviation to Climate Change.
-  To this extent the availability of an open model allows for reproducibility, transparency of
-  the results presented and in the end to trust in the work performed.  
+  The \acr{PRC} (and many other Organizations, industrial actors and academia
+  by the way) is interested in studies assessing the impact of Aviation to
+  Climate Change.
+  To this extent the availability of an open model allows for reproducibility,
+  transparency of the results presented and in the end to **trust** in the
+  performed analyses.
 
-* Why via a Challenge?  
-  The \acr{PRC} thinks that there is a great pool of Data Scientists that could help to define
-  the open model of the Challenge, but above that, it is the importance to have a "white box" approach
-  to the way the model is being built that drove the decision to setup a Data Challenge.
-  This transparency is a way to build trust, reproducibility and eventually evolve a collaboration
-  to improve the understanding of the impact of Aviation to the environment.
+* Why via a Data Challenge?  
+  The \acr{PRC} thinks that there is a great pool of Data Scientists that could
+  help to define the open model of the Challenge, but above that, it is the
+  importance to have a _white box_ approach to the way the model is being built
+  that drove the decision to setup a Data Challenge.  
+  This transparency is a way to build trust, reproducibility and eventually
+  evolve a collaboration to improve the understanding of (and reducing)
+  the impact of Aviation to the environment.
 
 ## Eligibility for Participation
 
 Any data science and/or aviation enthusiast team or individual can participate
 to the challenge.
 
-Please send you team name and list of members to
+Please send a team creation email with the following info:
 
-  ADDRESS TO WHICH REQUEST TEAM CREATION
+1. you team name
+1. list of members (names, eventual affiliations, [at least one for correspondence]
+   email addresses)
+1. (optional but nice to have) who you are
+1. (optional but nice to have) rationale for participation
 
-**NOTE**: Anyone affiliate with OpenSky or EUROCONTROL is not eligible to
-participate to the challenge.
+to
+
+> ADDRESS TO WHICH REQUEST TEAM CREATION
+
+After a little while, you will then receive the relevant access/secret keys
+to acces the relevant [Data](data.html).
+
+**NOTE**: Anyone affiliated with OpenSky Network or EUROCONTROL is not eligible
+to participate to the PRC Data Challenge.
 
 
 ## Acknowledgements
@@ -66,10 +82,10 @@ advise,  data and infrastructure for the challenge:
   - Vueling
 * Opensky Network: \acr{ADS-B} trajectories, hosting of the challenge infrastructure.
   (John Fitzgerald, Allan Tart, Martin Strohmeier, Vincent Lender)
-* TU Delft (Prof Junzi Sun): for wisely pre-processing, enhancing (meteo via
+* Prof Junzi Sun (TU Delft): for wisely pre-processing, enhancing (meteo via
   [fastmeteo][fm]), locally storing OSN trajectories and then making them
   available for the challenge
-* ONERA (Dr Xavier Olive): for advise and the invaluable [traffic][traffic] library
+* Dr Xavier Olive (ONERA): for advise and the invaluable [traffic][traffic] library
 * EUROCONTROL: for providing the relevant flight list (via Network Manager) and
                estimating \acr{TOW} (Aviation Intelligence Unit).
 
