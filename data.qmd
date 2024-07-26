@@ -190,8 +190,10 @@ dataset.
 The dataset files are hosted on \acr{OSN} infrastructure.  
 Upon registration of your team you should have received the relevant
 
-  * team name/ID, i.e. `cucu`
-  * `ACCESS_KEY` and `SECRET_KEY`.  
+  * team name and ID
+  * `BUCKET_ACCESS_KEY` and `BUCKET_ACCESS_SECRET`.
+  
+  
 
 Below you can find the details on how to access the data sets and submit your
 results for ranking.  

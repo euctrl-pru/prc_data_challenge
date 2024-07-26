@@ -55,7 +55,7 @@ We got many questions about this challenge. We grouped and answered them as foll
 Any data science and/or aviation enthusiast team or individual can participate
 to the challenge.
 
-Please send a team creation email with the following info (this will be publicly
+Please send an email for the team creation with the following info (this will be publicly
 visible [apart from emails] in a dedicated teams' page):
 
 1. an \acr{OSN} account ([create one][osnlog] if you do not have it yet)
@@ -69,8 +69,19 @@ to
 
 >   challenge AT opensky-network.org
 
-After a little while later, you will receive the relevant access/secret keys
-to obtain the relevant [Data](data.html) using your \acr{OSN} account.
+A little while later reception, you will receive the relevant access/secret keys
+to obtain the relevant [Data](data.html) using your \acr{OSN} account; something
+like:
+
+```json
+{
+  "team_name": "team_warm_donkey",
+  "team_id": "b8e3a438-d2f2-4a11-bf28-e7a8f84cf3db",
+  "bucket_access_key": "blah",
+  "bucket_access_secret": "blahblah"
+}
+```
+
 
 **NOTE**: Anyone affiliated with OpenSky Network or EUROCONTROL is not eligible
 to participate to the PRC Data Challenge.

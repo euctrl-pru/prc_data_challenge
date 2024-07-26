@@ -12,11 +12,21 @@ for now reading data from Github...when committing there the webpage just works
 
 ```{ojs}
 //| echo: false
-d3 = require('d3')
-ranks = await d3.csv(
-  "https://raw.githubusercontent.com/euctrl-pru/prc_data_challenge/202306-release/rankings.csv"
-)
 
+import { aq, op } from "@uwdata/arquero"; 
+
+url = "https://datacomp.opensky-network.org/api/rankings";
+rrr = await aq.loadJSON(url);
+
+ranks = {
+  aq.addFunction("parse_posix", d3.timeParse("%s"), { override: true });
+
+  let r = rrr
+    // .derive({ submission_date: (d) => op.parse_posix(d.timestamp) })
+    .orderby("rank")
+    .select("team_name", "rank", "file_version", "mse");
+  return r;
+}
 Inputs.table(ranks, { sort: "ranks"})
 ```
 
