@@ -393,13 +393,26 @@ You will have to use your team `bucket_access_key` and `bucket_access_secret`.
 The [RANKING PAGE][ranking] will be automatically updated every 30 minutes.  
 Eventually manually **reload it**, please.
 
-You can also get a JSON file with the rankings as:
+You can also get a JSON file with the rankings as (`| jq` only for pretty printing):
 
 ```
 $ curl -X 'GET' \
   'https://datacomp.opensky-network.org/api/rankings' \
-  -H 'accept: application/json'
-[{"mse":9.752328117373766E9,"rank":1,"competitor_id":"team1","file_name":"team1_submission_1720690930.csv.gz"},{"mse":9.752339084652348E9,"rank":2,"competitor_id":"team2","file_name":"team2_submission_1720690929.csv.gz"}]
+  -H 'accept: application/json' | jq
+[
+  {
+    "mse": 9752328117.3738,
+    "rank": 1,
+    "team_name": "team_radiant_xerox",
+    "file_version": "v2"
+  },
+  {
+    "mse": 9752339084.6523,
+    "rank": 2,
+    "team_name": "team_bold_xylophone",
+    "file_version": "v1"
+  }
+]
 ```
 
 [ranking]: <https://datacomp.opensky-network.org/results> "PRC Data Challenge ranking page"
