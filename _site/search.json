@@ -137,6 +137,6 @@
     "href": "rankings.html",
     "title": "Rankings",
     "section": "",
-    "text": "import { aq, op } from \"@uwdata/arquero\"; \n\nurl = \"https://datacomp.opensky-network.org/api/rankings\";\nrrr = await aq.loadJSON(url);\n\nranks = {\n  aq.addFunction(\"parse_posix\", d3.timeParse(\"%s\"), { override: true });\n\n  let r = rrr\n    // .derive({ submission_date: (d) =&gt; op.parse_posix(d.timestamp) })\n    .orderby(\"rank\")\n    .select(\"team_name\", \"rank\", \"file_version\", \"mse\");\n  return r;\n}\nInputs.table(ranks, { sort: \"ranks\"})"
+    "text": "Credit: PRC Data Challenge 2024 Rankings by Enrico Spinielli"
   }
 ]

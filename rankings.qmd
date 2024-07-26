@@ -8,23 +8,13 @@ acronyms:
 ---
 
 
-```{ojs}
-//| echo: false
+<div id="observablehq-ranking_table-4cdeabee"></div>
 
-import { aq, op } from "@uwdata/arquero"; 
-
-url = "https://datacomp.opensky-network.org/api/rankings";
-rrr = await aq.loadJSON(url);
-
-ranks = {
-  aq.addFunction("parse_posix", d3.timeParse("%s"), { override: true });
-
-  let r = rrr
-    // .derive({ submission_date: (d) => op.parse_posix(d.timestamp) })
-    .orderby("rank")
-    .select("team_name", "rank", "file_version", "mse");
-  return r;
-}
-Inputs.table(ranks, { sort: "ranks"})
-```
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/@espinielli/prc-data-challenge-2024-rankings@129.js?v=4";
+new Runtime().module(define, name => {
+  if (name === "ranking_table") return new Inspector(document.querySelector("#observablehq-ranking_table-4cdeabee"));
+});
+</script>
