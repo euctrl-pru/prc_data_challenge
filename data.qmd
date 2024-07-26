@@ -20,7 +20,19 @@ acronyms:
     - _acronyms.yml
 ---
 
-## Data for modeling
+The participating teams will have access to two S3 buckets as follows:
+
+```text
+competition-data/
+└── ...
+submissions/
+└── ...
+```
+
+The `competition-data` bucket contains the [data for modeling](#data-for-modeling)
+while `submissions` holds the teams' submission for [ranking](#ranking).
+
+## Data for modeling {#data-for-modeling}
 
 We propose two data sets:
 
@@ -45,7 +57,11 @@ submissions/
 Each daily trajectory parquet file contains (\acr{ADS-B} based) flown trajectories
 augmented with meteo information[^1].
 
-The `competition-data` is the S3 bucket as set up by \acr{OSN} for the Challenge.
+The S3 bucket `competition-data` contains
+
+1. the flight list, `challenge_set.csv`
+1. the daily trajectories, `2022-01-02.parquet` ...
+1. the submission template, `submission_set.csv`
 
 [^1]: from [Google's Analysis-Ready, Cloud Optimized (ARCO) ERA5][google-era5]:  
 ERA5 is the fifth generation of the [\acr{ECMWF}][ecmwf]
@@ -299,8 +315,8 @@ for obj in s3.s3client.list_objects("competition-data", recursive=True):
 For ranking you'll need to upload your
 `<team>_submission_<POSIX timestamp>.csv`  file with the estimated TOWs.
 
-The [RANKING PAGE][ranking] will be automatically updated every 30 minutes.
-Please eventually manually **reload it**.
+The [RANKING PAGE][ranking] will be automatically updated every 30 minutes.  
+Eventually manually **reload it**, please.
 
 You can also get a JSON file with the rankings as:
 

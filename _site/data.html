@@ -214,6 +214,12 @@ window.Quarto = {
 </header>
 
 
+<p>The participating teams will have access to two S3 buckets as follows:</p>
+<pre class="text"><code>competition-data/
+└── ...
+submissions/
+└── ...</code></pre>
+<p>The <code>competition-data</code> bucket contains the <a href="#data-for-modeling">data for modeling</a> while <code>submissions</code> holds the teams’ submission for <a href="#ranking">ranking</a>.</p>
 <section id="data-for-modeling" class="level2">
 <h2 class="anchored" data-anchor-id="data-for-modeling">Data for modeling</h2>
 <p>We propose two data sets:</p>
@@ -233,7 +239,12 @@ submissions/
 ├── cucu_submission_1720690111.csv.gz
 └── ...</code></pre>
 <p>Each daily trajectory parquet file contains (<a href="#acronyms_ADS-B">Automatic Dependent Surveillance–Broadcast (ADS-B)</a> based) flown trajectories augmented with meteo information<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
-<p>The <code>competition-data</code> is the S3 bucket as set up by <a href="#acronyms_OSN">OSN</a> for the Challenge.</p>
+<p>The S3 bucket <code>competition-data</code> contains</p>
+<ol type="1">
+<li>the flight list, <code>challenge_set.csv</code></li>
+<li>the daily trajectories, <code>2022-01-02.parquet</code> …</li>
+<li>the submission template, <code>submission_set.csv</code></li>
+</ol>
 <section id="flight-list" class="level3">
 <h3 class="anchored" data-anchor-id="flight-list">Flight List</h3>
 <p>The flight list provides details such as (<code>column names</code> in parenthesis, [<em>units</em>] in italic in square brackets when appropriate):</p>
@@ -370,13 +381,13 @@ secret_key = SECRET_KEY</code></pre>
 <section id="readwrite-data-1" class="level4">
 <h4 class="anchored" data-anchor-id="readwrite-data-1">Read/Write Data</h4>
 <p>The following code allows to download the challenge files</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyopensky.s3 <span class="im">import</span> S3Client</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>s3 <span class="op">=</span> S3Client()</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> obj <span class="kw">in</span> s3.s3client.list_objects(<span class="st">"competition-data"</span>, recursive<span class="op">=</span><span class="va">True</span>):</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>     <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>obj<span class="sc">.</span>bucket_name<span class="op">=</span><span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>obj<span class="sc">.</span>object_name<span class="op">=</span><span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>     s3.download_object(obj)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyopensky.s3 <span class="im">import</span> S3Client</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>s3 <span class="op">=</span> S3Client()</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> obj <span class="kw">in</span> s3.s3client.list_objects(<span class="st">"competition-data"</span>, recursive<span class="op">=</span><span class="va">True</span>):</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>     <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>obj<span class="sc">.</span>bucket_name<span class="op">=</span><span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>obj<span class="sc">.</span>object_name<span class="op">=</span><span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>     s3.download_object(obj)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 <section id="using-traffic" class="level3">
@@ -386,7 +397,8 @@ secret_key = SECRET_KEY</code></pre>
 <section id="ranking" class="level2">
 <h2 class="anchored" data-anchor-id="ranking">Ranking</h2>
 <p>For ranking you’ll need to upload your <code>&lt;team&gt;_submission_&lt;POSIX timestamp&gt;.csv</code> file with the estimated TOWs.</p>
-<p>The <a href="https://datacomp.opensky-network.org/results" title="PRC Data Challenge ranking page">RANKING PAGE</a> will be automatically updated every 30 minutes. Please eventually manually <strong>reload it</strong>.</p>
+<p>The <a href="https://datacomp.opensky-network.org/results" title="PRC Data Challenge ranking page">RANKING PAGE</a> will be automatically updated every 30 minutes.<br>
+Eventually manually <strong>reload it</strong>, please.</p>
 <p>You can also get a JSON file with the rankings as:</p>
 <pre><code>$ curl -X 'GET' \
   'https://datacomp.opensky-network.org/api/rankings' \

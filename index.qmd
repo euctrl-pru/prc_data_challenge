@@ -14,7 +14,11 @@ See the [Data page](data.html) for more details.
 
 ## The Prize
 
-DETAILS HERE
+A total prize of $5000$ EUR will be distributed among the finalists' teams.
+Each finalist will receive a prize to acknowledge their innovative ideas and
+contributions towards solving the posed challenge problem.
+
+
 
 ## The why of Why
 
@@ -51,24 +55,28 @@ We got many questions about this challenge. We grouped and answered them as foll
 Any data science and/or aviation enthusiast team or individual can participate
 to the challenge.
 
-Please send a team creation email with the following info:
+Please send a team creation email with the following info (this will be publicly
+visible [apart from emails] in a dedicated teams' page):
 
-1. you team name
+1. an \acr{OSN} account ([create one][osnlog] if you do not have it yet)
+1. team name
 1. list of members (names, eventual affiliations, [at least one for correspondence]
    email addresses)
-1. (optional but nice to have) who you are
-1. (optional but nice to have) rationale for participation
+1. who you are
+1. rationale for participation
 
 to
 
-> ADDRESS TO WHICH REQUEST TEAM CREATION
+>   challenge AT opensky-network.org
 
-After a little while, you will then receive the relevant access/secret keys
-to acces the relevant [Data](data.html).
+After a little while later, you will receive the relevant access/secret keys
+to obtain the relevant [Data](data.html) using your \acr{OSN} account.
 
 **NOTE**: Anyone affiliated with OpenSky Network or EUROCONTROL is not eligible
 to participate to the PRC Data Challenge.
 
+
+[osnlog]: <https://opensky-network.org/index.php?option=com_users&view=login> "OSN login"
 
 ## Acknowledgements
 

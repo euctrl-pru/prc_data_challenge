@@ -67,6 +67,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -158,7 +187,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="the-prize" class="level2">
 <h2 class="anchored" data-anchor-id="the-prize">The Prize</h2>
-<p>DETAILS HERE</p>
+<p>A total prize of <span class="math inline">\(5000\)</span> EUR will be distributed among the finalists’ teams. Each finalist will receive a prize to acknowledge their innovative ideas and contributions towards solving the posed challenge problem.</p>
 </section>
 <section id="the-why-of-why" class="level2">
 <h2 class="anchored" data-anchor-id="the-why-of-why">The why of Why</h2>
@@ -178,18 +207,19 @@ This transparency is a way to build trust, reproducibility and eventually evolve
 <section id="eligibility-for-participation" class="level2">
 <h2 class="anchored" data-anchor-id="eligibility-for-participation">Eligibility for Participation</h2>
 <p>Any data science and/or aviation enthusiast team or individual can participate to the challenge.</p>
-<p>Please send a team creation email with the following info:</p>
+<p>Please send a team creation email with the following info (this will be publicly visible [apart from emails] in a dedicated teams’ page):</p>
 <ol type="1">
-<li>you team name</li>
+<li>an <a href="#acronyms_OSN">OpenSky Network (OSN)</a> account (<a href="https://opensky-network.org/index.php?option=com_users&amp;view=login" title="OSN login">create one</a> if you do not have it yet)</li>
+<li>team name</li>
 <li>list of members (names, eventual affiliations, [at least one for correspondence] email addresses)</li>
-<li>(optional but nice to have) who you are</li>
-<li>(optional but nice to have) rationale for participation</li>
+<li>who you are</li>
+<li>rationale for participation</li>
 </ol>
 <p>to</p>
 <blockquote class="blockquote">
-<p>ADDRESS TO WHICH REQUEST TEAM CREATION</p>
+<p>challenge AT opensky-network.org</p>
 </blockquote>
-<p>After a little while, you will then receive the relevant access/secret keys to acces the relevant <a href="data.html">Data</a>.</p>
+<p>After a little while later, you will receive the relevant access/secret keys to obtain the relevant <a href="data.html">Data</a> using your <a href="#acronyms_OSN">OSN</a> account.</p>
 <p><strong>NOTE</strong>: Anyone affiliated with OpenSky Network or EUROCONTROL is not eligible to participate to the PRC Data Challenge.</p>
 </section>
 <section id="acknowledgements" class="level2">
@@ -218,6 +248,7 @@ This transparency is a way to build trust, reproducibility and eventually evolve
 <p><strong><span id="acronyms_ETOW">ETOW</span></strong>: Estimated TakeOff Weight</p>
 <p><strong><span id="acronyms_ML">ML</span></strong>: Machine Learning</p>
 <p><strong><span id="acronyms_MTOW">MTOW</span></strong>: Maximum TakeOff Weight</p>
+<p><strong><span id="acronyms_OSN">OSN</span></strong>: OpenSky Network</p>
 <p><strong><span id="acronyms_PRC">PRC</span></strong>: Performance Review Commission</p>
 <p><strong><span id="acronyms_TOW">TOW</span></strong>: TakeOff Weight</p>
 </div>
