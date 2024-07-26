@@ -60,7 +60,7 @@
     "href": "data.html#ranking",
     "title": "Data",
     "section": "Ranking",
-    "text": "Ranking\nFor ranking you’ll need to upload your &lt;team&gt;_submission_&lt;POSIX timestamp&gt;.csv file with the estimated TOWs.\nThe RANKING PAGE will be automatically updated every 30 minutes.\nEventually manually reload it, please.\nYou can also get a JSON file with the rankings as:\n$ curl -X 'GET' \\\n  'https://datacomp.opensky-network.org/api/rankings' \\\n  -H 'accept: application/json'\n[{\"mse\":9.752328117373766E9,\"rank\":1,\"competitor_id\":\"team1\",\"file_name\":\"team1_submission_1720690930.csv.gz\"},{\"mse\":9.752339084652348E9,\"rank\":2,\"competitor_id\":\"team2\",\"file_name\":\"team2_submission_1720690929.csv.gz\"}]"
+    "text": "Ranking\nFor ranking you’ll need to upload your estimated TOWs for all the flight IDs as in the competition-data/submission_set.csv to the submissions bucket in a file named\n{team_name}_v{num}_{team_id}.csv.gz\nwhere you are responsible to increase accordingly num for each of your submissions.\nYou will have to use your team bucket_access_key and bucket_access_secret.\nThe RANKING PAGE will be automatically updated every 30 minutes.\nEventually manually reload it, please.\nYou can also get a JSON file with the rankings as:\n$ curl -X 'GET' \\\n  'https://datacomp.opensky-network.org/api/rankings' \\\n  -H 'accept: application/json'\n[{\"mse\":9.752328117373766E9,\"rank\":1,\"competitor_id\":\"team1\",\"file_name\":\"team1_submission_1720690930.csv.gz\"},{\"mse\":9.752339084652348E9,\"rank\":2,\"competitor_id\":\"team2\",\"file_name\":\"team2_submission_1720690929.csv.gz\"}]"
   },
   {
     "objectID": "data.html#footnotes",

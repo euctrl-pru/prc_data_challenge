@@ -450,7 +450,10 @@ secret_key = SECRET_KEY</code></pre>
 </section>
 <section id="ranking" class="level2">
 <h2 class="anchored" data-anchor-id="ranking">Ranking</h2>
-<p>For ranking you’ll need to upload your <code>&lt;team&gt;_submission_&lt;POSIX timestamp&gt;.csv</code> file with the estimated TOWs.</p>
+<p>For ranking you’ll need to upload your estimated TOWs for all the flight IDs as in the <code>competition-data/submission_set.csv</code> to the <code>submissions</code> bucket in a file named</p>
+<p><code>{team_name}_v{num}_{team_id}.csv.gz</code></p>
+<p>where you are responsible to increase accordingly <code>num</code> for each of your submissions.</p>
+<p>You will have to use your team <code>bucket_access_key</code> and <code>bucket_access_secret</code>.</p>
 <p>The <a href="https://datacomp.opensky-network.org/results" title="PRC Data Challenge ranking page">RANKING PAGE</a> will be automatically updated every 30 minutes.<br>
 Eventually manually <strong>reload it</strong>, please.</p>
 <p>You can also get a JSON file with the rankings as:</p>

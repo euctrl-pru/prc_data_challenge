@@ -378,8 +378,17 @@ with plt.style.context("traffic"):
 
 
 ## Ranking
-For ranking you'll need to upload your
-`<team>_submission_<POSIX timestamp>.csv`  file with the estimated TOWs.
+For ranking you'll need to upload your estimated TOWs for
+all the flight IDs as in the `competition-data/submission_set.csv`
+to the `submissions` bucket in a file named
+
+`{team_name}_v{num}_{team_id}.csv.gz`
+
+where you are responsible to increase accordingly `num` for each of your
+submissions.
+
+You will have to use your team `bucket_access_key` and `bucket_access_secret`.
+
 
 The [RANKING PAGE][ranking] will be automatically updated every 30 minutes.  
 Eventually manually **reload it**, please.
