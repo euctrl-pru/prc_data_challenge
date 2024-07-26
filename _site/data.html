@@ -219,7 +219,7 @@ window.Quarto = {
 └── ...
 submissions/
 └── ...</code></pre>
-<p>The <code>competition-data</code> bucket contains the <a href="#data-for-modeling">data for modeling</a> while <code>submissions</code> holds the teams’ submission for <a href="#ranking">ranking</a>.</p>
+<p>The <code>competition-data</code> bucket contains the <a href="#data-for-modeling">data for modeling</a>, while <code>submissions</code> holds the teams’ submission for <a href="#ranking">ranking</a>.</p>
 <section id="data-for-modeling" class="level2">
 <h2 class="anchored" data-anchor-id="data-for-modeling">Data for modeling</h2>
 <p>We propose two data sets:</p>
@@ -277,8 +277,8 @@ submissions/
 <li><code>temperature</code> [<span class="math inline">\(K\)</span>, kelvin]</li>
 </ul></li>
 </ul>
-<p>The daily file <code>&lt;yyyy-mm-dd&gt;.parquet</code> includes all position reports on (UTC) <code>&lt;yyyy-mm-dd&gt;</code> date, it then can happen that flight portions be present in consecutive files, i.e.&nbsp;the same <code>flight_id</code> will occur in more than one daily file because the flight took place across the (UTC) midnight.</p>
-<p><strong>NOTE</strong>: trajectories are not necessarily complete/overlapping with respect to what reported in the flight list in <code>actual_offblock_time</code> or <code>arrival_time</code>. This is due to the possibly limited/partial <a href="#acronyms_ADS-B">ADS-B</a> coverage in some parts (or some lower altitudes) of the world.</p>
+<p>The daily file <code>&lt;yyyy-mm-dd&gt;.parquet</code> includes all position reports on (UTC) <code>&lt;yyyy-mm-dd&gt;</code> date; it can happen that flight portions be present in consecutive files, i.e.&nbsp;the same <code>flight_id</code> will occur in more than one daily file because the flight took place across the (UTC) midnight.</p>
+<p><strong>NOTE</strong>: trajectories are not necessarily complete/overlapping with respect to what reported in the flight list in <code>actual_offblock_time</code> or <code>arrival_time</code>. This is due to the possibly limited/partial <a href="#acronyms_ADS-B">ADS-B</a> coverage in some parts (or some lower altitudes) of the world. The interval <code>[actual_offblock_time + taxiout_time, arrival_time]</code> is a good approximation of the in-the-air portion of the flight.</p>
 <p>Further info material:</p>
 <ul>
 <li>Track in aviation: <a href="https://skybrary.aero/articles/heading-track-and-radial" title="Heading, Track and Radial">SkyBrary page</a></li>
@@ -290,7 +290,7 @@ submissions/
 <p>Our gut feelings say that <a href="#acronyms_ATOW">Actual TakeOff Weight (ATOW)</a> depends in some forms from:</p>
 <ul>
 <li>origin/destination: the <a href="https://en.wikipedia.org/wiki/Great-circle_distance" title="Great Circle Distance">great circle distance</a> is of course a factor in terms of how much fuel you will have to tank and hence the take-off weight.<br>
-Also <a href="#acronyms_ADEP">ADEP</a> or <a href="#acronyms_ADES">ADES</a> are important because of specific local procedures.<br>
+<a href="#acronyms_ADEP">ADEP</a> or <a href="#acronyms_ADES">ADES</a> are important because of specific local procedures.<br>
 <a href="#acronyms_ADEP">ADEP</a>/<a href="#acronyms_ADES">ADES</a> could also be important because different <a href="#acronyms_AO">AO</a>s plan and execute flights differently from/to the same airport.</li>
 <li>timing: when you execute a flight, i.e.&nbsp;morning/evening/night, weekly patterns, seasonal trends, local time (?), flight duration calculation, could be a factor to consider</li>
 <li>aircraft: of course the (ICAO) type will imply different amounts of fuel needed,</li>
@@ -318,8 +318,7 @@ Upon registration of your team you should have received the relevant</p>
 <li>team name and ID</li>
 <li><code>BUCKET_ACCESS_KEY</code> and <code>BUCKET_ACCESS_SECRET</code>.</li>
 </ul>
-<p>Below you can find the details on how to access the data sets and submit your results for ranking.<br>
-The S3 buckets as</p>
+<p>Below you can find the details on how to access the data sets and submit your results for ranking.</p>
 <section id="using-minio-client" class="level3">
 <h3 class="anchored" data-anchor-id="using-minio-client">Using MinIO Client</h3>
 <section id="pre-requisites" class="level4">
@@ -392,6 +391,61 @@ secret_key = SECRET_KEY</code></pre>
 </section>
 <section id="using-traffic" class="level3">
 <h3 class="anchored" data-anchor-id="using-traffic">Using <code>traffic</code></h3>
+<p>You can explore the trajectory data using the <a href="https://traffic-viz.github.io/" title="traffic - air traffic data processing with Python"><code>traffic</code></a> in a Python notebook.</p>
+<p>For example you can load one of the daily trajectory files</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tqdm <span class="im">import</span> TqdmExperimentalWarning</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">"ignore"</span>, category<span class="op">=</span>TqdmExperimentalWarning)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">"ignore"</span>, category<span class="op">=</span><span class="pp">FutureWarning</span>)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> traffic.core <span class="im">import</span> Traffic</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> timedelta</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.dates <span class="im">import</span> DateFormatter</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> Traffic.from_file(<span class="st">'2022-01-01.parquet'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>plot the list of flights</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>t</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="media/flights.png" class="img-fluid figure-img" style="width:6cm"></p>
+<figcaption>daily flights</figcaption>
+</figure>
+</div>
+<p>a 2D map</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>trj <span class="op">=</span> t[<span class="dv">11</span>]</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>trj</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="media/flight_map.png" class="img-fluid figure-img" style="width:10cm"></p>
+<figcaption>map of a flight</figcaption>
+</figure>
+</div>
+<p>and finally a vertical profile with ground speed:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> plt.style.context(<span class="st">"traffic"</span>):</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">7</span>))</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    (</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>        trj</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>        .plot_time(</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>            ax<span class="op">=</span>ax,</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>            y<span class="op">=</span>[<span class="st">"altitude"</span>, <span class="st">"groundspeed"</span>],</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>            secondary_y<span class="op">=</span>[<span class="st">"groundspeed"</span>]</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">""</span>)</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>    ax.tick_params(axis<span class="op">=</span><span class="st">'x'</span>, labelrotation<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>    ax.xaxis.set_major_formatter(DateFormatter(<span class="st">"%H:%M"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="media/trj11.png" style="height:10cm" class="figure-img"></p>
+<figcaption>vertical profile of a flight</figcaption>
+</figure>
+</div>
 </section>
 </section>
 <section id="ranking" class="level2">

@@ -29,7 +29,7 @@ submissions/
 └── ...
 ```
 
-The `competition-data` bucket contains the [data for modeling](#data-for-modeling)
+The `competition-data` bucket contains the [data for modeling](#data-for-modeling),
 while `submissions` holds the teams' submission for [ranking](#ranking).
 
 ## Data for modeling {#data-for-modeling}
@@ -124,7 +124,7 @@ The daily trajectory files contain:
   - `temperature` [$K$, kelvin]
 
 The daily file `<yyyy-mm-dd>.parquet` includes all position reports on
-(UTC) `<yyyy-mm-dd>` date, it then can happen that flight portions be present
+(UTC) `<yyyy-mm-dd>` date; it can happen that flight portions be present
 in consecutive files, i.e. the same `flight_id` will occur in more than one 
 daily file because the flight took place across the (UTC) midnight.
 
@@ -132,7 +132,8 @@ daily file because the flight took place across the (UTC) midnight.
 what reported in the flight list in `actual_offblock_time` or `arrival_time`.
 This is due to the possibly limited/partial  \acr{ADS-B} coverage in some parts
 (or some lower altitudes) of the world.
-
+The interval `[actual_offblock_time + taxiout_time, arrival_time]` is a good
+approximation of the in-the-air portion of the flight.
 
 Further info material:
 
@@ -148,12 +149,12 @@ Our gut feelings say that \acr{ATOW} depends in some forms from:
 
 * origin/destination: the [great circle distance][gcd] is of course a factor in terms
   of how much fuel you will have to tank and hence the take-off weight.  
-  Also \acr{ADEP} or \acr{ADES} are important because of specific local procedures.  
+  \acr{ADEP} or \acr{ADES} are important because of specific local procedures.  
   \acr{ADEP}/\acr{ADES} could also be important because different
   \acr{AO}s plan and execute flights differently from/to the same airport.
 * timing: when you execute a flight, i.e. morning/evening/night, weekly patterns,
-  seasonal trends, local time (?),
-  flight duration calculation, could be a factor to consider
+  seasonal trends, local time (?), flight duration calculation, 
+  could be a factor to consider
 * aircraft: of course the (ICAO) type will imply different amounts of fuel needed,
 * airline: policies varies, for example for same city-pair one airline could select
   different alternates from another airline depending on their technical support
@@ -197,7 +198,6 @@ Upon registration of your team you should have received the relevant
 
 Below you can find the details on how to access the data sets and submit your
 results for ranking.  
-The S3 buckets as 
 
 ### Using MinIO Client
 
@@ -312,6 +312,70 @@ for obj in s3.s3client.list_objects("competition-data", recursive=True):
 
 
 ### Using `traffic`
+
+You can explore the trajectory data using the [`traffic`][traffic] in
+a Python notebook.
+
+For example you can load one of the daily trajectory files 
+
+```python
+import warnings
+from tqdm import TqdmExperimentalWarning
+
+warnings.filterwarnings("ignore", category=TqdmExperimentalWarning)
+warnings.filterwarnings("ignore", category=FutureWarning)
+
+from traffic.core import Traffic
+from datetime import timedelta
+
+import matplotlib.pyplot as plt
+from matplotlib.dates import DateFormatter
+
+t = Traffic.from_file('2022-01-01.parquet')
+```
+
+plot the list of flights
+
+```python
+t
+```
+
+![daily flights](media/flights.png){width=6cm}
+ 
+a 2D map
+
+```python
+trj = t[11]
+trj
+```
+
+![map of a flight](media/flight_map.png){width=10cm}
+
+and finally a vertical profile with ground speed:
+
+```python
+with plt.style.context("traffic"):
+
+    fig, ax = plt.subplots(figsize=(10, 7))
+
+    (
+        trj
+        .plot_time(
+            ax=ax,
+            y=["altitude", "groundspeed"],
+            secondary_y=["groundspeed"]
+        )
+    )
+
+    ax.set_xlabel("")
+    ax.tick_params(axis='x', labelrotation=0)
+    ax.xaxis.set_major_formatter(DateFormatter("%H:%M"))
+```
+
+![vertical profile of a flight](media/trj11.png){height=10cm}
+
+[traffic]: <https://traffic-viz.github.io/> "traffic - air traffic data processing with Python"
+
 
 ## Ranking
 For ranking you'll need to upload your
