@@ -274,9 +274,6 @@ From the command line you can
     $ mc cp --recursive dc24/competition-data/  my-local-directory/
     ```
 
-**NOTE**: no team can list the content of the `submissions/` bucket; and team
-`<team_name>`  can only submit files in the format `<team_name>_v<num>_<team_id>.csv`
-
 [mc]: <https://min.io/docs/minio/linux/reference/minio-mc.html#> "MinIO Client"
 [install]: <https://min.io/docs/minio/linux/reference/minio-mc.html#install-mc> "mc install"
 
