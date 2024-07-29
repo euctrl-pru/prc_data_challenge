@@ -10,7 +10,7 @@ flown flight.
 
 
 ## The Data
-See the [Data page](challenge-data.html) for more details.
+See the [Data page](./challenge-data.html) for more details.
 
 ## The Prize
 
@@ -76,7 +76,7 @@ to
 >   challenge AT opensky-network.org
 
 A little while later reception, you will receive the relevant access/secret keys
-to obtain the [Data](challenge-data.html) using your \acr{OSN} account; something
+to obtain the [Data](./challenge-data.html) using your \acr{OSN} account; something
 like:
 
 ```json
