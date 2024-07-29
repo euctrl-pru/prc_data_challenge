@@ -152,7 +152,7 @@ Our gut feelings say that \acr{ATOW} depends in some forms from:
 * timing: when you execute a flight, i.e. morning/evening/night, weekly patterns,
   seasonal trends (IATA season schedule[^iataseason]), local time (?), flight duration calculation, 
   could be a factor to consider
-* aircraft: of course the (ICAO) type will imply different amounts of fuel needed,
+* aircraft: the (ICAO) type[^engine] will imply different amounts of fuel needed,
 * airline: policies varies, for example for same city-pair one airline could select
   different alternates from another airline depending on their technical support
   facilities/contracts.  
@@ -165,11 +165,15 @@ Our gut feelings say that \acr{ATOW} depends in some forms from:
 
 
 [gcd]: <https://en.wikipedia.org/wiki/Great-circle_distance> "Great Circle Distance"
+
 [^iataseason]: IATA Summer schedule for year `YYYY` begins on the last Sunday of
 March `YYYY` and ends on the last Saturday of October `YYYY`.  
 IATA Winter schedule for year `YYYY` begins on the Sunday after the last Saturday
 of October `YYYY` and ends on the Saturday before last Sunday of
 March `YYYY + 1`.
+[^engine]: and possibly the engine types/age, but these are unfortunately not
+included in the [Data for modeling](#data-for-modeling) dataset.
+
 
 ## Dataset for submission
 
