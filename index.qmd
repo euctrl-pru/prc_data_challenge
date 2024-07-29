@@ -1,0 +1,112 @@
+---
+title: "PRC Data Challenge"
+---
+
+The \acr{PRC} Data Challenge aims at engaging with data scientists, even without
+Aviation background, to create teams and compete to
+build an **open** \acr{ML} model able to accurately infer the \acr{ATOW} of a
+flown flight.
+
+
+
+## The Data
+See the [Data page](data.html) for more details.
+
+## The Prize
+
+A total prize of $5000$ EUR will be distributed among the finalists' teams.
+Each finalist will receive a prize to acknowledge their innovative ideas and
+contributions towards solving the posed challenge problem.
+
+
+
+## The why of Why
+
+We got many questions about this challenge. We grouped and answered them as follows:
+
+* Why is the challenge focusing on \acr{ATOW}?  
+  \acr{ATOW} is an important input for models estimating fuel burnt and derived
+  gaseous emissions.  
+  The current lack of openly available \acr{ATOW} is typically compensated by
+  assuming it to be equal to a certain percentage of the \acr{MTOW} for the
+  relevant aircraft model.  
+  With this challenge we aim at making available a better way to
+  estimate \acr{ATOW}, i.e. an \acr{ETOW}.
+
+* Why an Open model?  
+  The \acr{PRC} (and many other Organizations, industrial actors and academia
+  by the way) is interested in studies assessing the impact of Aviation to
+  Climate Change.
+  To this extent the availability of an open model allows for reproducibility,
+  transparency of the results presented and in the end to **trust** in the
+  performed analyses.
+
+* Why via a Data Challenge?  
+  The \acr{PRC} thinks that there is a great pool of Data Scientists that could
+  help to define the open model of the Challenge, but above that, it is the
+  importance to have a _white box_ approach to the way the model is being built.  
+  This transparency is a way to build trust, reproducibility and eventually
+  evolve a collaboration to improve the understanding (and the reduction) of
+  the impact of Aviation to the environment.
+
+## Eligibility for Participation
+
+Any data science and/or aviation enthusiast team or individual can participate
+to the challenge.
+
+Please send an email for the team creation with the following info (this will be publicly
+visible [apart from emails] in a dedicated teams' page):
+
+1. an \acr{OSN} account ([create one][osnlog] if you do not have it yet)
+1. team name
+1. list of members (names, eventual affiliations, [at least one for correspondence]
+   email addresses)
+1. who you are
+1. rationale for participation
+
+to
+
+>   challenge AT opensky-network.org
+
+A little while later reception, you will receive the relevant access/secret keys
+to obtain the [Data](data.html) using your \acr{OSN} account; something
+like:
+
+```json
+{
+  "team_name": "team_warm_donkey",
+  "team_id": "b8e3a438-d2f2-4a11-bf28-e7a8f84cf3db",
+  "bucket_access_key": "blah",
+  "bucket_access_secret": "blahblah"
+}
+```
+
+
+**NOTE**: Anyone affiliated with OpenSky Network or EUROCONTROL is not eligible
+to participate to the PRC Data Challenge.
+
+
+[osnlog]: <https://opensky-network.org/index.php?option=com_users&view=login> "OSN login"
+
+## Acknowledgements
+
+We would like to praise the following organisations, companies
+and individuals for their participation and support in the provision of
+advise,  data and infrastructure for the challenge:
+
+* Airlines:
+  - Austrian Airlines
+  - Swiss
+  - Vueling
+* Opensky Network: \acr{ADS-B} trajectories, hosting of the challenge infrastructure.
+  (John Fitzgerald, Allan Tart, Martin Strohmeier, Vincent Lender)
+* Prof Junzi Sun (TU Delft): for wisely pre-processing, enhancing (meteo via
+  [fastmeteo][fm]), locally storing OSN trajectories and then making them
+  available for the challenge
+* Dr Xavier Olive (ONERA): for advise and the invaluable [traffic][traffic] library
+* EUROCONTROL: for providing the relevant flight list (via Network Manager) and
+               estimating \acr{TOW} (Aviation Intelligence Unit).
+
+
+[fm]: <https://github.com/open-aviation/fastmeteo> "fastmeteo Python library"
+[traffic]: <https://github.com/open-aviation/fastmeteo> "traffic Python library"

@@ -1,0 +1,455 @@
+---
+title: "Data"
+format:
+  html: 
+    toc: true
+    toc-depth: 2
+acronyms:
+  loa_title: "List of Acronyms"
+  include_unused: false
+  insert_loa: "end"
+  insert_links: true
+  id_prefix: "acronyms_"
+  sorting: "alphabetical"
+  non_existing: "key"
+  # style: "long-short"
+  loa_format: '`**{shortname}**: {longname}`{=raw}'
+  loa_header_classes:
+  - unnumbered
+  fromfile:
+    - _acronyms.yml
+---
+
+The participating teams will have access to two S3 buckets as follows:
+
+```text
+competition-data/
+└── ...
+submissions/
+└── ...
+```
+
+The `competition-data` bucket contains the [data for modeling](#data-for-modeling),
+while `submissions` holds the teams' submission for [ranking](#ranking).
+The `submissions` will not show up when listing the buckets with a team's account,
+nevertheless it is present for submission and ranking, see the [Ranking](#ranking) section.
+
+## Data for modeling {#data-for-modeling}
+
+We propose two data sets:
+
+1. a flight list of (a subset of) flights (partially) flown in Europe in 2022
+1. the relevant trajectories for the above flights as recorded/processed by \acr{OSN}
+
+The data sets for the challenge are organized as follows:
+
+```text
+competition-data/
+├── 2022-01-01.parquet
+├── 2022-01-02.parquet
+├── ...
+├── challenge_set.csv
+└── submission_set.csv
+```
+
+Each daily trajectory parquet file contains (\acr{ADS-B} based) flown trajectories
+augmented with meteo information[^1].
+
+The S3 bucket `competition-data` contains
+
+1. the flight list, `challenge_set.csv`
+1. the daily trajectories, `2022-01-01.parquet`, `2022-01-02.parquet`, ...
+1. the submission template, `submission_set.csv`
+
+[^1]: from [Google's Analysis-Ready, Cloud Optimized (ARCO) ERA5][google-era5]:  
+ERA5 is the fifth generation of the [\acr{ECMWF}][ecmwf]
+Atmospheric Reanalysis, providing hourly estimates of a large number of atmospheric, land, and oceanic climate variables.  
+The Google Cloud Public Dataset Program hosts ERA5 data that spans from 1940 to recent days,
+covering the Earth on a 30 km grid and resolves the atmosphere using 137 levels from
+the surface up to a height of 80 km.
+
+[google-era5]: <https://cloud.google.com/storage/docs/public-datasets/era5> "Google's ERA5"
+[ecmwf]: <https://www.ecmwf.int/>
+
+
+
+### Flight List
+The flight list provides details such as (`column names` in parenthesis, [_units_]
+in italic in square brackets when appropriate):
+
+* flight identification: unique ID (`flight_id`), (obfuscated) callsign (`callsign`)
+* origin/destination: \acr{ADEP} (`adep` [_ICAO code_]), \acr{ADES} (`ades` [_ICAO code_])
+  and ancillary info, i.e. airport name (`name_adep`, `name_ades`) and 
+  country code (`country_code_adep`, `country_code_ades` [_ISO2C_])
+* timing: date of flight (`date` [_ISO 8601 UTC date_]),
+  \acr{AOBT} (`actual_offblock_time` [_ISO 8601 UTC date and time_]),
+  \acr{ARVT} (`arrival_time` [_ISO 8601 UTC date and time_)
+* aircraft: aircraft type code (`aircraft_type` [_ICAO aircraft type_]),
+  \acr{WTC} (`wtc`)
+* airline: (obfuscated) \acr{AO} code (`airline`), 
+* operational values: flight duration (`flight_duration` [_min_]) , 
+  taxi-out time (`taxiout_time` [_min_]),
+  route length (`flown_distance` [_nmi_]) , (estimated) \acr{TOW} (`tow` [_kg_]) 
+
+
+Further info material:
+
+* Airport codes, and more:  [OurAirports][oa], [OA on Observable][oaob]
+* ISO 2-character country codes: [ISO2C][iso2c]
+* (meaningful) Time and dates formats: [ISO 8601][iso8601]
+* ICAO aircraft type designator, \acr{WTC} and more: [ICAO aircraft type designator page][act_type]
+
+[iso8601]: <https://en.wikipedia.org/wiki/ISO_8601> "ISO 8601 date and time format"
+[oa]: <https://ourairports.com/> "OurAirports"
+[oaob]: <https://observablehq.com/@openaviation/airports> "Airports around the world"
+[act_type]: <https://www.icao.int/publications/DOC8643/Pages/Search.aspx> "Aircraft type"
+[iso2c]: <https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2> "ISO 2-character Contry code"
+
+### Trajectory
+The daily trajectory files contain:
+
+* flight identification: unique ID (`flight_id`, same as for flight list), 
+  (obfuscated) ICAO 24-bit address (`icao24`, same value as `flight_id`)
+* 4D position: `longitude` [_DD_, decimal degrees in -90/90 range] and
+  `latitude` [_DD_, decimal degrees in -180/180 range],
+  `altitude` [_ft_], `timestamp` [_timestamp with time zone_]
+* speed: ground speed (`groundspeed` [_kt_]), 
+  track angle (`track` and `track_unwrapped` [_decimal degrees_]),
+  vertical rate of climb/descent (`vertical_rate` [_ft/min_])
+* (optionally) meteo info at 4D position:
+  - wind (`u_component_of_wind` and `v_component_of_wind` [_m/s_])
+  - `temperature` [$K$, kelvin]
+
+The daily file `<yyyy-mm-dd>.parquet` includes all position reports on
+(UTC) `<yyyy-mm-dd>` date; it can happen that flight portions be present
+in consecutive files, i.e. the same `flight_id` will occur in more than one 
+daily file because the flight took place across the (UTC) midnight.
+
+**NOTE**: trajectories are not necessarily complete/overlapping with respect to
+what reported in the flight list in `actual_offblock_time` or `arrival_time`.
+This is due to the possibly limited/partial  \acr{ADS-B} coverage in some parts
+(or some lower altitudes) of the world.
+The interval `[actual_offblock_time + taxiout_time, arrival_time]` is a good
+approximation of the in-the-air portion of the flight.
+
+Further info material:
+
+* Track in aviation: [SkyBrary page][track]
+* Ground speed: [SkyBrary page][gs]
+
+[track]: <https://skybrary.aero/articles/heading-track-and-radial> "Heading, Track and Radial"
+[gs]: <https://skybrary.aero/articles/ground-speed> "Ground speed"
+
+### Rationale for the data sets
+
+Our gut feelings say that \acr{ATOW} depends in some forms from:
+
+* origin/destination: the [great circle distance][gcd] is of course a factor in terms
+  of how much fuel you will have to tank and hence the take-off weight.  
+  \acr{ADEP} or \acr{ADES} are important because of specific local procedures.  
+  \acr{ADEP}/\acr{ADES} could also be important because different
+  \acr{AO}s plan and execute flights differently from/to the same airport.
+* timing: when you execute a flight, i.e. morning/evening/night, weekly patterns,
+  seasonal trends (IATA season schedule[^iataseason]), local time (?), flight duration calculation, 
+  could be a factor to consider
+* aircraft: the (ICAO) type[^engine] will imply different amounts of fuel needed,
+* airline: policies varies, for example for same city-pair one airline could select
+  different alternates from another airline depending on their technical support
+  facilities/contracts.  
+  Also \acr{AO}s have different tanking policies.
+* operational: flown route length (different from great circle distance) could
+  better refine \acr{ATOW} estimation; same for taxi-out duration
+* trajectory: The \acr{ADS-B} trajectory can help to classify the way a flight
+  has been flown (rate of climb/descent, maximum en-route flight level, ...) and
+  hence refine the \acr{ATOW} estimate.
+
+
+[gcd]: <https://en.wikipedia.org/wiki/Great-circle_distance> "Great Circle Distance"
+
+[^iataseason]: IATA Summer schedule for year `YYYY` begins on the last Sunday of
+March `YYYY` and ends on the last Saturday of October `YYYY`.  
+IATA Winter schedule for year `YYYY` begins on the Sunday after the last Saturday
+of October `YYYY` and ends on the Saturday before last Sunday of
+March `YYYY + 1`.
+[^engine]: and possibly the engine types/age, but these are unfortunately not
+included in the [Data for modeling](#data-for-modeling) dataset.
+
+
+## Dataset for submission
+
+The submission template file, `competition-data/submission_set.csv`, contains
+the list of flight IDs for which to estimate the TOW; it looks something like:
+
+  ```
+  flight_id, tow
+  258081039,
+  258081111,
+  ...
+  ```
+  
+The relevant trajectories are part of the ones provided in the Trajectory
+dataset.
+
+
+
+## Where/How to get the Datasets
+
+The dataset files are hosted on \acr{OSN} infrastructure.  
+Upon registration of your team you should have received the relevant
+
+  * team name and ID
+  * `BUCKET_ACCESS_KEY` and `BUCKET_ACCESS_SECRET`.
+  
+something like
+
+```json
+{
+  "team_name": "team_warm_donkey",
+  "team_id": "b8e3a438-d2f2-4a11-bf28-e7a8f84cf3db",
+  "bucket_access_key": "blah",
+  "bucket_access_secret": "blahblah"
+}
+```
+
+
+Below you can find the details on how to access the data sets and submit your
+results for ranking.  
+
+### Using MinIO Client
+
+#### Pre-requisites
+The steps below have been executed on a MBR/macOS machine but it should be easy
+to apply them to other Unix-like environments (we did similarly on MS Windows via
+Git Bash.)
+
+1. Install [MinIO Client][mc] for your [OS/environment][install]:  
+  
+    ```
+    $ brew install minio/stable/mc
+    ```
+
+1. Set an alias up for the challenge data location:
+  
+    ```
+    $ mc alias set dc24 \
+      https://s3.opensky-network.org/ \
+      ACCESS_KEY SECRET_KEY
+    ```
+    
+    where `ACCESS_KEY` is the value of `bucket_access_key` and
+    `SECRET_KEY` the one of `bucket_access_secret`.
+
+#### Read/Write data
+From the command line you can
+
+1. list the competition buckets
+  
+    ```
+    $ mc ls dc24
+    [2024-07-05 04:05:29 CEST]     0B competition-data/
+    ```
+
+1. list the content of the (read-only) `competition-data/` bucket
+  
+    ```
+    $ mc ls dc24/competition-data/
+    [2024-07-10 10:58:23 CEST]  12MiB STANDARD 2022-01-01.parquet
+    [2024-07-10 10:58:34 CEST]  19MiB STANDARD 2022-01-02.parquet
+    ...
+    [2024-07-11 12:41:20 CEST] 164MiB STANDARD challenge_set.csv
+    [2024-07-11 12:42:43 CEST] 1.1MiB STANDARD submission_set.csv
+    ```
+
+1. copy Jan 2022 trajectory files from the (read-only) `competition-data/` bucket
+   to a local directory
+  
+    ```
+    $ mc cp --recursive dc24/competition-data/2022-01 my-local-directory/
+    ```
+
+1. copy all files from the (read-only) `competition-data/` bucket to a local
+   directory
+  
+    ```
+    $ mc cp --recursive dc24/competition-data/  my-local-directory/
+    ```
+
+[mc]: <https://min.io/docs/minio/linux/reference/minio-mc.html#> "MinIO Client"
+[install]: <https://min.io/docs/minio/linux/reference/minio-mc.html#install-mc> "mc install"
+
+
+### Using Python
+
+#### Pre-requisites
+You need to have [`pyopensky`][posn] installed as detailed [here][posninstall].
+
+Also your configuration files should contain the relevant values for 
+`ACCESS_KEY` and `SECRET_KEY` as explained above.
+
+```
+[default]
+username = your_osn_user
+password = ...
+
+access_key = ACCESS_KEY
+secret_key = SECRET_KEY
+```
+
+[posn]: <https://github.com/open-aviation/pyopensky> "pyopensky Python library"
+[posninstall]: <https://open-aviation.github.io/pyopensky/installation.html> "Installation of pyopensky"
+
+
+#### Read/Write Data
+The following code allows to download the challenge files
+
+```python
+from pyopensky.s3 import S3Client
+
+s3 = S3Client()
+
+for obj in s3.s3client.list_objects("competition-data", recursive=True):
+     print(f"{obj.bucket_name=}, {obj.object_name=}")
+     s3.download_object(obj)
+```
+
+
+### Using `traffic` for Exploratory Data Analysis
+
+You can explore the trajectory data using the [`traffic`][traffic] in
+a Python notebook.
+
+For example you can load one of the daily trajectory files 
+
+```python
+import warnings
+from tqdm import TqdmExperimentalWarning
+
+warnings.filterwarnings("ignore", category=TqdmExperimentalWarning)
+warnings.filterwarnings("ignore", category=FutureWarning)
+
+from traffic.core import Traffic
+from datetime import timedelta
+
+import matplotlib.pyplot as plt
+from matplotlib.dates import DateFormatter
+
+t = Traffic.from_file('2022-01-01.parquet')
+```
+
+plot the list of flights
+
+```python
+t
+```
+
+![daily flights](media/flights.png){width=6cm}
+ 
+a 2D map
+
+```python
+trj = t[11]
+trj
+```
+
+![map of flight `248750835`](media/flight_map.png){width=10cm}
+
+and finally a vertical profile with ground speed:
+
+```python
+with plt.style.context("traffic"):
+
+    fig, ax = plt.subplots(figsize=(10, 7))
+
+    (
+        trj
+        .plot_time(
+            ax=ax,
+            y=["altitude", "groundspeed"],
+            secondary_y=["groundspeed"]
+        )
+    )
+
+    ax.set_xlabel("")
+    ax.tick_params(axis='x', labelrotation=0)
+    ax.xaxis.set_major_formatter(DateFormatter("%H:%M"))
+```
+
+![vertical profile of flight `248750835`](media/trj11.png){height=10cm}
+
+[traffic]: <https://traffic-viz.github.io/> "traffic - air traffic data processing with Python"
+
+**Note**: the vertical profile for flight `248750835` shows that you should probably
+have considered only the  [`actual_offblock_time` + `taxiout_time`, `arrival_time`]
+interval if interested in the _in-the-air_ portion of the flight, i.e. cut the
+final portion at `2022-01-01T11:55:15Z`.
+
+## Ranking
+The `submission` bucket is organized as follows (teams' accounts won't be able
+to list this bucket contents):
+
+```
+submissions/
+├── team_warm_donkey_v1_b8e3a438-d2f2-4a11-bf28-e7a8f84cf3db.csv
+├── team_warm_donkey_v2_b8e3a438-d2f2-4a11-bf28-e7a8f84cf3db.csv
+├── team_zesty_wreath_v1_4eabd02b-1622-44d8-8066-1dccd12bd585.csv
+└── ...
+```
+
+For ranking you'll need to upload your estimated TOWs for
+all the flight IDs as present in the `competition-data/submission_set.csv`
+to the `submissions/` bucket in a file named
+
+`<team_name>_v<num>_<team_id>.csv.gz`
+
+where you are responsible to increase `num` accordingly for each of your
+submissions:
+
+```
+$ team_name='team_warm_donkey'
+$ team_id='b8e3a438-d2f2-4a11-bf28-e7a8f84cf3db'
+$ num=3
+$ subfile=${team_name}_v${num}_${team_id}.csv
+$ mc cp ./my_submission.csv dc24/submissions/${subfile}
+```
+
+Here you use the `dc24` alias as explained above.
+
+
+The ranking job will be automatically run every 30 minutes.  
+The [leaderboard][ranking] will display the new ranks.   
+Eventually manually **reload it**, please.
+
+You can also get a JSON file with the rankings as (`| jq` only for pretty printing):
+
+```
+$ curl -X 'GET' \
+  'https://datacomp.opensky-network.org/api/rankings' \
+  -H 'accept: application/json' | jq
+[
+  {
+    "mse": 9752328117.3738,
+    "rank": 1,
+    "team_name": "team_radiant_xerox",
+    "file_version": "v2"
+  },
+  {
+    "mse": 9752339084.6523,
+    "rank": 2,
+    "team_name": "team_bold_xylophone",
+    "file_version": "v1"
+  }
+]
+```
+
+[ranking]: <https://datacomp.opensky-network.org/results> "PRC Data Challenge ranking page"
+[rankingAPI]: <https://datacomp.opensky-network.org/> ""
+
+## Eligibility for Prize
+
+The winning solutions will only be eligible for the awards if all source code
+and additional data sets used to generate the results from the measurement data
+will be made available to be published under the **GNU GPLv3 license** on the
+OpenSky Network's github account.
+
+In addition, sufficient documentation must be provided to understand and
+reproduce the results.
