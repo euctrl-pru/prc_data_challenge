@@ -83,8 +83,7 @@ in italic in square brackets when appropriate):
   country code (`country_code_adep`, `country_code_ades` [_ISO2C_])
 * timing: date of flight (`date` [_ISO 8601 UTC date_]),
   \acr{AOBT} (`actual_offblock_time` [_ISO 8601 UTC date and time_]),
-  \acr{ARVT} (`arrival_time` [_ISO 8601 UTC date and time_);
-  \acr{AOBT} and \acr{ARVT} from \acr{NM}
+  \acr{ARVT} (`arrival_time` [_ISO 8601 UTC date and time_)
 * aircraft: aircraft type code (`aircraft_type` [_ICAO aircraft type_]),
   \acr{WTC} (`wtc`)
 * airline: (obfuscated) \acr{AO} code (`airline`), 
