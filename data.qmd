@@ -58,7 +58,7 @@ augmented with meteo information[^1].
 The S3 bucket `competition-data` contains
 
 1. the flight list, `challenge_set.csv`
-1. the daily trajectories, `2022-01-02.parquet` ...
+1. the daily trajectories, `2022-01-01.parquet`, `2022-01-02.parquet`, ...
 1. the submission template, `submission_set.csv`
 
 [^1]: from [Google's Analysis-Ready, Cloud Optimized (ARCO) ERA5][google-era5]:  
