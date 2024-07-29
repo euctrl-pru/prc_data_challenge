@@ -178,7 +178,7 @@ included in the [Data for modeling](#data-for-modeling) dataset.
 ## Dataset for submission
 
 The submission template file, `competition-data/submission_set.csv`, contains
-the list of flight IDs for which to estimate the TOW; it is something like:
+the list of flight IDs for which to estimate the TOW; it looks something like:
 
   ```
   flight_id, tow

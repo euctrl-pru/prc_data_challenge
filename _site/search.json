@@ -102,7 +102,7 @@
     "href": "data.html#dataset-for-submission",
     "title": "Data",
     "section": "Dataset for submission",
-    "text": "Dataset for submission\nThe submission template file, competition-data/submission_set.csv, contains the list of flight IDs for which to estimate the TOW; it is something like:\nflight_id, tow\n258081039,\n258081111,\n...\nThe relevant trajectories are part of the ones provided in the Trajectory dataset."
+    "text": "Dataset for submission\nThe submission template file, competition-data/submission_set.csv, contains the list of flight IDs for which to estimate the TOW; it looks something like:\nflight_id, tow\n258081039,\n258081111,\n...\nThe relevant trajectories are part of the ones provided in the Trajectory dataset."
   },
   {
     "objectID": "data.html#where-to-get-the-datasets",
