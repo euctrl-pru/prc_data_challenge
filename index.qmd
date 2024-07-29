@@ -69,7 +69,7 @@ to
 >   challenge AT opensky-network.org
 
 A little while later reception, you will receive the relevant access/secret keys
-to obtain the relevant [Data](data.html) using your \acr{OSN} account; something
+to obtain the [Data](data.html) using your \acr{OSN} account; something
 like:
 
 ```json
