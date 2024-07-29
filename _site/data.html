@@ -219,7 +219,7 @@ window.Quarto = {
 └── ...
 submissions/
 └── ...</code></pre>
-<p>The <code>competition-data</code> bucket contains the <a href="#data-for-modeling">data for modeling</a>, while <code>submissions</code> holds the teams’ submission for <a href="#ranking">ranking</a>.</p>
+<p>The <code>competition-data</code> bucket contains the <a href="#data-for-modeling">data for modeling</a>, while <code>submissions</code> holds the teams’ submission for <a href="#ranking">ranking</a>. The <code>submissions</code> will not show up when listing the buckets with a team’s account, nevertheless it is present for submission and ranking, see the <a href="#ranking">Ranking</a> section.</p>
 <section id="data-for-modeling" class="level2">
 <h2 class="anchored" data-anchor-id="data-for-modeling">Data for modeling</h2>
 <p>We propose two data sets:</p>
@@ -229,15 +229,11 @@ submissions/
 </ol>
 <p>The data sets for the challenge are organized as follows:</p>
 <pre class="text"><code>competition-data/
-├── challenge_set.csv
-├── submission_set.csv
 ├── 2022-01-01.parquet
 ├── 2022-01-02.parquet
-└── ...
-submissions/
-├── baba_submission_1720622222.csv.gz
-├── cucu_submission_1720690111.csv.gz
-└── ...</code></pre>
+├── ...
+├── challenge_set.csv
+└── submission_set.csv</code></pre>
 <p>Each daily trajectory parquet file contains (<a href="#acronyms_ADS-B">Automatic Dependent Surveillance–Broadcast (ADS-B)</a> based) flown trajectories augmented with meteo information<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
 <p>The S3 bucket <code>competition-data</code> contains</p>
 <ol type="1">
@@ -303,7 +299,7 @@ Also <a href="#acronyms_AO">AO</a>s have different tanking policies.</li>
 </section>
 <section id="dataset-for-submission" class="level2">
 <h2 class="anchored" data-anchor-id="dataset-for-submission">Dataset for submission</h2>
-<p>The submission template file, <code>competition-data/submission_set.csv</code>, contains the list of flight IDs for which to estimate the TOW; it is .</p>
+<p>The submission template file, <code>competition-data/submission_set.csv</code>, contains the list of flight IDs for which to estimate the TOW; it is something like:</p>
 <pre><code>flight_id, tow
 258081039,
 258081111,
@@ -318,6 +314,13 @@ Upon registration of your team you should have received the relevant</p>
 <li>team name and ID</li>
 <li><code>BUCKET_ACCESS_KEY</code> and <code>BUCKET_ACCESS_SECRET</code>.</li>
 </ul>
+<p>something like</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"team_name"</span><span class="fu">:</span> <span class="st">"team_warm_donkey"</span><span class="fu">,</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"team_id"</span><span class="fu">:</span> <span class="st">"b8e3a438-d2f2-4a11-bf28-e7a8f84cf3db"</span><span class="fu">,</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"bucket_access_key"</span><span class="fu">:</span> <span class="st">"blah"</span><span class="fu">,</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"bucket_access_secret"</span><span class="fu">:</span> <span class="st">"blahblah"</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Below you can find the details on how to access the data sets and submit your results for ranking.</p>
 <section id="using-minio-client" class="level3">
 <h3 class="anchored" data-anchor-id="using-minio-client">Using MinIO Client</h3>
@@ -330,7 +333,8 @@ Upon registration of your team you should have received the relevant</p>
 <li><p>Set an alias up for the challenge data location:</p>
 <pre><code>$ mc alias set dc24 \
   https://s3.opensky-network.org/ \
-  ACCESS_KEY SECRET_KEY</code></pre></li>
+  ACCESS_KEY SECRET_KEY</code></pre>
+<p>where <code>ACCESS_KEY</code> is the value of <code>bucket_access_key</code> and <code>SECRET_KEY</code> the one of <code>bucket_access_secret</code>.</p></li>
 </ol>
 </section>
 <section id="readwrite-data" class="level4">
@@ -339,14 +343,7 @@ Upon registration of your team you should have received the relevant</p>
 <ol type="1">
 <li><p>list the competition buckets</p>
 <pre><code>$ mc ls dc24
-[2024-07-05 04:05:29 CEST]     0B competition-data/
-[2024-07-08 06:10:23 CEST]     0B submissions/
-$ mc ls dc24/competition-data/
-[2024-07-10 10:58:23 CEST]  12MiB STANDARD 2022-01-01.parquet
-[2024-07-10 10:58:34 CEST]  19MiB STANDARD 2022-01-02.parquet
-...
-[2024-07-11 12:41:20 CEST] 164MiB STANDARD challenge_set.csv
-[2024-07-11 12:42:43 CEST] 1.1MiB STANDARD submission_set.csv</code></pre></li>
+[2024-07-05 04:05:29 CEST]     0B competition-data/</code></pre></li>
 <li><p>list the content of the (read-only) <code>competition-data/</code> bucket</p>
 <pre><code>$ mc ls dc24/competition-data/
 [2024-07-10 10:58:23 CEST]  12MiB STANDARD 2022-01-01.parquet
@@ -358,10 +355,8 @@ $ mc ls dc24/competition-data/
 <pre><code>$ mc cp --recursive dc24/competition-data/2022-01 my-local-directory/</code></pre></li>
 <li><p>copy all files from the (read-only) <code>competition-data/</code> bucket to a local directory</p>
 <pre><code>$ mc cp --recursive dc24/competition-data/  my-local-directory/</code></pre></li>
-<li><p>Write your team’s submission (assuming team name <code>cucu</code>) to the <code>submissions/</code> bucket</p>
-<pre><code>$ mc cp ./my_submission.csv  dc24/submissions/"cucu_submission_$(date +%s).csv"</code></pre></li>
 </ol>
-<p><strong>NOTE</strong>: no team can list the content of the <code>submissions/</code> bucket; and team <code>cucu</code> can only submit files in the format <code>cucu_submission_&lt;posix timestamp&gt;.csv</code></p>
+<p><strong>NOTE</strong>: no team can list the content of the <code>submissions/</code> bucket; and team <code>&lt;team_name&gt;</code> can only submit files in the format <code>&lt;team_name&gt;_v&lt;num&gt;_&lt;team_id&gt;.csv</code></p>
 </section>
 </section>
 <section id="using-python" class="level3">
@@ -369,7 +364,7 @@ $ mc ls dc24/competition-data/
 <section id="pre-requisites-1" class="level4">
 <h4 class="anchored" data-anchor-id="pre-requisites-1">Pre-requisites</h4>
 <p>You need to have <a href="https://github.com/open-aviation/pyopensky" title="pyopensky Python library"><code>pyopensky</code></a> installed as detailed <a href="https://open-aviation.github.io/pyopensky/installation.html" title="Installation of pyopensky">here</a>.</p>
-<p>Also your configuration files should contain the relevant values for <code>ACCESS_KEY</code> and <code>SECRET_KEY</code></p>
+<p>Also your configuration files should contain the relevant values for <code>ACCESS_KEY</code> and <code>SECRET_KEY</code> as explained above.</p>
 <pre><code>[default]
 username = your_osn_user
 password = ...
@@ -389,8 +384,8 @@ secret_key = SECRET_KEY</code></pre>
 <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>     s3.download_object(obj)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
-<section id="using-traffic" class="level3">
-<h3 class="anchored" data-anchor-id="using-traffic">Using <code>traffic</code></h3>
+<section id="using-traffic-for-exploratory-data-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="using-traffic-for-exploratory-data-analysis">Using <code>traffic</code> for Exploratory Data Analysis</h3>
 <p>You can explore the trajectory data using the <a href="https://traffic-viz.github.io/" title="traffic - air traffic data processing with Python"><code>traffic</code></a> in a Python notebook.</p>
 <p>For example you can load one of the daily trajectory files</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings</span>
@@ -420,7 +415,7 @@ secret_key = SECRET_KEY</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/flight_map.png" class="img-fluid figure-img" style="width:10cm"></p>
-<figcaption>map of a flight</figcaption>
+<figcaption>map of flight <code>248750835</code></figcaption>
 </figure>
 </div>
 <p>and finally a vertical profile with ground speed:</p>
@@ -443,18 +438,31 @@ secret_key = SECRET_KEY</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/trj11.png" style="height:10cm" class="figure-img"></p>
-<figcaption>vertical profile of a flight</figcaption>
+<figcaption>vertical profile of flight <code>248750835</code></figcaption>
 </figure>
 </div>
+<p><strong>Note</strong>: the vertical profile for flight <code>248750835</code> shows that you should probably have considered only the [<code>actual_offblock_time</code> + <code>taxiout_time</code>, <code>arrival_time</code>] interval if interested in the <em>in-the-air</em> portion of the flight, i.e.&nbsp;cut the final portion at <code>2022-01-01T11:55:15Z</code>.</p>
 </section>
 </section>
 <section id="ranking" class="level2">
 <h2 class="anchored" data-anchor-id="ranking">Ranking</h2>
-<p>For ranking you’ll need to upload your estimated TOWs for all the flight IDs as in the <code>competition-data/submission_set.csv</code> to the <code>submissions</code> bucket in a file named</p>
-<p><code>{team_name}_v{num}_{team_id}.csv.gz</code></p>
-<p>where you are responsible to increase accordingly <code>num</code> for each of your submissions.</p>
-<p>You will have to use your team <code>bucket_access_key</code> and <code>bucket_access_secret</code>.</p>
-<p>The <a href="https://datacomp.opensky-network.org/results" title="PRC Data Challenge ranking page">RANKING PAGE</a> will be automatically updated every 30 minutes.<br>
+<p>The <code>submission</code> bucket is organized as follows (teams’ accounts won’t be able to list this bucket contents):</p>
+<pre><code>submissions/
+├── team_warm_donkey_v1_b8e3a438-d2f2-4a11-bf28-e7a8f84cf3db.csv
+├── team_warm_donkey_v2_b8e3a438-d2f2-4a11-bf28-e7a8f84cf3db.csv
+├── team_zesty_wreath_v1_4eabd02b-1622-44d8-8066-1dccd12bd585.csv
+└── ...</code></pre>
+<p>For ranking you’ll need to upload your estimated TOWs for all the flight IDs as present in the <code>competition-data/submission_set.csv</code> to the <code>submissions/</code> bucket in a file named</p>
+<p><code>&lt;team_name&gt;_v&lt;num&gt;_&lt;team_id&gt;.csv.gz</code></p>
+<p>where you are responsible to increase <code>num</code> accordingly for each of your submissions:</p>
+<pre><code>$ team_name='team_warm_donkey'
+$ team_id='b8e3a438-d2f2-4a11-bf28-e7a8f84cf3db'
+$ num=3
+$ subfile=${team_name}_v${num}_${team_id}.csv
+$ mc cp ./my_submission.csv dc24/submissions/${subfile}</code></pre>
+<p>Here you use the <code>dc24</code> alias as explained above.</p>
+<p>The ranking job will be automatically run every 30 minutes.<br>
+The <a href="https://datacomp.opensky-network.org/results" title="PRC Data Challenge ranking page">leaderboard</a> will display the new ranks.<br>
 Eventually manually <strong>reload it</strong>, please.</p>
 <p>You can also get a JSON file with the rankings as (<code>| jq</code> only for pretty printing):</p>
 <pre><code>$ curl -X 'GET' \

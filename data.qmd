@@ -31,6 +31,8 @@ submissions/
 
 The `competition-data` bucket contains the [data for modeling](#data-for-modeling),
 while `submissions` holds the teams' submission for [ranking](#ranking).
+The `submissions` will not show up when listing the buckets with a team's account,
+nevertheless it is present for submission and ranking, see the [Ranking](#ranking) section.
 
 ## Data for modeling {#data-for-modeling}
 
@@ -43,15 +45,11 @@ The data sets for the challenge are organized as follows:
 
 ```text
 competition-data/
-├── challenge_set.csv
-├── submission_set.csv
 ├── 2022-01-01.parquet
 ├── 2022-01-02.parquet
-└── ...
-submissions/
-├── baba_submission_1720622222.csv.gz
-├── cucu_submission_1720690111.csv.gz
-└── ...
+├── ...
+├── challenge_set.csv
+└── submission_set.csv
 ```
 
 Each daily trajectory parquet file contains (\acr{ADS-B} based) flown trajectories
@@ -172,7 +170,7 @@ Our gut feelings say that \acr{ATOW} depends in some forms from:
 ## Dataset for submission
 
 The submission template file, `competition-data/submission_set.csv`, contains
-the list of flight IDs for which to estimate the TOW; it is .
+the list of flight IDs for which to estimate the TOW; it is something like:
 
   ```
   flight_id, tow
@@ -194,7 +192,17 @@ Upon registration of your team you should have received the relevant
   * team name and ID
   * `BUCKET_ACCESS_KEY` and `BUCKET_ACCESS_SECRET`.
   
-  
+something like
+
+```json
+{
+  "team_name": "team_warm_donkey",
+  "team_id": "b8e3a438-d2f2-4a11-bf28-e7a8f84cf3db",
+  "bucket_access_key": "blah",
+  "bucket_access_secret": "blahblah"
+}
+```
+
 
 Below you can find the details on how to access the data sets and submit your
 results for ranking.  
@@ -219,6 +227,9 @@ Git Bash.)
       https://s3.opensky-network.org/ \
       ACCESS_KEY SECRET_KEY
     ```
+    
+    where `ACCESS_KEY` is the value of `bucket_access_key` and
+    `SECRET_KEY` the one of `bucket_access_secret`.
 
 #### Read/Write data
 From the command line you can
@@ -228,13 +239,6 @@ From the command line you can
     ```
     $ mc ls dc24
     [2024-07-05 04:05:29 CEST]     0B competition-data/
-    [2024-07-08 06:10:23 CEST]     0B submissions/
-    $ mc ls dc24/competition-data/
-    [2024-07-10 10:58:23 CEST]  12MiB STANDARD 2022-01-01.parquet
-    [2024-07-10 10:58:34 CEST]  19MiB STANDARD 2022-01-02.parquet
-    ...
-    [2024-07-11 12:41:20 CEST] 164MiB STANDARD challenge_set.csv
-    [2024-07-11 12:42:43 CEST] 1.1MiB STANDARD submission_set.csv
     ```
 
 1. list the content of the (read-only) `competition-data/` bucket
@@ -262,15 +266,8 @@ From the command line you can
     $ mc cp --recursive dc24/competition-data/  my-local-directory/
     ```
 
-1. Write your team's submission (assuming team name `cucu`) to the
-  `submissions/` bucket
-  
-    ```
-    $ mc cp ./my_submission.csv  dc24/submissions/"cucu_submission_$(date +%s).csv"
-    ```
-
 **NOTE**: no team can list the content of the `submissions/` bucket; and team
-`cucu`  can only submit files in the format `cucu_submission_<posix timestamp>.csv`
+`<team_name>`  can only submit files in the format `<team_name>_v<num>_<team_id>.csv`
 
 [mc]: <https://min.io/docs/minio/linux/reference/minio-mc.html#> "MinIO Client"
 [install]: <https://min.io/docs/minio/linux/reference/minio-mc.html#install-mc> "mc install"
@@ -282,7 +279,7 @@ From the command line you can
 You need to have [`pyopensky`][posn] installed as detailed [here][posninstall].
 
 Also your configuration files should contain the relevant values for 
-`ACCESS_KEY` and `SECRET_KEY`
+`ACCESS_KEY` and `SECRET_KEY` as explained above.
 
 ```
 [default]
@@ -311,7 +308,7 @@ for obj in s3.s3client.list_objects("competition-data", recursive=True):
 ```
 
 
-### Using `traffic`
+### Using `traffic` for Exploratory Data Analysis
 
 You can explore the trajectory data using the [`traffic`][traffic] in
 a Python notebook.
@@ -349,7 +346,7 @@ trj = t[11]
 trj
 ```
 
-![map of a flight](media/flight_map.png){width=10cm}
+![map of flight `248750835`](media/flight_map.png){width=10cm}
 
 and finally a vertical profile with ground speed:
 
@@ -372,25 +369,49 @@ with plt.style.context("traffic"):
     ax.xaxis.set_major_formatter(DateFormatter("%H:%M"))
 ```
 
-![vertical profile of a flight](media/trj11.png){height=10cm}
+![vertical profile of flight `248750835`](media/trj11.png){height=10cm}
 
 [traffic]: <https://traffic-viz.github.io/> "traffic - air traffic data processing with Python"
 
+**Note**: the vertical profile for flight `248750835` shows that you should probably
+have considered only the  [`actual_offblock_time` + `taxiout_time`, `arrival_time`]
+interval if interested in the _in-the-air_ portion of the flight, i.e. cut the
+final portion at `2022-01-01T11:55:15Z`.
 
 ## Ranking
+The `submission` bucket is organized as follows (teams' accounts won't be able
+to list this bucket contents):
+
+```
+submissions/
+├── team_warm_donkey_v1_b8e3a438-d2f2-4a11-bf28-e7a8f84cf3db.csv
+├── team_warm_donkey_v2_b8e3a438-d2f2-4a11-bf28-e7a8f84cf3db.csv
+├── team_zesty_wreath_v1_4eabd02b-1622-44d8-8066-1dccd12bd585.csv
+└── ...
+```
+
 For ranking you'll need to upload your estimated TOWs for
-all the flight IDs as in the `competition-data/submission_set.csv`
-to the `submissions` bucket in a file named
+all the flight IDs as present in the `competition-data/submission_set.csv`
+to the `submissions/` bucket in a file named
 
-`{team_name}_v{num}_{team_id}.csv.gz`
+`<team_name>_v<num>_<team_id>.csv.gz`
 
-where you are responsible to increase accordingly `num` for each of your
-submissions.
+where you are responsible to increase `num` accordingly for each of your
+submissions:
 
-You will have to use your team `bucket_access_key` and `bucket_access_secret`.
+```
+$ team_name='team_warm_donkey'
+$ team_id='b8e3a438-d2f2-4a11-bf28-e7a8f84cf3db'
+$ num=3
+$ subfile=${team_name}_v${num}_${team_id}.csv
+$ mc cp ./my_submission.csv dc24/submissions/${subfile}
+```
+
+Here you use the `dc24` alias as explained above.
 
 
-The [RANKING PAGE][ranking] will be automatically updated every 30 minutes.  
+The ranking job will be automatically run every 30 minutes.  
+The [leaderboard][ranking] will display the new ranks.   
 Eventually manually **reload it**, please.
 
 You can also get a JSON file with the rankings as (`| jq` only for pretty printing):
