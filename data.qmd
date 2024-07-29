@@ -117,7 +117,7 @@ The daily trajectory files contain:
   track angle (`track` and `track_unwrapped` [_decimal degrees_]),
   vertical rate of climb/descent (`vertical_rate` [_ft/min_])
 * (optionally) meteo info at 4D position:
-  - wind (`u_component_of_wind` and `v_component_of_wind`) [_m/s_]
+  - wind (`u_component_of_wind` and `v_component_of_wind` [_m/s_])
   - `temperature` [$K$, kelvin]
 
 The daily file `<yyyy-mm-dd>.parquet` includes all position reports on
@@ -150,7 +150,7 @@ Our gut feelings say that \acr{ATOW} depends in some forms from:
   \acr{ADEP}/\acr{ADES} could also be important because different
   \acr{AO}s plan and execute flights differently from/to the same airport.
 * timing: when you execute a flight, i.e. morning/evening/night, weekly patterns,
-  seasonal trends, local time (?), flight duration calculation, 
+  seasonal trends (IATA season schedule[^iataseason]), local time (?), flight duration calculation, 
   could be a factor to consider
 * aircraft: of course the (ICAO) type will imply different amounts of fuel needed,
 * airline: policies varies, for example for same city-pair one airline could select
@@ -165,6 +165,11 @@ Our gut feelings say that \acr{ATOW} depends in some forms from:
 
 
 [gcd]: <https://en.wikipedia.org/wiki/Great-circle_distance> "Great Circle Distance"
+[^iataseason]: IATA Summer schedule for year `YYYY` begins on the last Sunday of
+March `YYYY` and ends on the last Saturday of October `YYYY`.  
+IATA Winter schedule for year `YYYY` begins on the Sunday after the last Saturday
+of October `YYYY` and ends on the Saturday before last Sunday of
+March `YYYY + 1`.
 
 ## Dataset for submission
 

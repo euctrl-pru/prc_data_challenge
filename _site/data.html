@@ -269,7 +269,7 @@ submissions/
 <li>speed: ground speed (<code>groundspeed</code> [<em>kt</em>]), track angle (<code>track</code> and <code>track_unwrapped</code> [<em>decimal degrees</em>]), vertical rate of climb/descent (<code>vertical_rate</code> [<em>ft/min</em>])</li>
 <li>(optionally) meteo info at 4D position:
 <ul>
-<li>wind (<code>u_component_of_wind</code> and <code>v_component_of_wind</code>) [<em>m/s</em>]</li>
+<li>wind (<code>u_component_of_wind</code> and <code>v_component_of_wind</code> [<em>m/s</em>])</li>
 <li><code>temperature</code> [<span class="math inline">\(K\)</span>, kelvin]</li>
 </ul></li>
 </ul>
@@ -288,7 +288,7 @@ submissions/
 <li>origin/destination: the <a href="https://en.wikipedia.org/wiki/Great-circle_distance" title="Great Circle Distance">great circle distance</a> is of course a factor in terms of how much fuel you will have to tank and hence the take-off weight.<br>
 <a href="#acronyms_ADEP">ADEP</a> or <a href="#acronyms_ADES">ADES</a> are important because of specific local procedures.<br>
 <a href="#acronyms_ADEP">ADEP</a>/<a href="#acronyms_ADES">ADES</a> could also be important because different <a href="#acronyms_AO">AO</a>s plan and execute flights differently from/to the same airport.</li>
-<li>timing: when you execute a flight, i.e.&nbsp;morning/evening/night, weekly patterns, seasonal trends, local time (?), flight duration calculation, could be a factor to consider</li>
+<li>timing: when you execute a flight, i.e.&nbsp;morning/evening/night, weekly patterns, seasonal trends (IATA season schedule<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>), local time (?), flight duration calculation, could be a factor to consider</li>
 <li>aircraft: of course the (ICAO) type will imply different amounts of fuel needed,</li>
 <li>airline: policies varies, for example for same city-pair one airline could select different alternates from another airline depending on their technical support facilities/contracts.<br>
 Also <a href="#acronyms_AO">AO</a>s have different tanking policies.</li>
@@ -514,6 +514,8 @@ Eventually manually <strong>reload it</strong>, please.</p>
 <li id="fn1"><p>from <a href="https://cloud.google.com/storage/docs/public-datasets/era5" title="Google's ERA5">Google’s Analysis-Ready, Cloud Optimized (ARCO) ERA5</a>:<br>
 ERA5 is the fifth generation of the <a href="https://www.ecmwf.int/"><span>European Centre for Medium-Range Weather Forecasts (ECMWF)</span></a> Atmospheric Reanalysis, providing hourly estimates of a large number of atmospheric, land, and oceanic climate variables.<br>
 The Google Cloud Public Dataset Program hosts ERA5 data that spans from 1940 to recent days, covering the Earth on a 30 km grid and resolves the atmosphere using 137 levels from the surface up to a height of 80 km.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>IATA Summer schedule for year <code>YYYY</code> begins on the last Sunday of March <code>YYYY</code> and ends on the last Saturday of October <code>YYYY</code>.<br>
+IATA Winter schedule for year <code>YYYY</code> begins on the Sunday after the last Saturday of October <code>YYYY</code> and ends on the Saturday before last Sunday of March <code>YYYY + 1</code>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
