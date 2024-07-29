@@ -14,12 +14,18 @@ See the [Data page](data.html) for more details.
 
 ## The Prize
 
-A total prize of $5000$ EUR will be distributed among the finalists' teams.
+A total prize of $5000$ EUR will be distributed among the finalists' teams.  
 Each finalist will receive a prize to acknowledge their innovative ideas and
-contributions towards solving the posed challenge problem.
+contributions towards solving the posed challenge problem.  
 
-The submission deadline latest data is  
+Winners' announcements will take place at the [12th edition of OpenSky Symposium][osnsym]
+in Hamburg on 7th--8th November 2024.
+
+The submission deadline is (intermediary submission are possible and welcome):  
 [**`2024-10-28T00:00:00Z`**]{.hugedate}.
+
+
+[osnsym]: <https://symposium.opensky-network.org/> "12th OpenSky Symposium, 7--8 Nov 2024"
 
 ## The why of Why
 
