@@ -10,7 +10,7 @@ flown flight.
 
 
 ## The Data
-See the [Data page](./challenge-data.html) for more details.
+See the [Data page](data.html) for more details.
 
 ## The Prize
 
@@ -65,18 +65,18 @@ Please send an email for the team creation with the following info (this will be
 visible [apart from emails] in a dedicated teams' page):
 
 1. an \acr{OSN} account ([create one][osnlog] if you do not have it yet)
-1. team name
-1. list of members (names, eventual affiliations, [at least one for correspondence]
-   email addresses)
-1. who you are
+1. corresponding member: name + email address
+1. list of members: name (eventual affiliation) + email address
+1. who you are: a description of the team
 1. rationale for participation
 
 to
 
 >   challenge AT opensky-network.org
 
-A little while later reception, you will receive the relevant access/secret keys
-to obtain the [Data](./challenge-data.html) using your \acr{OSN} account; something
+A little while later reception, you will receive the team name and
+the relevant access/secret keys to obtain the [Data](data.html)
+via your \acr{OSN} account; something
 like:
 
 ```json

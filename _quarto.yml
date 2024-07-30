@@ -6,9 +6,9 @@ book:
   title: "PRC Data Challenge"
   chapters:
     - index.qmd
-    - challenge-data.qmd
+    - data.qmd
     - rankings.qmd
-    - about-challenge.qmd
+    - about.qmd
 
   navbar:
     background: light

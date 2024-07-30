@@ -351,7 +351,7 @@ trj = t[11]
 trj
 ```
 
-![map of flight `248750835`](./media/flight_map.png){width=10cm}
+![map of flight `248750835`](media/flight_map.png){width=10cm}
 
 and finally a vertical profile with ground speed:
 
@@ -374,7 +374,7 @@ with plt.style.context("traffic"):
     ax.xaxis.set_major_formatter(DateFormatter("%H:%M"))
 ```
 
-![vertical profile of flight `248750835`](./media/trj11.png){height=10cm}
+![vertical profile of flight `248750835`](media/trj11.png){height=10cm}
 
 [traffic]: <https://traffic-viz.github.io/> "traffic - air traffic data processing with Python"
 
