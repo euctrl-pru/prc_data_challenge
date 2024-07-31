@@ -106,7 +106,7 @@ advise,  data and infrastructure for the challenge:
   - Swiss
   - Vueling
 * Opensky Network: \acr{ADS-B} trajectories, hosting of the challenge infrastructure.
-  (John Fitzgerald, Allan Tart, Martin Strohmeier, Vincent Lender)
+  (John Fitzgerald, Allan Tart, Martin Strohmeier, Vincent Lenders)
 * Prof Junzi Sun (TU Delft): for wisely pre-processing, enhancing (meteo via
   [fastmeteo][fm]), locally storing OSN trajectories and then making them
   available for the challenge
