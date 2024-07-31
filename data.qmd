@@ -399,7 +399,7 @@ For ranking you'll need to upload your estimated TOWs for
 all the flight IDs as present in the `competition-data/submission_set.csv`
 to the `submissions/` bucket in a file named
 
-`<team_name>_v<num>_<team_id>.csv.gz`
+`<team_name>_v<num>_<team_id>.csv`
 
 where you are responsible to increase `num` accordingly for each of your
 submissions:
