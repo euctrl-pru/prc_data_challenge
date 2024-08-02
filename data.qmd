@@ -74,7 +74,8 @@ the surface up to a height of 80 km.
 
 
 ### Flight List
-The flight list provides details such as (`column names` in parenthesis, [_units_]
+The flight list consists of 369013 flights departed/arrived in Europe 
+in 2022. Itprovides details such as (`column names` in parenthesis, [_units_]
 in italic in square brackets when appropriate):
 
 * flight identification: unique ID (`flight_id`), (obfuscated) callsign (`callsign`)
@@ -106,6 +107,10 @@ Further info material:
 [iso2c]: <https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2> "ISO 2-character Contry code"
 
 ### Trajectory
+The trajectoris for the flight list for modeling and the ones for ranking are
+provided as daily `.parquet` files amounting to around 158 GiB of (max) 1 second
+position reports out of \acr{ADS-B} data collected and processed by \acr{OSN}.
+
 The daily trajectory files contain:
 
 * flight identification: unique ID (`flight_id`, same as for flight list), 
@@ -415,7 +420,14 @@ $ mc cp ./my_submission.csv dc24/submissions/${subfile}
 Here you use the `dc24` alias as explained above.
 
 
-The ranking job will be automatically run every 30 minutes.  
+The ranking job will be automatically run every 30 minutes and will
+use \acr{RMSE} to compare a submission for the 105959 flights in `submission_set.csv`
+with the (hidden) the ground truth.
+The final ranking will use an additional 52190 flights.
+
+The final
+
+
 The [leaderboard][ranking] will display the new ranks.   
 Eventually manually **reload it**, please.
 
@@ -453,3 +465,27 @@ OpenSky Network's github account.
 
 In addition, sufficient documentation must be provided to understand and
 reproduce the results.
+
+
+### Original Solution
+
+Teams (or individuals) must use their own original solutions.
+Re-using any existing implementation is only allowed if the original authors 
+grant you the rights to use their solution and if you made significant modifications 
+to the algorithm or model.
+In particular, simply re-using existing code and rewriting the data input and 
+output mechanism is not sufficient. Adding parameters to the model and modifying
+filters to match the specific pecularities of the data, however, can be 
+considered sufficient. 
+
+### Final Prize 
+
+The Selection Committee will review and discuss the top ranking teams and
+select final Awardees considering
+
+1. their final ranking score,
+1. the originality of the proposed model
+1. the open availabiliy of the code and the relevant documentation provided.
+
+By participating in the Challenge, you agree to be bound by the final decision
+of the Challenge selection committee. 

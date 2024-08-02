@@ -10,6 +10,17 @@ flown flight.
 
 
 ## The Data
+
+We provide information for **369013** flights flown all over Europe in 2022.
+Flight data include origin/destination aiport, aircraft type,
+off-block and arrival times,...and estimated \acr{TOW}.
+Thanks to the collaboration to \acr{OSN} we added the relevant trajectories 
+at (max) 1 second granularity, accounting for around 158 GiB of parquet files.
+
+The 105959 flights of the `submission_set_csv` will be used to rank the intermediate 
+submissions before the deadline, and an additional 52190 that we will add for the 
+final prize ranking.
+
 See the [Data page](data.html) for more details.
 
 ## The Prize
@@ -113,6 +124,8 @@ advise,  data and infrastructure for the challenge:
 * Dr Xavier Olive (ONERA): for advise and the invaluable [traffic][traffic] library
 * EUROCONTROL: for providing the relevant flight list (via Network Manager) and
                estimating \acr{TOW} (Aviation Intelligence Unit).
+* José Miguel de PABLO GUERRERO (PRC Commissioner): for supporting and pushing
+  for this initiative.
 
 
 [fm]: <https://github.com/open-aviation/fastmeteo> "fastmeteo Python library"

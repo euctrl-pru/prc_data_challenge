@@ -43,6 +43,8 @@ acronyms:
       longname: OpenSky Network
     - shortname: PRC
       longname: Performance Review Commission
+    - longname: Root Mean Square Error
+      shortname: RMSE
     - shortname: TOW
       longname: TakeOff Weight
     - shortname: WTC

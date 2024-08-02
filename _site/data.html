@@ -522,7 +522,7 @@ submissions/
 </ol>
 <section id="flight-list" class="level3">
 <h3 class="anchored" data-anchor-id="flight-list">Flight List</h3>
-<p>The flight list provides details such as (<code>column names</code> in parenthesis, [<em>units</em>] in italic in square brackets when appropriate):</p>
+<p>The flight list consists of 369013 flights departed/arrived in Europe in 2022. Itprovides details such as (<code>column names</code> in parenthesis, [<em>units</em>] in italic in square brackets when appropriate):</p>
 <ul>
 <li>flight identification: unique ID (<code>flight_id</code>), (obfuscated) callsign (<code>callsign</code>)</li>
 <li>origin/destination: <a href="#acronyms_ADEP">Aerodrome of DEParture (ADEP)</a> (<code>adep</code> [<em>ICAO code</em>]), <a href="#acronyms_ADES">Aerodrome of DEStination (ADES)</a> (<code>ades</code> [<em>ICAO code</em>]) and ancillary info, i.e.&nbsp;airport name (<code>name_adep</code>, <code>name_ades</code>) and country code (<code>country_code_adep</code>, <code>country_code_ades</code> [<em>ISO2C</em>])</li>
@@ -541,6 +541,7 @@ submissions/
 </section>
 <section id="trajectory" class="level3">
 <h3 class="anchored" data-anchor-id="trajectory">Trajectory</h3>
+<p>The trajectoris for the flight list for modeling and the ones for ranking are provided as daily <code>.parquet</code> files amounting to around 158 GiB of (max) 1 second position reports out of <a href="#acronyms_ADS-B">ADS-B</a> data collected and processed by <a href="#acronyms_OSN">OSN</a>.</p>
 <p>The daily trajectory files contain:</p>
 <ul>
 <li>flight identification: unique ID (<code>flight_id</code>, same as for flight list), (obfuscated) ICAO 24-bit address (<code>icao24</code>, same value as <code>flight_id</code>)</li>
@@ -739,8 +740,9 @@ $ num=3
 $ subfile=${team_name}_v${num}_${team_id}.csv
 $ mc cp ./my_submission.csv dc24/submissions/${subfile}</code></pre>
 <p>Here you use the <code>dc24</code> alias as explained above.</p>
-<p>The ranking job will be automatically run every 30 minutes.<br>
-The <a href="https://datacomp.opensky-network.org/results" title="PRC Data Challenge ranking page">leaderboard</a> will display the new ranks.<br>
+<p>The ranking job will be automatically run every 30 minutes and will use <a href="#acronyms_RMSE">Root Mean Square Error (RMSE)</a> to compare a submission for the 105959 flights in <code>submission_set.csv</code> with the (hidden) the ground truth. The final ranking will use an additional 52190 flights.</p>
+<p>The final</p>
+<p>The <a href="https://datacomp.opensky-network.org/results" title="PRC Data Challenge ranking page">leaderboard</a> will display the new ranks.<br>
 Eventually manually <strong>reload it</strong>, please.</p>
 <p>You can also get a JSON file with the rankings as (<code>| jq</code> only for pretty printing):</p>
 <pre><code>$ curl -X 'GET' \
@@ -765,8 +767,22 @@ Eventually manually <strong>reload it</strong>, please.</p>
 <h2 class="anchored" data-anchor-id="eligibility-for-prize">Eligibility for Prize</h2>
 <p>The winning solutions will only be eligible for the awards if all source code and additional data sets used to generate the results from the measurement data will be made available to be published under the <strong>GNU GPLv3 license</strong> on the OpenSky Network’s github account.</p>
 <p>In addition, sufficient documentation must be provided to understand and reproduce the results.</p>
+<section id="original-solution" class="level3">
+<h3 class="anchored" data-anchor-id="original-solution">Original Solution</h3>
+<p>Teams (or individuals) must use their own original solutions. Re-using any existing implementation is only allowed if the original authors grant you the rights to use their solution and if you made significant modifications to the algorithm or model. In particular, simply re-using existing code and rewriting the data input and output mechanism is not sufficient. Adding parameters to the model and modifying filters to match the specific pecularities of the data, however, can be considered sufficient.</p>
+</section>
+<section id="final-prize" class="level3">
+<h3 class="anchored" data-anchor-id="final-prize">Final Prize</h3>
+<p>The Selection Committee will review and discuss the top ranking teams and select final Awardees considering</p>
+<ol type="1">
+<li>their final ranking score,</li>
+<li>the originality of the proposed model</li>
+<li>the open availabiliy of the code and the relevant documentation provided.</li>
+</ol>
+<p>By participating in the Challenge, you agree to be bound by the final decision of the Challenge selection committee.</p>
 
 
+</section>
 </section>
 <section id="acronyms_HEADER_LOA" class="level1 loa unnumbered">
 <h1 class="loa unnumbered">List of Acronyms</h1>
@@ -780,6 +796,7 @@ Eventually manually <strong>reload it</strong>, please.</p>
 <p><strong><span id="acronyms_ATOW">ATOW</span></strong>: Actual TakeOff Weight</p>
 <p><strong><span id="acronyms_ECMWF">ECMWF</span></strong>: European Centre for Medium-Range Weather Forecasts</p>
 <p><strong><span id="acronyms_OSN">OSN</span></strong>: OpenSky Network</p>
+<p><strong><span id="acronyms_RMSE">RMSE</span></strong>: Root Mean Square Error</p>
 <p><strong><span id="acronyms_TOW">TOW</span></strong>: TakeOff Weight</p>
 <p><strong><span id="acronyms_WTC">WTC</span></strong>: Wake Turbulence Category</p>
 </div>
