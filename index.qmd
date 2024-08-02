@@ -85,7 +85,7 @@ to
 
 >   challenge AT opensky-network.org
 
-A little while later reception, you will receive the team name and
+A little while later, you will receive the team name and
 the relevant access/secret keys to obtain the [Data](data.html)
 via your \acr{OSN} account; something
 like:
