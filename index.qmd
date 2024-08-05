@@ -61,8 +61,9 @@ We got many questions about this challenge. We grouped and answered them as foll
 
 * Why via a Data Challenge?  
   The \acr{PRC} thinks that there is a great pool of Data Scientists that could
-  help to define the open model of the Challenge, but above that, it is the
-  importance to have a _white box_ approach to the way the model is being built.  
+  help defining the _open_ model of the Challenge.  
+  The Challenge also makes it possible to have a _white box_ approach to the way
+  the model is being defined which goes in the direction of transparency.
   This transparency is a way to build trust, reproducibility and eventually
   evolve a collaboration to improve the understanding (and the reduction) of
   the impact of Aviation to the environment.
