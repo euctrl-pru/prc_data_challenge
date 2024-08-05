@@ -1,3 +1,3 @@
 # PRC Data Challenge
 
-Thsi is the repo for the PRC Data Challenge website.
+This is the repo for the PRC Data Challenge website.
