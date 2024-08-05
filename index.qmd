@@ -18,7 +18,7 @@ Thanks to the collaboration with \acr{OSN} we added the relevant trajectories
 at (max) 1 second granularity, accounting for around 158 GiB of parquet files.
 
 The 105959 flights of the `submission_set.csv` will be used to rank the intermediate 
-submissions before the deadline, and an additional 52190 that we will add for the 
+submissions before the deadline, and an additional 52190 will be used for the 
 final prize ranking.
 
 See the [Data page](data.html) for more details.
