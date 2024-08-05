@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "PRC Data Challenge",
     "section": "",
-    "text": "The Data\nWe provide information for 369013 flights flown all over Europe in 2022. Flight data include origin/destination aiport, aircraft type, off-block and arrival times,…and estimated TakeOff Weight (TOW). Thanks to the collaboration with OpenSky Network (OSN) we added the relevant trajectories at (max) 1 second granularity, accounting for around 158 GiB of parquet files.\nThe 105959 flights of the submission_set_csv will be used to rank the intermediate submissions before the deadline, and an additional 52190 that we will add for the final prize ranking.\nSee the Data page for more details.",
+    "text": "The Data\nWe provide information for 369013 flights flown all over Europe in 2022. Flight data include origin/destination aiport, aircraft type, off-block and arrival times,…and estimated TakeOff Weight (TOW). Thanks to the collaboration with OpenSky Network (OSN) we added the relevant trajectories at (max) 1 second granularity, accounting for around 158 GiB of parquet files.\nThe 105959 flights of the submission_set.csv will be used to rank the intermediate submissions before the deadline, and an additional 52190 that we will add for the final prize ranking.\nSee the Data page for more details.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>PRC Data Challenge</span>"
     ]
