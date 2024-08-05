@@ -495,7 +495,7 @@ window.Quarto = {
 <p>The <a href="#acronyms_PRC">Performance Review Commission (PRC)</a> Data Challenge aims at engaging with data scientists, even without Aviation background, to create teams and compete to build an <strong>open</strong> <a href="#acronyms_ML">Machine Learning (ML)</a> model able to accurately infer the <a href="#acronyms_ATOW">Actual TakeOff Weight (ATOW)</a> of a flown flight.</p>
 <section id="the-data" class="level2">
 <h2 class="anchored" data-anchor-id="the-data">The Data</h2>
-<p>We provide information for <strong>369013</strong> flights flown all over Europe in 2022. Flight data include origin/destination aiport, aircraft type, off-block and arrival times,…and estimated <a href="#acronyms_TOW">TakeOff Weight (TOW)</a>. Thanks to the collaboration with <a href="#acronyms_OSN">OpenSky Network (OSN)</a> we added the relevant trajectories at (max) 1 second granularity, accounting for around 158 GiB of parquet files.</p>
+<p>We provide information for <strong>369013</strong> flights flown all over Europe in 2022. Flight data include origin/destination airport, aircraft type, off-block and arrival times,…and estimated <a href="#acronyms_TOW">TakeOff Weight (TOW)</a>. Thanks to the collaboration with <a href="#acronyms_OSN">OpenSky Network (OSN)</a> we added the relevant trajectories at (max) 1 second granularity, accounting for around 158 GiB of parquet files.</p>
 <p>The 105959 flights of the <code>submission_set.csv</code> will be used to rank the intermediate submissions before the deadline, and an additional 52190 will be used for the final prize ranking.</p>
 <p>See the <a href="data.html">Data page</a> for more details.</p>
 </section>
@@ -582,8 +582,8 @@ Note
 <li>Swiss</li>
 <li>Vueling</li>
 </ul></li>
-<li>Opensky Network: <a href="#acronyms_ADS-B">Automatic Dependent Surveillance–Broadcast (ADS-B)</a> trajectories, hosting of the challenge infrastructure. (John Fitzgerald, Allan Tart, Martin Strohmeier, Vincent Lenders)</li>
-<li>Prof Junzi Sun (TU Delft): for wisely pre-processing, enhancing (meteo via <a href="https://github.com/open-aviation/fastmeteo" title="fastmeteo Python library">fastmeteo</a>), locally storing OSN trajectories and then making them available for the challenge</li>
+<li>OpenSky Network: <a href="#acronyms_ADS-B">Automatic Dependent Surveillance–Broadcast (ADS-B)</a> trajectories, hosting of the challenge infrastructure. (John Fitzgerald, Allan Tart, Martin Strohmeier, Vincent Lenders)</li>
+<li>Prof Junzi Sun (TU Delft): for wisely pre-processing, enhancing (meteorological data via <a href="https://github.com/open-aviation/fastmeteo" title="fastmeteo Python library">fastmeteo</a>), locally storing OSN trajectories and then making them available for the challenge</li>
 <li>Dr Xavier Olive (ONERA): for advise and the invaluable <a href="https://github.com/open-aviation/fastmeteo" title="traffic Python library">traffic</a> library</li>
 <li>EUROCONTROL: for providing the relevant flight list (via Network Manager) and estimating <a href="#acronyms_TOW">TOW</a> (Aviation Intelligence Unit).</li>
 <li>José Miguel de PABLO GUERRERO (PRC Commissioner): for supporting and pushing for this initiative.</li>

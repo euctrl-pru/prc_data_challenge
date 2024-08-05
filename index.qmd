@@ -12,7 +12,7 @@ flown flight.
 ## The Data
 
 We provide information for **369013** flights flown all over Europe in 2022.
-Flight data include origin/destination aiport, aircraft type,
+Flight data include origin/destination airport, aircraft type,
 off-block and arrival times,...and estimated \acr{TOW}.
 Thanks to the collaboration with \acr{OSN} we added the relevant trajectories 
 at (max) 1 second granularity, accounting for around 158 GiB of parquet files.
@@ -127,9 +127,9 @@ advise,  data and infrastructure for the challenge:
   - Austrian Airlines
   - Swiss
   - Vueling
-* Opensky Network: \acr{ADS-B} trajectories, hosting of the challenge infrastructure.
+* OpenSky Network: \acr{ADS-B} trajectories, hosting of the challenge infrastructure.
   (John Fitzgerald, Allan Tart, Martin Strohmeier, Vincent Lenders)
-* Prof Junzi Sun (TU Delft): for wisely pre-processing, enhancing (meteo via
+* Prof Junzi Sun (TU Delft): for wisely pre-processing, enhancing (meteorological data via
   [fastmeteo][fm]), locally storing OSN trajectories and then making them
   available for the challenge
 * Dr Xavier Olive (ONERA): for advise and the invaluable [traffic][traffic] library

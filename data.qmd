@@ -53,7 +53,7 @@ competition-data/
 ```
 
 Each daily trajectory parquet file contains (\acr{ADS-B} based) flown trajectories
-augmented with meteo information[^1].
+augmented with meteorological information[^1].
 
 The S3 bucket `competition-data` contains
 
@@ -75,7 +75,7 @@ the surface up to a height of 80 km.
 
 ### Flight List
 The flight list consists of 369013 flights departed/arrived in Europe 
-in 2022. Itprovides details such as (`column names` in parenthesis, [_units_]
+in 2022. It provides details such as (`column names` in parenthesis, [_units_]
 in italic in square brackets when appropriate):
 
 * flight identification: unique ID (`flight_id`), (obfuscated) callsign (`callsign`)
@@ -107,7 +107,7 @@ Further info material:
 [iso2c]: <https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2> "ISO 2-character Contry code"
 
 ### Trajectory
-The trajectoris for the flight list for modeling and the ones for ranking are
+The trajectories for the flight list for modeling and the ones for ranking are
 provided as daily `.parquet` files amounting to around 158 GiB of (max) 1 second
 position reports out of \acr{ADS-B} data collected and processed by \acr{OSN}.
 
@@ -121,7 +121,7 @@ The daily trajectory files contain:
 * speed: ground speed (`groundspeed` [_kt_]), 
   track angle (`track` and `track_unwrapped` [_decimal degrees_]),
   vertical rate of climb/descent (`vertical_rate` [_ft/min_])
-* (optionally) meteo info at 4D position:
+* (optionally) meteorological info at 4D position:
   - wind (`u_component_of_wind` and `v_component_of_wind` [_m/s_])
   - `temperature` [$K$, kelvin]
 
@@ -475,7 +475,7 @@ grant you the rights to use their solution and if you made significant modificat
 to the algorithm or model.
 In particular, simply re-using existing code and rewriting the data input and 
 output mechanism is not sufficient. Adding parameters to the model and modifying
-filters to match the specific pecularities of the data, however, can be 
+filters to match the specific peculiarities of the data, however, can be 
 considered sufficient. 
 
 ### Final Prize 
@@ -485,7 +485,7 @@ select final Awardees considering
 
 1. their final ranking score,
 1. the originality of the proposed model
-1. the open availabiliy of the code and the relevant documentation provided.
+1. the open availability of the code and the relevant documentation provided.
 
 By participating in the Challenge, you agree to be bound by the final decision
 of the PRC Data Challenge selection committee. 
