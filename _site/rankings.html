@@ -417,16 +417,15 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div id="observablehq-ranks-844a1e39">
+<div id="observablehq-ranking_table-b337f44f">
 
 </div>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-import define from "https://api.observablehq.com/@espinielli/prc-data-challenge-2024-rankings";
+import define from "https://api.observablehq.com/@espinielli/prc-data-challenge-2024-rankings@135.js?v=4";
 new Runtime().module(define, name => {
-  if (name === "ranks") return new Inspector(document.querySelector("#observablehq-ranks-844a1e39"));
-  return ["ranking_table"].includes(name);
+  if (name === "ranking_table") return new Inspector(document.querySelector("#observablehq-ranking_table-b337f44f"));
 });
 </script>
 
