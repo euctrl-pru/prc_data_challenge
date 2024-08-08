@@ -49,6 +49,7 @@ competition-data/
 ├── 2022-01-02.parquet
 ├── ...
 ├── challenge_set.csv
+├── final_submission_set.csv # <-- only 1 week before deadline
 └── submission_set.csv
 ```
 
@@ -59,7 +60,8 @@ The S3 bucket `competition-data` contains
 
 1. the flight list, `challenge_set.csv`
 1. the daily trajectories, `2022-01-01.parquet`, `2022-01-02.parquet`, ...
-1. the submission template, `submission_set.csv`
+1. the submission set, `submission_set.csv` (and `final_submission_set.csv`
+   only 1 week before deadline, see [Rankings](rankings.html))
 
 [^1]: from [Google's Analysis-Ready, Cloud Optimized (ARCO) ERA5][google-era5]:  
 ERA5 is the fifth generation of the [\acr{ECMWF}][ecmwf]
@@ -182,15 +184,9 @@ included in the [Data for modeling](#data-for-modeling) dataset.
 
 ## Dataset for submission
 
-The submission template file, `competition-data/submission_set.csv`, contains
-the list of flight IDs for which to estimate the TOW; it looks something like:
-
-  ```
-  flight_id, tow
-  258081039,
-  258081111,
-  ...
-  ```
+The submission file, `competition-data/submission_set.csv`, contains
+a flight list for which to estimate the \acr{TOW}; it has the same columns as
+the flight list (but of course empty `tow`.)
   
 The relevant trajectories are part of the ones provided in the Trajectory
 dataset.
@@ -400,9 +396,19 @@ submissions/
 └── ...
 ```
 
-For ranking you'll need to upload your estimated TOWs for
-all the flight IDs as present in the `competition-data/submission_set.csv`
-to the `submissions/` bucket in a file named
+For ranking you'll need to upload a file with your estimated TOWs (column `tow`)
+for all the flight IDs (column `flight_id`) as present in the `competition-data/submission_set.csv`.
+Its content can be as simple as
+
+```
+flight_id, tow
+258081039, 123
+258081111, 456
+...
+```
+
+Your submission file needs to be uploaded to the `submissions/` bucket in a
+file named
 
 `<team_name>_v<num>_<team_id>.csv`
 
@@ -419,13 +425,12 @@ $ mc cp ./my_submission.csv dc24/submissions/${subfile}
 
 Here you use the `dc24` alias as explained above.
 
-
 The ranking job will be automatically run every 30 minutes and will
-use \acr{RMSE} to compare a submission for the 105959 flights in `submission_set.csv`
-with the (hidden) the ground truth.
-The final ranking will use an additional 52190 flights.
+use \acr{RMSE} to compare a submission for the 105959 flights in
+`submission_set.csv` with the (hidden) the ground truth.
 
-The final
+The final ranking will use an additional 52190 flights.
+See the [Ranking page](rankings.html) for more details.
 
 
 The [leaderboard][ranking] will display the new ranks.   
@@ -455,37 +460,3 @@ $ curl -X 'GET' \
 
 [ranking]: <https://datacomp.opensky-network.org/results> "PRC Data Challenge ranking page"
 [rankingAPI]: <https://datacomp.opensky-network.org/> ""
-
-## Eligibility for Prize
-
-The winning solutions will only be eligible for the awards if all source code
-and additional data sets used to generate the results from the measurement data
-will be made available to be published under the **GNU GPLv3 license** on the
-OpenSky Network's github account.
-
-In addition, sufficient documentation must be provided to understand and
-reproduce the results.
-
-
-### Original Solution
-
-Teams (or individuals) must use their own original solutions.
-Re-using any existing implementation is only allowed if the original authors 
-grant you the rights to use their solution and if you made significant modifications 
-to the algorithm or model.
-In particular, simply re-using existing code and rewriting the data input and 
-output mechanism is not sufficient. Adding parameters to the model and modifying
-filters to match the specific peculiarities of the data, however, can be 
-considered sufficient. 
-
-### Final Prize 
-
-The Selection Committee will review and discuss the top ranking teams and
-select final Awardees considering
-
-1. their final ranking score,
-1. the originality of the proposed model
-1. the open availability of the code and the relevant documentation provided.
-
-By participating in the Challenge, you agree to be bound by the final decision
-of the PRC Data Challenge selection committee. 

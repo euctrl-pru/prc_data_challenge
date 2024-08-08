@@ -466,7 +466,6 @@ window.Quarto = {
   <li><a href="#dataset-for-submission" id="toc-dataset-for-submission" class="nav-link" data-scroll-target="#dataset-for-submission">Dataset for submission</a></li>
   <li><a href="#wherehow-to-get-the-datasets" id="toc-wherehow-to-get-the-datasets" class="nav-link" data-scroll-target="#wherehow-to-get-the-datasets">Where/How to get the Datasets</a></li>
   <li><a href="#ranking" id="toc-ranking" class="nav-link" data-scroll-target="#ranking">Ranking</a></li>
-  <li><a href="#eligibility-for-prize" id="toc-eligibility-for-prize" class="nav-link" data-scroll-target="#eligibility-for-prize">Eligibility for Prize</a></li>
   <li><a href="#acronyms_HEADER_LOA" id="toc-acronyms_HEADER_LOA" class="nav-link" data-scroll-target="#acronyms_HEADER_LOA">List of Acronyms</a></li>
   </ul>
 </nav>
@@ -512,13 +511,14 @@ submissions/
 ├── 2022-01-02.parquet
 ├── ...
 ├── challenge_set.csv
+├── final_submission_set.csv # &lt;-- only 1 week before deadline
 └── submission_set.csv</code></pre>
 <p>Each daily trajectory parquet file contains (<a href="#acronyms_ADS-B">Automatic Dependent Surveillance–Broadcast (ADS-B)</a> based) flown trajectories augmented with meteorological information<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
 <p>The S3 bucket <code>competition-data</code> contains</p>
 <ol type="1">
 <li>the flight list, <code>challenge_set.csv</code></li>
 <li>the daily trajectories, <code>2022-01-01.parquet</code>, <code>2022-01-02.parquet</code>, …</li>
-<li>the submission template, <code>submission_set.csv</code></li>
+<li>the submission set, <code>submission_set.csv</code> (and <code>final_submission_set.csv</code> only 1 week before deadline, see <a href="rankings.html">Rankings</a>)</li>
 </ol>
 <section id="flight-list" class="level3">
 <h3 class="anchored" data-anchor-id="flight-list">Flight List</h3>
@@ -579,11 +579,7 @@ Also <a href="#acronyms_AO">AO</a>s have different tanking policies.</li>
 </section>
 <section id="dataset-for-submission" class="level2">
 <h2 class="anchored" data-anchor-id="dataset-for-submission">Dataset for submission</h2>
-<p>The submission template file, <code>competition-data/submission_set.csv</code>, contains the list of flight IDs for which to estimate the TOW; it looks something like:</p>
-<pre><code>flight_id, tow
-258081039,
-258081111,
-...</code></pre>
+<p>The submission file, <code>competition-data/submission_set.csv</code>, contains a flight list for which to estimate the <a href="#acronyms_TOW">TOW</a>; it has the same columns as the flight list (but of course empty <code>tow</code>.)</p>
 <p>The relevant trajectories are part of the ones provided in the Trajectory dataset.</p>
 </section>
 <section id="wherehow-to-get-the-datasets" class="level2">
@@ -595,12 +591,12 @@ Upon registration of your team you should have received the relevant</p>
 <li><code>BUCKET_ACCESS_KEY</code> and <code>BUCKET_ACCESS_SECRET</code>.</li>
 </ul>
 <p>something like</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"team_name"</span><span class="fu">:</span> <span class="st">"team_warm_donkey"</span><span class="fu">,</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"team_id"</span><span class="fu">:</span> <span class="st">"b8e3a438-d2f2-4a11-bf28-e7a8f84cf3db"</span><span class="fu">,</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"bucket_access_key"</span><span class="fu">:</span> <span class="st">"blah"</span><span class="fu">,</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"bucket_access_secret"</span><span class="fu">:</span> <span class="st">"blahblah"</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"team_name"</span><span class="fu">:</span> <span class="st">"team_warm_donkey"</span><span class="fu">,</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"team_id"</span><span class="fu">:</span> <span class="st">"b8e3a438-d2f2-4a11-bf28-e7a8f84cf3db"</span><span class="fu">,</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"bucket_access_key"</span><span class="fu">:</span> <span class="st">"blah"</span><span class="fu">,</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"bucket_access_secret"</span><span class="fu">:</span> <span class="st">"blahblah"</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Below you can find the details on how to access the data sets and submit your results for ranking.</p>
 <section id="using-minio-client" class="level3">
 <h3 class="anchored" data-anchor-id="using-minio-client">Using MinIO Client</h3>
@@ -654,34 +650,34 @@ secret_key = SECRET_KEY</code></pre>
 <section id="readwrite-data-1" class="level4">
 <h4 class="anchored" data-anchor-id="readwrite-data-1">Read/Write Data</h4>
 <p>The following code allows to download the challenge files</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyopensky.s3 <span class="im">import</span> S3Client</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>s3 <span class="op">=</span> S3Client()</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> obj <span class="kw">in</span> s3.s3client.list_objects(<span class="st">"competition-data"</span>, recursive<span class="op">=</span><span class="va">True</span>):</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>     <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>obj<span class="sc">.</span>bucket_name<span class="op">=</span><span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>obj<span class="sc">.</span>object_name<span class="op">=</span><span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>     s3.download_object(obj)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyopensky.s3 <span class="im">import</span> S3Client</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>s3 <span class="op">=</span> S3Client()</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> obj <span class="kw">in</span> s3.s3client.list_objects(<span class="st">"competition-data"</span>, recursive<span class="op">=</span><span class="va">True</span>):</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>     <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>obj<span class="sc">.</span>bucket_name<span class="op">=</span><span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>obj<span class="sc">.</span>object_name<span class="op">=</span><span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>     s3.download_object(obj)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 <section id="using-traffic-for-exploratory-data-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="using-traffic-for-exploratory-data-analysis">Using <code>traffic</code> for Exploratory Data Analysis</h3>
 <p>You can explore the trajectory data using the <a href="https://traffic-viz.github.io/" title="traffic - air traffic data processing with Python"><code>traffic</code></a> in a Python notebook.</p>
 <p>For example you can load one of the daily trajectory files</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tqdm <span class="im">import</span> TqdmExperimentalWarning</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">"ignore"</span>, category<span class="op">=</span>TqdmExperimentalWarning)</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">"ignore"</span>, category<span class="op">=</span><span class="pp">FutureWarning</span>)</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> traffic.core <span class="im">import</span> Traffic</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> timedelta</span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.dates <span class="im">import</span> DateFormatter</span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> Traffic.from_file(<span class="st">'2022-01-01.parquet'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tqdm <span class="im">import</span> TqdmExperimentalWarning</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">"ignore"</span>, category<span class="op">=</span>TqdmExperimentalWarning)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">"ignore"</span>, category<span class="op">=</span><span class="pp">FutureWarning</span>)</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> traffic.core <span class="im">import</span> Traffic</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> timedelta</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.dates <span class="im">import</span> DateFormatter</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> Traffic.from_file(<span class="st">'2022-01-01.parquet'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>plot the list of flights</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>t</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>t</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/flights.png" class="img-fluid figure-img" style="width:6cm"></p>
@@ -689,8 +685,8 @@ secret_key = SECRET_KEY</code></pre>
 </figure>
 </div>
 <p>a 2D map</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>trj <span class="op">=</span> t[<span class="dv">11</span>]</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>trj</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>trj <span class="op">=</span> t[<span class="dv">11</span>]</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>trj</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/flight_map.png" class="img-fluid figure-img" style="width:10cm"></p>
@@ -698,22 +694,22 @@ secret_key = SECRET_KEY</code></pre>
 </figure>
 </div>
 <p>and finally a vertical profile with ground speed:</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> plt.style.context(<span class="st">"traffic"</span>):</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">7</span>))</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    (</span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>        trj</span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>        .plot_time(</span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>            ax<span class="op">=</span>ax,</span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>            y<span class="op">=</span>[<span class="st">"altitude"</span>, <span class="st">"groundspeed"</span>],</span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>            secondary_y<span class="op">=</span>[<span class="st">"groundspeed"</span>]</span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">""</span>)</span>
-<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>    ax.tick_params(axis<span class="op">=</span><span class="st">'x'</span>, labelrotation<span class="op">=</span><span class="dv">0</span>)</span>
-<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>    ax.xaxis.set_major_formatter(DateFormatter(<span class="st">"%H:%M"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> plt.style.context(<span class="st">"traffic"</span>):</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">7</span>))</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    (</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>        trj</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>        .plot_time(</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>            ax<span class="op">=</span>ax,</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>            y<span class="op">=</span>[<span class="st">"altitude"</span>, <span class="st">"groundspeed"</span>],</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>            secondary_y<span class="op">=</span>[<span class="st">"groundspeed"</span>]</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">""</span>)</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>    ax.tick_params(axis<span class="op">=</span><span class="st">'x'</span>, labelrotation<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>    ax.xaxis.set_major_formatter(DateFormatter(<span class="st">"%H:%M"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="media/trj11.png" style="height:10cm" class="figure-img"></p>
@@ -731,7 +727,12 @@ secret_key = SECRET_KEY</code></pre>
 ├── team_warm_donkey_v2_b8e3a438-d2f2-4a11-bf28-e7a8f84cf3db.csv
 ├── team_zesty_wreath_v1_4eabd02b-1622-44d8-8066-1dccd12bd585.csv
 └── ...</code></pre>
-<p>For ranking you’ll need to upload your estimated TOWs for all the flight IDs as present in the <code>competition-data/submission_set.csv</code> to the <code>submissions/</code> bucket in a file named</p>
+<p>For ranking you’ll need to upload a file with your estimated TOWs (column <code>tow</code>) for all the flight IDs (column <code>flight_id</code>) as present in the <code>competition-data/submission_set.csv</code>. Its content can be as simple as</p>
+<pre><code>flight_id, tow
+258081039, 123
+258081111, 456
+...</code></pre>
+<p>Your submission file needs to be uploaded to the <code>submissions/</code> bucket in a file named</p>
 <p><code>&lt;team_name&gt;_v&lt;num&gt;_&lt;team_id&gt;.csv</code></p>
 <p>where you are responsible to increase <code>num</code> accordingly for each of your submissions:</p>
 <pre><code>$ team_name='team_warm_donkey'
@@ -740,8 +741,8 @@ $ num=3
 $ subfile=${team_name}_v${num}_${team_id}.csv
 $ mc cp ./my_submission.csv dc24/submissions/${subfile}</code></pre>
 <p>Here you use the <code>dc24</code> alias as explained above.</p>
-<p>The ranking job will be automatically run every 30 minutes and will use <a href="#acronyms_RMSE">Root Mean Square Error (RMSE)</a> to compare a submission for the 105959 flights in <code>submission_set.csv</code> with the (hidden) the ground truth. The final ranking will use an additional 52190 flights.</p>
-<p>The final</p>
+<p>The ranking job will be automatically run every 30 minutes and will use <a href="#acronyms_RMSE">Root Mean Square Error (RMSE)</a> to compare a submission for the 105959 flights in <code>submission_set.csv</code> with the (hidden) the ground truth.</p>
+<p>The final ranking will use an additional 52190 flights. See the <a href="rankings.html">Ranking page</a> for more details.</p>
 <p>The <a href="https://datacomp.opensky-network.org/results" title="PRC Data Challenge ranking page">leaderboard</a> will display the new ranks.<br>
 Eventually manually <strong>reload it</strong>, please.</p>
 <p>You can also get a JSON file with the rankings as (<code>| jq</code> only for pretty printing):</p>
@@ -762,27 +763,8 @@ Eventually manually <strong>reload it</strong>, please.</p>
     "file_version": "v1"
   }
 ]</code></pre>
-</section>
-<section id="eligibility-for-prize" class="level2">
-<h2 class="anchored" data-anchor-id="eligibility-for-prize">Eligibility for Prize</h2>
-<p>The winning solutions will only be eligible for the awards if all source code and additional data sets used to generate the results from the measurement data will be made available to be published under the <strong>GNU GPLv3 license</strong> on the OpenSky Network’s github account.</p>
-<p>In addition, sufficient documentation must be provided to understand and reproduce the results.</p>
-<section id="original-solution" class="level3">
-<h3 class="anchored" data-anchor-id="original-solution">Original Solution</h3>
-<p>Teams (or individuals) must use their own original solutions. Re-using any existing implementation is only allowed if the original authors grant you the rights to use their solution and if you made significant modifications to the algorithm or model. In particular, simply re-using existing code and rewriting the data input and output mechanism is not sufficient. Adding parameters to the model and modifying filters to match the specific peculiarities of the data, however, can be considered sufficient.</p>
-</section>
-<section id="final-prize" class="level3">
-<h3 class="anchored" data-anchor-id="final-prize">Final Prize</h3>
-<p>The Selection Committee will review and discuss the top ranking teams and select final Awardees considering</p>
-<ol type="1">
-<li>their final ranking score,</li>
-<li>the originality of the proposed model</li>
-<li>the open availability of the code and the relevant documentation provided.</li>
-</ol>
-<p>By participating in the Challenge, you agree to be bound by the final decision of the PRC Data Challenge selection committee.</p>
 
 
-</section>
 </section>
 <section id="acronyms_HEADER_LOA" class="level1 loa unnumbered">
 <h1 class="loa unnumbered">List of Acronyms</h1>

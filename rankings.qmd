@@ -7,6 +7,8 @@ acronyms:
   insert_loa: false
 ---
 
+## Leaderboard
+
 <div id="observablehq-ranking_table-b337f44f"></div>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
@@ -17,3 +19,51 @@ new Runtime().module(define, name => {
   if (name === "ranking_table") return new Inspector(document.querySelector("#observablehq-ranking_table-b337f44f"));
 });
 </script>
+
+
+## Criteria for Ranking Intermediate Submissions
+
+Intermediate submissions are ranked on RMSE of the submitted `tow` with respect
+to the (hidden) "ground truth for the `flight_id`'s in `submission_set.csv` ".
+
+There are 105959 `flight_id`'s in `submission_set.csv`.
+
+
+## Criteria for Ranking of Final Submission
+
+Final ranking will be based on 
+
+* RMSE from `competition-data/final_submission_set.csv` (it will be posted around
+  1 week before the deadline) which includes an additional 52190 flights
+  compared to `competition-data/submission_set.csv`
+
+
+### Eligibility for Prize
+
+The winning solutions will only be eligible for the awards if
+
+* all source code and additional data sets used to generate the results from
+  the measurement data will be made available to be published under the
+  **GNU GPLv3 license** on the OpenSky Network's github account.
+* sufficient documentation is provided to understand and reproduce the results.
+* the solution is _original_: teams must use their own original solutions.
+  Re-using any existing implementation is only allowed if the original authors 
+  grant you the rights to use their solution and if you made significant modifications 
+  to the algorithm or model.
+  In particular, simply re-using existing code and rewriting the data input and 
+  output mechanism is not sufficient. Adding parameters to the model and modifying
+  filters to match the specific peculiarities of the data, however, can be 
+  considered sufficient. 
+
+
+### Final Prize 
+
+The Selection Committee will review and discuss the top ranking teams and
+select final Awardees considering
+
+1. their final ranking score,
+1. the originality of the proposed model
+1. the open availability of the code and the relevant documentation provided.
+
+By participating in the Challenge, you agree to be bound by the final decision
+of the PRC Data Challenge selection committee. 
