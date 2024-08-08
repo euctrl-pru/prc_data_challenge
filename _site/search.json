@@ -34,7 +34,7 @@
     "href": "index.html#eligibility-for-participation",
     "title": "PRC Data Challenge",
     "section": "Eligibility for Participation",
-    "text": "Eligibility for Participation\n\n\n\n\n\n\nDelay in handling Team creation requests\n\n\n\nWe are facing some minor issues for teams creation.\nPlease bear with us and do not worry, we will process your request in few days.\n\n\nAny data science and/or aviation enthusiast team or individual can participate to the challenge.\nPlease send an email for the team creation with the following info (this will be publicly visible [apart from emails] in a dedicated teams’ page):\n\nan OSN account (create one if you do not have it yet)\ncorresponding member: name + email address\nlist of members: team member name (eventual affiliation) + email address (optional)\nwho you are: a description of the team\nrationale for participation\n\nto\n\nchallenge AT opensky-network.org\n\nA little while later, you will receive the team name and the relevant access/secret keys to obtain the Data via your OSN account; something like:\n{\n  \"team_name\": \"team_warm_donkey\",\n  \"team_id\": \"b8e3a438-d2f2-4a11-bf28-e7a8f84cf3db\",\n  \"bucket_access_key\": \"blah\",\n  \"bucket_access_secret\": \"blahblah\"\n}\n\n\n\n\n\n\nNote\n\n\n\nAnyone affiliated with OpenSky Network or EUROCONTROL is not eligible to participate to the PRC Data Challenge.",
+    "text": "Eligibility for Participation\nAny data science and/or aviation enthusiast team or individual can participate to the challenge.\nPlease send an email for the team creation with the following info (this will be publicly visible [apart from emails] in a dedicated teams’ page):\n\nan OSN account (create one if you do not have it yet)\ncorresponding member: name + email address\nlist of members: team member name (eventual affiliation) + email address (optional)\nwho you are: a description of the team\nrationale for participation\n\nto\n\nchallenge AT opensky-network.org\n\nA little while later, you will receive the team name and the relevant access/secret keys to obtain the Data via your OSN account; something like:\n{\n  \"team_name\": \"team_warm_donkey\",\n  \"team_id\": \"b8e3a438-d2f2-4a11-bf28-e7a8f84cf3db\",\n  \"bucket_access_key\": \"blah\",\n  \"bucket_access_secret\": \"blahblah\"\n}\n\n\n\n\n\n\nNote\n\n\n\nAnyone affiliated with OpenSky Network or EUROCONTROL is not eligible to participate to the PRC Data Challenge.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>PRC Data Challenge</span>"
     ]
@@ -74,7 +74,7 @@
     "href": "data.html#dataset-for-submission",
     "title": "2  Data",
     "section": "Dataset for submission",
-    "text": "Dataset for submission\nThe submission file, competition-data/submission_set.csv, contains a flight list for which to estimate the TOW; it has the same columns as the flight list (but of course empty tow.)\nThe relevant trajectories are part of the ones provided in the Trajectory dataset.",
+    "text": "Dataset for submission\n\n\n\n\n\n\nRefreshed submission_set.csv on 8th Aug 2024\n\n\n\nsubmission_set.csv now contains all columns and not just flight_id and tow.\nPlease consider re-downloading it.\n\n\nThe submission file, competition-data/submission_set.csv, contains a flight list for which to estimate the TOW; it has the same columns as the flight list (but of course empty tow.)\nThe relevant trajectories are part of the ones provided in the Trajectory dataset.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data</span>"
     ]
@@ -187,6 +187,16 @@
     "text": "Criteria for Ranking of Final Submission\nFinal ranking will be based on\n\nRMSE from competition-data/final_submission_set.csv (it will be posted around 1 week before the deadline) which includes an additional 52190 flights compared to competition-data/submission_set.csv\n\n\nEligibility for Prize\nThe winning solutions will only be eligible for the awards if\n\nall source code and additional data sets used to generate the results from the measurement data will be made available to be published under the GNU GPLv3 license on the OpenSky Network’s github account.\nsufficient documentation is provided to understand and reproduce the results.\nthe solution is original: teams must use their own original solutions. Re-using any existing implementation is only allowed if the original authors grant you the rights to use their solution and if you made significant modifications to the algorithm or model. In particular, simply re-using existing code and rewriting the data input and output mechanism is not sufficient. Adding parameters to the model and modifying filters to match the specific peculiarities of the data, however, can be considered sufficient.\n\n\n\nFinal Prize\nThe Selection Committee will review and discuss the top ranking teams and select final Awardees considering\n\ntheir final ranking score,\nthe originality of the proposed model\nthe open availability of the code and the relevant documentation provided.\n\nBy participating in the Challenge, you agree to be bound by the final decision of the PRC Data Challenge selection committee.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Rankings</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#the-data",
+    "href": "index.html#the-data",
+    "title": "PRC Data Challenge",
+    "section": "",
+    "text": "Refreshed submission_set.csv on 8th Aug 2024\n\n\n\nsubmission_set.csv now contains all columns and not just flight_id and tow.\nPlease consider re-downloading it.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>PRC Data Challenge</span>"
     ]
   }
 ]

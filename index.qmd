@@ -23,6 +23,15 @@ final prize ranking.
 
 See the [Data page](data.html) for more details.
 
+::: {.callout-warning}
+## Refreshed `submission_set.csv` on 8th Aug 2024
+
+`submission_set.csv` now contains all columns and not just `flight_id` and `tow`.
+
+Please consider re-downloading it.
+:::
+
+
 ## The Prize
 
 A total prize of $5000$ EUR will be distributed among the finalists' teams.  
@@ -70,14 +79,6 @@ We got many questions about this challenge. We grouped and answered them as foll
   the impact of Aviation to the environment.
 
 ## Eligibility for Participation
-
-::: {.callout-warning}
-## Delay in handling Team creation requests
-
-We are facing some minor issues for teams creation.  
-Please bear with us and do not worry, we will process your request in few days.
-:::
-
 
 Any data science and/or aviation enthusiast team or individual can participate
 to the challenge.
