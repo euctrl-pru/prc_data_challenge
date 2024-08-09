@@ -7,7 +7,7 @@ Aviation background, to create teams and compete to
 build an **open** \acr{ML} model able to accurately infer the \acr{ATOW} of a
 flown flight.
 
-
+![PRC Data Challenge](media/prc_dc24.jpeg)
 
 ## The Data
 
