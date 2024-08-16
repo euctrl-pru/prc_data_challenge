@@ -24,6 +24,11 @@ final prize ranking.
 See the [Data page](data.html) for more details.
 
 ::: {.callout-warning}
+## Updated `challenge_set.csv` on 16th Aug 2024
+
+`challenge_set.csv` now contains fixes for `tow` originally below minimum mass
+for the relevant aircraft types.
+
 ## Refreshed `submission_set.csv` on 8th Aug 2024
 
 `submission_set.csv` now contains all columns and not just `flight_id` and `tow`.
