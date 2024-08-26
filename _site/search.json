@@ -228,5 +228,15 @@
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>PRC Data Challenge</span>"
     ]
+  },
+  {
+    "objectID": "rankings.html#leaderboard",
+    "href": "rankings.html#leaderboard",
+    "title": "3  Rankings",
+    "section": "",
+    "text": "Attention\n\n\n\n26th Aug: automation for ranking not active yet\nTHE following table is a PLACEHOLDER.\n(similarly for the API https://datacomp.opensky-network.org/api/rankings)\nPLEASE bear with us and wait for a little while more.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Rankings</span>"
+    ]
   }
 ]
