@@ -9,15 +9,6 @@ acronyms:
 
 ## Leaderboard
 
-::: {.callout-warning title="Attention"}
-#### 26th Aug: automation for ranking not active yet
-
-THE following table is a PLACEHOLDER.  
-(similarly for the API <https://datacomp.opensky-network.org/api/rankings>)
-
-PLEASE bear with us and wait for a little while more.
-:::
-
 
 <div id="observablehq-ranking_table-b4294d79"></div>
 
