@@ -11,9 +11,10 @@ teams_file := justfile_directory() + "/media/teams_private.json"
     -H 'accept: application/json' \
     -H 'Authorization: Basic YWRtaW46RHRVNmNLeEY5aWdsdENBaTFyekU='
 
-# save teams locally
+# save teams locally (sorted by registration date)
+[confirm("Are you sure you want to update local teams file (you need VPN)?")]
 @teams-update:
-  just teams | jq -r '.' > {{teams_file}}
+  just teams | jq -r '. | sort_by(.registration_date) ' > {{teams_file}}
 
 # remove email addresses
 @teams-no-emails:
@@ -27,7 +28,14 @@ teams_file := justfile_directory() + "/media/teams_private.json"
 @teams-email:
   cat {{teams_file}} | jq -r '.[] | .members[] | select(.leader == true) | .email'
 
+
+# team for team's name 
+@team-of-name team_name:
+  cat {{teams_file}} | \
+    jq '.[] | select(.active == true) | select(.team_name == "{{team_name}}") | .'
+
 # team's name for leader's email
-@team-leader leader_email:
+@team-of-leader leader_email:
   cat {{teams_file}} | \
     jq '.[] | select(.active == true) | select(.members[].leader == true and .members[].email == "{{leader_email}}") | .'
+
