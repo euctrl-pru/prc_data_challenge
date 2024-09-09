@@ -1,0 +1,8 @@
+## team_motivated_ostrich
+
+### Description
+We are an innovative team specializing in the development of software solutions across various market niches. Our team is composed of skilled professionals with deep expertise in data science, software engineering, and domain-specific knowledge, ensuring that our solutions meet the highest standards of excellence.
+
+### Rationale for participation
+Our participation in this data contest is motivated by our desire to contribute to a more efficient and environmentally friendly aviation sector. This contest is an opportunity to apply advanced machine learning knowledge and technologies to bring real improvements in this field. We are motivated by the possibility of creating a positive impact and contributing to a greener and more sustainable future for the planet and we aim to demonstrate that technology and innovation can play a vital role in addressing global challenges and building a better future for all.
+

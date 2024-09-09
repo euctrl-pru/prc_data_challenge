@@ -2,13 +2,16 @@ project:
   type: book
   output-dir: _site
 
+
 book:
   title: "PRC Data Challenge"
   chapters:
     - index.qmd
     - data.qmd
     - rankings.qmd
+    - teams.qmd
     - about.qmd
+
 
   navbar:
     background: light

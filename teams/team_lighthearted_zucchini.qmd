@@ -1,0 +1,8 @@
+## team_lighthearted_zucchini
+
+### Description
+A solo practitioner data scientist based in the United States
+
+### Rationale for participation
+Over the past several years I've developed a particular interest in spatial data analysis and geospatial data science. That work has focused mainly on human mobility and transportation, and through those efforts I began working with aviation and flight trajectory data. I think this data challenge offers a great opportunity to marry my interests to a problem with both important industry and broader climate implications
+

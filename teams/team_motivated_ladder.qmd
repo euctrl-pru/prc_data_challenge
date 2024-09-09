@@ -1,0 +1,8 @@
+## team_motivated_ladder
+
+### Description
+Angel and Carol are good friends. Angel is a developer while Carol works as a data scientist. Together, the two complement each other in their look of the issue
+
+### Rationale for participation
+To have fun
+

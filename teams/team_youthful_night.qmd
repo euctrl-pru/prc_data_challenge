@@ -1,0 +1,8 @@
+## team_youthful_night
+
+### Description
+data scientist in the aviation industry
+
+### Rationale for participation
+help explore efficient TOW prediction. I work in developing software for Flight operations and sustainability which is an important objective we work towards
+

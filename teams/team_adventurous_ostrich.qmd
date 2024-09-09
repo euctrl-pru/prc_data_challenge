@@ -1,0 +1,8 @@
+## team_adventurous_ostrich
+
+### Description
+We are a group of young researchers in the field of air traffic management with year of experience in data analysis and operational indicators
+
+### Rationale for participation
+We find this challenge interesting both from a technical and operational point of view.  We believe it may help to improve the estimations of the negative impact of aviation on the environment, providing a basis to find new tackle the problem
+

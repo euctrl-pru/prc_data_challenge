@@ -1,0 +1,8 @@
+## team_reliable_monkey
+
+### Description
+We are a team comprised of 5 current and past QUT students and members of the QUT Aerospace Society, all of whom have heavily contributed to the club's various projects. We have experience in electrical and mechanical engineering, mathematics, data science, computer science, aerospace and aviation
+
+### Rationale for participation
+This challenge provides a unique opportunity to both develop and demonstrate skills directly relevant to the aerospace industry. By tackling a project such as this as a team comprised of motivated students with a wide range of skills and knowledge, we can contribute new and valuable ideas towards overcoming current problems in the industry
+

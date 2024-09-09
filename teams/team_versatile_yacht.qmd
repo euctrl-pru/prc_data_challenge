@@ -1,0 +1,8 @@
+## team_versatile_yacht
+
+### Description
+The team is mainly composed by M3Systems consultants, bringing their expertise in aviation with several years of experience in the sector
+
+### Rationale for participation
+For several years we have provided our expertise in the aviation world and we are interested in bringing our unique combination of aeronautical engineering and data science skills to this challenge
+

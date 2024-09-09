@@ -1,0 +1,8 @@
+## team_sensible_robot
+
+### Description
+I am research intern from Boeing working on project related to data engineering
+
+### Rationale for participation
+This competition is relevant to the project that I have been working on
+

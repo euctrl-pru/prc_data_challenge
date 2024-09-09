@@ -1,0 +1,8 @@
+## team_witty_zucchini
+
+### Description
+I am an avid aviation enthusiast working as a data scientist in a Fortune 40 company. I have experience working with [prior aviation related data] (https://github.com/billodalroy/flight-delay-prediction).
+
+### Rationale for participation
+As an avgeek and a climate conscious person I rarely find anything which exists in the intersection of the two, this challenge is the closest to it. I believe I can contribute and learn while participating in the challenge.
+

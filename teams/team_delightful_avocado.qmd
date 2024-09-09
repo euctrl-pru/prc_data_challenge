@@ -1,0 +1,8 @@
+## team_delightful_avocado
+
+### Description
+aviation enthusiasts with a strong interest in machine learning
+
+### Rationale for participation
+great opportunity for us to combine these passions and see how data science can make a real impact in aviation
+

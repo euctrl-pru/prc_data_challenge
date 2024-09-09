@@ -1,0 +1,8 @@
+## team_brisk_pencil
+
+### Description
+We are a team of highly motivated engineers passionate about leveraging data to solve real-world challenges. As individuals with some experience in data analysis, machine learning, and software development, we are excited to contribute our skills to this challenge. Our team brings a strong combination of technical expertise, creative problem-solving, and a deep commitment to making an impact.
+
+### Rationale for participation
+We are eager to participate in the PRC Data Challenge because it offers a unique opportunity to apply our knowledge to a meaningful cause. The challenge aligns perfectly with our academic and career goals, as it allows us to engage with complex datasets, develop innovative solutions, and contribute to the broader field of aviation safety. We are particularly interested in exploring how data can enhance the safety and efficiency of air traffic management, and we look forward to collaborating with other participants and learning from the experience
+

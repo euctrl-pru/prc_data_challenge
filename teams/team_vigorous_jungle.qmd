@@ -1,0 +1,8 @@
+## team_vigorous_jungle
+
+### Description
+We are a group of software engineers with diverse backgrounds in machine learning and a shared passion for data science and machine learning. Our team actively contributes to open-source projects across different fields, allowing us to develop complex solutions that tackle real-world challenges
+
+### Rationale for participation
+We are particularly interested in tracking flight records and addressing the current gap in open-source models for predicting critical aviation parameters. Our experience in data science and machine learning equips us well for this challenge, especially as it involves large datasets within a specific domain that we find both challenging and fascinating
+

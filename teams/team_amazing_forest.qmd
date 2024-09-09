@@ -1,0 +1,8 @@
+## team_amazing_forest
+
+### Description
+Professionally, I am a Data Scientist for a large social media business. Personally, I am a frequent blogger on analytics and sports topics at conormclaughlin.net
+
+### Rationale for participation
+Life-long interest in aviation, academic and commercial experience building machine learning models, prior history working with OpenSky APIs to implement personal projects
+

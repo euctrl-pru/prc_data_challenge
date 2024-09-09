@@ -1,0 +1,8 @@
+## team_imaginative_flamingo
+
+### Description
+I am currently a student of a Master's degree course in Scientific and Data-Intensive Computing at the University of Trieste, Italy
+
+### Rationale for participation
+I find the PRC Data Challenge a terrific opportunity to challenge myself in my field of study, but with a much more practical approach. I have been long devoted to open source software and I much appreciate the idea of exploiting crowd-harvested data for creating a crowd-devised model and making it publicly available, in order for it to be worked upon and improved
+

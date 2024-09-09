@@ -1,0 +1,8 @@
+## team_outgoing_boat
+
+### Description
+I am a business insights analyst at NetJets Europe
+
+### Rationale for participation
+This challenge is a great opportunity for me to develop my ML skills using real world aviation data
+

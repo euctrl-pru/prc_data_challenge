@@ -1,0 +1,8 @@
+## team_faithful_napkin
+
+### Description
+A researcher at Xiamen University's School of Aeronautics and Astronautics, my work focuses on advanced algorithmic solutions in the civil aviation sector, including passenger flow forecasting, revenue management, and crew scheduling
+
+### Rationale for participation
+As a researcher at Xiamen University's School of Aeronautics and Astronautics, my work focuses on advanced algorithmic solutions in the civil aviation sector, including passenger flow forecasting, revenue management, and crew scheduling. Participating in the PRC Data Challenge aligns perfectly with my expertise and interests, offering a unique opportunity to apply my skills in machine learning and data analysis to a critical aspect of aviation—inferring the Actual TakeOff Weight (ATOW)
+

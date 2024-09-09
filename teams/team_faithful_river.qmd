@@ -1,0 +1,8 @@
+## team_faithful_river
+
+### Description
+We are scientist employed and working for ANSP Deutsche Flugsicherung (DFS), Germany
+
+### Rationale for participation
+Through our collaborative work, we have developed and fine-tuned a trajectory prediction framework, which can estimate ATOW. The PCR data challenge gives us a platform to test our framework
+

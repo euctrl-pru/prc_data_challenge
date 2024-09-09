@@ -1,0 +1,8 @@
+## team_kind_nightlight
+
+### Description
+researchers from the Berlin Institute for the Foundations of Learning and Data (BIFOLD) at Technische Universität Berlin. Our primary research focuses on the intersection of computer security and machine learning, but in our free time we also have a strong passion for aviation
+
+### Rationale for participation
+curious about aviation and are eager to apply some of our research expertise to this challenge
+

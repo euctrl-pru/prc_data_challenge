@@ -1,0 +1,8 @@
+## team_outspoken_lemon
+
+### Description
+Karolina is an associate Professor at University of Zagreb, Faculty of Transport and Traffic Sciences, with expertise in flight mechanics and aerodynamics. Dario is a software engineer and  data science expert
+
+### Rationale for participation
+We already published a paper together in this area, and initial mass is a problem we are trying to solve
+

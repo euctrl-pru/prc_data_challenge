@@ -1,0 +1,8 @@
+## team_cheery_vase
+
+### Description
+I'm enthusiast python programmer and eventually make some software on flights
+
+### Rationale for participation
+I like to program in python and I've been making some application with scikitlearn machine learning: the PRC Data Challenge looks like a good opportunity to show up my knowledge
+

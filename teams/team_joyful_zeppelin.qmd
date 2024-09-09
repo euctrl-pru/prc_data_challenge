@@ -1,0 +1,8 @@
+## team_joyful_zeppelin
+
+### Description
+We are team Sydorg, a group of four aviation and machine learning enthusiasts from Gandhinagar, India. With a mix of data scientist, software engineers and management experts, our fondness of data analytics and its implications in real world is what brings us together
+
+### Rationale for participation
+We are a team of data scientists and aviation enthusiasts eager to tackle this challenge. It not only stimulates our data-driven, analytical minds but also pushes us to address both the short- and long-term implications of our solutions. We are part of Sydorg Technologies, an Indian startup dedicated to optimizing air traffic operations at airports, which plays a significant role in reducing carbon emissions in the aviation sector. We are excited about the possibility of making this work open-source, as it aligns with our mission to build a more sustainable ML-based SaaS product and contribute to the broader community
+

@@ -1,0 +1,8 @@
+## team_gentle_dragon
+
+### Description
+a Business and Computer science student from Hamburg
+
+### Rationale for participation
+I want to try this data science project out for myself, I am not that proficient in projects like this but I would like to change that!
+

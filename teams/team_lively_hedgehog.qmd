@@ -1,0 +1,8 @@
+## team_lively_hedgehog
+
+### Description
+Student at Aarhus University in Computer technology, with focus on deep learning
+
+### Rationale for participation
+Challenge, and see how good it can be
+

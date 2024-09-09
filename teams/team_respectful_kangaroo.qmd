@@ -1,0 +1,8 @@
+## team_respectful_kangaroo
+
+### Description
+Our team is a group of researchers focused on machine learning algorithms and data science for aviation applications. We are committed to advancing machine learning techniques and exploring their practical applications to address real-world challenges in the aviation industry.
+
+### Rationale for participation
+Our participation in this Data Challenge is motivated by the opportunity to leverage our skills and knowledge to develop an ML model that accurately infers the Actual Take Off Weight (ATOW) of a flight. This problem is essential for optimizing flight performance, fuel efficiency, and safety in the aviation industry.
+

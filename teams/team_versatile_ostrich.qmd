@@ -1,0 +1,8 @@
+## team_versatile_ostrich
+
+### Description
+I am a senior aerospace undergraduate student at Sharif University of Technology with a passion for data science and its applications in the aerospace field
+
+### Rationale for participation
+I have a deep love for data and am eager to explore its applications in aerospace. This challenge presents a fantastic opportunity to apply my knowledge and skills in a meaningful way
+

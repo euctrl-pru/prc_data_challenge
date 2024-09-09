@@ -1,0 +1,8 @@
+## team_gentle_wreath
+
+### Description
+I am a young data scientist holding a master degree in data science with specialization in reliable and secure systems from the university of Stavanger in Norway where i currently live. I have a great interest in artificial intelligence and machine learning algorithms and its practical applications and important role in building and improving modern society. On the personal level, I am an active and social person who are happy to motivate and engage people around to exchange learning and experience
+
+### Rationale for participation
+I have a combined passion in both computer science and aviation. And as an engineer I would like to use my acquired knowledge to help solving the challenges that impact aviation operations and help improve the aviation industry towards better performance and less impact on natural environment and resources. I am also looking forward to learn more about data science in aviation and gain better experience in this area of knowledge
+

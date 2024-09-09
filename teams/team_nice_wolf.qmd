@@ -1,0 +1,8 @@
+## team_nice_wolf
+
+### Description
+french engineer and a colleague experienced in system engineering applied to aeronautical systems. Recent bootcamp training program in Data Engineering. Passionate about aeronautics, I passed my PPL license several years ago, among other licenses (ultralight, gliding, paragliding, ...)
+
+### Rationale for participation
+opportunity to improve  knowledge in both data science and aeronautic operations
+

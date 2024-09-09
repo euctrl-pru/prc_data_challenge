@@ -1,0 +1,8 @@
+## team_youthful_xylophone
+
+### Description
+I am a passionate engineer with a strong foundation in applied mathematics and computer science. Aviation has captivated my imagination since childhood, inspiring me to pursue a career in engineering
+
+### Rationale for participation
+My academic background equipped me with a robust analytical toolkit in digital signal processing, enabling me to tackle complex problems with a structured approach. I am excited to contribute my skills to this competition and extract valuable insights from this dataset
+

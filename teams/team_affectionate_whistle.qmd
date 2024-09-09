@@ -1,0 +1,8 @@
+## team_affectionate_whistle
+
+### Description
+We are a group of aviation data science enthusiasts hailing from Hong Kong. Our team primarily consists of current and former members of the OCTAD Lab in the Department of Mechanical and Aerospace Engineering at the Hong Kong University of Science and Technology (HKUST)
+
+### Rationale for participation
+Driven by curiosity and a shared passion for pushing the boundaries of aviation technology, we are participating in this competition to challenge ourselves to develop creative solutions that could potentially reshape the future of aviation
+

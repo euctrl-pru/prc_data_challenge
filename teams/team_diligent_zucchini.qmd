@@ -1,0 +1,8 @@
+## team_diligent_zucchini
+
+### Description
+Our team is eager to utilize the provided data for predicting aircraft trajectories within terminal airspace. We also aim to explore potential impacts on Air Traffic Management (ATM) airspace, considering the upcoming integration of urban air mobility operations
+
+### Rationale for participation
+The data provided through this challenge offers a valuable baseline for prediction tasks. We intend to highlight not only accuracy metrics, such as minFDE and minADE, but also to emphasize the safety aspects and implications of the prediction results
+

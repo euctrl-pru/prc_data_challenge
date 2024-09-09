@@ -1,0 +1,8 @@
+## team_tiny_rainbow
+
+### Description
+We are a team of professors and graduate students affiliated with the Aeronautics Institute of Technology (ITA) in Brazil, with expertise in the areas of data science and aviation
+
+### Rationale for participation
+The participation in the PRC data challenge will serve an educational purpose, providing the team members with an opportunity to collaborate, expand knowledge on the subject and refine analytical skills. Moreover, we are excited about the chance to make a contribution to the aviation community with the development of innovative solutions for modeling and enhancing the environmental performance of aviation
+

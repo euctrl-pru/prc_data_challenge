@@ -1,0 +1,8 @@
+## team_sociable_river
+
+### Description
+I'm an airplane enthusiast, seeking to apply ML research to decreasing carbon emissions!
+
+### Rationale for participation
+I'm really excited to spend some time looking at this data problem and develop a ML algo for it
+

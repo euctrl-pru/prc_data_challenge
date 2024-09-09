@@ -1,0 +1,8 @@
+## team_spirited_eel
+
+### Description
+aviation data scientist at ZHAW
+
+### Rationale for participation
+Working daily with this type of datasets, I'm curious to see what can be achieved
+

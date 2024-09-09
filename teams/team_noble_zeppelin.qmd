@@ -1,0 +1,8 @@
+## team_noble_zeppelin
+
+### Description
+ I am a solo participant.
+
+### Rationale for participation
+I am a sustainability research intern with Boeing and this competition is highly relevant to the work I am doing. Hence, I would like to participate to learn more from the brilliant and experienced Data Scientist who will be partaking in the competition.
+

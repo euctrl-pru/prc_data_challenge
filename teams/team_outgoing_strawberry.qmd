@@ -1,0 +1,8 @@
+## team_outgoing_strawberry
+
+### Description
+I am a senior software engineer at a major AI company
+
+### Rationale for participation
+I want to test and experiment with my workflows on real-world data - all the better with interesting aviation data, and for a good cause
+

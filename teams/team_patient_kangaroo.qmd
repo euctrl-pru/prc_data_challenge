@@ -1,0 +1,8 @@
+## team_patient_kangaroo
+
+### Description
+A team of data scientists working in the aviation industry
+
+### Rationale for participation
+Learning opportunity for an interesting data problem
+

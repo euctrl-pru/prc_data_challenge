@@ -1,0 +1,8 @@
+## team_patient_net
+
+### Description
+A team of Airbus Flight Physic data analytics enthusiasts
+
+### Rationale for participation
+Seeking the challenge while wanting to learn on the problem presented
+

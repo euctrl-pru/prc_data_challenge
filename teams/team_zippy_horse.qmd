@@ -1,0 +1,8 @@
+## team_zippy_horse
+
+### Description
+Prof. Dr. Ulrich Schumann studied Mechanical Engineering in Berlin, promoted on turbulence in Karlsruhe and habilitated in Meteorology in Munich, Germany. He works on various aspects of contrail cirrus and airborne measurements, and lectures on aviation climate impact, now at the Technical University Munich. Prof. Ian Poll published a series of open-access aircraft performance models. Dr. Roger Teoh is Scientist at Imperial College (with Prof. Dr Marc Stettler)  and published, since 2019, several papers on contrail modelling
+
+### Rationale for participation
+We plan to derive best estimates of the aircraft takeoff mass (at least upper and lower bounds) by comparing the given flight trajectories with the restrictions resulting from performance modelling using the open access PS Performance model. The most recent model PS model version covers 67 ICAO aircraft types, hopefully including all aircraft types in the set of test data, and provides several criteria to deduce the achievability of the given flight states in respect to Flight level,  Mach number, climb rate, vertical and horizontal accelerations, thrust, and lift coefficient, for the potential range of aircraft mass consistent with the takeoff mass, past fuel consumption, including all flight states from departure to destination. This should allow to estimate at least upper and lower bounds of the aircraft mass. The PS model is available among other within the pycontrail code ( https://doi.org/10.5281/zenodo.7776686 ). The PS model got improved over the  years, and further improvements are to be expected. The  team coordinator works mainly with Fortran, partially with Excel and partially with python
+

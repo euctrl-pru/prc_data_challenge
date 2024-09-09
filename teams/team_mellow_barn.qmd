@@ -1,0 +1,8 @@
+## team_mellow_barn
+
+### Description
+we are two PhD's in psychology who have branched out to the field of Data Science. David currently works as a Data Scientist for Bayer. Juul currently works as a Data Scientist for Ernest and Young
+
+### Rationale for participation
+We are joining the challenge due to my interest in flight data analysis, as I have done an internship at Eurocontrol where I studied the effect of Covid-19 on the European Air Transportation Network. As such, I would love the opportunity to again work with flight data and try some possibly interesting ideas that may help in estimating actual takeoff weight
+

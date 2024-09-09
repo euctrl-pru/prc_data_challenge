@@ -1,0 +1,8 @@
+## team_strong_fossil
+
+### Description
+Kristoffer Borgen - Aviation professor at San Jose State University, Jonathan Cox - Student at University of California Riverside
+
+### Rationale for participation
+We both like competitions and this seems like a good competition to compete in and use the project to learn machine learning applications
+

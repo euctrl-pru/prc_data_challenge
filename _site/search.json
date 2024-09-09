@@ -10,6 +10,16 @@
     ]
   },
   {
+    "objectID": "index.html#the-data",
+    "href": "index.html#the-data",
+    "title": "PRC Data Challenge",
+    "section": "",
+    "text": "Attention\n\n\n\n\nUpdated challenge_set.csv on 16th Aug 2024\nchallenge_set.csv now contains fixes for tow originally below minimum mass for the relevant aircraft types.\n\n\nRefreshed submission_set.csv on 8th Aug 2024\nsubmission_set.csv now contains all columns and not just flight_id and tow.\nPlease consider re-downloading.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>PRC Data Challenge</span>"
+    ]
+  },
+  {
     "objectID": "index.html#the-prize",
     "href": "index.html#the-prize",
     "title": "PRC Data Challenge",
@@ -100,16 +110,6 @@
     ]
   },
   {
-    "objectID": "data.html#eligibility-for-prize",
-    "href": "data.html#eligibility-for-prize",
-    "title": "2  Data",
-    "section": "Eligibility for Prize",
-    "text": "Eligibility for Prize\nThe winning solutions will only be eligible for the awards if all source code and additional data sets used to generate the results from the measurement data will be made available to be published under the GNU GPLv3 license on the OpenSky Network’s github account.\nIn addition, sufficient documentation must be provided to understand and reproduce the results.\n\nOriginal Solution\nTeams (or individuals) must use their own original solutions. Re-using any existing implementation is only allowed if the original authors grant you the rights to use their solution and if you made significant modifications to the algorithm or model. In particular, simply re-using existing code and rewriting the data input and output mechanism is not sufficient. Adding parameters to the model and modifying filters to match the specific peculiarities of the data, however, can be considered sufficient.\n\n\nFinal Prize\nThe Selection Committee will review and discuss the top ranking teams and select final Awardees considering\n\ntheir final ranking score,\nthe originality of the proposed model\nthe open availability of the code and the relevant documentation provided.\n\nBy participating in the Challenge, you agree to be bound by the final decision of the PRC Data Challenge selection committee.",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data</span>"
-    ]
-  },
-  {
     "objectID": "data.html#footnotes",
     "href": "data.html#footnotes",
     "title": "2  Data",
@@ -120,51 +120,11 @@
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "4  About",
-    "section": "",
-    "text": "This website describes the PRC Data Challenge.\nThe Performance Review Commission (PRC) was established in 1998 by EUROCONTROL’s Permanent Commission.\nIt provides objective information and independent advice to EUROCONTROL’s governing bodies on European air traffic management (ATM) performance.\nYou can find further details in the AIU Portal PRC page",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>About</span>"
-    ]
-  },
-  {
     "objectID": "rankings.html",
     "href": "rankings.html",
     "title": "3  Rankings",
     "section": "",
     "text": "Leaderboard",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Rankings</span>"
-    ]
-  },
-  {
-    "objectID": "rankings.html#criteria-for-intermediate-submissions",
-    "href": "rankings.html#criteria-for-intermediate-submissions",
-    "title": "3  Rankings",
-    "section": "Criteria for Intermediate Submissions",
-    "text": "Criteria for Intermediate Submissions\nIntermediate submissions are ranked on RMSE of the submitted tow with respect to the (hidden) “ground truth for the flight_id’s in submission_set.csv”.\nThere are 105959 flight_id’s in submission_set.csv.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Rankings</span>"
-    ]
-  },
-  {
-    "objectID": "rankings.html#criteria-for-final-submission",
-    "href": "rankings.html#criteria-for-final-submission",
-    "title": "3  Rankings",
-    "section": "Criteria for Final Submission",
-    "text": "Criteria for Final Submission\nFinal ranking will be based on\n\nRMSE from competition-data/final_submission_set.csv (it will be posted around 1 week before the deadline) which includes an additional 52190 flights compared to competition-data/submission_set.csv\noriginality of the solution\ndocumentation\nreproducibility of results\n\n\nEligibility for Prize\nThe winning solutions will only be eligible for the awards if all source code and additional data sets used to generate the results from the measurement data will be made available to be published under the GNU GPLv3 license on the OpenSky Network’s github account.\nIn addition, sufficient documentation must be provided to understand and reproduce the results.\n\nOriginal Solution\nTeams (or individuals) must use their own original solutions. Re-using any existing implementation is only allowed if the original authors grant you the rights to use their solution and if you made significant modifications to the algorithm or model. In particular, simply re-using existing code and rewriting the data input and output mechanism is not sufficient. Adding parameters to the model and modifying filters to match the specific peculiarities of the data, however, can be considered sufficient.\n\n\nFinal Prize\nThe Selection Committee will review and discuss the top ranking teams and select final Awardees considering\n\ntheir final ranking score,\nthe originality of the proposed model\nthe open availability of the code and the relevant documentation provided.\n\nBy participating in the Challenge, you agree to be bound by the final decision of the PRC Data Challenge selection committee.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Rankings</span>"
-    ]
-  },
-  {
-    "objectID": "rankings.html#eligibility-for-prize",
-    "href": "rankings.html#eligibility-for-prize",
-    "title": "3  Rankings",
-    "section": "Eligibility for Prize",
-    "text": "Eligibility for Prize\nThe winning solutions will only be eligible for the awards if all source code and additional data sets used to generate the results from the measurement data will be made available to be published under the GNU GPLv3 license on the OpenSky Network’s github account.\nIn addition, sufficient documentation must be provided to understand and reproduce the results.\n\nOriginal Solution\nTeams (or individuals) must use their own original solutions. Re-using any existing implementation is only allowed if the original authors grant you the rights to use their solution and if you made significant modifications to the algorithm or model. In particular, simply re-using existing code and rewriting the data input and output mechanism is not sufficient. Adding parameters to the model and modifying filters to match the specific peculiarities of the data, however, can be considered sufficient.\n\n\nFinal Prize\nThe Selection Committee will review and discuss the top ranking teams and select final Awardees considering\n\ntheir final ranking score,\nthe originality of the proposed model\nthe open availability of the code and the relevant documentation provided.\n\nBy participating in the Challenge, you agree to be bound by the final decision of the PRC Data Challenge selection committee.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Rankings</span>"
     ]
@@ -190,53 +150,933 @@
     ]
   },
   {
-    "objectID": "index.html#the-data",
-    "href": "index.html#the-data",
-    "title": "PRC Data Challenge",
+    "objectID": "teams.html",
+    "href": "teams.html",
+    "title": "4  Teams",
     "section": "",
-    "text": "Attention\n\n\n\n\nUpdated challenge_set.csv on 16th Aug 2024\nchallenge_set.csv now contains fixes for tow originally below minimum mass for the relevant aircraft types.\n\n\nRefreshed submission_set.csv on 8th Aug 2024\nsubmission_set.csv now contains all columns and not just flight_id and tow.\nPlease consider re-downloading.",
+    "text": "team_adventurous_ostrich",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>PRC Data Challenge</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
     ]
   },
   {
-    "objectID": "data.html#refreshed-submission_set.csv-on-8th-aug-2024",
-    "href": "data.html#refreshed-submission_set.csv-on-8th-aug-2024",
-    "title": "2  Data",
-    "section": "Refreshed submission_set.csv on 8th Aug 2024",
-    "text": "Refreshed submission_set.csv on 8th Aug 2024\nsubmission_set.csv now contains all columns and not just flight_id and tow.\nPlease consider re-downloading it.",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data</span>"
-    ]
-  },
-  {
-    "objectID": "index.html#refreshed-submission_set.csv-on-8th-aug-2024",
-    "href": "index.html#refreshed-submission_set.csv-on-8th-aug-2024",
-    "title": "PRC Data Challenge",
-    "section": "Refreshed submission_set.csv on 8th Aug 2024",
-    "text": "Refreshed submission_set.csv on 8th Aug 2024\nsubmission_set.csv now contains all columns and not just flight_id and tow.\nPlease consider re-downloading it.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>PRC Data Challenge</span>"
-    ]
-  },
-  {
-    "objectID": "index.html#updated-challenge_set.csv-on-16th-aug-2024",
-    "href": "index.html#updated-challenge_set.csv-on-16th-aug-2024",
-    "title": "PRC Data Challenge",
+    "objectID": "teams.html#team_adventurous_ostrich",
+    "href": "teams.html#team_adventurous_ostrich",
+    "title": "4  Teams",
     "section": "",
-    "text": "challenge_set.csv now contains fixes for tow originally below minimum mass for the relevant aircraft types.",
+    "text": "Description\nWe are a group of young researchers in the field of air traffic management with year of experience in data analysis and operational indicators\n\n\nRationale for participation\nWe find this challenge interesting both from a technical and operational point of view. We believe it may help to improve the estimations of the negative impact of aviation on the environment, providing a basis to find new tackle the problem",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>PRC Data Challenge</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
     ]
   },
   {
-    "objectID": "rankings.html#leaderboard",
-    "href": "rankings.html#leaderboard",
-    "title": "3  Rankings",
-    "section": "",
-    "text": "Attention\n\n\n\n26th Aug: automation for ranking not active yet\nTHE following table is a PLACEHOLDER.\n(similarly for the API https://datacomp.opensky-network.org/api/rankings)\nPLEASE bear with us and wait for a little while more.",
+    "objectID": "teams.html#team_affectionate_bridge",
+    "href": "teams.html#team_affectionate_bridge",
+    "title": "4  Teams",
+    "section": "team_affectionate_bridge",
+    "text": "team_affectionate_bridge\n\nDescription\njust myself\n\n\nRationale for participation\nI’ve always been an aviation fan, and currently work in data analytics, but I’ve never had much opportunity to combine the two. I did use OpenSky Network a few times and blogged about it: it is a fantastic resource!",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Rankings</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_affectionate_whistle",
+    "href": "teams.html#team_affectionate_whistle",
+    "title": "4  Teams",
+    "section": "team_affectionate_whistle",
+    "text": "team_affectionate_whistle\n\nDescription\nWe are a group of aviation data science enthusiasts hailing from Hong Kong. Our team primarily consists of current and former members of the OCTAD Lab in the Department of Mechanical and Aerospace Engineering at the Hong Kong University of Science and Technology (HKUST)\n\n\nRationale for participation\nDriven by curiosity and a shared passion for pushing the boundaries of aviation technology, we are participating in this competition to challenge ourselves to develop creative solutions that could potentially reshape the future of aviation",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_amazing_forest",
+    "href": "teams.html#team_amazing_forest",
+    "title": "4  Teams",
+    "section": "team_amazing_forest",
+    "text": "team_amazing_forest\n\nDescription\nProfessionally, I am a Data Scientist for a large social media business. Personally, I am a frequent blogger on analytics and sports topics at conormclaughlin.net\n\n\nRationale for participation\nLife-long interest in aviation, academic and commercial experience building machine learning models, prior history working with OpenSky APIs to implement personal projects",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_amiable_garden",
+    "href": "teams.html#team_amiable_garden",
+    "title": "4  Teams",
+    "section": "team_amiable_garden",
+    "text": "team_amiable_garden\n\nDescription\nI play with data as a hobby\n\n\nRationale for participation\nA plane just flew over my house!",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_athletic_glacier",
+    "href": "teams.html#team_athletic_glacier",
+    "title": "4  Teams",
+    "section": "team_athletic_glacier",
+    "text": "team_athletic_glacier\n\nDescription\nI am a former airline pilot, current engineer and aviation enthusiast with an interest in data science and ML\n\n\nRationale for participation\nI would like to participate in advancing green aviation",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_brave_pillow",
+    "href": "teams.html#team_brave_pillow",
+    "title": "4  Teams",
+    "section": "team_brave_pillow",
+    "text": "team_brave_pillow\n\nDescription\nTU Delft PhD student\n\n\nRationale for participation\nMy research is related to TOW estimation, curiosity",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_breezy_scarf",
+    "href": "teams.html#team_breezy_scarf",
+    "title": "4  Teams",
+    "section": "team_breezy_scarf",
+    "text": "team_breezy_scarf\n\nDescription\nI am a student in the 4th year at the Aerospace Engineering Faculty, Air Navigation section from the Politehnica University of Bucharest, Romania. Right now, I am doing an internship of four month at INDRA SISTEMAS in Belgium, working as a System Engineer and developing different digital products for improving the ATM domain. Being driven by a passion for aviation and computer science, I am eager to find out new things about these domains and also new opportunities in this area. I enjoy working in teams, sharing ideas and constantly offering, receiving and implementing feedback while being part of fruitful projects\n\n\nRationale for participation\nI want to participate in this project because it would offer me the perfect opportunity to gain more knowledge into the machine learning domain, besides aviation one and in the same time to put my actual knowledge about this domains into practice. Also, I want to prepare for my bachelor thesis, which will address another subject regarding machine learning in the aviation domain, more exactly machine learning for traffic volume predictions",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_brisk_pencil",
+    "href": "teams.html#team_brisk_pencil",
+    "title": "4  Teams",
+    "section": "team_brisk_pencil",
+    "text": "team_brisk_pencil\n\nDescription\nWe are a team of highly motivated engineers passionate about leveraging data to solve real-world challenges. As individuals with some experience in data analysis, machine learning, and software development, we are excited to contribute our skills to this challenge. Our team brings a strong combination of technical expertise, creative problem-solving, and a deep commitment to making an impact.\n\n\nRationale for participation\nWe are eager to participate in the PRC Data Challenge because it offers a unique opportunity to apply our knowledge to a meaningful cause. The challenge aligns perfectly with our academic and career goals, as it allows us to engage with complex datasets, develop innovative solutions, and contribute to the broader field of aviation safety. We are particularly interested in exploring how data can enhance the safety and efficiency of air traffic management, and we look forward to collaborating with other participants and learning from the experience",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_charismatic_fossil",
+    "href": "teams.html#team_charismatic_fossil",
+    "title": "4  Teams",
+    "section": "team_charismatic_fossil",
+    "text": "team_charismatic_fossil\n\nDescription\nAirspace Engineer interested in Data Analysis\n\n\nRationale for participation\nhobby project",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_cheery_vase",
+    "href": "teams.html#team_cheery_vase",
+    "title": "4  Teams",
+    "section": "team_cheery_vase",
+    "text": "team_cheery_vase\n\nDescription\nI’m enthusiast python programmer and eventually make some software on flights\n\n\nRationale for participation\nI like to program in python and I’ve been making some application with scikitlearn machine learning: the PRC Data Challenge looks like a good opportunity to show up my knowledge",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_courageous_parrot",
+    "href": "teams.html#team_courageous_parrot",
+    "title": "4  Teams",
+    "section": "team_courageous_parrot",
+    "text": "team_courageous_parrot\n\nDescription\nmaster’s students at the Aeronautics Institute of Technology (ITA) in Brazil, with a strong interest in the fields of aeronautics, encompassing mechanical, electrical, and computational engineering\n\n\nRationale for participation\nSome of our dissertations address similar challenges, focused on enhancing our skills in machine learning and deepening our knowledge in areas such as aircraft systems, avionics, and flight dynamics. The challenge is a good way to reach the best version of us and spread a new solution to the problem",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_delightful_avocado",
+    "href": "teams.html#team_delightful_avocado",
+    "title": "4  Teams",
+    "section": "team_delightful_avocado",
+    "text": "team_delightful_avocado\n\nDescription\naviation enthusiasts with a strong interest in machine learning\n\n\nRationale for participation\ngreat opportunity for us to combine these passions and see how data science can make a real impact in aviation",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_dependable_gorilla",
+    "href": "teams.html#team_dependable_gorilla",
+    "title": "4  Teams",
+    "section": "team_dependable_gorilla",
+    "text": "team_dependable_gorilla\n\nDescription\nWe are a team of students. Skye is on his last year of high school and Isaac has just started university\n\n\nRationale for participation\nThis challenge appeared interesting to us simply as something to try as we’ve both done ML projects before and have a passion for computer science",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_diligent_zucchini",
+    "href": "teams.html#team_diligent_zucchini",
+    "title": "4  Teams",
+    "section": "team_diligent_zucchini",
+    "text": "team_diligent_zucchini\n\nDescription\nOur team is eager to utilize the provided data for predicting aircraft trajectories within terminal airspace. We also aim to explore potential impacts on Air Traffic Management (ATM) airspace, considering the upcoming integration of urban air mobility operations\n\n\nRationale for participation\nThe data provided through this challenge offers a valuable baseline for prediction tasks. We intend to highlight not only accuracy metrics, such as minFDE and minADE, but also to emphasize the safety aspects and implications of the prediction results",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_energetic_quiver",
+    "href": "teams.html#team_energetic_quiver",
+    "title": "4  Teams",
+    "section": "team_energetic_quiver",
+    "text": "team_energetic_quiver\n\nDescription\nOur team, comprising members from Serbia and the USA, brings together a unique blend of expertise in aviation and machine learning to tackle the PRC Data Challenge. Emir Ganić, a research associate at the University of Belgrade, Serbia, has over a decade of experience in aviation, with a particular focus on airports, aircraft noise, engine emissions, unmanned aircraft systems, and sustainable aviation. His extensive research background is evidenced by his contributions to international monograph and over 30 scientific papers. He is also an active member of several prestigious organizations, including the European Aviation Noise Research Network (X-NOISE) and the TRB Standing Committee on Environmental Issues in Aviation, USA. Yanyu Wang, an Assistant Professor at Louisiana State University, USA, specializes in machine learning with a focus on aviation safety, efficiency, and sustainability. Her expertise in applying advanced machine learning techniques to solve complex aviation problems complements the team’s objectives in developing innovative solutions for accurately estimating Actual TakeOff Weight (ATOW). Together, our team’s diverse skills and experiences position us well to create a robust, open machine learning model that addresses the challenge’s goals of transparency, reproducibility, and environmental impact reduction\n\n\nRationale for participation\nOur participation in the PRC Data Challenge is driven by a strong commitment to advancing aviation safety and sustainability in the context of climate change. This challenge presents a valuable opportunity to contribute to the development of an open Machine Learning model for accurately estimating ATOW, a critical factor in improving fuel efficiency and reducing emissions. We are excited to collaborate together on this challenge as a team, confident that our efforts will lead to meaningful advancements in understanding and mitigating the environmental impact of aviation",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_enthusiastic_jungle",
+    "href": "teams.html#team_enthusiastic_jungle",
+    "title": "4  Teams",
+    "section": "team_enthusiastic_jungle",
+    "text": "team_enthusiastic_jungle\n\nDescription\nWe, at Data Science Lab, measure and predict real world actions and events with online data\n\n\nRationale for participation\ninterested following our 2020 published work ‘Using aircraft location data to estimate current economic activity’",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_exuberant_scooter",
+    "href": "teams.html#team_exuberant_scooter",
+    "title": "4  Teams",
+    "section": "team_exuberant_scooter",
+    "text": "team_exuberant_scooter\n\nDescription\nWe are a Swiss startup building pilot assistance and safety applications and services\n\n\nRationale for participation\nPredicting ATOW/ETOW from OpenSkyNetwork flight data is an intriguing challenge that aligns well with our professional experience in machine learning, aeronautics, and software engineering. This opportunity will allow us to identify and understand patterns in flight data, enhancing our ability to build accurate ML models for prediction and estimation.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_faithful_engine",
+    "href": "teams.html#team_faithful_engine",
+    "title": "4  Teams",
+    "section": "team_faithful_engine",
+    "text": "team_faithful_engine\n\nDescription\nWe fly planes and build artificial brains\n\n\nRationale for participation\nWe want to learn more about aircraft performance, contribute to Open Source Software and are motivated by a potential environmental impact",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_faithful_napkin",
+    "href": "teams.html#team_faithful_napkin",
+    "title": "4  Teams",
+    "section": "team_faithful_napkin",
+    "text": "team_faithful_napkin\n\nDescription\nA researcher at Xiamen University’s School of Aeronautics and Astronautics, my work focuses on advanced algorithmic solutions in the civil aviation sector, including passenger flow forecasting, revenue management, and crew scheduling\n\n\nRationale for participation\nAs a researcher at Xiamen University’s School of Aeronautics and Astronautics, my work focuses on advanced algorithmic solutions in the civil aviation sector, including passenger flow forecasting, revenue management, and crew scheduling. Participating in the PRC Data Challenge aligns perfectly with my expertise and interests, offering a unique opportunity to apply my skills in machine learning and data analysis to a critical aspect of aviation—inferring the Actual TakeOff Weight (ATOW)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_faithful_river",
+    "href": "teams.html#team_faithful_river",
+    "title": "4  Teams",
+    "section": "team_faithful_river",
+    "text": "team_faithful_river\n\nDescription\nWe are scientist employed and working for ANSP Deutsche Flugsicherung (DFS), Germany\n\n\nRationale for participation\nThrough our collaborative work, we have developed and fine-tuned a trajectory prediction framework, which can estimate ATOW. The PCR data challenge gives us a platform to test our framework",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_fearless_glacier",
+    "href": "teams.html#team_fearless_glacier",
+    "title": "4  Teams",
+    "section": "team_fearless_glacier",
+    "text": "team_fearless_glacier\n\nDescription\nA group of friends who like working with data and solving problems with the help of machine learning algorithms. Some of us have an educational background in aviation\n\n\nRationale for participation\nWe were interested by the data we get to work with in this challenge as well as the problem that is being solved",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_fearless_marshmallow",
+    "href": "teams.html#team_fearless_marshmallow",
+    "title": "4  Teams",
+    "section": "team_fearless_marshmallow",
+    "text": "team_fearless_marshmallow\n\nDescription\nA team consisting of petroleum, environmental, and computer science engineers\n\n\nRationale for participation\nAs a team with varied backgrounds we are very interested in using data to improve operational efficiency. This challenge is a good experience to apply our skills to aviation industry-related problems",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_funny_yogurt",
+    "href": "teams.html#team_funny_yogurt",
+    "title": "4  Teams",
+    "section": "team_funny_yogurt",
+    "text": "team_funny_yogurt\n\nDescription\nwe are a group of data scientists working together at LATAM Airlines, with a keen interest in airline operations and aviation\n\n\nRationale for participation\nwe find the problem at hand to be legitimately interesting, and we are looking forward to matching our experience building data products for airline operations to build a valuable solution and share it with the aviation community",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_gentle_dragon",
+    "href": "teams.html#team_gentle_dragon",
+    "title": "4  Teams",
+    "section": "team_gentle_dragon",
+    "text": "team_gentle_dragon\n\nDescription\na Business and Computer science student from Hamburg\n\n\nRationale for participation\nI want to try this data science project out for myself, I am not that proficient in projects like this but I would like to change that!",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_gentle_wreath",
+    "href": "teams.html#team_gentle_wreath",
+    "title": "4  Teams",
+    "section": "team_gentle_wreath",
+    "text": "team_gentle_wreath\n\nDescription\nI am a young data scientist holding a master degree in data science with specialization in reliable and secure systems from the university of Stavanger in Norway where i currently live. I have a great interest in artificial intelligence and machine learning algorithms and its practical applications and important role in building and improving modern society. On the personal level, I am an active and social person who are happy to motivate and engage people around to exchange learning and experience\n\n\nRationale for participation\nI have a combined passion in both computer science and aviation. And as an engineer I would like to use my acquired knowledge to help solving the challenges that impact aviation operations and help improve the aviation industry towards better performance and less impact on natural environment and resources. I am also looking forward to learn more about data science in aviation and gain better experience in this area of knowledge",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_genuine_emu",
+    "href": "teams.html#team_genuine_emu",
+    "title": "4  Teams",
+    "section": "team_genuine_emu",
+    "text": "team_genuine_emu\n\nDescription\nI am a fan of aviation, and a ML leaner. I hope to solve issues by AI\n\n\nRationale for participation\nparticipation is important, enjoy the process",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_helpful_wizard",
+    "href": "teams.html#team_helpful_wizard",
+    "title": "4  Teams",
+    "section": "team_helpful_wizard",
+    "text": "team_helpful_wizard\n\nDescription\nI am an AI Graduate from the Cranfield University, currently studying in the US\n\n\nRationale for participation\nI would like to participate in the challenge to improve my skills and contribute to the OpenSky network",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_honest_cactus",
+    "href": "teams.html#team_honest_cactus",
+    "title": "4  Teams",
+    "section": "team_honest_cactus",
+    "text": "team_honest_cactus\n\nDescription\nA data engineer exploring opportunities to get experience in data science too\n\n\nRationale for participation\nexploring opportunities to get experience in data science",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_honest_turtle",
+    "href": "teams.html#team_honest_turtle",
+    "title": "4  Teams",
+    "section": "team_honest_turtle",
+    "text": "team_honest_turtle\n\nDescription\nI am currently pursuing my Master’s degree in Air Transport and Logistics at TU Dresden\n\n\nRationale for participation\nTo apply data analysis and machine learning techniques in solving a key aviation problem, with a focus on environmental impact reduction",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_imaginative_flamingo",
+    "href": "teams.html#team_imaginative_flamingo",
+    "title": "4  Teams",
+    "section": "team_imaginative_flamingo",
+    "text": "team_imaginative_flamingo\n\nDescription\nI am currently a student of a Master’s degree course in Scientific and Data-Intensive Computing at the University of Trieste, Italy\n\n\nRationale for participation\nI find the PRC Data Challenge a terrific opportunity to challenge myself in my field of study, but with a much more practical approach. I have been long devoted to open source software and I much appreciate the idea of exploiting crowd-harvested data for creating a crowd-devised model and making it publicly available, in order for it to be worked upon and improved",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_imaginative_yarn",
+    "href": "teams.html#team_imaginative_yarn",
+    "title": "4  Teams",
+    "section": "team_imaginative_yarn",
+    "text": "team_imaginative_yarn\n\nDescription\nGraduating student business engineering, master data analytics at Ghent university\n\n\nRationale for participation\nI’d like to gain some more data science/data engineering experience before starting work next month",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_incredible_boat",
+    "href": "teams.html#team_incredible_boat",
+    "title": "4  Teams",
+    "section": "team_incredible_boat",
+    "text": "team_incredible_boat\n\nDescription\nI recently graduated from the University of Warwick, England, where I studied integrated masters in Computer Science. I will be joining Vanguard Asset Management as an Application Engineer this late September.\n\n\nRationale for participation\nFor my masters thesis, I researched deep learning techniques (more specifically Graph Neural Networks) in classification tasks in Computational Pathology. I want to use this challenge to apply and improve my ML skills, whilst trying to solve a real world problem",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_inventive_emu",
+    "href": "teams.html#team_inventive_emu",
+    "title": "4  Teams",
+    "section": "team_inventive_emu",
+    "text": "team_inventive_emu\n\nDescription\nIn my spare time I am interested in data science and aviation\n\n\nRationale for participation\nI would like for test my skills on this challenge",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_jolly_koala",
+    "href": "teams.html#team_jolly_koala",
+    "title": "4  Teams",
+    "section": "team_jolly_koala",
+    "text": "team_jolly_koala\n\nDescription\nAviation enthusiasts in their early careers in the aviation industry\n\n\nRationale for participation\nApplying our knowledge to see what we can learn from data. And more importantly, having fun!",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_jovial_quince",
+    "href": "teams.html#team_jovial_quince",
+    "title": "4  Teams",
+    "section": "team_jovial_quince",
+    "text": "team_jovial_quince\n\nDescription\nWe are two alumni who completed the Bachelor in Aviation at the University of Applied Sciences of Amsterdam and later specialized in data science through a Master’s in Digital Driven Business. We aim to combine our aviation industry knowledge with our data science skills\n\n\nRationale for participation\nWe understand the challenges in the aviation industry and aim to contribute by developing transparent, explainable, and easy-to-train models",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_joyful_zeppelin",
+    "href": "teams.html#team_joyful_zeppelin",
+    "title": "4  Teams",
+    "section": "team_joyful_zeppelin",
+    "text": "team_joyful_zeppelin\n\nDescription\nWe are team Sydorg, a group of four aviation and machine learning enthusiasts from Gandhinagar, India. With a mix of data scientist, software engineers and management experts, our fondness of data analytics and its implications in real world is what brings us together\n\n\nRationale for participation\nWe are a team of data scientists and aviation enthusiasts eager to tackle this challenge. It not only stimulates our data-driven, analytical minds but also pushes us to address both the short- and long-term implications of our solutions. We are part of Sydorg Technologies, an Indian startup dedicated to optimizing air traffic operations at airports, which plays a significant role in reducing carbon emissions in the aviation sector. We are excited about the possibility of making this work open-source, as it aligns with our mission to build a more sustainable ML-based SaaS product and contribute to the broader community",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_jubilant_jelly",
+    "href": "teams.html#team_jubilant_jelly",
+    "title": "4  Teams",
+    "section": "team_jubilant_jelly",
+    "text": "team_jubilant_jelly\n\nDescription\nCollege Student interested in machine learning and aviation\n\n\nRationale for participation\nI am very interested in machine learning and aviation and would like the opportunity to test my skills in a real-world setting.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_keen_eagle",
+    "href": "teams.html#team_keen_eagle",
+    "title": "4  Teams",
+    "section": "team_keen_eagle",
+    "text": "team_keen_eagle\n\nDescription\nI run an OpenSky feed and worked in the aviation industry in the past but now work in the AI/LM field using Oracle business analytics and other Oracle AI technologies\n\n\nRationale for participation\nI want to put my AI/ML knowledge and Oracle technologies to work solving this interesting challenge",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_kind_lemon",
+    "href": "teams.html#team_kind_lemon",
+    "title": "4  Teams",
+    "section": "team_kind_lemon",
+    "text": "team_kind_lemon\n\nDescription\nOur team is composed of experts in various disciplines from the University of Vigo, including mathematics, computer science, and engineering\n\n\nRationale for participation\nWe are eager to collaborate and bring our collective expertise to this project and keen to contribute to the definition and development of a model for the calculation of ATOW",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_kind_nightlight",
+    "href": "teams.html#team_kind_nightlight",
+    "title": "4  Teams",
+    "section": "team_kind_nightlight",
+    "text": "team_kind_nightlight\n\nDescription\nresearchers from the Berlin Institute for the Foundations of Learning and Data (BIFOLD) at Technische Universität Berlin. Our primary research focuses on the intersection of computer security and machine learning, but in our free time we also have a strong passion for aviation\n\n\nRationale for participation\ncurious about aviation and are eager to apply some of our research expertise to this challenge",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_knowledgeable_glove",
+    "href": "teams.html#team_knowledgeable_glove",
+    "title": "4  Teams",
+    "section": "team_knowledgeable_glove",
+    "text": "team_knowledgeable_glove\n\nDescription\nI am a researcher and analyst passionate about aviation, astrophysics, and data science\n\n\nRationale for participation\nI would love to bolster my portfolio on a fun project that has real meaning",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_knowledgeable_jungle",
+    "href": "teams.html#team_knowledgeable_jungle",
+    "title": "4  Teams",
+    "section": "team_knowledgeable_jungle",
+    "text": "team_knowledgeable_jungle\n\nDescription\nAn associate professor and an IT engineer\n\n\nRationale for participation\nWe are investigating ML models for big data and we are interested in assessing the performance results of our research works",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_lighthearted_goblin",
+    "href": "teams.html#team_lighthearted_goblin",
+    "title": "4  Teams",
+    "section": "team_lighthearted_goblin",
+    "text": "team_lighthearted_goblin\n\nDescription\nIndividual with AI and data processing skills\n\n\nRationale for participation\nI like the goal, I like the challenge, and I think I can do a great job. Some Prize money would be icing on the cake.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_lighthearted_zucchini",
+    "href": "teams.html#team_lighthearted_zucchini",
+    "title": "4  Teams",
+    "section": "team_lighthearted_zucchini",
+    "text": "team_lighthearted_zucchini\n\nDescription\nA solo practitioner data scientist based in the United States\n\n\nRationale for participation\nOver the past several years I’ve developed a particular interest in spatial data analysis and geospatial data science. That work has focused mainly on human mobility and transportation, and through those efforts I began working with aviation and flight trajectory data. I think this data challenge offers a great opportunity to marry my interests to a problem with both important industry and broader climate implications",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_likable_jelly",
+    "href": "teams.html#team_likable_jelly",
+    "title": "4  Teams",
+    "section": "team_likable_jelly",
+    "text": "team_likable_jelly\n\nDescription\nRichard Alligier received his Ph.D. (2014) degree in Computer Science from the ‘Institut National Polytechnique de Toulouse’ (INPT), his engineer’s degree (IEEAC, 2010) from the french university of civil aviation (ENAC) and his M.Sc. (2010) in computer science from the University of Toulouse. He is currently assistant professor at the ENAC in Toulouse, France. David Gianazza received his two engineer degrees (1986, 1996) from the ‘École Nationale de l’Aviation Civile’ (ENAC) and his M.Sc. (1996) and Ph.D. (2004) in Computer Science from the ‘Institut National Polytechnique de Toulouse’ (INPT). He has obtained his HDR (a french post-doctoral degree similar to tenure) in 2016 from the INPT. He has held various positions in the french civil aviation administration, successively as an engineer in ATC operations, technical manager, and researcher. He is currently associate professor at the ENAC, Toulouse\n\n\nRationale for participation\nWe have worked on a PhD thesis estimating mass ten years ago, but it was with a different usage in mind, it was not the actual mass, more like an ‘equivalent mass’ for trajectory prediction. Nonetheless, maybe we can use some of our knowledge/techniques on this problem, and it might be fun to play with a data set of actual masses",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_lively_hedgehog",
+    "href": "teams.html#team_lively_hedgehog",
+    "title": "4  Teams",
+    "section": "team_lively_hedgehog",
+    "text": "team_lively_hedgehog\n\nDescription\nStudent at Aarhus University in Computer technology, with focus on deep learning\n\n\nRationale for participation\nChallenge, and see how good it can be",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_mellow_barn",
+    "href": "teams.html#team_mellow_barn",
+    "title": "4  Teams",
+    "section": "team_mellow_barn",
+    "text": "team_mellow_barn\n\nDescription\nwe are two PhD’s in psychology who have branched out to the field of Data Science. David currently works as a Data Scientist for Bayer. Juul currently works as a Data Scientist for Ernest and Young\n\n\nRationale for participation\nWe are joining the challenge due to my interest in flight data analysis, as I have done an internship at Eurocontrol where I studied the effect of Covid-19 on the European Air Transportation Network. As such, I would love the opportunity to again work with flight data and try some possibly interesting ideas that may help in estimating actual takeoff weight",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_mindful_donkey",
+    "href": "teams.html#team_mindful_donkey",
+    "title": "4  Teams",
+    "section": "team_mindful_donkey",
+    "text": "team_mindful_donkey\n\nDescription\nMark is a data analyst for an environmental nonprofit and a flight data enthusiast (and home ADS-B receiver operator)\n\n\nRationale for participation\nOpen models using public data have great potential for estimating values that are difficult to aggregate for important global analyses like calculating greenhouse gas emissions. ATOW estimation using OSN data is a wonderful example of this application and I am excited to see how accurate the winning models may be",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_mindful_puzzle",
+    "href": "teams.html#team_mindful_puzzle",
+    "title": "4  Teams",
+    "section": "team_mindful_puzzle",
+    "text": "team_mindful_puzzle\n\nDescription\nWe are a group of researchers working in the Flight Operations Concepts department at the Institute of Air Transport (German Aerospace Center) with a background in the development of operational innovations at mission and network level for air traffic. Together, we cover a range of skills and know-how, mainly in the areas of aircraft trajectory simulation, optimization as well as machine learning and climate impact assessment\n\n\nRationale for participation\nGiven our background and multi-faceted research on trajectories (and experience with ADS-B data), we see this challenge as a great opportunity to apply our knowledge and increase the level of scientific understanding for aircraft take-off weight estimation using open data and models. A part of our investigations’ focus resides on the estimation of air traffic’s climate impact in terms of CO2 and non-CO2 emissions, for which the modeling of aircraft performance along a flown trajectory is highly significant. We are interested in evaluating a ML-based approach to estimate a TOW given the pre-processed dataset of the challenge",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_mindful_raccoon",
+    "href": "teams.html#team_mindful_raccoon",
+    "title": "4  Teams",
+    "section": "team_mindful_raccoon",
+    "text": "team_mindful_raccoon\n\nDescription\nI teach courses in data analytics, programming, and database management at the University of Illinois. I’m also an ADSB flight data enthusiast/hobbiest\n\n\nRationale for participation\nI have been using my own receiver’s ADSB data plus some selected public data from OSN as example data sets for one assignment in each of two courses I teach",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_motivated_ladder",
+    "href": "teams.html#team_motivated_ladder",
+    "title": "4  Teams",
+    "section": "team_motivated_ladder",
+    "text": "team_motivated_ladder\n\nDescription\nAngel and Carol are good friends. Angel is a developer while Carol works as a data scientist. Together, the two complement each other in their look of the issue\n\n\nRationale for participation\nTo have fun",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_motivated_ostrich",
+    "href": "teams.html#team_motivated_ostrich",
+    "title": "4  Teams",
+    "section": "team_motivated_ostrich",
+    "text": "team_motivated_ostrich\n\nDescription\nWe are an innovative team specializing in the development of software solutions across various market niches. Our team is composed of skilled professionals with deep expertise in data science, software engineering, and domain-specific knowledge, ensuring that our solutions meet the highest standards of excellence.\n\n\nRationale for participation\nOur participation in this data contest is motivated by our desire to contribute to a more efficient and environmentally friendly aviation sector. This contest is an opportunity to apply advanced machine learning knowledge and technologies to bring real improvements in this field. We are motivated by the possibility of creating a positive impact and contributing to a greener and more sustainable future for the planet and we aim to demonstrate that technology and innovation can play a vital role in addressing global challenges and building a better future for all.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_nice_hippo",
+    "href": "teams.html#team_nice_hippo",
+    "title": "4  Teams",
+    "section": "team_nice_hippo",
+    "text": "team_nice_hippo\n\nDescription\nOur team is composed of Emanuele Bossi, a dual major student in Data Science and Software Engineering at Embry-Riddle Aeronautical University, Prescott campus, and Dr. Rahman R. AlMomani, an Assistant Professor of Data Science and Mathematics at the same university. The student will be mentored by the professor as we work together to develop a Machine Learning model to predict the best Aircraft Takeoff Weight (ATOW) of a flown flight\n\n\nRationale for participation\nWe are passionate about contributing to cutting-edge research in the aviation industry. This competition provides an exceptional opportunity to apply our knowledge in data science and machine learning to real-world aviation challenges. By participating, we aim to push the boundaries of what’s possible in flight optimization and contribute to advancements that could have a significant impact on the industry",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_nice_wolf",
+    "href": "teams.html#team_nice_wolf",
+    "title": "4  Teams",
+    "section": "team_nice_wolf",
+    "text": "team_nice_wolf\n\nDescription\nfrench engineer and a colleague experienced in system engineering applied to aeronautical systems. Recent bootcamp training program in Data Engineering. Passionate about aeronautics, I passed my PPL license several years ago, among other licenses (ultralight, gliding, paragliding, …)\n\n\nRationale for participation\nopportunity to improve knowledge in both data science and aeronautic operations",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_noble_zeppelin",
+    "href": "teams.html#team_noble_zeppelin",
+    "title": "4  Teams",
+    "section": "team_noble_zeppelin",
+    "text": "team_noble_zeppelin\n\nDescription\nI am a solo participant.\n\n\nRationale for participation\nI am a sustainability research intern with Boeing and this competition is highly relevant to the work I am doing. Hence, I would like to participate to learn more from the brilliant and experienced Data Scientist who will be partaking in the competition.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_organized_volcano",
+    "href": "teams.html#team_organized_volcano",
+    "title": "4  Teams",
+    "section": "team_organized_volcano",
+    "text": "team_organized_volcano\n\nDescription\nWe are three friends who met during their physics studies and are now pursuing different paths related to data science. Loving both aviation (mainly Dennis) and data science (all of us)\n\n\nRationale for participation\nwe are curious to find out whether we can provide a model that predicts the ATOW better than other submissions. We are very much looking forward to the fun we are going to have tackling this question",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_outgoing_boat",
+    "href": "teams.html#team_outgoing_boat",
+    "title": "4  Teams",
+    "section": "team_outgoing_boat",
+    "text": "team_outgoing_boat\n\nDescription\nI am a business insights analyst at NetJets Europe\n\n\nRationale for participation\nThis challenge is a great opportunity for me to develop my ML skills using real world aviation data",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_outgoing_strawberry",
+    "href": "teams.html#team_outgoing_strawberry",
+    "title": "4  Teams",
+    "section": "team_outgoing_strawberry",
+    "text": "team_outgoing_strawberry\n\nDescription\nI am a senior software engineer at a major AI company\n\n\nRationale for participation\nI want to test and experiment with my workflows on real-world data - all the better with interesting aviation data, and for a good cause",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_outspoken_lemon",
+    "href": "teams.html#team_outspoken_lemon",
+    "title": "4  Teams",
+    "section": "team_outspoken_lemon",
+    "text": "team_outspoken_lemon\n\nDescription\nKarolina is an associate Professor at University of Zagreb, Faculty of Transport and Traffic Sciences, with expertise in flight mechanics and aerodynamics. Dario is a software engineer and data science expert\n\n\nRationale for participation\nWe already published a paper together in this area, and initial mass is a problem we are trying to solve",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_patient_kangaroo",
+    "href": "teams.html#team_patient_kangaroo",
+    "title": "4  Teams",
+    "section": "team_patient_kangaroo",
+    "text": "team_patient_kangaroo\n\nDescription\nA team of data scientists working in the aviation industry\n\n\nRationale for participation\nLearning opportunity for an interesting data problem",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_patient_net",
+    "href": "teams.html#team_patient_net",
+    "title": "4  Teams",
+    "section": "team_patient_net",
+    "text": "team_patient_net\n\nDescription\nA team of Airbus Flight Physic data analytics enthusiasts\n\n\nRationale for participation\nSeeking the challenge while wanting to learn on the problem presented",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_peaceful_lobster",
+    "href": "teams.html#team_peaceful_lobster",
+    "title": "4  Teams",
+    "section": "team_peaceful_lobster",
+    "text": "team_peaceful_lobster\n\nDescription\nI’m a mechanical engineer and a private pilot with deep love for the aviation community and industry\n\n\nRationale for participation\nI would love to apply my data science skills from my day job to tackle this data challenge to get a chance to develop my machine learning skills as well as make a positive impact on the environment and aviation industry data streams",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_quick_candle",
+    "href": "teams.html#team_quick_candle",
+    "title": "4  Teams",
+    "section": "team_quick_candle",
+    "text": "team_quick_candle\n\nDescription\ndata science beginner\n\n\nRationale for participation\nfor skill up",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_reliable_monkey",
+    "href": "teams.html#team_reliable_monkey",
+    "title": "4  Teams",
+    "section": "team_reliable_monkey",
+    "text": "team_reliable_monkey\n\nDescription\nWe are a team comprised of 5 current and past QUT students and members of the QUT Aerospace Society, all of whom have heavily contributed to the club’s various projects. We have experience in electrical and mechanical engineering, mathematics, data science, computer science, aerospace and aviation\n\n\nRationale for participation\nThis challenge provides a unique opportunity to both develop and demonstrate skills directly relevant to the aerospace industry. By tackling a project such as this as a team comprised of motivated students with a wide range of skills and knowledge, we can contribute new and valuable ideas towards overcoming current problems in the industry",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_respectful_kangaroo",
+    "href": "teams.html#team_respectful_kangaroo",
+    "title": "4  Teams",
+    "section": "team_respectful_kangaroo",
+    "text": "team_respectful_kangaroo\n\nDescription\nOur team is a group of researchers focused on machine learning algorithms and data science for aviation applications. We are committed to advancing machine learning techniques and exploring their practical applications to address real-world challenges in the aviation industry.\n\n\nRationale for participation\nOur participation in this Data Challenge is motivated by the opportunity to leverage our skills and knowledge to develop an ML model that accurately infers the Actual Take Off Weight (ATOW) of a flight. This problem is essential for optimizing flight performance, fuel efficiency, and safety in the aviation industry.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_sensible_robot",
+    "href": "teams.html#team_sensible_robot",
+    "title": "4  Teams",
+    "section": "team_sensible_robot",
+    "text": "team_sensible_robot\n\nDescription\nI am research intern from Boeing working on project related to data engineering\n\n\nRationale for participation\nThis competition is relevant to the project that I have been working on",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_sincere_quicksand",
+    "href": "teams.html#team_sincere_quicksand",
+    "title": "4  Teams",
+    "section": "team_sincere_quicksand",
+    "text": "team_sincere_quicksand\n\nDescription\nI am a passionate Data Scientist wanting to generally improve AI and automate as many things as possible\n\n\nRationale for participation\nI believe I have a set of skills and a spirit that can be of great help regarding this challenge",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_sociable_river",
+    "href": "teams.html#team_sociable_river",
+    "title": "4  Teams",
+    "section": "team_sociable_river",
+    "text": "team_sociable_river\n\nDescription\nI’m an airplane enthusiast, seeking to apply ML research to decreasing carbon emissions!\n\n\nRationale for participation\nI’m really excited to spend some time looking at this data problem and develop a ML algo for it",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_spirited_eel",
+    "href": "teams.html#team_spirited_eel",
+    "title": "4  Teams",
+    "section": "team_spirited_eel",
+    "text": "team_spirited_eel\n\nDescription\naviation data scientist at ZHAW\n\n\nRationale for participation\nWorking daily with this type of datasets, I’m curious to see what can be achieved",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_strong_fossil",
+    "href": "teams.html#team_strong_fossil",
+    "title": "4  Teams",
+    "section": "team_strong_fossil",
+    "text": "team_strong_fossil\n\nDescription\nKristoffer Borgen - Aviation professor at San Jose State University, Jonathan Cox - Student at University of California Riverside\n\n\nRationale for participation\nWe both like competitions and this seems like a good competition to compete in and use the project to learn machine learning applications",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_thoughtful_quicksand",
+    "href": "teams.html#team_thoughtful_quicksand",
+    "title": "4  Teams",
+    "section": "team_thoughtful_quicksand",
+    "text": "team_thoughtful_quicksand\n\nDescription\nI am a cybersecurity analyst, who focuses on deep learning and its applications in the cyberdefense. I am also an aviation and flight simulation enthusiast\n\n\nRationale for participation\nSince I started my studies in cybersecurity, I always wanted to apply my skills in the aviation area. I had the opportunity to develop my skills in AI within my company but I want to share my experience and apply it in this challenge",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_tidy_kitten",
+    "href": "teams.html#team_tidy_kitten",
+    "title": "4  Teams",
+    "section": "team_tidy_kitten",
+    "text": "team_tidy_kitten\n\nDescription\nEngineers working in the area of air control\n\n\nRationale for participation\nWe are looking for a challenge while contributing to a better world",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_tiny_rainbow",
+    "href": "teams.html#team_tiny_rainbow",
+    "title": "4  Teams",
+    "section": "team_tiny_rainbow",
+    "text": "team_tiny_rainbow\n\nDescription\nWe are a team of professors and graduate students affiliated with the Aeronautics Institute of Technology (ITA) in Brazil, with expertise in the areas of data science and aviation\n\n\nRationale for participation\nThe participation in the PRC data challenge will serve an educational purpose, providing the team members with an opportunity to collaborate, expand knowledge on the subject and refine analytical skills. Moreover, we are excited about the chance to make a contribution to the aviation community with the development of innovative solutions for modeling and enhancing the environmental performance of aviation",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_unbelievable_donkey",
+    "href": "teams.html#team_unbelievable_donkey",
+    "title": "4  Teams",
+    "section": "team_unbelievable_donkey",
+    "text": "team_unbelievable_donkey\n\nDescription\nA small Data Science Consulting firm with a big interest in Aviation\n\n\nRationale for participation\nFirstly, for fun and the chance to meet other people and to challenge myself and learn from the process",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_understanding_jacket",
+    "href": "teams.html#team_understanding_jacket",
+    "title": "4  Teams",
+    "section": "team_understanding_jacket",
+    "text": "team_understanding_jacket\n\nDescription\nmathematician and computer scientist\n\n\nRationale for participation\nextremely interested in the complex nature of aviation and air traffic management",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_unique_tiger",
+    "href": "teams.html#team_unique_tiger",
+    "title": "4  Teams",
+    "section": "team_unique_tiger",
+    "text": "team_unique_tiger\n\nDescription\ncomputer science students driven by an unrelenting passion to continually expand our knowledge\n\n\nRationale for participation\nwe want to expand our knowledge in the field of data science",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_versatile_ostrich",
+    "href": "teams.html#team_versatile_ostrich",
+    "title": "4  Teams",
+    "section": "team_versatile_ostrich",
+    "text": "team_versatile_ostrich\n\nDescription\nI am a senior aerospace undergraduate student at Sharif University of Technology with a passion for data science and its applications in the aerospace field\n\n\nRationale for participation\nI have a deep love for data and am eager to explore its applications in aerospace. This challenge presents a fantastic opportunity to apply my knowledge and skills in a meaningful way",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_versatile_yacht",
+    "href": "teams.html#team_versatile_yacht",
+    "title": "4  Teams",
+    "section": "team_versatile_yacht",
+    "text": "team_versatile_yacht\n\nDescription\nThe team is mainly composed by M3Systems consultants, bringing their expertise in aviation with several years of experience in the sector\n\n\nRationale for participation\nFor several years we have provided our expertise in the aviation world and we are interested in bringing our unique combination of aeronautical engineering and data science skills to this challenge",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_vibrant_pencil",
+    "href": "teams.html#team_vibrant_pencil",
+    "title": "4  Teams",
+    "section": "team_vibrant_pencil",
+    "text": "team_vibrant_pencil\n\nDescription\nI am an air traffic management specialist and data scientist at ASECNA air navigation service provider\n\n\nRationale for participation\nApply Expertise in Air Traffic Data to supports the development of innovative solutions and improvements in air traffic management. Gain Visibility for professional recognition, networking opportunities, and potential collaborations that enhance both my career and the strategic goals of ASECNA.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_vigorous_jungle",
+    "href": "teams.html#team_vigorous_jungle",
+    "title": "4  Teams",
+    "section": "team_vigorous_jungle",
+    "text": "team_vigorous_jungle\n\nDescription\nWe are a group of software engineers with diverse backgrounds in machine learning and a shared passion for data science and machine learning. Our team actively contributes to open-source projects across different fields, allowing us to develop complex solutions that tackle real-world challenges\n\n\nRationale for participation\nWe are particularly interested in tracking flight records and addressing the current gap in open-source models for predicting critical aviation parameters. Our experience in data science and machine learning equips us well for this challenge, especially as it involves large datasets within a specific domain that we find both challenging and fascinating",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_witty_yogurt",
+    "href": "teams.html#team_witty_yogurt",
+    "title": "4  Teams",
+    "section": "team_witty_yogurt",
+    "text": "team_witty_yogurt\n\nDescription\nI’m a pilot, software engineer, and person who likes to play with flight data\n\n\nRationale for participation\nit seems like an interesting problem",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_witty_zucchini",
+    "href": "teams.html#team_witty_zucchini",
+    "title": "4  Teams",
+    "section": "team_witty_zucchini",
+    "text": "team_witty_zucchini\n\nDescription\nI am an avid aviation enthusiast working as a data scientist in a Fortune 40 company. I have experience working with [prior aviation related data] (https://github.com/billodalroy/flight-delay-prediction).\n\n\nRationale for participation\nAs an avgeek and a climate conscious person I rarely find anything which exists in the intersection of the two, this challenge is the closest to it. I believe I can contribute and learn while participating in the challenge.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_wonderful_boat",
+    "href": "teams.html#team_wonderful_boat",
+    "title": "4  Teams",
+    "section": "team_wonderful_boat",
+    "text": "team_wonderful_boat\n\nDescription\nI am an aviation consultant, with a Master in Computer of Science\n\n\nRationale for participation\nimprove in ML and also just interested in the goal of the challenge (climate change related)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_youthful_night",
+    "href": "teams.html#team_youthful_night",
+    "title": "4  Teams",
+    "section": "team_youthful_night",
+    "text": "team_youthful_night\n\nDescription\ndata scientist in the aviation industry\n\n\nRationale for participation\nhelp explore efficient TOW prediction. I work in developing software for Flight operations and sustainability which is an important objective we work towards",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_youthful_xylophone",
+    "href": "teams.html#team_youthful_xylophone",
+    "title": "4  Teams",
+    "section": "team_youthful_xylophone",
+    "text": "team_youthful_xylophone\n\nDescription\nI am a passionate engineer with a strong foundation in applied mathematics and computer science. Aviation has captivated my imagination since childhood, inspiring me to pursue a career in engineering\n\n\nRationale for participation\nMy academic background equipped me with a robust analytical toolkit in digital signal processing, enabling me to tackle complex problems with a structured approach. I am excited to contribute my skills to this competition and extract valuable insights from this dataset",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_zany_eagle",
+    "href": "teams.html#team_zany_eagle",
+    "title": "4  Teams",
+    "section": "team_zany_eagle",
+    "text": "team_zany_eagle\n\nDescription\nI study Mathematics at Technical University of Munich\n\n\nRationale for participation\nhuge aviation enthusiast since childhood. Moreover I have a passion for data science",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_zany_fireplace",
+    "href": "teams.html#team_zany_fireplace",
+    "title": "4  Teams",
+    "section": "team_zany_fireplace",
+    "text": "team_zany_fireplace\n\nDescription\nI work in the aviation industry and have a PhD in air transportation systems\n\n\nRationale for participation\nMy interest lies in big data processing in aviation and transportation systems. I process ample amounts of radar data on a regular basis but don’t get to perform any exploratory analysis, which I love.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_zany_ladder",
+    "href": "teams.html#team_zany_ladder",
+    "title": "4  Teams",
+    "section": "team_zany_ladder",
+    "text": "team_zany_ladder\n\nDescription\nI am: Grad student at Gies College of Business\n\n\nRationale for participation\nExploring Aviation Business & OSN API",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_zippy_horse",
+    "href": "teams.html#team_zippy_horse",
+    "title": "4  Teams",
+    "section": "team_zippy_horse",
+    "text": "team_zippy_horse\n\nDescription\nProf. Dr. Ulrich Schumann studied Mechanical Engineering in Berlin, promoted on turbulence in Karlsruhe and habilitated in Meteorology in Munich, Germany. He works on various aspects of contrail cirrus and airborne measurements, and lectures on aviation climate impact, now at the Technical University Munich. Prof. Ian Poll published a series of open-access aircraft performance models. Dr. Roger Teoh is Scientist at Imperial College (with Prof. Dr Marc Stettler) and published, since 2019, several papers on contrail modelling\n\n\nRationale for participation\nWe plan to derive best estimates of the aircraft takeoff mass (at least upper and lower bounds) by comparing the given flight trajectories with the restrictions resulting from performance modelling using the open access PS Performance model. The most recent model PS model version covers 67 ICAO aircraft types, hopefully including all aircraft types in the set of test data, and provides several criteria to deduce the achievability of the given flight states in respect to Flight level, Mach number, climb rate, vertical and horizontal accelerations, thrust, and lift coefficient, for the potential range of aircraft mass consistent with the takeoff mass, past fuel consumption, including all flight states from departure to destination. This should allow to estimate at least upper and lower bounds of the aircraft mass. The PS model is available among other within the pycontrail code ( https://doi.org/10.5281/zenodo.7776686 ). The PS model got improved over the years, and further improvements are to be expected. The team coordinator works mainly with Fortran, partially with Excel and partially with python",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_zippy_river",
+    "href": "teams.html#team_zippy_river",
+    "title": "4  Teams",
+    "section": "team_zippy_river",
+    "text": "team_zippy_river\n\nDescription\nI am an industrial engineering student (final year bachelor) from Hamburg with a focus on data science and a passion for aviation\n\n\nRationale for participation\nApply my knowledge for my personal interests",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "5  About",
+    "section": "",
+    "text": "This website describes the PRC Data Challenge.\nThe Performance Review Commission (PRC) was established in 1998 by EUROCONTROL’s Permanent Commission.\nIt provides objective information and independent advice to EUROCONTROL’s governing bodies on European air traffic management (ATM) performance.\nYou can find further details in the AIU Portal PRC page",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>About</span>"
     ]
   }
 ]

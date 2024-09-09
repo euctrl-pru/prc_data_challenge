@@ -1,0 +1,8 @@
+## team_dependable_gorilla
+
+### Description
+We are a team of students. Skye is on his last year of high school and Isaac has just started university
+
+### Rationale for participation
+This challenge appeared interesting to us simply as something to try as we've both done ML projects before and have a passion for computer science
+

@@ -1,0 +1,8 @@
+## team_imaginative_yarn
+
+### Description
+Graduating student business engineering, master data analytics at Ghent university
+
+### Rationale for participation
+I'd like to gain some more data science/data engineering experience before starting work next month
+

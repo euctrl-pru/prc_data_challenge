@@ -1,0 +1,8 @@
+## team_faithful_engine
+
+### Description
+We fly planes and build artificial brains
+
+### Rationale for participation
+We want to learn more about aircraft performance, contribute to Open Source Software and are motivated by a potential environmental impact
+

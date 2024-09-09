@@ -1,0 +1,8 @@
+## team_thoughtful_quicksand
+
+### Description
+I am a cybersecurity analyst, who focuses on deep learning and its applications in the cyberdefense. I am also an aviation and flight simulation enthusiast
+
+### Rationale for participation
+Since I started my studies in cybersecurity, I always wanted to apply my skills in the aviation area. I had the opportunity to develop my skills in AI within my company but I want to share my experience and apply it in this challenge
+

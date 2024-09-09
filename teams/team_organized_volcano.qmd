@@ -1,0 +1,8 @@
+## team_organized_volcano
+
+### Description
+We are three friends who met during their physics studies and are now pursuing different paths related to data science. Loving both aviation (mainly Dennis) and data science (all of us)
+
+### Rationale for participation
+we are curious to find out whether we can provide a model that predicts the ATOW better than other submissions. We are very much looking forward to the fun we are going to have tackling this question
+

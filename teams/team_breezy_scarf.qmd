@@ -1,0 +1,8 @@
+## team_breezy_scarf
+
+### Description
+ I am a student in the 4th year at the Aerospace Engineering Faculty, Air Navigation section from the Politehnica University of Bucharest, Romania. Right now, I am doing an internship of four month at INDRA SISTEMAS in Belgium, working as a System Engineer and developing different digital products for improving the ATM domain. Being driven by a passion for aviation and computer science, I am eager to find out new things about these domains and also new opportunities in this area. I enjoy working in teams, sharing ideas and constantly offering, receiving and implementing feedback while being part of fruitful projects
+
+### Rationale for participation
+I want to participate in this project because it would offer me the perfect opportunity to gain more knowledge into the machine learning domain, besides aviation one and in the same time to put my actual knowledge about this domains into practice. Also, I want to prepare for my bachelor thesis, which will address another subject regarding machine learning in the aviation domain, more exactly machine learning for traffic volume predictions
+

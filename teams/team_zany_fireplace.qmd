@@ -1,0 +1,8 @@
+## team_zany_fireplace
+
+### Description
+I work in the aviation industry and have a PhD in air transportation systems
+
+### Rationale for participation
+My interest lies in big data processing in aviation and transportation systems. I process ample amounts of radar data on a regular basis but don't get to perform any exploratory analysis, which I love.
+

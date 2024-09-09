@@ -1,0 +1,8 @@
+## team_jovial_quince
+
+### Description
+We are two alumni who completed the Bachelor in Aviation at the University of Applied Sciences of Amsterdam and later specialized in data science through a Master’s in Digital Driven Business. We aim to combine our aviation industry knowledge with our data science skills
+
+### Rationale for participation
+We understand the challenges in the aviation industry and aim to contribute by developing transparent, explainable, and easy-to-train models
+

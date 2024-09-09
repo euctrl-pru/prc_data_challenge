@@ -1,0 +1,8 @@
+## team_peaceful_lobster
+
+### Description
+I'm a mechanical engineer and a private pilot with deep love for the aviation community and industry
+
+### Rationale for participation
+I would love to apply my data science skills from my day job to tackle this data challenge to get a chance to develop my machine learning skills as well as make a positive impact on the environment and aviation industry data streams
+

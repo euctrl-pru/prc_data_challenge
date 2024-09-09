@@ -1,0 +1,8 @@
+## team_knowledgeable_jungle
+
+### Description
+An associate professor and an IT engineer
+
+### Rationale for participation
+We are investigating ML models for big data and we are interested in assessing the performance results of our research works
+

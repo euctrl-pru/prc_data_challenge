@@ -1,0 +1,8 @@
+## team_inventive_emu
+
+### Description
+In my spare time I am interested in data science and aviation
+
+### Rationale for participation
+I would like for test my skills on this challenge
+

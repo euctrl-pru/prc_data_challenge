@@ -1,0 +1,8 @@
+## team_funny_yogurt
+
+### Description
+we are a group of data scientists working together at LATAM Airlines, with a keen interest in airline operations and aviation
+
+### Rationale for participation
+we find the problem at hand to be legitimately interesting, and we are looking forward to matching our experience building data products for airline operations to build a valuable solution and share it with the aviation community
+

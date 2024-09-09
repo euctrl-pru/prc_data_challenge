@@ -1,0 +1,8 @@
+## team_unique_tiger
+
+### Description
+computer science students driven by an unrelenting passion to continually expand our knowledge
+
+### Rationale for participation
+we want to expand our knowledge in the field of data science
+

@@ -1,0 +1,8 @@
+## team_mindful_puzzle
+
+### Description
+We are a group of researchers working in the Flight Operations Concepts department at the Institute of Air Transport (German Aerospace Center) with a background in the development of operational innovations at mission and network level for air traffic. Together, we cover a range of skills and know-how, mainly in the areas of aircraft trajectory simulation, optimization as well as machine learning and climate impact assessment
+
+### Rationale for participation
+Given our background and multi-faceted research on trajectories (and experience with ADS-B data), we see this challenge as a great opportunity to apply our knowledge and increase the level of scientific understanding for aircraft take-off weight estimation using open data and models. A part of our investigations' focus resides on the estimation of air traffic's climate impact in terms of CO2 and non-CO2 emissions, for which the modeling of aircraft performance along a flown trajectory is highly significant. We are interested in evaluating a ML-based approach to estimate a TOW given the pre-processed dataset of the challenge
+

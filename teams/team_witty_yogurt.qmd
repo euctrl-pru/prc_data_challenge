@@ -1,0 +1,8 @@
+## team_witty_yogurt
+
+### Description
+I'm a pilot, software engineer, and person who likes to play with flight data
+
+### Rationale for participation
+it seems like an interesting problem
+

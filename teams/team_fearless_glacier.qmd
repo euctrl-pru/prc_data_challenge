@@ -1,0 +1,8 @@
+## team_fearless_glacier
+
+### Description
+A group of friends who like working with data and solving problems with the help of machine learning algorithms. Some of us have an educational background in aviation
+
+### Rationale for participation
+We were interested by the data we get to work with in this challenge as well as the problem that is being solved
+

@@ -1,0 +1,8 @@
+## team_honest_turtle
+
+### Description
+I am currently pursuing my Master's degree in Air Transport and Logistics at TU Dresden
+
+### Rationale for participation
+To apply data analysis and machine learning techniques in solving a key aviation problem, with a focus on environmental impact reduction
+

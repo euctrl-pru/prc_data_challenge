@@ -1,0 +1,8 @@
+## team_fearless_marshmallow
+
+### Description
+A team consisting of petroleum, environmental, and computer science engineers
+
+### Rationale for participation
+As a team with varied backgrounds we are very interested in using data to improve operational efficiency. This challenge is a good experience to apply our skills to aviation industry-related problems
+

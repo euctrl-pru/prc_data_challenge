@@ -1,0 +1,8 @@
+## team_incredible_boat
+
+### Description
+I recently graduated from the University of Warwick, England, where I studied integrated masters in Computer Science. I will be joining Vanguard Asset Management as an Application Engineer this late September.
+
+### Rationale for participation
+For my masters thesis, I researched deep learning techniques (more specifically Graph Neural Networks) in classification tasks in Computational Pathology. I want to use this challenge to apply and improve my ML skills, whilst trying to solve a real world problem
+

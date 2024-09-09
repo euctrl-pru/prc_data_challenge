@@ -1,0 +1,1955 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.553">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>PRC Data Challenge - 4&nbsp; Teams</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./about.html" rel="next">
+<link href="./rankings.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./media/EUROCONTROL-logo-standard-rgb.svg" alt="" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-aiu-home" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">AIU Home</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-aiu-home">    
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu"><i class="bi bi-house-fill" role="img">
+</i> 
+ <span class="dropdown-text"><strong>Home</strong></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/traffic/">
+ <span class="dropdown-text"><i class="fas fa-plane-departure"></i> <strong>Traffic</strong></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://www.eurocontrol.int/Economics/DailyTrafficVariation-States.html"><i class="bi bi-arrow-return-right" role="img">
+</i> 
+ <span class="dropdown-text"> Daily Traffic Dashboard</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/traffic/statfor/"><i class="bi bi-arrow-return-right" role="img">
+</i> 
+ <span class="dropdown-text">Traffic Forecast</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/efficiency/">
+ <span class="dropdown-text"><i class="fas fa-leaf"></i> <strong>Efficiency &amp; Environment</strong></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/efficiency/emissions/"><i class="bi bi-arrow-return-right" role="img">
+</i> 
+ <span class="dropdown-text">CO<sub>2</sub> emissions</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/efficiency/hfe/"><i class="bi bi-arrow-return-right" role="img">
+</i> 
+ <span class="dropdown-text">Horizontal Flight Efficiency</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/efficiency/vfe/"><i class="bi bi-arrow-return-right" role="img">
+</i> 
+ <span class="dropdown-text">Vertical Flight Efficiency</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/efficiency/asma/"><i class="bi bi-arrow-return-right" role="img">
+</i> 
+ <span class="dropdown-text">Terminal Holdings</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/efficiency/taxiout/"><i class="bi bi-arrow-return-right" role="img">
+</i> 
+ <span class="dropdown-text">Taxi-out</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/economics/">
+ <span class="dropdown-text"><i class="fas fa-euro-sign"></i> <strong>Economics</strong></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://www.eurocontrol.int/ServiceUnits/Dashboard/EnRouteMainDashboard.html"><i class="bi bi-arrow-return-right" role="img">
+</i> 
+ <span class="dropdown-text">Service Units</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://www.eurocontrol.int/ServiceUnits/Dashboard/EnRouteUnitRates.html"><i class="bi bi-arrow-return-right" role="img">
+</i> 
+ <span class="dropdown-text">Unit Rates and Costs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/ACE/"><i class="bi bi-arrow-return-right" role="img">
+</i> 
+ <span class="dropdown-text">ATM Cost Effectiveness</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/economics/finance/"><i class="bi bi-arrow-return-right" role="img">
+</i> 
+ <span class="dropdown-text">ANSPs Financial Situation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/economics/cba/"><i class="bi bi-arrow-return-right" role="img">
+</i> 
+ <span class="dropdown-text">CBA</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/dashboard/stakeholder/">
+ <span class="dropdown-text"><i class="fas fa-user-friends"></i> <strong>Stakeholder views</strong></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/airport/"><i class="bi bi-arrow-return-right" role="img">
+</i> 
+ <span class="dropdown-text">Airport View</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/ansp/"><i class="bi bi-arrow-return-right" role="img">
+</i> 
+ <span class="dropdown-text">ANSP View</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/dashboard/stakeholder/fab/"><i class="bi bi-arrow-return-right" role="img">
+</i> 
+ <span class="dropdown-text">FAB View</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/dashboard/stakeholder/state/"><i class="bi bi-arrow-return-right" role="img">
+</i> 
+ <span class="dropdown-text">State View</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/publications/">
+ <span class="dropdown-text"><i class="fas fa-book"></i> <strong>Publications</strong></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/data/"><i class="bi bi-arrow-return-right" role="img">
+</i> 
+ <span class="dropdown-text">Data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/reference/">
+ <span class="dropdown-text"><i class="fas fa-hands-helping"></i> <strong>Reference</strong></span></a>
+  </li>  
+        <li class="dropdown-header"><i class="fas fa-external-link-alt"></i> <strong>External</strong></li>
+        <li>
+    <a class="dropdown-item" href="https://www.eurocontrol.int/prudata/dashboard/"><i class="bi bi-arrow-return-right" role="img">
+</i> 
+ <span class="dropdown-text">Single European Sky Portal</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://www4.icao.int/ganpportal/"><i class="bi bi-arrow-return-right" role="img">
+</i> 
+ <span class="dropdown-text">ICAO GANP</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-about">    
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/about/prc/">
+ <span class="dropdown-text">About the PRC</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/about/us/">
+ <span class="dropdown-text">About the PRU</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/post/">
+ <span class="dropdown-text">Release notes</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/about/disclaimer/">
+ <span class="dropdown-text">Disclaimer</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-areas" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Areas</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-areas">    
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/traffic/">
+ <span class="dropdown-text">Traffic</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/capacity/">
+ <span class="dropdown-text">Capacity &amp; delays</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/efficiency/">
+ <span class="dropdown-text">Efficiency &amp; environment</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/economics/">
+ <span class="dropdown-text">Economics</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-views" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Views</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-views">    
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/dashboard/stakeholder/airport/">
+ <span class="dropdown-text">Airports</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/ansp/">
+ <span class="dropdown-text">Air Navigation Service Provider</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/fab/">
+ <span class="dropdown-text">Functional Airspace Block</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/dashboard/stakeholder/state/">
+ <span class="dropdown-text">State</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://ansperformance.eu/publications/"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://ansperformance.eu/data/"> 
+<span class="menu-text">Data</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-reference" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Reference</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-reference">    
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/data/">
+ <span class="dropdown-text">Data downloads</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/definition/">
+ <span class="dropdown-text">Definitions</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/methodology/">
+ <span class="dropdown-text">Methodology</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/acronym/">
+ <span class="dropdown-text">Acronyms</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ansperformance.eu/bibliography/">
+ <span class="dropdown-text">Bibliography</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="https://www4.icao.int/ganpportal/">
+ <span class="dropdown-text"><i class="fas fa-xs fa-external-link-alt"></i> ICAO GANP</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ses" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">SES</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ses">    
+        <li>
+    <a class="dropdown-item" href="https://www.eurocontrol.int/prudata/dashboard/">
+ <span class="dropdown-text"><i class="fas fa-xs fa-external-link-alt"></i> Single European Sky (SES) Portal</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./teams.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Teams</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">PRC Data Challenge</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rankings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Rankings</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./teams.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Teams</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./about.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">About</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul class="collapse">
+  <li><a href="#team_adventurous_ostrich" id="toc-team_adventurous_ostrich" class="nav-link active" data-scroll-target="#team_adventurous_ostrich">team_adventurous_ostrich</a></li>
+  <li><a href="#team_affectionate_bridge" id="toc-team_affectionate_bridge" class="nav-link" data-scroll-target="#team_affectionate_bridge">team_affectionate_bridge</a></li>
+  <li><a href="#team_affectionate_whistle" id="toc-team_affectionate_whistle" class="nav-link" data-scroll-target="#team_affectionate_whistle">team_affectionate_whistle</a></li>
+  <li><a href="#team_amazing_forest" id="toc-team_amazing_forest" class="nav-link" data-scroll-target="#team_amazing_forest">team_amazing_forest</a></li>
+  <li><a href="#team_amiable_garden" id="toc-team_amiable_garden" class="nav-link" data-scroll-target="#team_amiable_garden">team_amiable_garden</a></li>
+  <li><a href="#team_athletic_glacier" id="toc-team_athletic_glacier" class="nav-link" data-scroll-target="#team_athletic_glacier">team_athletic_glacier</a></li>
+  <li><a href="#team_brave_pillow" id="toc-team_brave_pillow" class="nav-link" data-scroll-target="#team_brave_pillow">team_brave_pillow</a></li>
+  <li><a href="#team_breezy_scarf" id="toc-team_breezy_scarf" class="nav-link" data-scroll-target="#team_breezy_scarf">team_breezy_scarf</a></li>
+  <li><a href="#team_brisk_pencil" id="toc-team_brisk_pencil" class="nav-link" data-scroll-target="#team_brisk_pencil">team_brisk_pencil</a></li>
+  <li><a href="#team_charismatic_fossil" id="toc-team_charismatic_fossil" class="nav-link" data-scroll-target="#team_charismatic_fossil">team_charismatic_fossil</a></li>
+  <li><a href="#team_cheery_vase" id="toc-team_cheery_vase" class="nav-link" data-scroll-target="#team_cheery_vase">team_cheery_vase</a></li>
+  <li><a href="#team_courageous_parrot" id="toc-team_courageous_parrot" class="nav-link" data-scroll-target="#team_courageous_parrot">team_courageous_parrot</a></li>
+  <li><a href="#team_delightful_avocado" id="toc-team_delightful_avocado" class="nav-link" data-scroll-target="#team_delightful_avocado">team_delightful_avocado</a></li>
+  <li><a href="#team_dependable_gorilla" id="toc-team_dependable_gorilla" class="nav-link" data-scroll-target="#team_dependable_gorilla">team_dependable_gorilla</a></li>
+  <li><a href="#team_diligent_zucchini" id="toc-team_diligent_zucchini" class="nav-link" data-scroll-target="#team_diligent_zucchini">team_diligent_zucchini</a></li>
+  <li><a href="#team_energetic_quiver" id="toc-team_energetic_quiver" class="nav-link" data-scroll-target="#team_energetic_quiver">team_energetic_quiver</a></li>
+  <li><a href="#team_enthusiastic_jungle" id="toc-team_enthusiastic_jungle" class="nav-link" data-scroll-target="#team_enthusiastic_jungle">team_enthusiastic_jungle</a></li>
+  <li><a href="#team_exuberant_scooter" id="toc-team_exuberant_scooter" class="nav-link" data-scroll-target="#team_exuberant_scooter">team_exuberant_scooter</a></li>
+  <li><a href="#team_faithful_engine" id="toc-team_faithful_engine" class="nav-link" data-scroll-target="#team_faithful_engine">team_faithful_engine</a></li>
+  <li><a href="#team_faithful_napkin" id="toc-team_faithful_napkin" class="nav-link" data-scroll-target="#team_faithful_napkin">team_faithful_napkin</a></li>
+  <li><a href="#team_faithful_river" id="toc-team_faithful_river" class="nav-link" data-scroll-target="#team_faithful_river">team_faithful_river</a></li>
+  <li><a href="#team_fearless_glacier" id="toc-team_fearless_glacier" class="nav-link" data-scroll-target="#team_fearless_glacier">team_fearless_glacier</a></li>
+  <li><a href="#team_fearless_marshmallow" id="toc-team_fearless_marshmallow" class="nav-link" data-scroll-target="#team_fearless_marshmallow">team_fearless_marshmallow</a></li>
+  <li><a href="#team_funny_yogurt" id="toc-team_funny_yogurt" class="nav-link" data-scroll-target="#team_funny_yogurt">team_funny_yogurt</a></li>
+  <li><a href="#team_gentle_dragon" id="toc-team_gentle_dragon" class="nav-link" data-scroll-target="#team_gentle_dragon">team_gentle_dragon</a></li>
+  <li><a href="#team_gentle_wreath" id="toc-team_gentle_wreath" class="nav-link" data-scroll-target="#team_gentle_wreath">team_gentle_wreath</a></li>
+  <li><a href="#team_genuine_emu" id="toc-team_genuine_emu" class="nav-link" data-scroll-target="#team_genuine_emu">team_genuine_emu</a></li>
+  <li><a href="#team_helpful_wizard" id="toc-team_helpful_wizard" class="nav-link" data-scroll-target="#team_helpful_wizard">team_helpful_wizard</a></li>
+  <li><a href="#team_honest_cactus" id="toc-team_honest_cactus" class="nav-link" data-scroll-target="#team_honest_cactus">team_honest_cactus</a></li>
+  <li><a href="#team_honest_turtle" id="toc-team_honest_turtle" class="nav-link" data-scroll-target="#team_honest_turtle">team_honest_turtle</a></li>
+  <li><a href="#team_imaginative_flamingo" id="toc-team_imaginative_flamingo" class="nav-link" data-scroll-target="#team_imaginative_flamingo">team_imaginative_flamingo</a></li>
+  <li><a href="#team_imaginative_yarn" id="toc-team_imaginative_yarn" class="nav-link" data-scroll-target="#team_imaginative_yarn">team_imaginative_yarn</a></li>
+  <li><a href="#team_incredible_boat" id="toc-team_incredible_boat" class="nav-link" data-scroll-target="#team_incredible_boat">team_incredible_boat</a></li>
+  <li><a href="#team_inventive_emu" id="toc-team_inventive_emu" class="nav-link" data-scroll-target="#team_inventive_emu">team_inventive_emu</a></li>
+  <li><a href="#team_jolly_koala" id="toc-team_jolly_koala" class="nav-link" data-scroll-target="#team_jolly_koala">team_jolly_koala</a></li>
+  <li><a href="#team_jovial_quince" id="toc-team_jovial_quince" class="nav-link" data-scroll-target="#team_jovial_quince">team_jovial_quince</a></li>
+  <li><a href="#team_joyful_zeppelin" id="toc-team_joyful_zeppelin" class="nav-link" data-scroll-target="#team_joyful_zeppelin">team_joyful_zeppelin</a></li>
+  <li><a href="#team_jubilant_jelly" id="toc-team_jubilant_jelly" class="nav-link" data-scroll-target="#team_jubilant_jelly">team_jubilant_jelly</a></li>
+  <li><a href="#team_keen_eagle" id="toc-team_keen_eagle" class="nav-link" data-scroll-target="#team_keen_eagle">team_keen_eagle</a></li>
+  <li><a href="#team_kind_lemon" id="toc-team_kind_lemon" class="nav-link" data-scroll-target="#team_kind_lemon">team_kind_lemon</a></li>
+  <li><a href="#team_kind_nightlight" id="toc-team_kind_nightlight" class="nav-link" data-scroll-target="#team_kind_nightlight">team_kind_nightlight</a></li>
+  <li><a href="#team_knowledgeable_glove" id="toc-team_knowledgeable_glove" class="nav-link" data-scroll-target="#team_knowledgeable_glove">team_knowledgeable_glove</a></li>
+  <li><a href="#team_knowledgeable_jungle" id="toc-team_knowledgeable_jungle" class="nav-link" data-scroll-target="#team_knowledgeable_jungle">team_knowledgeable_jungle</a></li>
+  <li><a href="#team_lighthearted_goblin" id="toc-team_lighthearted_goblin" class="nav-link" data-scroll-target="#team_lighthearted_goblin">team_lighthearted_goblin</a></li>
+  <li><a href="#team_lighthearted_zucchini" id="toc-team_lighthearted_zucchini" class="nav-link" data-scroll-target="#team_lighthearted_zucchini">team_lighthearted_zucchini</a></li>
+  <li><a href="#team_likable_jelly" id="toc-team_likable_jelly" class="nav-link" data-scroll-target="#team_likable_jelly">team_likable_jelly</a></li>
+  <li><a href="#team_lively_hedgehog" id="toc-team_lively_hedgehog" class="nav-link" data-scroll-target="#team_lively_hedgehog">team_lively_hedgehog</a></li>
+  <li><a href="#team_mellow_barn" id="toc-team_mellow_barn" class="nav-link" data-scroll-target="#team_mellow_barn">team_mellow_barn</a></li>
+  <li><a href="#team_mindful_donkey" id="toc-team_mindful_donkey" class="nav-link" data-scroll-target="#team_mindful_donkey">team_mindful_donkey</a></li>
+  <li><a href="#team_mindful_puzzle" id="toc-team_mindful_puzzle" class="nav-link" data-scroll-target="#team_mindful_puzzle">team_mindful_puzzle</a></li>
+  <li><a href="#team_mindful_raccoon" id="toc-team_mindful_raccoon" class="nav-link" data-scroll-target="#team_mindful_raccoon">team_mindful_raccoon</a></li>
+  <li><a href="#team_motivated_ladder" id="toc-team_motivated_ladder" class="nav-link" data-scroll-target="#team_motivated_ladder">team_motivated_ladder</a></li>
+  <li><a href="#team_motivated_ostrich" id="toc-team_motivated_ostrich" class="nav-link" data-scroll-target="#team_motivated_ostrich">team_motivated_ostrich</a></li>
+  <li><a href="#team_nice_hippo" id="toc-team_nice_hippo" class="nav-link" data-scroll-target="#team_nice_hippo">team_nice_hippo</a></li>
+  <li><a href="#team_nice_wolf" id="toc-team_nice_wolf" class="nav-link" data-scroll-target="#team_nice_wolf">team_nice_wolf</a></li>
+  <li><a href="#team_noble_zeppelin" id="toc-team_noble_zeppelin" class="nav-link" data-scroll-target="#team_noble_zeppelin">team_noble_zeppelin</a></li>
+  <li><a href="#team_organized_volcano" id="toc-team_organized_volcano" class="nav-link" data-scroll-target="#team_organized_volcano">team_organized_volcano</a></li>
+  <li><a href="#team_outgoing_boat" id="toc-team_outgoing_boat" class="nav-link" data-scroll-target="#team_outgoing_boat">team_outgoing_boat</a></li>
+  <li><a href="#team_outgoing_strawberry" id="toc-team_outgoing_strawberry" class="nav-link" data-scroll-target="#team_outgoing_strawberry">team_outgoing_strawberry</a></li>
+  <li><a href="#team_outspoken_lemon" id="toc-team_outspoken_lemon" class="nav-link" data-scroll-target="#team_outspoken_lemon">team_outspoken_lemon</a></li>
+  <li><a href="#team_patient_kangaroo" id="toc-team_patient_kangaroo" class="nav-link" data-scroll-target="#team_patient_kangaroo">team_patient_kangaroo</a></li>
+  <li><a href="#team_patient_net" id="toc-team_patient_net" class="nav-link" data-scroll-target="#team_patient_net">team_patient_net</a></li>
+  <li><a href="#team_peaceful_lobster" id="toc-team_peaceful_lobster" class="nav-link" data-scroll-target="#team_peaceful_lobster">team_peaceful_lobster</a></li>
+  <li><a href="#team_quick_candle" id="toc-team_quick_candle" class="nav-link" data-scroll-target="#team_quick_candle">team_quick_candle</a></li>
+  <li><a href="#team_reliable_monkey" id="toc-team_reliable_monkey" class="nav-link" data-scroll-target="#team_reliable_monkey">team_reliable_monkey</a></li>
+  <li><a href="#team_respectful_kangaroo" id="toc-team_respectful_kangaroo" class="nav-link" data-scroll-target="#team_respectful_kangaroo">team_respectful_kangaroo</a></li>
+  <li><a href="#team_sensible_robot" id="toc-team_sensible_robot" class="nav-link" data-scroll-target="#team_sensible_robot">team_sensible_robot</a></li>
+  <li><a href="#team_sincere_quicksand" id="toc-team_sincere_quicksand" class="nav-link" data-scroll-target="#team_sincere_quicksand">team_sincere_quicksand</a></li>
+  <li><a href="#team_sociable_river" id="toc-team_sociable_river" class="nav-link" data-scroll-target="#team_sociable_river">team_sociable_river</a></li>
+  <li><a href="#team_spirited_eel" id="toc-team_spirited_eel" class="nav-link" data-scroll-target="#team_spirited_eel">team_spirited_eel</a></li>
+  <li><a href="#team_strong_fossil" id="toc-team_strong_fossil" class="nav-link" data-scroll-target="#team_strong_fossil">team_strong_fossil</a></li>
+  <li><a href="#team_thoughtful_quicksand" id="toc-team_thoughtful_quicksand" class="nav-link" data-scroll-target="#team_thoughtful_quicksand">team_thoughtful_quicksand</a></li>
+  <li><a href="#team_tidy_kitten" id="toc-team_tidy_kitten" class="nav-link" data-scroll-target="#team_tidy_kitten">team_tidy_kitten</a></li>
+  <li><a href="#team_tiny_rainbow" id="toc-team_tiny_rainbow" class="nav-link" data-scroll-target="#team_tiny_rainbow">team_tiny_rainbow</a></li>
+  <li><a href="#team_unbelievable_donkey" id="toc-team_unbelievable_donkey" class="nav-link" data-scroll-target="#team_unbelievable_donkey">team_unbelievable_donkey</a></li>
+  <li><a href="#team_understanding_jacket" id="toc-team_understanding_jacket" class="nav-link" data-scroll-target="#team_understanding_jacket">team_understanding_jacket</a></li>
+  <li><a href="#team_unique_tiger" id="toc-team_unique_tiger" class="nav-link" data-scroll-target="#team_unique_tiger">team_unique_tiger</a></li>
+  <li><a href="#team_versatile_ostrich" id="toc-team_versatile_ostrich" class="nav-link" data-scroll-target="#team_versatile_ostrich">team_versatile_ostrich</a></li>
+  <li><a href="#team_versatile_yacht" id="toc-team_versatile_yacht" class="nav-link" data-scroll-target="#team_versatile_yacht">team_versatile_yacht</a></li>
+  <li><a href="#team_vibrant_pencil" id="toc-team_vibrant_pencil" class="nav-link" data-scroll-target="#team_vibrant_pencil">team_vibrant_pencil</a></li>
+  <li><a href="#team_vigorous_jungle" id="toc-team_vigorous_jungle" class="nav-link" data-scroll-target="#team_vigorous_jungle">team_vigorous_jungle</a></li>
+  <li><a href="#team_witty_yogurt" id="toc-team_witty_yogurt" class="nav-link" data-scroll-target="#team_witty_yogurt">team_witty_yogurt</a></li>
+  <li><a href="#team_witty_zucchini" id="toc-team_witty_zucchini" class="nav-link" data-scroll-target="#team_witty_zucchini">team_witty_zucchini</a></li>
+  <li><a href="#team_wonderful_boat" id="toc-team_wonderful_boat" class="nav-link" data-scroll-target="#team_wonderful_boat">team_wonderful_boat</a></li>
+  <li><a href="#team_youthful_night" id="toc-team_youthful_night" class="nav-link" data-scroll-target="#team_youthful_night">team_youthful_night</a></li>
+  <li><a href="#team_youthful_xylophone" id="toc-team_youthful_xylophone" class="nav-link" data-scroll-target="#team_youthful_xylophone">team_youthful_xylophone</a></li>
+  <li><a href="#team_zany_eagle" id="toc-team_zany_eagle" class="nav-link" data-scroll-target="#team_zany_eagle">team_zany_eagle</a></li>
+  <li><a href="#team_zany_fireplace" id="toc-team_zany_fireplace" class="nav-link" data-scroll-target="#team_zany_fireplace">team_zany_fireplace</a></li>
+  <li><a href="#team_zany_ladder" id="toc-team_zany_ladder" class="nav-link" data-scroll-target="#team_zany_ladder">team_zany_ladder</a></li>
+  <li><a href="#team_zippy_horse" id="toc-team_zippy_horse" class="nav-link" data-scroll-target="#team_zippy_horse">team_zippy_horse</a></li>
+  <li><a href="#team_zippy_river" id="toc-team_zippy_river" class="nav-link" data-scroll-target="#team_zippy_river">team_zippy_river</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Teams</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="team_adventurous_ostrich" class="level2">
+<h2 class="anchored" data-anchor-id="team_adventurous_ostrich">team_adventurous_ostrich</h2>
+<section id="description" class="level3">
+<h3 class="anchored" data-anchor-id="description">Description</h3>
+<p>We are a group of young researchers in the field of air traffic management with year of experience in data analysis and operational indicators</p>
+</section>
+<section id="rationale-for-participation" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation">Rationale for participation</h3>
+<p>We find this challenge interesting both from a technical and operational point of view. We believe it may help to improve the estimations of the negative impact of aviation on the environment, providing a basis to find new tackle the problem</p>
+</section>
+</section>
+<section id="team_affectionate_bridge" class="level2">
+<h2 class="anchored" data-anchor-id="team_affectionate_bridge">team_affectionate_bridge</h2>
+<section id="description-1" class="level3">
+<h3 class="anchored" data-anchor-id="description-1">Description</h3>
+<p>just myself</p>
+</section>
+<section id="rationale-for-participation-1" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-1">Rationale for participation</h3>
+<p>I’ve always been an aviation fan, and currently work in data analytics, but I’ve never had much opportunity to combine the two. I did use OpenSky Network a few times and blogged about it: it is a fantastic resource!</p>
+</section>
+</section>
+<section id="team_affectionate_whistle" class="level2">
+<h2 class="anchored" data-anchor-id="team_affectionate_whistle">team_affectionate_whistle</h2>
+<section id="description-2" class="level3">
+<h3 class="anchored" data-anchor-id="description-2">Description</h3>
+<p>We are a group of aviation data science enthusiasts hailing from Hong Kong. Our team primarily consists of current and former members of the OCTAD Lab in the Department of Mechanical and Aerospace Engineering at the Hong Kong University of Science and Technology (HKUST)</p>
+</section>
+<section id="rationale-for-participation-2" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-2">Rationale for participation</h3>
+<p>Driven by curiosity and a shared passion for pushing the boundaries of aviation technology, we are participating in this competition to challenge ourselves to develop creative solutions that could potentially reshape the future of aviation</p>
+</section>
+</section>
+<section id="team_amazing_forest" class="level2">
+<h2 class="anchored" data-anchor-id="team_amazing_forest">team_amazing_forest</h2>
+<section id="description-3" class="level3">
+<h3 class="anchored" data-anchor-id="description-3">Description</h3>
+<p>Professionally, I am a Data Scientist for a large social media business. Personally, I am a frequent blogger on analytics and sports topics at conormclaughlin.net</p>
+</section>
+<section id="rationale-for-participation-3" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-3">Rationale for participation</h3>
+<p>Life-long interest in aviation, academic and commercial experience building machine learning models, prior history working with OpenSky APIs to implement personal projects</p>
+</section>
+</section>
+<section id="team_amiable_garden" class="level2">
+<h2 class="anchored" data-anchor-id="team_amiable_garden">team_amiable_garden</h2>
+<section id="description-4" class="level3">
+<h3 class="anchored" data-anchor-id="description-4">Description</h3>
+<p>I play with data as a hobby</p>
+</section>
+<section id="rationale-for-participation-4" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-4">Rationale for participation</h3>
+<p>A plane just flew over my house!</p>
+</section>
+</section>
+<section id="team_athletic_glacier" class="level2">
+<h2 class="anchored" data-anchor-id="team_athletic_glacier">team_athletic_glacier</h2>
+<section id="description-5" class="level3">
+<h3 class="anchored" data-anchor-id="description-5">Description</h3>
+<p>I am a former airline pilot, current engineer and aviation enthusiast with an interest in data science and ML</p>
+</section>
+<section id="rationale-for-participation-5" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-5">Rationale for participation</h3>
+<p>I would like to participate in advancing green aviation</p>
+</section>
+</section>
+<section id="team_brave_pillow" class="level2">
+<h2 class="anchored" data-anchor-id="team_brave_pillow">team_brave_pillow</h2>
+<section id="description-6" class="level3">
+<h3 class="anchored" data-anchor-id="description-6">Description</h3>
+<p>TU Delft PhD student</p>
+</section>
+<section id="rationale-for-participation-6" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-6">Rationale for participation</h3>
+<p>My research is related to TOW estimation, curiosity</p>
+</section>
+</section>
+<section id="team_breezy_scarf" class="level2">
+<h2 class="anchored" data-anchor-id="team_breezy_scarf">team_breezy_scarf</h2>
+<section id="description-7" class="level3">
+<h3 class="anchored" data-anchor-id="description-7">Description</h3>
+<p>I am a student in the 4th year at the Aerospace Engineering Faculty, Air Navigation section from the Politehnica University of Bucharest, Romania. Right now, I am doing an internship of four month at INDRA SISTEMAS in Belgium, working as a System Engineer and developing different digital products for improving the ATM domain. Being driven by a passion for aviation and computer science, I am eager to find out new things about these domains and also new opportunities in this area. I enjoy working in teams, sharing ideas and constantly offering, receiving and implementing feedback while being part of fruitful projects</p>
+</section>
+<section id="rationale-for-participation-7" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-7">Rationale for participation</h3>
+<p>I want to participate in this project because it would offer me the perfect opportunity to gain more knowledge into the machine learning domain, besides aviation one and in the same time to put my actual knowledge about this domains into practice. Also, I want to prepare for my bachelor thesis, which will address another subject regarding machine learning in the aviation domain, more exactly machine learning for traffic volume predictions</p>
+</section>
+</section>
+<section id="team_brisk_pencil" class="level2">
+<h2 class="anchored" data-anchor-id="team_brisk_pencil">team_brisk_pencil</h2>
+<section id="description-8" class="level3">
+<h3 class="anchored" data-anchor-id="description-8">Description</h3>
+<p>We are a team of highly motivated engineers passionate about leveraging data to solve real-world challenges. As individuals with some experience in data analysis, machine learning, and software development, we are excited to contribute our skills to this challenge. Our team brings a strong combination of technical expertise, creative problem-solving, and a deep commitment to making an impact.</p>
+</section>
+<section id="rationale-for-participation-8" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-8">Rationale for participation</h3>
+<p>We are eager to participate in the PRC Data Challenge because it offers a unique opportunity to apply our knowledge to a meaningful cause. The challenge aligns perfectly with our academic and career goals, as it allows us to engage with complex datasets, develop innovative solutions, and contribute to the broader field of aviation safety. We are particularly interested in exploring how data can enhance the safety and efficiency of air traffic management, and we look forward to collaborating with other participants and learning from the experience</p>
+</section>
+</section>
+<section id="team_charismatic_fossil" class="level2">
+<h2 class="anchored" data-anchor-id="team_charismatic_fossil">team_charismatic_fossil</h2>
+<section id="description-9" class="level3">
+<h3 class="anchored" data-anchor-id="description-9">Description</h3>
+<p>Airspace Engineer interested in Data Analysis</p>
+</section>
+<section id="rationale-for-participation-9" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-9">Rationale for participation</h3>
+<p>hobby project</p>
+</section>
+</section>
+<section id="team_cheery_vase" class="level2">
+<h2 class="anchored" data-anchor-id="team_cheery_vase">team_cheery_vase</h2>
+<section id="description-10" class="level3">
+<h3 class="anchored" data-anchor-id="description-10">Description</h3>
+<p>I’m enthusiast python programmer and eventually make some software on flights</p>
+</section>
+<section id="rationale-for-participation-10" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-10">Rationale for participation</h3>
+<p>I like to program in python and I’ve been making some application with scikitlearn machine learning: the PRC Data Challenge looks like a good opportunity to show up my knowledge</p>
+</section>
+</section>
+<section id="team_courageous_parrot" class="level2">
+<h2 class="anchored" data-anchor-id="team_courageous_parrot">team_courageous_parrot</h2>
+<section id="description-11" class="level3">
+<h3 class="anchored" data-anchor-id="description-11">Description</h3>
+<p>master’s students at the Aeronautics Institute of Technology (ITA) in Brazil, with a strong interest in the fields of aeronautics, encompassing mechanical, electrical, and computational engineering</p>
+</section>
+<section id="rationale-for-participation-11" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-11">Rationale for participation</h3>
+<p>Some of our dissertations address similar challenges, focused on enhancing our skills in machine learning and deepening our knowledge in areas such as aircraft systems, avionics, and flight dynamics. The challenge is a good way to reach the best version of us and spread a new solution to the problem</p>
+</section>
+</section>
+<section id="team_delightful_avocado" class="level2">
+<h2 class="anchored" data-anchor-id="team_delightful_avocado">team_delightful_avocado</h2>
+<section id="description-12" class="level3">
+<h3 class="anchored" data-anchor-id="description-12">Description</h3>
+<p>aviation enthusiasts with a strong interest in machine learning</p>
+</section>
+<section id="rationale-for-participation-12" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-12">Rationale for participation</h3>
+<p>great opportunity for us to combine these passions and see how data science can make a real impact in aviation</p>
+</section>
+</section>
+<section id="team_dependable_gorilla" class="level2">
+<h2 class="anchored" data-anchor-id="team_dependable_gorilla">team_dependable_gorilla</h2>
+<section id="description-13" class="level3">
+<h3 class="anchored" data-anchor-id="description-13">Description</h3>
+<p>We are a team of students. Skye is on his last year of high school and Isaac has just started university</p>
+</section>
+<section id="rationale-for-participation-13" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-13">Rationale for participation</h3>
+<p>This challenge appeared interesting to us simply as something to try as we’ve both done ML projects before and have a passion for computer science</p>
+</section>
+</section>
+<section id="team_diligent_zucchini" class="level2">
+<h2 class="anchored" data-anchor-id="team_diligent_zucchini">team_diligent_zucchini</h2>
+<section id="description-14" class="level3">
+<h3 class="anchored" data-anchor-id="description-14">Description</h3>
+<p>Our team is eager to utilize the provided data for predicting aircraft trajectories within terminal airspace. We also aim to explore potential impacts on Air Traffic Management (ATM) airspace, considering the upcoming integration of urban air mobility operations</p>
+</section>
+<section id="rationale-for-participation-14" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-14">Rationale for participation</h3>
+<p>The data provided through this challenge offers a valuable baseline for prediction tasks. We intend to highlight not only accuracy metrics, such as minFDE and minADE, but also to emphasize the safety aspects and implications of the prediction results</p>
+</section>
+</section>
+<section id="team_energetic_quiver" class="level2">
+<h2 class="anchored" data-anchor-id="team_energetic_quiver">team_energetic_quiver</h2>
+<section id="description-15" class="level3">
+<h3 class="anchored" data-anchor-id="description-15">Description</h3>
+<p>Our team, comprising members from Serbia and the USA, brings together a unique blend of expertise in aviation and machine learning to tackle the PRC Data Challenge. Emir Ganić, a research associate at the University of Belgrade, Serbia, has over a decade of experience in aviation, with a particular focus on airports, aircraft noise, engine emissions, unmanned aircraft systems, and sustainable aviation. His extensive research background is evidenced by his contributions to international monograph and over 30 scientific papers. He is also an active member of several prestigious organizations, including the European Aviation Noise Research Network (X-NOISE) and the TRB Standing Committee on Environmental Issues in Aviation, USA. Yanyu Wang, an Assistant Professor at Louisiana State University, USA, specializes in machine learning with a focus on aviation safety, efficiency, and sustainability. Her expertise in applying advanced machine learning techniques to solve complex aviation problems complements the team’s objectives in developing innovative solutions for accurately estimating Actual TakeOff Weight (ATOW). Together, our team’s diverse skills and experiences position us well to create a robust, open machine learning model that addresses the challenge’s goals of transparency, reproducibility, and environmental impact reduction</p>
+</section>
+<section id="rationale-for-participation-15" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-15">Rationale for participation</h3>
+<p>Our participation in the PRC Data Challenge is driven by a strong commitment to advancing aviation safety and sustainability in the context of climate change. This challenge presents a valuable opportunity to contribute to the development of an open Machine Learning model for accurately estimating ATOW, a critical factor in improving fuel efficiency and reducing emissions. We are excited to collaborate together on this challenge as a team, confident that our efforts will lead to meaningful advancements in understanding and mitigating the environmental impact of aviation</p>
+</section>
+</section>
+<section id="team_enthusiastic_jungle" class="level2">
+<h2 class="anchored" data-anchor-id="team_enthusiastic_jungle">team_enthusiastic_jungle</h2>
+<section id="description-16" class="level3">
+<h3 class="anchored" data-anchor-id="description-16">Description</h3>
+<p>We, at Data Science Lab, measure and predict real world actions and events with online data</p>
+</section>
+<section id="rationale-for-participation-16" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-16">Rationale for participation</h3>
+<p>interested following our 2020 published work ‘Using aircraft location data to estimate current economic activity’</p>
+</section>
+</section>
+<section id="team_exuberant_scooter" class="level2">
+<h2 class="anchored" data-anchor-id="team_exuberant_scooter">team_exuberant_scooter</h2>
+<section id="description-17" class="level3">
+<h3 class="anchored" data-anchor-id="description-17">Description</h3>
+<p>We are a Swiss startup building pilot assistance and safety applications and services</p>
+</section>
+<section id="rationale-for-participation-17" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-17">Rationale for participation</h3>
+<p>Predicting ATOW/ETOW from OpenSkyNetwork flight data is an intriguing challenge that aligns well with our professional experience in machine learning, aeronautics, and software engineering. This opportunity will allow us to identify and understand patterns in flight data, enhancing our ability to build accurate ML models for prediction and estimation.</p>
+</section>
+</section>
+<section id="team_faithful_engine" class="level2">
+<h2 class="anchored" data-anchor-id="team_faithful_engine">team_faithful_engine</h2>
+<section id="description-18" class="level3">
+<h3 class="anchored" data-anchor-id="description-18">Description</h3>
+<p>We fly planes and build artificial brains</p>
+</section>
+<section id="rationale-for-participation-18" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-18">Rationale for participation</h3>
+<p>We want to learn more about aircraft performance, contribute to Open Source Software and are motivated by a potential environmental impact</p>
+</section>
+</section>
+<section id="team_faithful_napkin" class="level2">
+<h2 class="anchored" data-anchor-id="team_faithful_napkin">team_faithful_napkin</h2>
+<section id="description-19" class="level3">
+<h3 class="anchored" data-anchor-id="description-19">Description</h3>
+<p>A researcher at Xiamen University’s School of Aeronautics and Astronautics, my work focuses on advanced algorithmic solutions in the civil aviation sector, including passenger flow forecasting, revenue management, and crew scheduling</p>
+</section>
+<section id="rationale-for-participation-19" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-19">Rationale for participation</h3>
+<p>As a researcher at Xiamen University’s School of Aeronautics and Astronautics, my work focuses on advanced algorithmic solutions in the civil aviation sector, including passenger flow forecasting, revenue management, and crew scheduling. Participating in the PRC Data Challenge aligns perfectly with my expertise and interests, offering a unique opportunity to apply my skills in machine learning and data analysis to a critical aspect of aviation—inferring the Actual TakeOff Weight (ATOW)</p>
+</section>
+</section>
+<section id="team_faithful_river" class="level2">
+<h2 class="anchored" data-anchor-id="team_faithful_river">team_faithful_river</h2>
+<section id="description-20" class="level3">
+<h3 class="anchored" data-anchor-id="description-20">Description</h3>
+<p>We are scientist employed and working for ANSP Deutsche Flugsicherung (DFS), Germany</p>
+</section>
+<section id="rationale-for-participation-20" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-20">Rationale for participation</h3>
+<p>Through our collaborative work, we have developed and fine-tuned a trajectory prediction framework, which can estimate ATOW. The PCR data challenge gives us a platform to test our framework</p>
+</section>
+</section>
+<section id="team_fearless_glacier" class="level2">
+<h2 class="anchored" data-anchor-id="team_fearless_glacier">team_fearless_glacier</h2>
+<section id="description-21" class="level3">
+<h3 class="anchored" data-anchor-id="description-21">Description</h3>
+<p>A group of friends who like working with data and solving problems with the help of machine learning algorithms. Some of us have an educational background in aviation</p>
+</section>
+<section id="rationale-for-participation-21" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-21">Rationale for participation</h3>
+<p>We were interested by the data we get to work with in this challenge as well as the problem that is being solved</p>
+</section>
+</section>
+<section id="team_fearless_marshmallow" class="level2">
+<h2 class="anchored" data-anchor-id="team_fearless_marshmallow">team_fearless_marshmallow</h2>
+<section id="description-22" class="level3">
+<h3 class="anchored" data-anchor-id="description-22">Description</h3>
+<p>A team consisting of petroleum, environmental, and computer science engineers</p>
+</section>
+<section id="rationale-for-participation-22" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-22">Rationale for participation</h3>
+<p>As a team with varied backgrounds we are very interested in using data to improve operational efficiency. This challenge is a good experience to apply our skills to aviation industry-related problems</p>
+</section>
+</section>
+<section id="team_funny_yogurt" class="level2">
+<h2 class="anchored" data-anchor-id="team_funny_yogurt">team_funny_yogurt</h2>
+<section id="description-23" class="level3">
+<h3 class="anchored" data-anchor-id="description-23">Description</h3>
+<p>we are a group of data scientists working together at LATAM Airlines, with a keen interest in airline operations and aviation</p>
+</section>
+<section id="rationale-for-participation-23" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-23">Rationale for participation</h3>
+<p>we find the problem at hand to be legitimately interesting, and we are looking forward to matching our experience building data products for airline operations to build a valuable solution and share it with the aviation community</p>
+</section>
+</section>
+<section id="team_gentle_dragon" class="level2">
+<h2 class="anchored" data-anchor-id="team_gentle_dragon">team_gentle_dragon</h2>
+<section id="description-24" class="level3">
+<h3 class="anchored" data-anchor-id="description-24">Description</h3>
+<p>a Business and Computer science student from Hamburg</p>
+</section>
+<section id="rationale-for-participation-24" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-24">Rationale for participation</h3>
+<p>I want to try this data science project out for myself, I am not that proficient in projects like this but I would like to change that!</p>
+</section>
+</section>
+<section id="team_gentle_wreath" class="level2">
+<h2 class="anchored" data-anchor-id="team_gentle_wreath">team_gentle_wreath</h2>
+<section id="description-25" class="level3">
+<h3 class="anchored" data-anchor-id="description-25">Description</h3>
+<p>I am a young data scientist holding a master degree in data science with specialization in reliable and secure systems from the university of Stavanger in Norway where i currently live. I have a great interest in artificial intelligence and machine learning algorithms and its practical applications and important role in building and improving modern society. On the personal level, I am an active and social person who are happy to motivate and engage people around to exchange learning and experience</p>
+</section>
+<section id="rationale-for-participation-25" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-25">Rationale for participation</h3>
+<p>I have a combined passion in both computer science and aviation. And as an engineer I would like to use my acquired knowledge to help solving the challenges that impact aviation operations and help improve the aviation industry towards better performance and less impact on natural environment and resources. I am also looking forward to learn more about data science in aviation and gain better experience in this area of knowledge</p>
+</section>
+</section>
+<section id="team_genuine_emu" class="level2">
+<h2 class="anchored" data-anchor-id="team_genuine_emu">team_genuine_emu</h2>
+<section id="description-26" class="level3">
+<h3 class="anchored" data-anchor-id="description-26">Description</h3>
+<p>I am a fan of aviation, and a ML leaner. I hope to solve issues by AI</p>
+</section>
+<section id="rationale-for-participation-26" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-26">Rationale for participation</h3>
+<p>participation is important, enjoy the process</p>
+</section>
+</section>
+<section id="team_helpful_wizard" class="level2">
+<h2 class="anchored" data-anchor-id="team_helpful_wizard">team_helpful_wizard</h2>
+<section id="description-27" class="level3">
+<h3 class="anchored" data-anchor-id="description-27">Description</h3>
+<p>I am an AI Graduate from the Cranfield University, currently studying in the US</p>
+</section>
+<section id="rationale-for-participation-27" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-27">Rationale for participation</h3>
+<p>I would like to participate in the challenge to improve my skills and contribute to the OpenSky network</p>
+</section>
+</section>
+<section id="team_honest_cactus" class="level2">
+<h2 class="anchored" data-anchor-id="team_honest_cactus">team_honest_cactus</h2>
+<section id="description-28" class="level3">
+<h3 class="anchored" data-anchor-id="description-28">Description</h3>
+<p>A data engineer exploring opportunities to get experience in data science too</p>
+</section>
+<section id="rationale-for-participation-28" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-28">Rationale for participation</h3>
+<p>exploring opportunities to get experience in data science</p>
+</section>
+</section>
+<section id="team_honest_turtle" class="level2">
+<h2 class="anchored" data-anchor-id="team_honest_turtle">team_honest_turtle</h2>
+<section id="description-29" class="level3">
+<h3 class="anchored" data-anchor-id="description-29">Description</h3>
+<p>I am currently pursuing my Master’s degree in Air Transport and Logistics at TU Dresden</p>
+</section>
+<section id="rationale-for-participation-29" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-29">Rationale for participation</h3>
+<p>To apply data analysis and machine learning techniques in solving a key aviation problem, with a focus on environmental impact reduction</p>
+</section>
+</section>
+<section id="team_imaginative_flamingo" class="level2">
+<h2 class="anchored" data-anchor-id="team_imaginative_flamingo">team_imaginative_flamingo</h2>
+<section id="description-30" class="level3">
+<h3 class="anchored" data-anchor-id="description-30">Description</h3>
+<p>I am currently a student of a Master’s degree course in Scientific and Data-Intensive Computing at the University of Trieste, Italy</p>
+</section>
+<section id="rationale-for-participation-30" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-30">Rationale for participation</h3>
+<p>I find the PRC Data Challenge a terrific opportunity to challenge myself in my field of study, but with a much more practical approach. I have been long devoted to open source software and I much appreciate the idea of exploiting crowd-harvested data for creating a crowd-devised model and making it publicly available, in order for it to be worked upon and improved</p>
+</section>
+</section>
+<section id="team_imaginative_yarn" class="level2">
+<h2 class="anchored" data-anchor-id="team_imaginative_yarn">team_imaginative_yarn</h2>
+<section id="description-31" class="level3">
+<h3 class="anchored" data-anchor-id="description-31">Description</h3>
+<p>Graduating student business engineering, master data analytics at Ghent university</p>
+</section>
+<section id="rationale-for-participation-31" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-31">Rationale for participation</h3>
+<p>I’d like to gain some more data science/data engineering experience before starting work next month</p>
+</section>
+</section>
+<section id="team_incredible_boat" class="level2">
+<h2 class="anchored" data-anchor-id="team_incredible_boat">team_incredible_boat</h2>
+<section id="description-32" class="level3">
+<h3 class="anchored" data-anchor-id="description-32">Description</h3>
+<p>I recently graduated from the University of Warwick, England, where I studied integrated masters in Computer Science. I will be joining Vanguard Asset Management as an Application Engineer this late September.</p>
+</section>
+<section id="rationale-for-participation-32" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-32">Rationale for participation</h3>
+<p>For my masters thesis, I researched deep learning techniques (more specifically Graph Neural Networks) in classification tasks in Computational Pathology. I want to use this challenge to apply and improve my ML skills, whilst trying to solve a real world problem</p>
+</section>
+</section>
+<section id="team_inventive_emu" class="level2">
+<h2 class="anchored" data-anchor-id="team_inventive_emu">team_inventive_emu</h2>
+<section id="description-33" class="level3">
+<h3 class="anchored" data-anchor-id="description-33">Description</h3>
+<p>In my spare time I am interested in data science and aviation</p>
+</section>
+<section id="rationale-for-participation-33" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-33">Rationale for participation</h3>
+<p>I would like for test my skills on this challenge</p>
+</section>
+</section>
+<section id="team_jolly_koala" class="level2">
+<h2 class="anchored" data-anchor-id="team_jolly_koala">team_jolly_koala</h2>
+<section id="description-34" class="level3">
+<h3 class="anchored" data-anchor-id="description-34">Description</h3>
+<p>Aviation enthusiasts in their early careers in the aviation industry</p>
+</section>
+<section id="rationale-for-participation-34" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-34">Rationale for participation</h3>
+<p>Applying our knowledge to see what we can learn from data. And more importantly, having fun!</p>
+</section>
+</section>
+<section id="team_jovial_quince" class="level2">
+<h2 class="anchored" data-anchor-id="team_jovial_quince">team_jovial_quince</h2>
+<section id="description-35" class="level3">
+<h3 class="anchored" data-anchor-id="description-35">Description</h3>
+<p>We are two alumni who completed the Bachelor in Aviation at the University of Applied Sciences of Amsterdam and later specialized in data science through a Master’s in Digital Driven Business. We aim to combine our aviation industry knowledge with our data science skills</p>
+</section>
+<section id="rationale-for-participation-35" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-35">Rationale for participation</h3>
+<p>We understand the challenges in the aviation industry and aim to contribute by developing transparent, explainable, and easy-to-train models</p>
+</section>
+</section>
+<section id="team_joyful_zeppelin" class="level2">
+<h2 class="anchored" data-anchor-id="team_joyful_zeppelin">team_joyful_zeppelin</h2>
+<section id="description-36" class="level3">
+<h3 class="anchored" data-anchor-id="description-36">Description</h3>
+<p>We are team Sydorg, a group of four aviation and machine learning enthusiasts from Gandhinagar, India. With a mix of data scientist, software engineers and management experts, our fondness of data analytics and its implications in real world is what brings us together</p>
+</section>
+<section id="rationale-for-participation-36" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-36">Rationale for participation</h3>
+<p>We are a team of data scientists and aviation enthusiasts eager to tackle this challenge. It not only stimulates our data-driven, analytical minds but also pushes us to address both the short- and long-term implications of our solutions. We are part of Sydorg Technologies, an Indian startup dedicated to optimizing air traffic operations at airports, which plays a significant role in reducing carbon emissions in the aviation sector. We are excited about the possibility of making this work open-source, as it aligns with our mission to build a more sustainable ML-based SaaS product and contribute to the broader community</p>
+</section>
+</section>
+<section id="team_jubilant_jelly" class="level2">
+<h2 class="anchored" data-anchor-id="team_jubilant_jelly">team_jubilant_jelly</h2>
+<section id="description-37" class="level3">
+<h3 class="anchored" data-anchor-id="description-37">Description</h3>
+<p>College Student interested in machine learning and aviation</p>
+</section>
+<section id="rationale-for-participation-37" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-37">Rationale for participation</h3>
+<p>I am very interested in machine learning and aviation and would like the opportunity to test my skills in a real-world setting.</p>
+</section>
+</section>
+<section id="team_keen_eagle" class="level2">
+<h2 class="anchored" data-anchor-id="team_keen_eagle">team_keen_eagle</h2>
+<section id="description-38" class="level3">
+<h3 class="anchored" data-anchor-id="description-38">Description</h3>
+<p>I run an OpenSky feed and worked in the aviation industry in the past but now work in the AI/LM field using Oracle business analytics and other Oracle AI technologies</p>
+</section>
+<section id="rationale-for-participation-38" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-38">Rationale for participation</h3>
+<p>I want to put my AI/ML knowledge and Oracle technologies to work solving this interesting challenge</p>
+</section>
+</section>
+<section id="team_kind_lemon" class="level2">
+<h2 class="anchored" data-anchor-id="team_kind_lemon">team_kind_lemon</h2>
+<section id="description-39" class="level3">
+<h3 class="anchored" data-anchor-id="description-39">Description</h3>
+<p>Our team is composed of experts in various disciplines from the University of Vigo, including mathematics, computer science, and engineering</p>
+</section>
+<section id="rationale-for-participation-39" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-39">Rationale for participation</h3>
+<p>We are eager to collaborate and bring our collective expertise to this project and keen to contribute to the definition and development of a model for the calculation of ATOW</p>
+</section>
+</section>
+<section id="team_kind_nightlight" class="level2">
+<h2 class="anchored" data-anchor-id="team_kind_nightlight">team_kind_nightlight</h2>
+<section id="description-40" class="level3">
+<h3 class="anchored" data-anchor-id="description-40">Description</h3>
+<p>researchers from the Berlin Institute for the Foundations of Learning and Data (BIFOLD) at Technische Universität Berlin. Our primary research focuses on the intersection of computer security and machine learning, but in our free time we also have a strong passion for aviation</p>
+</section>
+<section id="rationale-for-participation-40" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-40">Rationale for participation</h3>
+<p>curious about aviation and are eager to apply some of our research expertise to this challenge</p>
+</section>
+</section>
+<section id="team_knowledgeable_glove" class="level2">
+<h2 class="anchored" data-anchor-id="team_knowledgeable_glove">team_knowledgeable_glove</h2>
+<section id="description-41" class="level3">
+<h3 class="anchored" data-anchor-id="description-41">Description</h3>
+<p>I am a researcher and analyst passionate about aviation, astrophysics, and data science</p>
+</section>
+<section id="rationale-for-participation-41" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-41">Rationale for participation</h3>
+<p>I would love to bolster my portfolio on a fun project that has real meaning</p>
+</section>
+</section>
+<section id="team_knowledgeable_jungle" class="level2">
+<h2 class="anchored" data-anchor-id="team_knowledgeable_jungle">team_knowledgeable_jungle</h2>
+<section id="description-42" class="level3">
+<h3 class="anchored" data-anchor-id="description-42">Description</h3>
+<p>An associate professor and an IT engineer</p>
+</section>
+<section id="rationale-for-participation-42" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-42">Rationale for participation</h3>
+<p>We are investigating ML models for big data and we are interested in assessing the performance results of our research works</p>
+</section>
+</section>
+<section id="team_lighthearted_goblin" class="level2">
+<h2 class="anchored" data-anchor-id="team_lighthearted_goblin">team_lighthearted_goblin</h2>
+<section id="description-43" class="level3">
+<h3 class="anchored" data-anchor-id="description-43">Description</h3>
+<p>Individual with AI and data processing skills</p>
+</section>
+<section id="rationale-for-participation-43" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-43">Rationale for participation</h3>
+<p>I like the goal, I like the challenge, and I think I can do a great job. Some Prize money would be icing on the cake.</p>
+</section>
+</section>
+<section id="team_lighthearted_zucchini" class="level2">
+<h2 class="anchored" data-anchor-id="team_lighthearted_zucchini">team_lighthearted_zucchini</h2>
+<section id="description-44" class="level3">
+<h3 class="anchored" data-anchor-id="description-44">Description</h3>
+<p>A solo practitioner data scientist based in the United States</p>
+</section>
+<section id="rationale-for-participation-44" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-44">Rationale for participation</h3>
+<p>Over the past several years I’ve developed a particular interest in spatial data analysis and geospatial data science. That work has focused mainly on human mobility and transportation, and through those efforts I began working with aviation and flight trajectory data. I think this data challenge offers a great opportunity to marry my interests to a problem with both important industry and broader climate implications</p>
+</section>
+</section>
+<section id="team_likable_jelly" class="level2">
+<h2 class="anchored" data-anchor-id="team_likable_jelly">team_likable_jelly</h2>
+<section id="description-45" class="level3">
+<h3 class="anchored" data-anchor-id="description-45">Description</h3>
+<p>Richard Alligier received his Ph.D.&nbsp;(2014) degree in Computer Science from the ‘Institut National Polytechnique de Toulouse’ (INPT), his engineer’s degree (IEEAC, 2010) from the french university of civil aviation (ENAC) and his M.Sc. (2010) in computer science from the University of Toulouse. He is currently assistant professor at the ENAC in Toulouse, France. David Gianazza received his two engineer degrees (1986, 1996) from the ‘École Nationale de l’Aviation Civile’ (ENAC) and his M.Sc. (1996) and Ph.D.&nbsp;(2004) in Computer Science from the ‘Institut National Polytechnique de Toulouse’ (INPT). He has obtained his HDR (a french post-doctoral degree similar to tenure) in 2016 from the INPT. He has held various positions in the french civil aviation administration, successively as an engineer in ATC operations, technical manager, and researcher. He is currently associate professor at the ENAC, Toulouse</p>
+</section>
+<section id="rationale-for-participation-45" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-45">Rationale for participation</h3>
+<p>We have worked on a PhD thesis estimating mass ten years ago, but it was with a different usage in mind, it was not the actual mass, more like an ‘equivalent mass’ for trajectory prediction. Nonetheless, maybe we can use some of our knowledge/techniques on this problem, and it might be fun to play with a data set of actual masses</p>
+</section>
+</section>
+<section id="team_lively_hedgehog" class="level2">
+<h2 class="anchored" data-anchor-id="team_lively_hedgehog">team_lively_hedgehog</h2>
+<section id="description-46" class="level3">
+<h3 class="anchored" data-anchor-id="description-46">Description</h3>
+<p>Student at Aarhus University in Computer technology, with focus on deep learning</p>
+</section>
+<section id="rationale-for-participation-46" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-46">Rationale for participation</h3>
+<p>Challenge, and see how good it can be</p>
+</section>
+</section>
+<section id="team_mellow_barn" class="level2">
+<h2 class="anchored" data-anchor-id="team_mellow_barn">team_mellow_barn</h2>
+<section id="description-47" class="level3">
+<h3 class="anchored" data-anchor-id="description-47">Description</h3>
+<p>we are two PhD’s in psychology who have branched out to the field of Data Science. David currently works as a Data Scientist for Bayer. Juul currently works as a Data Scientist for Ernest and Young</p>
+</section>
+<section id="rationale-for-participation-47" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-47">Rationale for participation</h3>
+<p>We are joining the challenge due to my interest in flight data analysis, as I have done an internship at Eurocontrol where I studied the effect of Covid-19 on the European Air Transportation Network. As such, I would love the opportunity to again work with flight data and try some possibly interesting ideas that may help in estimating actual takeoff weight</p>
+</section>
+</section>
+<section id="team_mindful_donkey" class="level2">
+<h2 class="anchored" data-anchor-id="team_mindful_donkey">team_mindful_donkey</h2>
+<section id="description-48" class="level3">
+<h3 class="anchored" data-anchor-id="description-48">Description</h3>
+<p>Mark is a data analyst for an environmental nonprofit and a flight data enthusiast (and home ADS-B receiver operator)</p>
+</section>
+<section id="rationale-for-participation-48" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-48">Rationale for participation</h3>
+<p>Open models using public data have great potential for estimating values that are difficult to aggregate for important global analyses like calculating greenhouse gas emissions. ATOW estimation using OSN data is a wonderful example of this application and I am excited to see how accurate the winning models may be</p>
+</section>
+</section>
+<section id="team_mindful_puzzle" class="level2">
+<h2 class="anchored" data-anchor-id="team_mindful_puzzle">team_mindful_puzzle</h2>
+<section id="description-49" class="level3">
+<h3 class="anchored" data-anchor-id="description-49">Description</h3>
+<p>We are a group of researchers working in the Flight Operations Concepts department at the Institute of Air Transport (German Aerospace Center) with a background in the development of operational innovations at mission and network level for air traffic. Together, we cover a range of skills and know-how, mainly in the areas of aircraft trajectory simulation, optimization as well as machine learning and climate impact assessment</p>
+</section>
+<section id="rationale-for-participation-49" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-49">Rationale for participation</h3>
+<p>Given our background and multi-faceted research on trajectories (and experience with ADS-B data), we see this challenge as a great opportunity to apply our knowledge and increase the level of scientific understanding for aircraft take-off weight estimation using open data and models. A part of our investigations’ focus resides on the estimation of air traffic’s climate impact in terms of CO2 and non-CO2 emissions, for which the modeling of aircraft performance along a flown trajectory is highly significant. We are interested in evaluating a ML-based approach to estimate a TOW given the pre-processed dataset of the challenge</p>
+</section>
+</section>
+<section id="team_mindful_raccoon" class="level2">
+<h2 class="anchored" data-anchor-id="team_mindful_raccoon">team_mindful_raccoon</h2>
+<section id="description-50" class="level3">
+<h3 class="anchored" data-anchor-id="description-50">Description</h3>
+<p>I teach courses in data analytics, programming, and database management at the University of Illinois. I’m also an ADSB flight data enthusiast/hobbiest</p>
+</section>
+<section id="rationale-for-participation-50" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-50">Rationale for participation</h3>
+<p>I have been using my own receiver’s ADSB data plus some selected public data from OSN as example data sets for one assignment in each of two courses I teach</p>
+</section>
+</section>
+<section id="team_motivated_ladder" class="level2">
+<h2 class="anchored" data-anchor-id="team_motivated_ladder">team_motivated_ladder</h2>
+<section id="description-51" class="level3">
+<h3 class="anchored" data-anchor-id="description-51">Description</h3>
+<p>Angel and Carol are good friends. Angel is a developer while Carol works as a data scientist. Together, the two complement each other in their look of the issue</p>
+</section>
+<section id="rationale-for-participation-51" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-51">Rationale for participation</h3>
+<p>To have fun</p>
+</section>
+</section>
+<section id="team_motivated_ostrich" class="level2">
+<h2 class="anchored" data-anchor-id="team_motivated_ostrich">team_motivated_ostrich</h2>
+<section id="description-52" class="level3">
+<h3 class="anchored" data-anchor-id="description-52">Description</h3>
+<p>We are an innovative team specializing in the development of software solutions across various market niches. Our team is composed of skilled professionals with deep expertise in data science, software engineering, and domain-specific knowledge, ensuring that our solutions meet the highest standards of excellence.</p>
+</section>
+<section id="rationale-for-participation-52" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-52">Rationale for participation</h3>
+<p>Our participation in this data contest is motivated by our desire to contribute to a more efficient and environmentally friendly aviation sector. This contest is an opportunity to apply advanced machine learning knowledge and technologies to bring real improvements in this field. We are motivated by the possibility of creating a positive impact and contributing to a greener and more sustainable future for the planet and we aim to demonstrate that technology and innovation can play a vital role in addressing global challenges and building a better future for all.</p>
+</section>
+</section>
+<section id="team_nice_hippo" class="level2">
+<h2 class="anchored" data-anchor-id="team_nice_hippo">team_nice_hippo</h2>
+<section id="description-53" class="level3">
+<h3 class="anchored" data-anchor-id="description-53">Description</h3>
+<p>Our team is composed of Emanuele Bossi, a dual major student in Data Science and Software Engineering at Embry-Riddle Aeronautical University, Prescott campus, and Dr.&nbsp;Rahman R. AlMomani, an Assistant Professor of Data Science and Mathematics at the same university. The student will be mentored by the professor as we work together to develop a Machine Learning model to predict the best Aircraft Takeoff Weight (ATOW) of a flown flight</p>
+</section>
+<section id="rationale-for-participation-53" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-53">Rationale for participation</h3>
+<p>We are passionate about contributing to cutting-edge research in the aviation industry. This competition provides an exceptional opportunity to apply our knowledge in data science and machine learning to real-world aviation challenges. By participating, we aim to push the boundaries of what’s possible in flight optimization and contribute to advancements that could have a significant impact on the industry</p>
+</section>
+</section>
+<section id="team_nice_wolf" class="level2">
+<h2 class="anchored" data-anchor-id="team_nice_wolf">team_nice_wolf</h2>
+<section id="description-54" class="level3">
+<h3 class="anchored" data-anchor-id="description-54">Description</h3>
+<p>french engineer and a colleague experienced in system engineering applied to aeronautical systems. Recent bootcamp training program in Data Engineering. Passionate about aeronautics, I passed my PPL license several years ago, among other licenses (ultralight, gliding, paragliding, …)</p>
+</section>
+<section id="rationale-for-participation-54" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-54">Rationale for participation</h3>
+<p>opportunity to improve knowledge in both data science and aeronautic operations</p>
+</section>
+</section>
+<section id="team_noble_zeppelin" class="level2">
+<h2 class="anchored" data-anchor-id="team_noble_zeppelin">team_noble_zeppelin</h2>
+<section id="description-55" class="level3">
+<h3 class="anchored" data-anchor-id="description-55">Description</h3>
+<p>I am a solo participant.</p>
+</section>
+<section id="rationale-for-participation-55" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-55">Rationale for participation</h3>
+<p>I am a sustainability research intern with Boeing and this competition is highly relevant to the work I am doing. Hence, I would like to participate to learn more from the brilliant and experienced Data Scientist who will be partaking in the competition.</p>
+</section>
+</section>
+<section id="team_organized_volcano" class="level2">
+<h2 class="anchored" data-anchor-id="team_organized_volcano">team_organized_volcano</h2>
+<section id="description-56" class="level3">
+<h3 class="anchored" data-anchor-id="description-56">Description</h3>
+<p>We are three friends who met during their physics studies and are now pursuing different paths related to data science. Loving both aviation (mainly Dennis) and data science (all of us)</p>
+</section>
+<section id="rationale-for-participation-56" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-56">Rationale for participation</h3>
+<p>we are curious to find out whether we can provide a model that predicts the ATOW better than other submissions. We are very much looking forward to the fun we are going to have tackling this question</p>
+</section>
+</section>
+<section id="team_outgoing_boat" class="level2">
+<h2 class="anchored" data-anchor-id="team_outgoing_boat">team_outgoing_boat</h2>
+<section id="description-57" class="level3">
+<h3 class="anchored" data-anchor-id="description-57">Description</h3>
+<p>I am a business insights analyst at NetJets Europe</p>
+</section>
+<section id="rationale-for-participation-57" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-57">Rationale for participation</h3>
+<p>This challenge is a great opportunity for me to develop my ML skills using real world aviation data</p>
+</section>
+</section>
+<section id="team_outgoing_strawberry" class="level2">
+<h2 class="anchored" data-anchor-id="team_outgoing_strawberry">team_outgoing_strawberry</h2>
+<section id="description-58" class="level3">
+<h3 class="anchored" data-anchor-id="description-58">Description</h3>
+<p>I am a senior software engineer at a major AI company</p>
+</section>
+<section id="rationale-for-participation-58" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-58">Rationale for participation</h3>
+<p>I want to test and experiment with my workflows on real-world data - all the better with interesting aviation data, and for a good cause</p>
+</section>
+</section>
+<section id="team_outspoken_lemon" class="level2">
+<h2 class="anchored" data-anchor-id="team_outspoken_lemon">team_outspoken_lemon</h2>
+<section id="description-59" class="level3">
+<h3 class="anchored" data-anchor-id="description-59">Description</h3>
+<p>Karolina is an associate Professor at University of Zagreb, Faculty of Transport and Traffic Sciences, with expertise in flight mechanics and aerodynamics. Dario is a software engineer and data science expert</p>
+</section>
+<section id="rationale-for-participation-59" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-59">Rationale for participation</h3>
+<p>We already published a paper together in this area, and initial mass is a problem we are trying to solve</p>
+</section>
+</section>
+<section id="team_patient_kangaroo" class="level2">
+<h2 class="anchored" data-anchor-id="team_patient_kangaroo">team_patient_kangaroo</h2>
+<section id="description-60" class="level3">
+<h3 class="anchored" data-anchor-id="description-60">Description</h3>
+<p>A team of data scientists working in the aviation industry</p>
+</section>
+<section id="rationale-for-participation-60" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-60">Rationale for participation</h3>
+<p>Learning opportunity for an interesting data problem</p>
+</section>
+</section>
+<section id="team_patient_net" class="level2">
+<h2 class="anchored" data-anchor-id="team_patient_net">team_patient_net</h2>
+<section id="description-61" class="level3">
+<h3 class="anchored" data-anchor-id="description-61">Description</h3>
+<p>A team of Airbus Flight Physic data analytics enthusiasts</p>
+</section>
+<section id="rationale-for-participation-61" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-61">Rationale for participation</h3>
+<p>Seeking the challenge while wanting to learn on the problem presented</p>
+</section>
+</section>
+<section id="team_peaceful_lobster" class="level2">
+<h2 class="anchored" data-anchor-id="team_peaceful_lobster">team_peaceful_lobster</h2>
+<section id="description-62" class="level3">
+<h3 class="anchored" data-anchor-id="description-62">Description</h3>
+<p>I’m a mechanical engineer and a private pilot with deep love for the aviation community and industry</p>
+</section>
+<section id="rationale-for-participation-62" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-62">Rationale for participation</h3>
+<p>I would love to apply my data science skills from my day job to tackle this data challenge to get a chance to develop my machine learning skills as well as make a positive impact on the environment and aviation industry data streams</p>
+</section>
+</section>
+<section id="team_quick_candle" class="level2">
+<h2 class="anchored" data-anchor-id="team_quick_candle">team_quick_candle</h2>
+<section id="description-63" class="level3">
+<h3 class="anchored" data-anchor-id="description-63">Description</h3>
+<p>data science beginner</p>
+</section>
+<section id="rationale-for-participation-63" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-63">Rationale for participation</h3>
+<p>for skill up</p>
+</section>
+</section>
+<section id="team_reliable_monkey" class="level2">
+<h2 class="anchored" data-anchor-id="team_reliable_monkey">team_reliable_monkey</h2>
+<section id="description-64" class="level3">
+<h3 class="anchored" data-anchor-id="description-64">Description</h3>
+<p>We are a team comprised of 5 current and past QUT students and members of the QUT Aerospace Society, all of whom have heavily contributed to the club’s various projects. We have experience in electrical and mechanical engineering, mathematics, data science, computer science, aerospace and aviation</p>
+</section>
+<section id="rationale-for-participation-64" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-64">Rationale for participation</h3>
+<p>This challenge provides a unique opportunity to both develop and demonstrate skills directly relevant to the aerospace industry. By tackling a project such as this as a team comprised of motivated students with a wide range of skills and knowledge, we can contribute new and valuable ideas towards overcoming current problems in the industry</p>
+</section>
+</section>
+<section id="team_respectful_kangaroo" class="level2">
+<h2 class="anchored" data-anchor-id="team_respectful_kangaroo">team_respectful_kangaroo</h2>
+<section id="description-65" class="level3">
+<h3 class="anchored" data-anchor-id="description-65">Description</h3>
+<p>Our team is a group of researchers focused on machine learning algorithms and data science for aviation applications. We are committed to advancing machine learning techniques and exploring their practical applications to address real-world challenges in the aviation industry.</p>
+</section>
+<section id="rationale-for-participation-65" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-65">Rationale for participation</h3>
+<p>Our participation in this Data Challenge is motivated by the opportunity to leverage our skills and knowledge to develop an ML model that accurately infers the Actual Take Off Weight (ATOW) of a flight. This problem is essential for optimizing flight performance, fuel efficiency, and safety in the aviation industry.</p>
+</section>
+</section>
+<section id="team_sensible_robot" class="level2">
+<h2 class="anchored" data-anchor-id="team_sensible_robot">team_sensible_robot</h2>
+<section id="description-66" class="level3">
+<h3 class="anchored" data-anchor-id="description-66">Description</h3>
+<p>I am research intern from Boeing working on project related to data engineering</p>
+</section>
+<section id="rationale-for-participation-66" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-66">Rationale for participation</h3>
+<p>This competition is relevant to the project that I have been working on</p>
+</section>
+</section>
+<section id="team_sincere_quicksand" class="level2">
+<h2 class="anchored" data-anchor-id="team_sincere_quicksand">team_sincere_quicksand</h2>
+<section id="description-67" class="level3">
+<h3 class="anchored" data-anchor-id="description-67">Description</h3>
+<p>I am a passionate Data Scientist wanting to generally improve AI and automate as many things as possible</p>
+</section>
+<section id="rationale-for-participation-67" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-67">Rationale for participation</h3>
+<p>I believe I have a set of skills and a spirit that can be of great help regarding this challenge</p>
+</section>
+</section>
+<section id="team_sociable_river" class="level2">
+<h2 class="anchored" data-anchor-id="team_sociable_river">team_sociable_river</h2>
+<section id="description-68" class="level3">
+<h3 class="anchored" data-anchor-id="description-68">Description</h3>
+<p>I’m an airplane enthusiast, seeking to apply ML research to decreasing carbon emissions!</p>
+</section>
+<section id="rationale-for-participation-68" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-68">Rationale for participation</h3>
+<p>I’m really excited to spend some time looking at this data problem and develop a ML algo for it</p>
+</section>
+</section>
+<section id="team_spirited_eel" class="level2">
+<h2 class="anchored" data-anchor-id="team_spirited_eel">team_spirited_eel</h2>
+<section id="description-69" class="level3">
+<h3 class="anchored" data-anchor-id="description-69">Description</h3>
+<p>aviation data scientist at ZHAW</p>
+</section>
+<section id="rationale-for-participation-69" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-69">Rationale for participation</h3>
+<p>Working daily with this type of datasets, I’m curious to see what can be achieved</p>
+</section>
+</section>
+<section id="team_strong_fossil" class="level2">
+<h2 class="anchored" data-anchor-id="team_strong_fossil">team_strong_fossil</h2>
+<section id="description-70" class="level3">
+<h3 class="anchored" data-anchor-id="description-70">Description</h3>
+<p>Kristoffer Borgen - Aviation professor at San Jose State University, Jonathan Cox - Student at University of California Riverside</p>
+</section>
+<section id="rationale-for-participation-70" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-70">Rationale for participation</h3>
+<p>We both like competitions and this seems like a good competition to compete in and use the project to learn machine learning applications</p>
+</section>
+</section>
+<section id="team_thoughtful_quicksand" class="level2">
+<h2 class="anchored" data-anchor-id="team_thoughtful_quicksand">team_thoughtful_quicksand</h2>
+<section id="description-71" class="level3">
+<h3 class="anchored" data-anchor-id="description-71">Description</h3>
+<p>I am a cybersecurity analyst, who focuses on deep learning and its applications in the cyberdefense. I am also an aviation and flight simulation enthusiast</p>
+</section>
+<section id="rationale-for-participation-71" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-71">Rationale for participation</h3>
+<p>Since I started my studies in cybersecurity, I always wanted to apply my skills in the aviation area. I had the opportunity to develop my skills in AI within my company but I want to share my experience and apply it in this challenge</p>
+</section>
+</section>
+<section id="team_tidy_kitten" class="level2">
+<h2 class="anchored" data-anchor-id="team_tidy_kitten">team_tidy_kitten</h2>
+<section id="description-72" class="level3">
+<h3 class="anchored" data-anchor-id="description-72">Description</h3>
+<p>Engineers working in the area of air control</p>
+</section>
+<section id="rationale-for-participation-72" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-72">Rationale for participation</h3>
+<p>We are looking for a challenge while contributing to a better world</p>
+</section>
+</section>
+<section id="team_tiny_rainbow" class="level2">
+<h2 class="anchored" data-anchor-id="team_tiny_rainbow">team_tiny_rainbow</h2>
+<section id="description-73" class="level3">
+<h3 class="anchored" data-anchor-id="description-73">Description</h3>
+<p>We are a team of professors and graduate students affiliated with the Aeronautics Institute of Technology (ITA) in Brazil, with expertise in the areas of data science and aviation</p>
+</section>
+<section id="rationale-for-participation-73" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-73">Rationale for participation</h3>
+<p>The participation in the PRC data challenge will serve an educational purpose, providing the team members with an opportunity to collaborate, expand knowledge on the subject and refine analytical skills. Moreover, we are excited about the chance to make a contribution to the aviation community with the development of innovative solutions for modeling and enhancing the environmental performance of aviation</p>
+</section>
+</section>
+<section id="team_unbelievable_donkey" class="level2">
+<h2 class="anchored" data-anchor-id="team_unbelievable_donkey">team_unbelievable_donkey</h2>
+<section id="description-74" class="level3">
+<h3 class="anchored" data-anchor-id="description-74">Description</h3>
+<p>A small Data Science Consulting firm with a big interest in Aviation</p>
+</section>
+<section id="rationale-for-participation-74" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-74">Rationale for participation</h3>
+<p>Firstly, for fun and the chance to meet other people and to challenge myself and learn from the process</p>
+</section>
+</section>
+<section id="team_understanding_jacket" class="level2">
+<h2 class="anchored" data-anchor-id="team_understanding_jacket">team_understanding_jacket</h2>
+<section id="description-75" class="level3">
+<h3 class="anchored" data-anchor-id="description-75">Description</h3>
+<p>mathematician and computer scientist</p>
+</section>
+<section id="rationale-for-participation-75" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-75">Rationale for participation</h3>
+<p>extremely interested in the complex nature of aviation and air traffic management</p>
+</section>
+</section>
+<section id="team_unique_tiger" class="level2">
+<h2 class="anchored" data-anchor-id="team_unique_tiger">team_unique_tiger</h2>
+<section id="description-76" class="level3">
+<h3 class="anchored" data-anchor-id="description-76">Description</h3>
+<p>computer science students driven by an unrelenting passion to continually expand our knowledge</p>
+</section>
+<section id="rationale-for-participation-76" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-76">Rationale for participation</h3>
+<p>we want to expand our knowledge in the field of data science</p>
+</section>
+</section>
+<section id="team_versatile_ostrich" class="level2">
+<h2 class="anchored" data-anchor-id="team_versatile_ostrich">team_versatile_ostrich</h2>
+<section id="description-77" class="level3">
+<h3 class="anchored" data-anchor-id="description-77">Description</h3>
+<p>I am a senior aerospace undergraduate student at Sharif University of Technology with a passion for data science and its applications in the aerospace field</p>
+</section>
+<section id="rationale-for-participation-77" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-77">Rationale for participation</h3>
+<p>I have a deep love for data and am eager to explore its applications in aerospace. This challenge presents a fantastic opportunity to apply my knowledge and skills in a meaningful way</p>
+</section>
+</section>
+<section id="team_versatile_yacht" class="level2">
+<h2 class="anchored" data-anchor-id="team_versatile_yacht">team_versatile_yacht</h2>
+<section id="description-78" class="level3">
+<h3 class="anchored" data-anchor-id="description-78">Description</h3>
+<p>The team is mainly composed by M3Systems consultants, bringing their expertise in aviation with several years of experience in the sector</p>
+</section>
+<section id="rationale-for-participation-78" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-78">Rationale for participation</h3>
+<p>For several years we have provided our expertise in the aviation world and we are interested in bringing our unique combination of aeronautical engineering and data science skills to this challenge</p>
+</section>
+</section>
+<section id="team_vibrant_pencil" class="level2">
+<h2 class="anchored" data-anchor-id="team_vibrant_pencil">team_vibrant_pencil</h2>
+<section id="description-79" class="level3">
+<h3 class="anchored" data-anchor-id="description-79">Description</h3>
+<p>I am an air traffic management specialist and data scientist at ASECNA air navigation service provider</p>
+</section>
+<section id="rationale-for-participation-79" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-79">Rationale for participation</h3>
+<p>Apply Expertise in Air Traffic Data to supports the development of innovative solutions and improvements in air traffic management. Gain Visibility for professional recognition, networking opportunities, and potential collaborations that enhance both my career and the strategic goals of ASECNA.</p>
+</section>
+</section>
+<section id="team_vigorous_jungle" class="level2">
+<h2 class="anchored" data-anchor-id="team_vigorous_jungle">team_vigorous_jungle</h2>
+<section id="description-80" class="level3">
+<h3 class="anchored" data-anchor-id="description-80">Description</h3>
+<p>We are a group of software engineers with diverse backgrounds in machine learning and a shared passion for data science and machine learning. Our team actively contributes to open-source projects across different fields, allowing us to develop complex solutions that tackle real-world challenges</p>
+</section>
+<section id="rationale-for-participation-80" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-80">Rationale for participation</h3>
+<p>We are particularly interested in tracking flight records and addressing the current gap in open-source models for predicting critical aviation parameters. Our experience in data science and machine learning equips us well for this challenge, especially as it involves large datasets within a specific domain that we find both challenging and fascinating</p>
+</section>
+</section>
+<section id="team_witty_yogurt" class="level2">
+<h2 class="anchored" data-anchor-id="team_witty_yogurt">team_witty_yogurt</h2>
+<section id="description-81" class="level3">
+<h3 class="anchored" data-anchor-id="description-81">Description</h3>
+<p>I’m a pilot, software engineer, and person who likes to play with flight data</p>
+</section>
+<section id="rationale-for-participation-81" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-81">Rationale for participation</h3>
+<p>it seems like an interesting problem</p>
+</section>
+</section>
+<section id="team_witty_zucchini" class="level2">
+<h2 class="anchored" data-anchor-id="team_witty_zucchini">team_witty_zucchini</h2>
+<section id="description-82" class="level3">
+<h3 class="anchored" data-anchor-id="description-82">Description</h3>
+<p>I am an avid aviation enthusiast working as a data scientist in a Fortune 40 company. I have experience working with [prior aviation related data] (https://github.com/billodalroy/flight-delay-prediction).</p>
+</section>
+<section id="rationale-for-participation-82" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-82">Rationale for participation</h3>
+<p>As an avgeek and a climate conscious person I rarely find anything which exists in the intersection of the two, this challenge is the closest to it. I believe I can contribute and learn while participating in the challenge.</p>
+</section>
+</section>
+<section id="team_wonderful_boat" class="level2">
+<h2 class="anchored" data-anchor-id="team_wonderful_boat">team_wonderful_boat</h2>
+<section id="description-83" class="level3">
+<h3 class="anchored" data-anchor-id="description-83">Description</h3>
+<p>I am an aviation consultant, with a Master in Computer of Science</p>
+</section>
+<section id="rationale-for-participation-83" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-83">Rationale for participation</h3>
+<p>improve in ML and also just interested in the goal of the challenge (climate change related)</p>
+</section>
+</section>
+<section id="team_youthful_night" class="level2">
+<h2 class="anchored" data-anchor-id="team_youthful_night">team_youthful_night</h2>
+<section id="description-84" class="level3">
+<h3 class="anchored" data-anchor-id="description-84">Description</h3>
+<p>data scientist in the aviation industry</p>
+</section>
+<section id="rationale-for-participation-84" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-84">Rationale for participation</h3>
+<p>help explore efficient TOW prediction. I work in developing software for Flight operations and sustainability which is an important objective we work towards</p>
+</section>
+</section>
+<section id="team_youthful_xylophone" class="level2">
+<h2 class="anchored" data-anchor-id="team_youthful_xylophone">team_youthful_xylophone</h2>
+<section id="description-85" class="level3">
+<h3 class="anchored" data-anchor-id="description-85">Description</h3>
+<p>I am a passionate engineer with a strong foundation in applied mathematics and computer science. Aviation has captivated my imagination since childhood, inspiring me to pursue a career in engineering</p>
+</section>
+<section id="rationale-for-participation-85" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-85">Rationale for participation</h3>
+<p>My academic background equipped me with a robust analytical toolkit in digital signal processing, enabling me to tackle complex problems with a structured approach. I am excited to contribute my skills to this competition and extract valuable insights from this dataset</p>
+</section>
+</section>
+<section id="team_zany_eagle" class="level2">
+<h2 class="anchored" data-anchor-id="team_zany_eagle">team_zany_eagle</h2>
+<section id="description-86" class="level3">
+<h3 class="anchored" data-anchor-id="description-86">Description</h3>
+<p>I study Mathematics at Technical University of Munich</p>
+</section>
+<section id="rationale-for-participation-86" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-86">Rationale for participation</h3>
+<p>huge aviation enthusiast since childhood. Moreover I have a passion for data science</p>
+</section>
+</section>
+<section id="team_zany_fireplace" class="level2">
+<h2 class="anchored" data-anchor-id="team_zany_fireplace">team_zany_fireplace</h2>
+<section id="description-87" class="level3">
+<h3 class="anchored" data-anchor-id="description-87">Description</h3>
+<p>I work in the aviation industry and have a PhD in air transportation systems</p>
+</section>
+<section id="rationale-for-participation-87" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-87">Rationale for participation</h3>
+<p>My interest lies in big data processing in aviation and transportation systems. I process ample amounts of radar data on a regular basis but don’t get to perform any exploratory analysis, which I love.</p>
+</section>
+</section>
+<section id="team_zany_ladder" class="level2">
+<h2 class="anchored" data-anchor-id="team_zany_ladder">team_zany_ladder</h2>
+<section id="description-88" class="level3">
+<h3 class="anchored" data-anchor-id="description-88">Description</h3>
+<p>I am: Grad student at Gies College of Business</p>
+</section>
+<section id="rationale-for-participation-88" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-88">Rationale for participation</h3>
+<p>Exploring Aviation Business &amp; OSN API</p>
+</section>
+</section>
+<section id="team_zippy_horse" class="level2">
+<h2 class="anchored" data-anchor-id="team_zippy_horse">team_zippy_horse</h2>
+<section id="description-89" class="level3">
+<h3 class="anchored" data-anchor-id="description-89">Description</h3>
+<p>Prof.&nbsp;Dr.&nbsp;Ulrich Schumann studied Mechanical Engineering in Berlin, promoted on turbulence in Karlsruhe and habilitated in Meteorology in Munich, Germany. He works on various aspects of contrail cirrus and airborne measurements, and lectures on aviation climate impact, now at the Technical University Munich. Prof.&nbsp;Ian Poll published a series of open-access aircraft performance models. Dr.&nbsp;Roger Teoh is Scientist at Imperial College (with Prof.&nbsp;Dr Marc Stettler) and published, since 2019, several papers on contrail modelling</p>
+</section>
+<section id="rationale-for-participation-89" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-89">Rationale for participation</h3>
+<p>We plan to derive best estimates of the aircraft takeoff mass (at least upper and lower bounds) by comparing the given flight trajectories with the restrictions resulting from performance modelling using the open access PS Performance model. The most recent model PS model version covers 67 ICAO aircraft types, hopefully including all aircraft types in the set of test data, and provides several criteria to deduce the achievability of the given flight states in respect to Flight level, Mach number, climb rate, vertical and horizontal accelerations, thrust, and lift coefficient, for the potential range of aircraft mass consistent with the takeoff mass, past fuel consumption, including all flight states from departure to destination. This should allow to estimate at least upper and lower bounds of the aircraft mass. The PS model is available among other within the pycontrail code ( https://doi.org/10.5281/zenodo.7776686 ). The PS model got improved over the years, and further improvements are to be expected. The team coordinator works mainly with Fortran, partially with Excel and partially with python</p>
+</section>
+</section>
+<section id="team_zippy_river" class="level2">
+<h2 class="anchored" data-anchor-id="team_zippy_river">team_zippy_river</h2>
+<section id="description-90" class="level3">
+<h3 class="anchored" data-anchor-id="description-90">Description</h3>
+<p>I am an industrial engineering student (final year bachelor) from Hamburg with a focus on data science and a passion for aviation</p>
+</section>
+<section id="rationale-for-participation-90" class="level3">
+<h3 class="anchored" data-anchor-id="rationale-for-participation-90">Rationale for participation</h3>
+<p>Apply my knowledge for my personal interests</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./rankings.html" class="pagination-link" aria-label="Rankings">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Rankings</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./about.html" class="pagination-link" aria-label="About">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">About</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

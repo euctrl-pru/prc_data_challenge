@@ -39,3 +39,7 @@ teams_file := justfile_directory() + "/media/teams_private.json"
   cat {{teams_file}} | \
     jq '.[] | select(.active == true) | select(.members[].leader == true and .members[].email == "{{leader_email}}") | .'
 
+# update _teams.qmd
+@teams-qmd-include:
+  #!/usr/bin/env sh
+  cat media/teams_private.json | jq -r '.[] | .team_name' | sort | sed 's/$/.qmd >}}/;s/^/{{{{< include teams\//' > _teams.qmd 

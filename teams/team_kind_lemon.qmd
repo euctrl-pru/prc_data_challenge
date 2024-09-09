@@ -1,0 +1,8 @@
+## team_kind_lemon
+
+### Description
+Our team is composed of experts in various disciplines from the University of Vigo, including mathematics, computer science, and engineering
+
+### Rationale for participation
+We are eager to collaborate and bring our collective expertise to this project and keen to contribute to the definition and development of a model for the calculation of ATOW
+

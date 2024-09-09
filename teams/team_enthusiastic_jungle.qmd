@@ -1,0 +1,8 @@
+## team_enthusiastic_jungle
+
+### Description
+We, at Data Science Lab, measure and predict real world actions and events with online data
+
+### Rationale for participation
+interested following our 2020 published work 'Using aircraft location data to estimate current economic activity'
+

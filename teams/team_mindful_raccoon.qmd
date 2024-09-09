@@ -1,0 +1,8 @@
+## team_mindful_raccoon
+
+### Description
+I teach courses in data analytics, programming, and database management at the University of Illinois.  I’m also an ADSB flight data enthusiast/hobbiest
+
+### Rationale for participation
+I have been using my own receiver’s ADSB data plus some selected public data from OSN as example data sets for one assignment in each of two courses I teach
+

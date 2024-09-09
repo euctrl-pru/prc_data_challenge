@@ -1,0 +1,8 @@
+## team_exuberant_scooter
+
+### Description
+We are a Swiss startup building pilot assistance and safety applications and services
+
+### Rationale for participation
+Predicting ATOW/ETOW from OpenSkyNetwork flight data is an intriguing challenge that aligns well with our professional experience in machine learning, aeronautics, and software engineering. This opportunity will allow us to identify and understand patterns in flight data, enhancing our ability to build accurate ML models for prediction and estimation. 
+

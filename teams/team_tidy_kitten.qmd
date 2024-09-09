@@ -1,0 +1,8 @@
+## team_tidy_kitten
+
+### Description
+Engineers working in the area of air control
+
+### Rationale for participation
+We are looking for a challenge while contributing to a better world
+

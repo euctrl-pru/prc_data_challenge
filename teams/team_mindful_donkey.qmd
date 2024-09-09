@@ -1,0 +1,8 @@
+## team_mindful_donkey
+
+### Description
+Mark is a data analyst for an environmental nonprofit and a flight data enthusiast (and home ADS-B receiver operator)
+
+### Rationale for participation
+Open models using public data have great potential for estimating values that are difficult to aggregate for important global analyses like calculating greenhouse gas emissions. ATOW estimation using OSN data is a wonderful example of this application and I am excited to see how accurate the winning models may be
+
