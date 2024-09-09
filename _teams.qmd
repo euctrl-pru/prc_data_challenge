@@ -79,6 +79,7 @@
 {{< include teams/team_versatile_yacht.qmd >}}
 {{< include teams/team_vibrant_pencil.qmd >}}
 {{< include teams/team_vigorous_jungle.qmd >}}
+{{< include teams/team_whimsical_moose.qmd >}}
 {{< include teams/team_witty_yogurt.qmd >}}
 {{< include teams/team_witty_zucchini.qmd >}}
 {{< include teams/team_wonderful_boat.qmd >}}
