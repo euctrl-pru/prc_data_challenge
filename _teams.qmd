@@ -84,6 +84,7 @@
 {{< include teams/team_witty_zucchini.qmd >}}
 {{< include teams/team_wonderful_boat.qmd >}}
 {{< include teams/team_youthful_night.qmd >}}
+{{< include teams/team_youthful_xerox.qmd >}}
 {{< include teams/team_youthful_xylophone.qmd >}}
 {{< include teams/team_zany_eagle.qmd >}}
 {{< include teams/team_zany_fireplace.qmd >}}
