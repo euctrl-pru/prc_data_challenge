@@ -779,8 +779,9 @@ $ mc cp ./my_submission.csv dc24/submissions/${subfile}</code></pre>
 <p>Here you use the <code>dc24</code> alias as explained above.</p>
 <p>The ranking job will be automatically run every 30 minutes and will use <a href="#acronyms_RMSE">Root Mean Square Error (RMSE)</a> to compare a submission for the 105959 flights in <code>submission_set.csv</code> with the (hidden) the ground truth.</p>
 <p>The final ranking will use an additional 52190 flights. See the <a href="rankings.html">Ranking page</a> for more details.</p>
-<p>The <a href="https://datacomp.opensky-network.org/results" title="PRC Data Challenge ranking page">leaderboard</a> will display the new ranks.<br>
+<p>The <a href="https://datacomp.opensky-network.org/results" title="PRC Data Challenge ranking page">leaderboard</a> will display the best ranked submissions per team.<br>
 Eventually manually <strong>reload it</strong>, please.</p>
+<p>To query for all calculated RMSE’s for all submissions, please use <a href="https://datacomp.opensky-network.org/api/stats" class="uri">https://datacomp.opensky-network.org/api/stats</a></p>
 <p>You can also get a JSON file with the rankings as (<code>| jq</code> only for pretty printing):</p>
 <pre><code>$ curl -X 'GET' \
   'https://datacomp.opensky-network.org/api/rankings' \

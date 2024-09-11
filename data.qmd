@@ -453,8 +453,12 @@ The final ranking will use an additional 52190 flights.
 See the [Ranking page](rankings.html) for more details.
 
 
-The [leaderboard][ranking] will display the new ranks.   
+The [leaderboard][ranking] will display the best ranked submissions per team.   
 Eventually manually **reload it**, please.
+
+To query for all calculated RMSE's for all submissions, please use
+<https://datacomp.opensky-network.org/api/stats>
+
 
 You can also get a JSON file with the rankings as (`| jq` only for pretty printing):
 
