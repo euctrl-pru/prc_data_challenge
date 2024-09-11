@@ -124,7 +124,7 @@
     "href": "rankings.html",
     "title": "3  Rankings",
     "section": "",
-    "text": "Leaderboard",
+    "text": "Leaderboard\nThe following table shows the best result per team’s submission.\nTo see all submissions RMSE’s please use https://datacomp.opensky-network.org/api/stats",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Rankings</span>"
     ]

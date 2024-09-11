@@ -8,7 +8,9 @@ acronyms:
 ---
 
 ## Leaderboard
-
+The following table shows the best result per team's submission.  
+To see all submissions `RMSE`'s please use 
+<https://datacomp.opensky-network.org/api/stats>
 
 <div id="observablehq-ranking_table-b4294d79"></div>
 
