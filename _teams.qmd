@@ -12,6 +12,7 @@
 {{< include teams/team_courageous_parrot.qmd >}}
 {{< include teams/team_delightful_avocado.qmd >}}
 {{< include teams/team_dependable_gorilla.qmd >}}
+{{< include teams/team_diligent_volcano.qmd >}}
 {{< include teams/team_diligent_zucchini.qmd >}}
 {{< include teams/team_energetic_quiver.qmd >}}
 {{< include teams/team_enthusiastic_jungle.qmd >}}
