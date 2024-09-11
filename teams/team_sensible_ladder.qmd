@@ -1,0 +1,8 @@
+## team_sensible_ladder
+
+### Description
+An airline pilot from Germany interested in data and aeroplane performance. I do Python coding in my spare time
+
+### Rationale for participation
+I would like to dig into the data to see how well performance values like speed, climb gradient etc. correlate with the weight of an aircraft. Might be interesting to differentiate between airline fleets as they use different cost indices
+

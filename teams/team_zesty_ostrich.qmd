@@ -1,0 +1,8 @@
+## team_zesty_ostrich
+
+### Description
+We are a team consisting of a Data Scientist and an MLOps Engineer, both working for a small IT company in Italy that specializes in providing solutions for the aviation industry
+
+### Rationale for participation
+Being already part of the aviation sector, we understand its complexity and challenges. We think this challenge offers a good opportunity for us to engage with new data, further enhance our knowledge, and test our skills
+

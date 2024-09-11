@@ -1,0 +1,8 @@
+## team_diligent_volcano
+
+### Description
+Applied mathematics researchers of the Department of Quantitative Methods of CUNEF and Aerospatial researchers for diverse areas such as Aircraft design and Air navigation in Universidad Politécnica de Madrid
+
+### Rationale for participation
+Apply our expertise in data analysis to real-world aviation problems. By leveraging the challenge's dataset, we aim to develop insights that enhance operational efficiency, reduce environmental impacts, and contribute to sustainable air traffic management. This challenge provides a great opportunity for us to collaborate and advance the field through data-driven solutions
+

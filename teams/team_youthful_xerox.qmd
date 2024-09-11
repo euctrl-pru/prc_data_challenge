@@ -1,0 +1,8 @@
+## team_youthful_xerox
+
+### Description
+We are four data scientists from the company Euranova. Lorenzo and Brieuc have contracting experience with Eurocontrol and are very motivated by aviation topics. Reda and Aziz are R&D data scientists and work on state-of-the-art models for Euranova's research department
+
+### Rationale for participation
+We think our participation should be relevant to this challenge and want to demonstrate Euranova's abilities in data sciences in the aviation sector
+
