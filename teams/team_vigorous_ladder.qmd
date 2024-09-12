@@ -1,0 +1,8 @@
+## team_vigorous_ladder
+
+### Description
+We are two people working in tech learning new technologies. I work with a vartity of data from telco and Dylan working with social media and marketing data
+
+### Rationale for participation
+We have been looking for a data project for data analysis as well as creating an open model. We want to learn, put our skills to the test and hopefully help build something
+
