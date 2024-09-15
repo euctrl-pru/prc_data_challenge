@@ -1,0 +1,8 @@
+## team_versatile_monkey
+
+### Description
+A web developer looking to branch out into Big Data projects and machine learning
+
+### Rationale for participation
+Interested in big data projects and have been doing a lot of learning around ML/AI in the past year or so, keen to put something to the test
+
