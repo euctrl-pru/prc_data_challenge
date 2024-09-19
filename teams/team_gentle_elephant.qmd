@@ -1,0 +1,8 @@
+## team_gentle_elephant
+
+### Description
+Graduate Aerospace Student at Istanbul Technical University
+
+### Rationale for participation
+I enjoy integrating data science with aviation
+

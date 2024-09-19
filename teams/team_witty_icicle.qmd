@@ -1,0 +1,8 @@
+## team_witty_icicle
+
+### Description
+We are engineers with a passion for programming and data science. Anthony holds a Master's degree in Aeronautical Engineering, while Enrica has a PhD in Aerial Robotics
+
+### Rationale for participation
+We are excited to participate in this challenge, aiming to develop a model to estimate the ATOW for aircraft
+

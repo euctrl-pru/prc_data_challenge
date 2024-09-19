@@ -420,6 +420,16 @@
     ]
   },
   {
+    "objectID": "teams.html#team_gentle_elephant",
+    "href": "teams.html#team_gentle_elephant",
+    "title": "4  Teams",
+    "section": "team_gentle_elephant",
+    "text": "team_gentle_elephant\n\nDescription\nGraduate Aerospace Student at Istanbul Technical University\n\n\nRationale for participation\nI enjoy integrating data science with aviation",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
     "objectID": "teams.html#team_gentle_wreath",
     "href": "teams.html#team_gentle_wreath",
     "title": "4  Teams",
@@ -1035,6 +1045,16 @@
     "title": "4  Teams",
     "section": "team_whimsical_moose",
     "text": "team_whimsical_moose\n\nDescription\nDr. Yifan Xu – An assistant professor from the College of Civil Aviation, Nanjing University of Aeronautics and Astronautics. Yifan brings deep domain knowledge of trajectory optimization, aircraft performance, and related data handling techniques. He was also a developer for Sabre Flight Plan Manager product. This background is essential for understanding the challenges in accurately predicting Actual TakeOff Weight (ATOW) and interpreting aviation-specific datasets. Dr. Yutao Hu – An associated professor from the School of Computer Science and Engineering, Southeast University. Yutao specializes in machine learning and AI-based optimization, with hands-on experience in large-scale data modeling and predictive analytics. His technical expertise will guide the development of the machine learning model, ensuring robust and reliable performance. Our team blends aviation-specific insight with cutting-edge data science expertise to deliver a model that accurately infers ATOW\n\n\nRationale for participation\nWhile precise ATOW estimates are vital for improving fuel efficiency, safety, and operational decision-making in aviation. Our team sees this challenge as an opportunity to apply our skills in aviation operations and machine learning to develop a scalable, open-source model that can benefit the broader aviation community. We are motivated by both the technical challenge and the potential for real-world impact in optimizing flight operations and contributing to the future of data-driven aviation",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_witty_icicle",
+    "href": "teams.html#team_witty_icicle",
+    "title": "4  Teams",
+    "section": "team_witty_icicle",
+    "text": "team_witty_icicle\n\nDescription\nWe are engineers with a passion for programming and data science. Anthony holds a Master’s degree in Aeronautical Engineering, while Enrica has a PhD in Aerial Robotics\n\n\nRationale for participation\nWe are excited to participate in this challenge, aiming to develop a model to estimate the ATOW for aircraft",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
     ]
