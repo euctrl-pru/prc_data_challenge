@@ -8,4 +8,10 @@ acronyms:
   insert_loa: false
 ---
 
+```{r echo=FALSE}
+number_of_teams <- fs::dir_ls("teams") |> length()
+```
+
+There are `{r} number_of_teams` active teams!
+
 {{< include _teams.qmd >}}
