@@ -1,0 +1,8 @@
+## team_motivated_baker
+
+### Description
+Aviation consultants based in the UK
+
+### Rationale for participation
+This challenge is an interesting and meaningful application of data science in aviation, and we would like to contribute to the understanding of the impacts that the industry has to the environment
+
