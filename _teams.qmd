@@ -61,6 +61,7 @@
 {{< include teams/team_organized_volcano.qmd >}}
 {{< include teams/team_outgoing_boat.qmd >}}
 {{< include teams/team_outgoing_strawberry.qmd >}}
+{{< include teams/team_outspoken_engine.qmd >}}
 {{< include teams/team_outspoken_lemon.qmd >}}
 {{< include teams/team_patient_kangaroo.qmd >}}
 {{< include teams/team_patient_net.qmd >}}

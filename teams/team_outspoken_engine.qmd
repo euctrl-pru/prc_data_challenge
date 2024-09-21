@@ -1,0 +1,8 @@
+## team_outspoken_engine
+
+### Description
+Group of Embry-Riddle students and researchers interested in flight data research
+
+### Rationale for participation
+Participating in the challenge will. Help students and researchers at Embry-Riddle Aeronautical University explore the application of machine learning methods to ads-b data, support sustainability initiatives in aviation, and build the capabilities necessary for success in data analytics professions
+
