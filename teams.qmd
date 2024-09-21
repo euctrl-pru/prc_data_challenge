@@ -7,11 +7,62 @@ format:
 acronyms:
   insert_loa: false
 ---
+```{r setup, echo=FALSE, warning=FALSE, error=FALSE, message=FALSE}
+library(fs)
+library(tidyverse)
+library(jsonlite)
 
-```{r echo=FALSE}
-number_of_teams <- fs::dir_ls("teams") |> length()
+
+ttt <- "media/teams_private.json" |> 
+  fromJSON() |> 
+  filter(active == TRUE) |> 
+  mutate(registration_date = as_date(registration_date)) |> 
+  complete(registration_date = seq(ymd("2024-07-28"),
+                                   ymd("2024-10-28"),
+                                   by = "day"))
+
+counts_in_time <- ttt |> 
+  select(team_name, registration_date) |> 
+  mutate(n = if_else(is.na(team_name), 0L, 1L)) |> 
+  arrange(registration_date) |> 
+  group_by(registration_date) |>
+  summarise(across(n, ~ sum(.x, na.rm = TRUE))) |> 
+  mutate(future = registration_date > today())
+
+number_of_teams <- counts_in_time |> 
+  summarise(across("n", ~ sum(.x, na.rm = TRUE))) |> 
+  pull(n)
+
+cumulative_counts_in_time <- counts_in_time |> 
+  mutate(n = cumsum(n))
 ```
 
+
 There are `{r} number_of_teams` active teams!
+
+Here is the cumulative sum of created teams 
+(as of `{r} format(today(), "%b %d, %Y")`):
+
+```{r cum-plot, echo=FALSE}
+cumulative_counts_in_time |> 
+  ggplot() +
+  geom_step(aes(x = registration_date,
+                y = n,
+                linetype = future),
+            stat = "identity") +
+  geom_text(
+    data = cumulative_counts_in_time |>
+      slice(which.max(registration_date)),
+    aes(x = registration_date, y = n, label = n), size = 4, vjust = -0.5) +
+  theme_minimal() +
+    theme(
+      axis.title.x = element_blank(),
+      axis.title.y = element_blank(),
+      # axis.text.x = element_blank(),
+      # axis.ticks.x = element_blank(),
+      legend.position = "none",
+      NULL)
+```
+
 
 {{< include _teams.qmd >}}

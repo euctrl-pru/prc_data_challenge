@@ -116,7 +116,6 @@ like:
 }
 ```
 
-
 ::: {.callout-note}
 Anyone affiliated with OpenSky Network or EUROCONTROL is **not eligible**
 to participate to the PRC Data Challenge.
