@@ -29,7 +29,7 @@ teams_file := justfile_directory() + "/media/teams_private.json"
   cat {{teams_file}} | jq -r '.[] | .members[] | select(.leader == true) | .email'
 
 
-# team for team's name 
+# team for team's name
 @team-of-name team_name:
   cat {{teams_file}} | \
     jq '.[] | select(.active == true) | select(.team_name == "{{team_name}}") | .'
@@ -39,9 +39,9 @@ teams_file := justfile_directory() + "/media/teams_private.json"
   cat {{teams_file}} | \
     jq '.[] | select(.active == true) | select(.members[].leader == true and .members[].email == "{{leader_email}}") | .'
 
-# regenerate teams pages 
+# regenerate teams pages
 @teams-website-regenerate:
   #!/usr/bin/env sh
-  cat media/teams_private.json | jq -r '.[] | .team_name' | sort | sed 's/$/.qmd >}}/;s/^/{{{{< include teams\//' > _teams.qmd 
-  Rscript ./generate_teams_pages.R
+  cat media/teams_private.json | jq -r '.[] | .team_name' | sort | sed 's/$/.qmd >}}/;s/^/{{{{< include teams\//' > _teams.qmd
+  Rscript ./R/generate_teams_pages.R
   quarto render
