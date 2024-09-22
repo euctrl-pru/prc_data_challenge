@@ -1,0 +1,8 @@
+## team_vibrant_orchid
+
+### Description
+electrical engineering student with a background in data science
+
+### Rationale for participation
+while reworking my own aviation data science side project, I stumbled upon this competition and as a lover of side projects, I thought it would be fun to compete
+

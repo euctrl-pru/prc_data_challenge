@@ -86,6 +86,7 @@
 {{< include teams/team_versatile_monkey.qmd >}}
 {{< include teams/team_versatile_ostrich.qmd >}}
 {{< include teams/team_versatile_yacht.qmd >}}
+{{< include teams/team_vibrant_orchid.qmd >}}
 {{< include teams/team_vibrant_pencil.qmd >}}
 {{< include teams/team_vigorous_jungle.qmd >}}
 {{< include teams/team_vigorous_ladder.qmd >}}
