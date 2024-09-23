@@ -1,0 +1,8 @@
+## team_joyous_fountain
+
+### Description
+We are a group of professors and researchers who want to contribute to the rise of aviation
+
+### Rationale for participation
+Participating in the PRC Data Challenge offers a unique opportunity for data scientists to apply their skills to a real-world aviation problem without requiring prior industry experience. By collaborating with diverse teams, participants can contribute to building an open Machine Learning model capable of accurately inferring Actual TakeOff Weight (ATOW), a critical factor in flight performance and safety. This challenge fosters innovation and cross-disciplinary learning, while also providing the chance to impact aviation efficiency and operational planning with data-driven insights. We just want to be a part of it
+

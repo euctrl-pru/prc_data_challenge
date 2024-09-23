@@ -1,0 +1,8 @@
+## team_refreshing_unicorn
+
+### Description
+a machine learning student from Denmark
+
+### Rationale for participation
+I came across this challenge recently and thought it would be fun to test my skills
+
