@@ -38,12 +38,16 @@ nevertheless it is present for submission and ranking, see the [Ranking](#rankin
 
 ::: {.callout-warning title="Attention"}
 
-#### Updated `challenge_set.csv` on 16th Aug 2024
+#### Updated `challenge_set.csv` on **24th Sep 2024**
 
-`challenge_set.csv` now contains fixes for `tow` originally below minimum mass
-for the relevant aircraft types.
+**24th Sep 2024**: trajectory files have been reprocessed (weird constant altitudes
+and midnight crossing issues).  
+*Please consider re-downloading them*.
 
+**16th Aug 2024**: `challenge_set.csv` now contains fixes for `tow` 
+originally below minimum mass for the relevant aircraft types.  
 Please consider re-downloading it.
+
 :::
 
 

@@ -105,6 +105,7 @@
 {{< include teams/team_zany_eagle.qmd >}}
 {{< include teams/team_zany_fireplace.qmd >}}
 {{< include teams/team_zany_ladder.qmd >}}
+{{< include teams/team_zealous_watermelon.qmd >}}
 {{< include teams/team_zesty_ostrich.qmd >}}
 {{< include teams/team_zippy_horse.qmd >}}
 {{< include teams/team_zippy_river.qmd >}}

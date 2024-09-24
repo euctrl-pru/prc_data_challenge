@@ -1,0 +1,8 @@
+## team_zealous_watermelon
+
+### Description
+We are all students in engineering (2nd year of Master), in fields related to Machine Learning, Data Science, Computer Science and Optimisation. Some of us also have a social science background at Sciences Po
+
+### Rationale for participation
+We are all interested in participating in interesting and well-thought ML projects, even more when they are for open source. We think the subject is interesting and clearly defined, making it a great opportunity for learning and hands-on experience. I personally discovered this challenge when digging on SDR-related projects, as I have been amazed by airplanes since my childhood (I was actually looking to build my own Radio to add it to the Open Sky Network). I have invited a few friends to join me on this challenge and work as a team, and we are looking forward to modelization, and to playing with the data
+
