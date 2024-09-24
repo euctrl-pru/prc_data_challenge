@@ -25,8 +25,8 @@ See the [Data page](data.html) for more details.
 
 ::: {.callout-warning title="Attention"}
 
-#### Updated trajecotries on 24th Sep 2024
-trajectory files have been reprocessed and updated.  
+#### Updated trajectories on 24th Sep 2024
+Trajectory files have been reprocessed and updated.  
 
 #### Updated `challenge_set.csv` on 16th Aug 2024
 
