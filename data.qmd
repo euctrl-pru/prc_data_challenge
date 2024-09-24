@@ -38,7 +38,7 @@ nevertheless it is present for submission and ranking, see the [Ranking](#rankin
 
 ::: {.callout-warning title="Attention"}
 
-#### Updated `challenge_set.csv` on **24th Sep 2024**
+#### Updated trajectories on **24th Sep 2024**
 
 **24th Sep 2024**: trajectory files have been reprocessed (weird constant altitudes
 and midnight crossing issues).  
