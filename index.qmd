@@ -25,6 +25,9 @@ See the [Data page](data.html) for more details.
 
 ::: {.callout-warning title="Attention"}
 
+#### Updated trajecotries on 24th Sep 2024
+trajectory files have been reprocessed and updated.  
+
 #### Updated `challenge_set.csv` on 16th Aug 2024
 
 `challenge_set.csv` now contains fixes for `tow` originally below minimum mass

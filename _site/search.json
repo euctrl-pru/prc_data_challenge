@@ -14,7 +14,7 @@
     "href": "index.html#the-data",
     "title": "PRC Data Challenge",
     "section": "",
-    "text": "Attention\n\n\n\n\nUpdated challenge_set.csv on 16th Aug 2024\nchallenge_set.csv now contains fixes for tow originally below minimum mass for the relevant aircraft types.\n\n\nRefreshed submission_set.csv on 8th Aug 2024\nsubmission_set.csv now contains all columns and not just flight_id and tow.\nPlease consider re-downloading.",
+    "text": "Attention\n\n\n\n\nUpdated trajecotries on 24th Sep 2024\ntrajectory files have been reprocessed and updated.\n\n\nUpdated challenge_set.csv on 16th Aug 2024\nchallenge_set.csv now contains fixes for tow originally below minimum mass for the relevant aircraft types.\n\n\nRefreshed submission_set.csv on 8th Aug 2024\nsubmission_set.csv now contains all columns and not just flight_id and tow.\nPlease consider re-downloading.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>PRC Data Challenge</span>"
     ]
