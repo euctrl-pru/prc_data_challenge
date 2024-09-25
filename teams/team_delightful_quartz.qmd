@@ -1,0 +1,8 @@
+## team_delightful_quartz
+
+### Description
+We are a group of researchers with years of experience in data sciences and analysis
+
+### Rationale for participation
+We find this challenge particularly interesting as it presents an opportunity to apply cutting-edge machine learning techniques to a critical domain like Air Traffic Management. Our goal is to explore and develop models that can enhance accuracy and efficiency, potentially leading to safer and more optimized air traffic operations. Through this challenge, we aim to contribute innovative solutions that could improve real time decision-making and predictive capabilities in this vital field.
+

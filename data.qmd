@@ -340,7 +340,7 @@ for obj in s3.s3client.list_objects("competition-data", recursive=True):
 
 ### Using `traffic` for Exploratory Data Analysis
 
-You can explore the trajectory data using the [`traffic`][traffic] in
+You can explore the trajectory data using the [`traffic`][traffic] library in
 a Python notebook.
 
 For example you can load one of the daily trajectory files 
@@ -351,14 +351,18 @@ from tqdm import TqdmExperimentalWarning
 
 warnings.filterwarnings("ignore", category=TqdmExperimentalWarning)
 warnings.filterwarnings("ignore", category=FutureWarning)
-
-from traffic.core import Traffic
-from datetime import timedelta
-
 import matplotlib.pyplot as plt
-from matplotlib.dates import DateFormatter
+from traffic.core import Traffic
 
-t = Traffic.from_file('2022-01-01.parquet')
+t = (Traffic.from_file("2022-01-01.parquet")
+        # smooth vertical glitches
+        .filter()
+        # resample at 1s
+        .resample('1s')
+        # execute all
+        .eval()
+)
+
 ```
 
 plot the list of flights
@@ -381,22 +385,12 @@ trj
 and finally a vertical profile with ground speed:
 
 ```python
-with plt.style.context("traffic"):
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 7))
 
-    fig, ax = plt.subplots(figsize=(10, 7))
-
-    (
-        trj
-        .plot_time(
-            ax=ax,
-            y=["altitude", "groundspeed"],
-            secondary_y=["groundspeed"]
-        )
-    )
-
-    ax.set_xlabel("")
-    ax.tick_params(axis='x', labelrotation=0)
-    ax.xaxis.set_major_formatter(DateFormatter("%H:%M"))
+flight = t[11]
+flight.plot_time(ax=ax1, y="altitude")
+flight.plot_time(ax=ax2, y="groundspeed")
+plt.show()
 ```
 
 ![vertical profile of flight `248750835`](media/trj11.png){height=10cm}
@@ -406,7 +400,7 @@ with plt.style.context("traffic"):
 **Note**: the vertical profile for flight `248750835` shows that you should probably
 have considered only the  [`actual_offblock_time` + `taxiout_time`, `arrival_time`]
 interval if interested in the _in-the-air_ portion of the flight, i.e. cut the
-final portion at `2022-01-01T11:55:15Z`.
+final portion at `2022-01-01T11:55:15Z` (and not that there is no very low altitude data from the takeoff).
 
 ## Ranking
 The `submission` bucket is organized as follows (teams' accounts won't be able

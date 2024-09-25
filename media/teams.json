@@ -1,0 +1,783 @@
+[
+  {
+    "description": "Our team is eager to utilize the provided data for predicting aircraft trajectories within terminal airspace. We also aim to explore potential impacts on Air Traffic Management (ATM) airspace, considering the upcoming integration of urban air mobility operations",
+    "rationale": "The data provided through this challenge offers a valuable baseline for prediction tasks. We intend to highlight not only accuracy metrics, such as minFDE and minADE, but also to emphasize the safety aspects and implications of the prediction results",
+    "active": true,
+    "members": [
+      {
+        "leader": false,
+        "member_name": "Yuyol Shin"
+      },
+      {
+        "leader": true,
+        "member_name": "Jungwoo"
+      }
+    ],
+    "team_name": "team_diligent_zucchini",
+    "registration_date": "2024-08-09"
+  },
+  {
+    "description": "I'm a pilot, software engineer, and person who likes to play with flight data",
+    "rationale": "it seems like an interesting problem",
+    "active": true,
+    "members": [
+      {
+        "leader": true,
+        "member_name": "Jonathan Kunze"
+      }
+    ],
+    "team_name": "team_witty_yogurt",
+    "registration_date": "2024-08-07"
+  },
+  {
+    "description": "I study Mathematics at Technical University of Munich",
+    "rationale": "huge aviation enthusiast since childhood. Moreover I have a passion for data science",
+    "active": true,
+    "members": [
+      {
+        "leader": true,
+        "member_name": "Julius Platzer"
+      }
+    ],
+    "team_name": "team_zany_eagle",
+    "registration_date": "2024-08-14"
+  },
+  {
+    "description": "researchers from the Berlin Institute for the Foundations of Learning and Data (BIFOLD) at Technische Universität Berlin. Our primary research focuses on the intersection of computer security and machine learning, but in our free time we also have a strong passion for aviation",
+    "rationale": "curious about aviation and are eager to apply some of our research expertise to this challenge",
+    "active": true,
+    "members": [
+      {
+        "leader": false,
+        "member_name": "Felix Weißberg"
+      },
+      {
+        "leader": false,
+        "member_name": "Thorsten Eisenhofer"
+      },
+      {
+        "leader": true,
+        "member_name": "Micha Horlboge"
+      }
+    ],
+    "team_name": "team_kind_nightlight",
+    "registration_date": "2024-08-14"
+  },
+  {
+    "description": "I'm an airplane enthusiast, seeking to apply ML research to decreasing carbon emissions!",
+    "rationale": "I'm really excited to spend some time looking at this data problem and develop a ML algo for it",
+    "active": true,
+    "members": [
+      {
+        "leader": true,
+        "member_name": "Aaron Zhang"
+      }
+    ],
+    "team_name": "team_sociable_river",
+    "registration_date": "2024-08-06"
+  },
+  {
+    "description": "An associate professor and an IT engineer",
+    "rationale": "We are investigating ML models for big data and we are interested in assessing the performance results of our research works",
+    "active": true,
+    "members": [
+      {
+        "leader": false,
+        "member_name": "Abderazek Chaka Bennour"
+      },
+      {
+        "leader": true,
+        "member_name": "Rim Moussa"
+      }
+    ],
+    "team_name": "team_knowledgeable_jungle",
+    "registration_date": "2024-08-07"
+  },
+  {
+    "description": "I am an aviation consultant, with a Master in Computer of Science",
+    "rationale": "improve in ML and also just interested in the goal of the challenge (climate change related)",
+    "active": true,
+    "members": [
+      {
+        "leader": true,
+        "member_name": "Nicolas Rostoker"
+      }
+    ],
+    "team_name": "team_wonderful_boat",
+    "registration_date": "2024-08-07"
+  },
+  {
+    "description": "I am a researcher and analyst passionate about aviation, astrophysics, and data science",
+    "rationale": "I would love to bolster my portfolio on a fun project that has real meaning",
+    "active": true,
+    "members": [
+      {
+        "leader": true,
+        "member_name": "Andrew Macpherson"
+      }
+    ],
+    "team_name": "team_knowledgeable_glove",
+    "registration_date": "2024-08-08"
+  },
+  {
+    "description": "I am a cybersecurity analyst, who focuses on deep learning and its applications in the cyberdefense. I am also an aviation and flight simulation enthusiast",
+    "rationale": "Since I started my studies in cybersecurity, I always wanted to apply my skills in the aviation area. I had the opportunity to develop my skills in AI within my company but I want to share my experience and apply it in this challenge",
+    "active": true,
+    "members": [
+      {
+        "leader": true,
+        "member_name": "Imad Eddine Yamani"
+      }
+    ],
+    "team_name": "team_thoughtful_quicksand",
+    "registration_date": "2024-08-07"
+  },
+  {
+    "description": "aviation data scientist at ZHAW",
+    "rationale": "Working daily with this type of datasets, I'm curious to see what can be achieved",
+    "active": true,
+    "members": [
+      {
+        "leader": true,
+        "member_name": "Benoit Figuet"
+      }
+    ],
+    "team_name": "team_spirited_eel",
+    "registration_date": "2024-08-07"
+  },
+  {
+    "description": "Student at Aarhus University in Computer technology, with focus on deep learning",
+    "rationale": "Challenge, and see how good it can be",
+    "active": true,
+    "members": [
+      {
+        "leader": true,
+        "member_name": "Christian Otte"
+      }
+    ],
+    "team_name": "team_lively_hedgehog",
+    "registration_date": "2024-08-07"
+  },
+  {
+    "description": "I'm a mechanical engineer and a private pilot with deep love for the aviation community and industry",
+    "rationale": "I would love to apply my data science skills from my day job to tackle this data challenge to get a chance to develop my machine learning skills as well as make a positive impact on the environment and aviation industry data streams",
+    "active": true,
+    "members": [
+      {
+        "leader": true,
+        "member_name": "Mohamed Siblini"
+      }
+    ],
+    "team_name": "team_peaceful_lobster",
+    "registration_date": "2024-08-07"
+  },
+  {
+    "description": "Engineers working in the area of air control",
+    "rationale": "We are looking for a challenge while contributing to a better world",
+    "active": true,
+    "members": [
+      {
+        "leader": false,
+        "member_name": "Onur Sertel"
+      },
+      {
+        "leader": true,
+        "member_name": "Sipke Lautenbach"
+      }
+    ],
+    "team_name": "team_tidy_kitten",
+    "registration_date": "2024-08-07"
+  },
+  {
+    "description": "Prof. Dr. Ulrich Schumann studied Mechanical Engineering in Berlin, promoted on turbulence in Karlsruhe and habilitated in Meteorology in Munich, Germany. He works on various aspects of contrail cirrus and airborne measurements, and lectures on aviation climate impact, now at the Technical University Munich. Prof. Ian Poll published a series of open-access aircraft performance models. Dr. Roger Teoh is Scientist at Imperial College (with Prof. Dr Marc Stettler)  and published, since 2019, several papers on contrail modelling",
+    "rationale": "We plan to derive best estimates of the aircraft takeoff mass (at least upper and lower bounds) by comparing the given flight trajectories with the restrictions resulting from performance modelling using the open access PS Performance model. The most recent model PS model version covers 67 ICAO aircraft types, hopefully including all aircraft types in the set of test data, and provides several criteria to deduce the achievability of the given flight states in respect to Flight level,  Mach number, climb rate, vertical and horizontal accelerations, thrust, and lift coefficient, for the potential range of aircraft mass consistent with the takeoff mass, past fuel consumption, including all flight states from departure to destination. This should allow to estimate at least upper and lower bounds of the aircraft mass. The PS model is available among other within the pycontrail code ( https://doi.org/10.5281/zenodo.7776686 ). The PS model got improved over the  years, and further improvements are to be expected. The  team coordinator works mainly with Fortran, partially with Excel and partially with python",
+    "active": true,
+    "members": [
+      {
+        "leader": false,
+        "member_name": "Ian Poll"
+      },
+      {
+        "leader": false,
+        "member_name": "Roger Teoh"
+      },
+      {
+        "leader": true,
+        "member_name": "Ulrich Schumann"
+      }
+    ],
+    "team_name": "team_zippy_horse",
+    "registration_date": "2024-08-14"
+  },
+  {
+    "description": "Individual with AI and data processing skills",
+    "rationale": "I like the goal, I like the challenge, and I think I can do a great job. Some Prize money would be icing on the cake.",
+    "active": true,
+    "members": [
+      {
+        "leader": true,
+        "member_name": "Trent Georg"
+      }
+    ],
+    "team_name": "team_lighthearted_goblin",
+    "registration_date": "2024-08-06"
+  },
+  {
+    "description": "A team of data scientists working in the aviation industry",
+    "rationale": "Learning opportunity for an interesting data problem",
+    "active": true,
+    "members": [
+      {
+        "leader": true,
+        "member_name": "Bilal Razi"
+      }
+    ],
+    "team_name": "team_patient_kangaroo",
+    "registration_date": "2024-08-08"
+  },
+  {
+    "description": "I work in the aviation industry and have a PhD in air transportation systems",
+    "rationale": "My interest lies in big data processing in aviation and transportation systems. I process ample amounts of radar data on a regular basis but don't get to perform any exploratory analysis, which I love.",
+    "active": true,
+    "members": [
+      {
+        "leader": true,
+        "member_name": "Mihir Rimjha"
+      }
+    ],
+    "team_name": "team_zany_fireplace",
+    "registration_date": "2024-08-06"
+  },
+  {
+    "description": "We fly planes and build artificial brains",
+    "rationale": "We want to learn more about aircraft performance, contribute to Open Source Software and are motivated by a potential environmental impact",
+    "active": true,
+    "members": [
+      {
+        "leader": false,
+        "member_name": "Lukas Tyburzy"
+      },
+      {
+        "leader": true,
+        "member_name": "Niclas Wüstenbecker"
+      }
+    ],
+    "team_name": "team_faithful_engine",
+    "registration_date": "2024-08-13"
+  },
+  {
+    "description": "aviation enthusiasts with a strong interest in machine learning",
+    "rationale": "great opportunity for us to combine these passions and see how data science can make a real impact in aviation",
+    "active": true,
+    "members": [
+      {
+        "leader": false,
+        "member_name": "Paul Hollmann"
+      },
+      {
+        "leader": true,
+        "member_name": "Felix Soest"
+      }
+    ],
+    "team_name": "team_delightful_avocado",
+    "registration_date": "2024-08-13"
+  },
+  {
+    "description": "I am a former airline pilot, current engineer and aviation enthusiast with an interest in data science and ML",
+    "rationale": "I would like to participate in advancing green aviation",
+    "active": true,
+    "members": [
+      {
+        "leader": true,
+        "member_name": "Daryn Beneck"
+      }
+    ],
+    "team_name": "team_athletic_glacier",
+    "registration_date": "2024-08-13"
+  },
+  {
+    "description": "Mark is a data analyst for an environmental nonprofit and a flight data enthusiast (and home ADS-B receiver operator)",
+    "rationale": "Open models using public data have great potential for estimating values that are difficult to aggregate for important global analyses like calculating greenhouse gas emissions. ATOW estimation using OSN data is a wonderful example of this application and I am excited to see how accurate the winning models may be",
+    "active": true,
+    "members": [
+      {
+        "leader": true,
+        "member_name": "Mark Fahey"
+      }
+    ],
+    "team_name": "team_mindful_donkey",
+    "registration_date": "2024-08-07"
+  },
+  {
+    "description": " I am a solo participant.",
+    "rationale": "I am a sustainability research intern with Boeing and this competition is highly relevant to the work I am doing. Hence, I would like to participate to learn more from the brilliant and experienced Data Scientist who will be partaking in the competition.",
+    "active": true,
+    "members": [
+      {
+        "leader": false,
+        "member_name": ""
+      },
+      {
+        "leader": true,
+        "member_name": "Ang Keng Boon"
+      }
+    ],
+    "team_name": "team_noble_zeppelin",
+    "registration_date": "2024-08-06"
+  },
+  {
+    "description": "french engineer and a colleague experienced in system engineering applied to aeronautical systems. Recent bootcamp training program in Data Engineering. Passionate about aeronautics, I passed my PPL license several years ago, among other licenses (ultralight, gliding, paragliding, ...)",
+    "rationale": "opportunity to improve  knowledge in both data science and aeronautic operations",
+    "active": true,
+    "members": [
+      {
+        "leader": false,
+        "member_name": "Yoann MOCQUIN"
+      },
+      {
+        "leader": true,
+        "member_name": "Stéphane BONAPFEL"
+      }
+    ],
+    "team_name": "team_nice_wolf",
+    "registration_date": "2024-08-06"
+  },
+  {
+    "description": "I'm enthusiast python programmer and eventually make some software on flights",
+    "rationale": "I like to program in python and I've been making some application with scikitlearn machine learning: the PRC Data Challenge looks like a good opportunity to show up my knowledge",
+    "active": true,
+    "members": [
+      {
+        "leader": true,
+        "member_name": "Luis Julian Rossi"
+      }
+    ],
+    "team_name": "team_cheery_vase",
+    "registration_date": "2024-08-07"
+  },
+  {
+    "description": "I am a passionate engineer with a strong foundation in applied mathematics and computer science. Aviation has captivated my imagination since childhood, inspiring me to pursue a career in engineering",
+    "rationale": "My academic background equipped me with a robust analytical toolkit in digital signal processing, enabling me to tackle complex problems with a structured approach. I am excited to contribute my skills to this competition and extract valuable insights from this dataset",
+    "active": true,
+    "members": [
+      {
+        "leader": true,
+        "member_name": "Francois LAMBERT"
+      }
+    ],
+    "team_name": "team_youthful_xylophone",
+    "registration_date": "2024-08-09"
+  },
+  {
+    "description": "computer science students driven by an unrelenting passion to continually expand our knowledge",
+    "rationale": "we want to expand our knowledge in the field of data science",
+    "active": true,
+    "members": [
+      {
+        "leader": false,
+        "member_name": "Ahmed Tamer Fawazy"
+      },
+      {
+        "leader": false,
+        "member_name": "Abdullah Mohamed Sayed"
+      },
+      {
+        "leader": true,
+        "member_name": "Mohamed Gamal Sheta"
+      }
+    ],
+    "team_name": "team_unique_tiger",
+    "registration_date": "2024-08-13"
+  },
+  {
+    "description": "A small Data Science Consulting firm with a big interest in Aviation",
+    "rationale": "Firstly, for fun and the chance to meet other people and to challenge myself and learn from the process",
+    "active": true,
+    "members": [
+      {
+        "leader": false,
+        "member_name": "Ewelina Lawless"
+      },
+      {
+        "leader": true,
+        "member_name": "keith Lawless"
+      }
+    ],
+    "team_name": "team_unbelievable_donkey",
+    "registration_date": "2024-08-07"
+  },
+  {
+    "description": "College Student interested in machine learning and aviation",
+    "rationale": "I am very interested in machine learning and aviation and would like the opportunity to test my skills in a real-world setting.",
+    "active": true,
+    "members": [
+      {
+        "leader": false,
+        "member_name": ""
+      },
+      {
+        "leader": true,
+        "member_name": "Nathan Bronson"
+      }
+    ],
+    "team_name": "team_jubilant_jelly",
+    "registration_date": "2024-08-06"
+  },
+  {
+    "description": "mathematician and computer scientist",
+    "rationale": "extremely interested in the complex nature of aviation and air traffic management",
+    "active": true,
+    "members": [
+      {
+        "leader": true,
+        "member_name": "Juan Daniel Lopez Serna"
+      }
+    ],
+    "team_name": "team_understanding_jacket",
+    "registration_date": "2024-08-06"
+  },
+  {
+    "description": "We are three friends who met during their physics studies and are now pursuing different paths related to data science. Loving both aviation (mainly Dennis) and data science (all of us)",
+    "rationale": "we are curious to find out whether we can provide a model that predicts the ATOW better than other submissions. We are very much looking forward to the fun we are going to have tackling this question",
+    "active": true,
+    "members": [
+      {
+        "leader": false,
+        "member_name": "Malte Cordts"
+      },
+      {
+        "leader": false,
+        "member_name": "Sabrina Kerz"
+      },
+      {
+        "leader": true,
+        "member_name": "Dennis Schorn"
+      }
+    ],
+    "team_name": "team_organized_volcano",
+    "registration_date": "2024-08-07"
+  },
+  {
+    "description": "TU Delft PhD student",
+    "rationale": "My research is related to TOW estimation, curiosity",
+    "active": true,
+    "members": [
+      {
+        "leader": true,
+        "member_name": "Aidana Tassanbi"
+      }
+    ],
+    "team_name": "team_brave_pillow",
+    "registration_date": "2024-08-13"
+  },
+  {
+    "description": "I am an AI Graduate from the Cranfield University, currently studying in the US",
+    "rationale": "I would like to participate in the challenge to improve my skills and contribute to the OpenSky network",
+    "active": true,
+    "members": [
+      {
+        "leader": true,
+        "member_name": "Adam El Youmi"
+      }
+    ],
+    "team_name": "team_helpful_wizard",
+    "registration_date": "2024-08-07"
+  },
+  {
+    "description": "I am a passionate Data Scientist wanting to generally improve AI and automate as many things as possible",
+    "rationale": "I believe I have a set of skills and a spirit that can be of great help regarding this challenge",
+    "active": true,
+    "members": [
+      {
+        "leader": true,
+        "member_name": "Dimitri Condoris"
+      }
+    ],
+    "team_name": "team_sincere_quicksand",
+    "registration_date": "2024-08-13"
+  },
+  {
+    "description": "Our team is composed of Emanuele Bossi, a dual major student in Data Science and Software Engineering at Embry-Riddle Aeronautical University, Prescott campus, and Dr. Rahman R. AlMomani, an Assistant Professor of Data Science and Mathematics at the same university. The student will be mentored by the professor as we work together to develop a Machine Learning model to predict the best Aircraft Takeoff Weight (ATOW) of a flown flight",
+    "rationale": "We are passionate about contributing to cutting-edge research in the aviation industry. This competition provides an exceptional opportunity to apply our knowledge in data science and machine learning to real-world aviation challenges. By participating, we aim to push the boundaries of what’s possible in flight optimization and contribute to advancements that could have a significant impact on the industry",
+    "active": true,
+    "members": [
+      {
+        "leader": false,
+        "member_name": "Dr. Rahman R. AlMomani"
+      },
+      {
+        "leader": true,
+        "member_name": "Emanuele Bossi"
+      }
+    ],
+    "team_name": "team_nice_hippo",
+    "registration_date": "2024-08-13"
+  },
+  {
+    "description": "We are a Swiss startup building pilot assistance and safety applications and services",
+    "rationale": "Predicting ATOW/ETOW from OpenSkyNetwork flight data is an intriguing challenge that aligns well with our professional experience in machine learning, aeronautics, and software engineering. This opportunity will allow us to identify and understand patterns in flight data, enhancing our ability to build accurate ML models for prediction and estimation. ",
+    "active": true,
+    "members": [
+      {
+        "leader": false,
+        "member_name": "Loyd Hook"
+      },
+      {
+        "leader": false,
+        "member_name": "Walter Weinmann"
+      },
+      {
+        "leader": false,
+        "member_name": "Stefan Ochsenbein"
+      },
+      {
+        "leader": true,
+        "member_name": "Bikram Chatterjee"
+      }
+    ],
+    "team_name": "team_exuberant_scooter",
+    "registration_date": "2024-08-06"
+  },
+  {
+    "description": "I recently graduated from the University of Warwick, England, where I studied integrated masters in Computer Science. I will be joining Vanguard Asset Management as an Application Engineer this late September.",
+    "rationale": "For my masters thesis, I researched deep learning techniques (more specifically Graph Neural Networks) in classification tasks in Computational Pathology. I want to use this challenge to apply and improve my ML skills, whilst trying to solve a real world problem",
+    "active": true,
+    "members": [
+      {
+        "leader": true,
+        "member_name": "Farham Ahmad"
+      }
+    ],
+    "team_name": "team_incredible_boat",
+    "registration_date": "2024-08-06"
+  },
+  {
+    "description": "Kristoffer Borgen - Aviation professor at San Jose State University, Jonathan Cox - Student at University of California Riverside",
+    "rationale": "We both like competitions and this seems like a good competition to compete in and use the project to learn machine learning applications",
+    "active": true,
+    "members": [
+      {
+        "leader": false,
+        "member_name": "Jonathan Cox"
+      },
+      {
+        "leader": true,
+        "member_name": "Kristoffer Borgen"
+      }
+    ],
+    "team_name": "team_strong_fossil",
+    "registration_date": "2024-08-02"
+  },
+  {
+    "description": "I am an avid aviation enthusiast working as a data scientist in a Fortune 40 company. I have experience working with [prior aviation related data] (https://github.com/billodalroy/flight-delay-prediction).",
+    "rationale": "As an avgeek and a climate conscious person I rarely find anything which exists in the intersection of the two, this challenge is the closest to it. I believe I can contribute and learn while participating in the challenge.",
+    "active": true,
+    "members": [
+      {
+        "leader": true,
+        "member_name": "Billodal Roy"
+      }
+    ],
+    "team_name": "team_witty_zucchini",
+    "registration_date": "2024-08-02"
+  },
+  {
+    "description": "In my spare time I am interested in data science and aviation",
+    "rationale": "I would like for test my skills on this challenge",
+    "active": true,
+    "members": [
+      {
+        "leader": true,
+        "member_name": "Anders Vestergaard"
+      }
+    ],
+    "team_name": "team_inventive_emu",
+    "registration_date": "2024-08-06"
+  },
+  {
+    "description": "just myself",
+    "rationale": "I've always been an aviation fan, and currently work in data analytics, but I've never had much opportunity to combine the two. I did use OpenSky Network a few times and blogged about it: it is a fantastic resource!",
+    "active": true,
+    "members": [
+      {
+        "leader": true,
+        "member_name": "Charles Mercieca"
+      }
+    ],
+    "team_name": "team_affectionate_bridge",
+    "registration_date": "2024-08-07"
+  },
+  {
+    "description": "I am an air traffic management specialist and data scientist at ASECNA air navigation service provider",
+    "rationale": "Apply Expertise in Air Traffic Data to supports the development of innovative solutions and improvements in air traffic management. Gain Visibility for  professional recognition, networking opportunities, and potential collaborations that enhance both my career and the strategic goals of ASECNA.",
+    "active": true,
+    "members": [
+      {
+        "leader": true,
+        "member_name": "MOUSTAPHA Amadou Roufaï"
+      }
+    ],
+    "team_name": "team_vibrant_pencil",
+    "registration_date": "2024-08-06"
+  },
+  {
+    "description": "Our team is a group of researchers focused on machine learning algorithms and data science for aviation applications. We are committed to advancing machine learning techniques and exploring their practical applications to address real-world challenges in the aviation industry.",
+    "rationale": "Our participation in this Data Challenge is motivated by the opportunity to leverage our skills and knowledge to develop an ML model that accurately infers the Actual Take Off Weight (ATOW) of a flight. This problem is essential for optimizing flight performance, fuel efficiency, and safety in the aviation industry.",
+    "active": true,
+    "members": [
+      {
+        "leader": false,
+        "member_name": "Michael Ka Ming Cheung"
+      },
+      {
+        "leader": false,
+        "member_name": "Simon Cheung"
+      },
+      {
+        "leader": true,
+        "member_name": "Tommy Cheung"
+      }
+    ],
+    "team_name": "team_respectful_kangaroo",
+    "registration_date": "2024-08-06"
+  },
+  {
+    "description": "A team consisting of petroleum, environmental, and computer science engineers",
+    "rationale": "As a team with varied backgrounds we are very interested in using data to improve operational efficiency. This challenge is a good experience to apply our skills to aviation industry-related problems",
+    "active": true,
+    "members": [
+      {
+        "leader": false,
+        "member_name": "Shashank Bekal"
+      },
+      {
+        "leader": false,
+        "member_name": "Jnana Bairy"
+      },
+      {
+        "leader": true,
+        "member_name": "Sri Poludasu"
+      }
+    ],
+    "team_name": "team_fearless_marshmallow",
+    "registration_date": "2024-08-07"
+  },
+  {
+    "description": "We are a group of young researchers in the field of air traffic management with year of experience in data analysis and operational indicators",
+    "rationale": "We find this challenge interesting both from a technical and operational point of view.  We believe it may help to improve the estimations of the negative impact of aviation on the environment, providing a basis to find new tackle the problem",
+    "active": true,
+    "members": [
+      {
+        "leader": false,
+        "member_name": "Natividad Valle"
+      },
+      {
+        "leader": false,
+        "member_name": "Faustino Tello"
+      },
+      {
+        "leader": false,
+        "member_name": "Diego Piva"
+      },
+      {
+        "leader": true,
+        "member_name": "Andrés Perillo"
+      }
+    ],
+    "team_name": "team_adventurous_ostrich",
+    "registration_date": "2024-08-13"
+  },
+  {
+    "description": "I run an OpenSky feed and worked in the aviation industry in the past but now work in the AI/LM field using Oracle business analytics and other Oracle AI technologies",
+    "rationale": "I want to put my AI/ML knowledge and Oracle technologies to work solving this interesting challenge",
+    "active": true,
+    "members": [
+      {
+        "leader": true,
+        "member_name": "Phil Dolbow"
+      }
+    ],
+    "team_name": "team_keen_eagle",
+    "registration_date": "2024-08-06"
+  },
+  {
+    "description": "A group of friends who like working with data and solving problems with the help of machine learning algorithms. Some of us have an educational background in aviation",
+    "rationale": "We were interested by the data we get to work with in this challenge as well as the problem that is being solved",
+    "active": true,
+    "members": [
+      {
+        "leader": false,
+        "member_name": "Jonasz Rudnik"
+      },
+      {
+        "leader": false,
+        "member_name": "Kacper Paszkowski"
+      },
+      {
+        "leader": true,
+        "member_name": "Paweł Jędrzejczak"
+      }
+    ],
+    "team_name": "team_fearless_glacier",
+    "registration_date": "2024-08-08"
+  },
+  {
+    "description": "master's students at the Aeronautics Institute of Technology (ITA) in Brazil, with a strong interest in the fields of aeronautics, encompassing mechanical, electrical, and computational engineering",
+    "rationale": "Some of our dissertations address similar challenges, focused on enhancing our skills in machine learning and deepening our knowledge in areas such as aircraft systems, avionics, and flight dynamics. The challenge is a good way to reach the best version of us and spread a new solution to the problem",
+    "active": true,
+    "members": [
+      {
+        "leader": false,
+        "member_name": "Guilherme Jose Antonio"
+      },
+      {
+        "leader": false,
+        "member_name": "Marcos Vinicius Gonçalves"
+      },
+      {
+        "leader": true,
+        "member_name": "Arthur Souza Ribeiro"
+      }
+    ],
+    "team_name": "team_courageous_parrot",
+    "registration_date": "2024-08-13"
+  },
+  {
+    "description": "We are an innovative team specializing in the development of software solutions across various market niches. Our team is composed of skilled professionals with deep expertise in data science, software engineering, and domain-specific knowledge, ensuring that our solutions meet the highest standards of excellence.",
+    "rationale": "Our participation in this data contest is motivated by our desire to contribute to a more efficient and environmentally friendly aviation sector. This contest is an opportunity to apply advanced machine learning knowledge and technologies to bring real improvements in this field. We are motivated by the possibility of creating a positive impact and contributing to a greener and more sustainable future for the planet and we aim to demonstrate that technology and innovation can play a vital role in addressing global challenges and building a better future for all.",
+    "active": true,
+    "members": [
+      {
+        "leader": false,
+        "member_name": "Nemes Andrei"
+      },
+      {
+        "leader": false,
+        "member_name": "Szabo David"
+      },
+      {
+        "leader": true,
+        "member_name": "Paur Attila"
+      }
+    ],
+    "team_name": "team_motivated_ostrich",
+    "registration_date": "2024-08-07"
+  },
+  {
+    "description": "Angel and Carol are good friends. Angel is a developer while Carol works as a data scientist. Together, the two complement each other in their look of the issue",
+    "rationale": "To have fun",
+    "active": true,
+    "members": [
+      {
+        "leader": false,
+        "member_name": "Angel KOH"
+      },
+      {
+        "leader": true,
+        "member_name": "Carol TEO"
+      }
+    ],
+    "team_name": "team_motivated_ladder",
+    "registration_date": "2024-08-08"
+  }
+]
