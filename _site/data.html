@@ -576,7 +576,7 @@ Please consider re-downloading it.</p>
 <li><code>temperature</code> [<span class="math inline">\(K\)</span>, kelvin]</li>
 </ul></li>
 </ul>
-<p>The daily file <code>&lt;yyyy-mm-dd&gt;.parquet</code> includes all position reports on (UTC) <code>&lt;yyyy-mm-dd&gt;</code> date; it can happen that flight portions be present in consecutive files, i.e.&nbsp;the same <code>flight_id</code> will occur in more than one daily file because the flight took place across the (UTC) midnight.</p>
+<p>The daily file <code>&lt;yyyy-mm-dd&gt;.parquet</code> includes all position reports on (UTC) <code>&lt;yyyy-mm-dd&gt;</code> date<del>; it can happen that flight portions be present in consecutive files, i.e.&nbsp;the same <code>flight_id</code> will occur in more than one daily file because the flight took place across the (UTC) midnight</del>.</p>
 <p><strong>NOTE</strong>: trajectories are not necessarily complete/overlapping with respect to what reported in the flight list in <code>actual_offblock_time</code> or <code>arrival_time</code>. This is due to the possibly limited/partial <a href="#acronyms_ADS-B">ADS-B</a> coverage in some parts (or some lower altitudes) of the world. The interval <code>[actual_offblock_time + taxiout_time, arrival_time]</code> is a good approximation of the in-the-air portion of the flight.</p>
 <p>Further info material:</p>
 <ul>

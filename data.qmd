@@ -143,9 +143,9 @@ The daily trajectory files contain:
   - `temperature` [$K$, kelvin]
 
 The daily file `<yyyy-mm-dd>.parquet` includes all position reports on
-(UTC) `<yyyy-mm-dd>` date; it can happen that flight portions be present
+(UTC) `<yyyy-mm-dd>` date~~; it can happen that flight portions be present
 in consecutive files, i.e. the same `flight_id` will occur in more than one 
-daily file because the flight took place across the (UTC) midnight.
+daily file because the flight took place across the (UTC) midnight~~.
 
 **NOTE**: trajectories are not necessarily complete/overlapping with respect to
 what reported in the flight list in `actual_offblock_time` or `arrival_time`.
