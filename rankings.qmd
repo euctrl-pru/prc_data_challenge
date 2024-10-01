@@ -14,11 +14,11 @@ To see all submissions `RMSE`'s please use
 
 ::: {.callout-warning title="Attention"}
 
-#### Ranking jobs issue: **1st Oct 2024**
+#### Ranking job issue: **1st Oct 2024**
 
 The ranking job is having issues and does not work.
 
-Please be patiente, we are working on having it up and rinning in few days.
+Please be patient, we are working on having it up and running in few days.
 :::
 
 
