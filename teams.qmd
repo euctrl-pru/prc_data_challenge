@@ -40,7 +40,7 @@ cumulative_counts_in_time <- counts_in_time |>
 
 There are `{r} number_of_teams` active teams!
 
-Here is the cumulative sum of created teams 
+Here is the cumulative sum of created (active) teams 
 (as of `{r} format(today(), "%b %d, %Y")`):
 
 ```{r cum-plot, echo=FALSE}
