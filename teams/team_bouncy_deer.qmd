@@ -1,0 +1,8 @@
+## team_bouncy_deer
+
+### Description
+I work with FedEx as a Flight Safety Advisor. Anna is pursuing Masters in Data Science at University of Memphis
+
+### Rationale for participation
+We found the topic for PRC challenge interesting as it closely aligns with the Airline Safety area that I work in and along with Anna's proficiency in Statistics and Machine Learning, we wanted to attempt the PRC challenge and present our solution together, as a Team. This exercise will offer us an opportunity to learn more about Jet Fuel consumption and how we can approach optimizing fuel consumption using Machine Learning techniques
+

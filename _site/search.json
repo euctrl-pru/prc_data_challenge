@@ -134,7 +134,7 @@
     "href": "rankings.html#leaderboard",
     "title": "3  Rankings",
     "section": "",
-    "text": "Attention\n\n\n\nRanking job issue: 1st Oct 2024\nThe ranking job is having issues and does not work.\nPlease be patient, we are working on having it up and running in few days.",
+    "text": "Attention\n\n\n\n\nRanking job issue RESOLVED: 5th Oct 2024\nThe ranking job is working again.\n\n\nRanking job issue: 1st Oct 2024\nThe ranking job is having issues and does not work.\nPlease be patient, we are working on having it up and running in few days.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Rankings</span>"
     ]
@@ -240,6 +240,16 @@
     ]
   },
   {
+    "objectID": "teams.html#team_bouncy_deer",
+    "href": "teams.html#team_bouncy_deer",
+    "title": "4  Teams",
+    "section": "team_bouncy_deer",
+    "text": "team_bouncy_deer\n\nDescription\nI work with FedEx as a Flight Safety Advisor. Anna is pursuing Masters in Data Science at University of Memphis\n\n\nRationale for participation\nWe found the topic for PRC challenge interesting as it closely aligns with the Airline Safety area that I work in and along with Anna’s proficiency in Statistics and Machine Learning, we wanted to attempt the PRC challenge and present our solution together, as a Team. This exercise will offer us an opportunity to learn more about Jet Fuel consumption and how we can approach optimizing fuel consumption using Machine Learning techniques",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
     "objectID": "teams.html#team_brave_pillow",
     "href": "teams.html#team_brave_pillow",
     "title": "4  Teams",
@@ -305,6 +315,16 @@
     "title": "4  Teams",
     "section": "team_delightful_avocado",
     "text": "team_delightful_avocado\n\nDescription\naviation enthusiasts with a strong interest in machine learning\n\n\nRationale for participation\ngreat opportunity for us to combine these passions and see how data science can make a real impact in aviation",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_delightful_hedgehog",
+    "href": "teams.html#team_delightful_hedgehog",
+    "title": "4  Teams",
+    "section": "team_delightful_hedgehog",
+    "text": "team_delightful_hedgehog\n\nDescription\nsolo hobbyist with a career in financial data modelling, including airline industry operating metrics\n\n\nRationale for participation\nI believe that improved data modelling can improve the bases on which policies are set and decisions are made, for the good of the industry and the wider world",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
     ]
@@ -570,6 +590,16 @@
     ]
   },
   {
+    "objectID": "teams.html#team_jovial_glove",
+    "href": "teams.html#team_jovial_glove",
+    "title": "4  Teams",
+    "section": "team_jovial_glove",
+    "text": "team_jovial_glove\n\nDescription\nI am currently pursuing my Master’s degree in Electrical Engineering and Information Technology. In addition to my studies, I am an aviation enthusiast who likes to spend his free time developing open-source projects\n\n\nRationale for participation\nI’m interested in the challenge as an opportunity to apply the data science knowledge I gained during my Bachelor’s degree in a practical setting, particularly within aviation as my field of interest",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
     "objectID": "teams.html#team_jovial_quince",
     "href": "teams.html#team_jovial_quince",
     "title": "4  Teams",
@@ -700,6 +730,16 @@
     ]
   },
   {
+    "objectID": "teams.html#team_loyal_hippo",
+    "href": "teams.html#team_loyal_hippo",
+    "title": "4  Teams",
+    "section": "team_loyal_hippo",
+    "text": "team_loyal_hippo\n\nDescription\nJust one developer / data scientist who has a lot of experience in spatial data processing but plans to understand airplanes’ domain during the competition\n\n\nRationale for participation\nRecently, I’ve become terrified of flying on airplanes. Hopefully, a deeper dive into the subject area will help me get over this fear and take my mind off of it the next time I fly",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
     "objectID": "teams.html#team_mellow_barn",
     "href": "teams.html#team_mellow_barn",
     "title": "4  Teams",
@@ -780,11 +820,31 @@
     ]
   },
   {
+    "objectID": "teams.html#team_motivated_quicksand",
+    "href": "teams.html#team_motivated_quicksand",
+    "title": "4  Teams",
+    "section": "team_motivated_quicksand",
+    "text": "team_motivated_quicksand\n\nDescription\nWe’re an Italian Machine Learning Engineer currently working on Computer Vision for an American Scale-up company\n\n\nRationale for participation\nI’d like to know more about data in the aviation sector, and I think this challenge is a great opportunity to do that",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
     "objectID": "teams.html#team_nice_hippo",
     "href": "teams.html#team_nice_hippo",
     "title": "4  Teams",
     "section": "team_nice_hippo",
     "text": "team_nice_hippo\n\nDescription\nOur team is composed of Emanuele Bossi, a dual major student in Data Science and Software Engineering at Embry-Riddle Aeronautical University, Prescott campus, and Dr. Rahman R. AlMomani, an Assistant Professor of Data Science and Mathematics at the same university. The student will be mentored by the professor as we work together to develop a Machine Learning model to predict the best Aircraft Takeoff Weight (ATOW) of a flown flight\n\n\nRationale for participation\nWe are passionate about contributing to cutting-edge research in the aviation industry. This competition provides an exceptional opportunity to apply our knowledge in data science and machine learning to real-world aviation challenges. By participating, we aim to push the boundaries of what’s possible in flight optimization and contribute to advancements that could have a significant impact on the industry",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_nice_jacket",
+    "href": "teams.html#team_nice_jacket",
+    "title": "4  Teams",
+    "section": "team_nice_jacket",
+    "text": "team_nice_jacket\n\nDescription\nWe are a team formed with researchers and graduate students from department of aerospace engineering and department of computer engineering, faculty of engineering, Kasetsart University, Thailand. We expertise in the fields of flight operations, flight performance analysis, and machine learning. Recently we are working on optimization of aircraft flight operation in order to reduce fuel burn and emission\n\n\nRationale for participation\nWe are excited to participate to the PRC Data Challenge, and hope that we can complete the challenge with an excellence solution that will be of value to the industry especially the aviation industry",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
     ]
@@ -1025,6 +1085,16 @@
     "title": "4  Teams",
     "section": "team_tiny_rainbow",
     "text": "team_tiny_rainbow\n\nDescription\nWe are a team of professors and graduate students affiliated with the Aeronautics Institute of Technology (ITA) in Brazil, with expertise in the areas of data science and aviation\n\n\nRationale for participation\nThe participation in the PRC data challenge will serve an educational purpose, providing the team members with an opportunity to collaborate, expand knowledge on the subject and refine analytical skills. Moreover, we are excited about the chance to make a contribution to the aviation community with the development of innovative solutions for modeling and enhancing the environmental performance of aviation",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
+    ]
+  },
+  {
+    "objectID": "teams.html#team_trustworthy_tractor",
+    "href": "teams.html#team_trustworthy_tractor",
+    "title": "4  Teams",
+    "section": "team_trustworthy_tractor",
+    "text": "team_trustworthy_tractor\n\nDescription\nMy research interests include data analysis, machine learning and its applications. The team focuses on developing algorithms and technologies related to data analysis, applying related technologies to solve practical problems. Through the efforts of team members, we can provide intelligent, efficient, and innovative solutions for civil aviation\n\n\nRationale for participation\nFirstly, I have a great interest and passion for data analysis. I have accumulated a certain amount of knowledge and experience in this field. I aspire to transform my interests into practical actions through participating in this competition, further explore and challenge myself, and deepen my understanding and application of it. By communicating and exchanging ideas with other outstanding players, I can learn more cutting-edge knowledge, skills, and methods, broaden my horizons and ideas. At the same time, the challenges and difficulties in the competition will also prompte me to constantly break through myself and improve my problem-solving abilities",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Teams</span>"
     ]

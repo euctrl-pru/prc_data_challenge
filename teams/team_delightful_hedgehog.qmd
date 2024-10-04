@@ -1,0 +1,8 @@
+## team_delightful_hedgehog
+
+### Description
+solo hobbyist with a career in financial data modelling, including airline industry operating metrics
+
+### Rationale for participation
+I believe that improved data modelling can improve the bases on which policies are set and decisions are made, for the good of the industry and the wider world
+

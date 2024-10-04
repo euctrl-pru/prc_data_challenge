@@ -1,0 +1,8 @@
+## team_nice_jacket
+
+### Description
+We are a team formed with researchers and graduate students from department of aerospace engineering and department of computer engineering, faculty of engineering, Kasetsart University, Thailand. We expertise in the fields of flight operations, flight performance analysis, and machine learning. Recently we are working on optimization of aircraft flight operation in order to reduce fuel burn and emission
+
+### Rationale for participation
+We are excited to participate to the PRC Data Challenge, and hope that we can complete the challenge with an excellence solution that will be of value to the industry especially the aviation industry
+

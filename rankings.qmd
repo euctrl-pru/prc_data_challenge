@@ -12,15 +12,6 @@ The following table shows the best result per team's submission.
 To see all submissions `RMSE`'s please use 
 <https://datacomp.opensky-network.org/api/stats>
 
-::: {.callout-warning title="Attention"}
-
-#### Ranking job issue: **1st Oct 2024**
-
-The ranking job is having issues and does not work.
-
-Please be patient, we are working on having it up and running in few days.
-:::
-
 
 <div id="observablehq-ranking_table-b4294d79"></div>
 

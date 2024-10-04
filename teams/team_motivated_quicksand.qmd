@@ -1,0 +1,8 @@
+## team_motivated_quicksand
+
+### Description
+We're an Italian Machine Learning Engineer currently working on Computer Vision for an American Scale-up company
+
+### Rationale for participation
+I’d like to know more about data in the aviation sector, and I think this challenge is a great opportunity to do that
+

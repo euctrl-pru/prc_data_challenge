@@ -1,0 +1,8 @@
+## team_jovial_glove
+
+### Description
+I am currently pursuing my Master’s degree in Electrical Engineering and Information Technology. In addition to my studies, I am an aviation enthusiast who likes to spend his free time developing open-source projects
+
+### Rationale for participation
+I’m interested in the challenge as an opportunity to apply the data science knowledge I gained during my Bachelor’s degree in a practical setting, particularly within aviation as my field of interest
+

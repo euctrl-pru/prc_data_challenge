@@ -1,0 +1,8 @@
+## team_loyal_hippo
+
+### Description
+Just one developer / data scientist who has a lot of experience in spatial data processing but plans to understand airplanes' domain during the competition
+
+### Rationale for participation
+Recently, I've become terrified of flying on airplanes. Hopefully, a deeper dive into the subject area will help me get over this fear and take my mind off of it the next time I fly
+
