@@ -526,7 +526,7 @@ Please consider re-downloading it.</p>
 <p>We propose two data sets:</p>
 <ol type="1">
 <li>a flight list of (a subset of) flights (partially) flown in Europe in 2022</li>
-<li>the relevant trajectories for the above flights as recorded/processed by <a href="#acronyms_OSN">OpenSky Network (OSN)</a></li>
+<li>the relevant trajectories for the above flights as recorded/processed by <a href="#acronyms_OSN">OpenSky Network (OSN)</a> (<strong>note</strong>: few thousand flights have <strong>no</strong> trajectory available)</li>
 </ol>
 <p>The data sets for the challenge are organized as follows:</p>
 <pre class="text"><code>competition-data/
@@ -564,7 +564,7 @@ Please consider re-downloading it.</p>
 </section>
 <section id="trajectory" class="level3">
 <h3 class="anchored" data-anchor-id="trajectory">Trajectory</h3>
-<p>The trajectories for the flight list for modeling and the ones for ranking are provided as daily <code>.parquet</code> files amounting to around 158 GiB of (max) 1 second position reports out of <a href="#acronyms_ADS-B">ADS-B</a> data collected and processed by <a href="#acronyms_OSN">OSN</a>.</p>
+<p>The trajectories for the flight list for modeling and the ones for ranking are provided as daily <code>.parquet</code> files amounting to around 158 GiB of (max) 1 second position reports out of <a href="#acronyms_ADS-B">ADS-B</a> data collected and processed by <a href="#acronyms_OSN">OSN</a>. (<strong>note</strong>: few thousand flights have <strong>no</strong> trajectory available)</p>
 <p>The daily trajectory files contain:</p>
 <ul>
 <li>flight identification: unique ID (<code>flight_id</code>, same as for flight list), (obfuscated) ICAO 24-bit address (<code>icao24</code>, same value as <code>flight_id</code>)</li>

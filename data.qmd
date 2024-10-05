@@ -54,7 +54,7 @@ Please consider re-downloading it.
 We propose two data sets:
 
 1. a flight list of (a subset of) flights (partially) flown in Europe in 2022
-1. the relevant trajectories for the above flights as recorded/processed by \acr{OSN}
+1. the relevant trajectories for the above flights as recorded/processed by \acr{OSN} (**note**: few thousand flights have **no** trajectory available)
 
 The data sets for the challenge are organized as follows:
 
@@ -127,6 +127,7 @@ Further info material:
 The trajectories for the flight list for modeling and the ones for ranking are
 provided as daily `.parquet` files amounting to around 158 GiB of (max) 1 second
 position reports out of \acr{ADS-B} data collected and processed by \acr{OSN}.
+(**note**: few thousand flights have **no** trajectory available)
 
 The daily trajectory files contain:
 
