@@ -1,0 +1,8 @@
+## team_diligent_igloo
+
+### Description
+We are members of the Innovation and Data Lab, part of the Inspectorate of Transportation and Human Environment, Ministry of Infrastructure and Water Management, Dutch Govt. In IDlab, we build various models (think about Machine Learning, Computer Vision, Chatbots, Natural Language Processing) to help our inspectors be more efficient and effective in monitoring and enforcing the Dutch Laws related to the safe and clean transportation, deposit and use of dangerous substances, fine matter etc. by commercial companies. We cover all modes of transportation (land, sea, air) and have special focus on the impact on the environment that said companies have while conducting their business. We also use satellite data to estimate emissions for ships crossing the oceans, for example
+
+### Rationale for participation
+We are interested in developing an ML model in order to firstly contribute to the effort of measuring the climate impact that aviation has in Europe. This alone would be enough as a motivation, as a more realistic estimate of emissions will have an impact on aviation policy. Secondly, I have personally always looked for opportunities to combine my aviation background (also former EUROCONTROL trainee 😊)with data science, so I am quite excited about the possibility
+

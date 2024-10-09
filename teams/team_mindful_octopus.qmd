@@ -1,0 +1,8 @@
+## team_mindful_octopus
+
+### Description
+We are a team of final-year engineering students in France specializing since 2 years in Modelling and AI, we hope to bring a unique blend of technical expertise and innovative thinking to this challenge. Our academic background has equipped us with a strong foundation in machine learning techniques, which we are eager to apply to this real-world problems
+
+### Rationale for participation
+We see this as an opportunity to challenge ourselves by tackling a complex problem in the aviation industry, a field that is familiar to us as we are studying in Toulouse, the aeronautical city of France
+

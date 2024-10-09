@@ -1,0 +1,8 @@
+## team_bold_emu
+
+### Description
+We are two brothers with different backgrounds (Economics and Chemistry), but with the same passion for data analysis and causal inference
+
+### Rationale for participation
+We like data, challenges, and aviation
+

@@ -1,0 +1,8 @@
+## team_nice_xylophone
+
+### Description
+We are a team of machine learning researchers specializing in the robustness assessment of ML models, but also experienced in data analysis and a comprehensive understanding of operational indicators. Our experience extends to scrutinizing large datasets, including onetime an aviation dataset as well
+
+### Rationale for participation
+The challenge we face is a technical puzzle pertinent to the aviation industry. By exploring the complexities of the Operational Design Domain (ODD) and utilizing advanced data science techniques, we strive to develop models that improve operational efficiency and sustainability. Our participation is driven by a strong belief that our collective efforts and focus on considering the ODD while developing data science solution will ensure the feasibility and safety of our data science solutions within the aviation sector
+

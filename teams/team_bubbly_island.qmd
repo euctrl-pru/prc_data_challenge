@@ -1,0 +1,8 @@
+## team_bubbly_island
+
+### Description
+I am an associate professor of computer science
+
+### Rationale for participation
+One of my research goals is to see the power of data analytics with AI in solving challenging real problems
+

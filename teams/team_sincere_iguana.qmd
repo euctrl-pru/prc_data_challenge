@@ -1,0 +1,8 @@
+## team_sincere_iguana
+
+### Description
+Backend developper and curious about aviation
+
+### Rationale for participation
+​It could be a nice challenge to explore the data, and see what type of modeling techniques can be used
+
