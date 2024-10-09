@@ -25,6 +25,12 @@ See the [Data page](data.html) for more details.
 
 ::: {.callout-warning title="Attention"}
 
+#### Updated trajectories on **9th Oct 2024**
+**9thth Oct 2024**: trajectory files have been re-extracted (again) for the whole 2022.  
+We haven't filtered against OSN flight list but retrieved all
+that is available for the relevant flights (and more to be frank).  
+*Please consider re-downloading them*.
+
 #### Updated trajectories on 24th Sep 2024
 Trajectory files have been reprocessed and updated.  
 

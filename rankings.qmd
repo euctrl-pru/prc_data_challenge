@@ -9,9 +9,11 @@ acronyms:
 
 ## Leaderboard
 The following table shows the best result per team's submission.  
-To see all submissions `RMSE`'s please use 
+
+To see all submissions's `RMSE`'s please use 
 <https://datacomp.opensky-network.org/api/stats>
 
+(Submissions are processed automatically every **30 minutes**.)
 
 <div id="observablehq-ranking_table-b4294d79"></div>
 

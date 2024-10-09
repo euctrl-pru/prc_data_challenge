@@ -2,10 +2,11 @@
 title: "About"
 acronyms:
   insert_loa: false
+  insert_links: false
 ---
-This website describes the \acr{PRC} Data Challenge.
+This website describes the PRC Data Challenge.
 
-The  Performance Review Commission (PRC) was established in 1998 by EUROCONTROL’s
+The Performance Review Commission was established in 1998 by EUROCONTROL’s
 Permanent Commission.
 
 It provides **objective** information and **independent** advice to EUROCONTROL’s
