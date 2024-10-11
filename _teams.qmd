@@ -21,6 +21,7 @@
 {{< include teams/team_diligent_igloo.qmd >}}
 {{< include teams/team_diligent_volcano.qmd >}}
 {{< include teams/team_diligent_zucchini.qmd >}}
+{{< include teams/team_elegant_lemon.qmd >}}
 {{< include teams/team_energetic_quiver.qmd >}}
 {{< include teams/team_enthusiastic_jungle.qmd >}}
 {{< include teams/team_exuberant_scooter.qmd >}}

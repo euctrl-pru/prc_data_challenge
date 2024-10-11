@@ -1,0 +1,8 @@
+## team_elegant_lemon
+
+### Description
+I'm an engineer with Boeing and like working with data
+
+### Rationale for participation
+Learning about data challenges
+
