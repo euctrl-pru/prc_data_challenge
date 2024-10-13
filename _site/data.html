@@ -625,8 +625,8 @@ Attention
 <p>Please consider re-downloading it.</p>
 </section>
 </div>
-<p>The submission file, <code>competition-data/submission_set.csv</code>, contains a flight list for which to estimate the <a href="#acronyms_TOW">TOW</a>; it has the same columns as the flight list (but of course empty <code>tow</code>.)</p>
-<p>The relevant trajectories are part of the ones provided in the Trajectory dataset.</p>
+<p>The submission file, <code>competition-data/submission_set.csv</code>, contains a flight list for which to estimate the <a href="#acronyms_TOW">TOW</a>; it has two columns, namely <code>flight_id</code> and <code>tow</code> (but of course empty <code>tow</code>.)</p>
+<p>The relevant trajectories associated to the <code>flight_id</code>’s are part of the ones provided in the Trajectory dataset.</p>
 </section>
 <section id="wherehow-to-get-the-datasets" class="level2">
 <h2 class="anchored" data-anchor-id="wherehow-to-get-the-datasets">Where/How to get the Datasets</h2>
@@ -771,15 +771,15 @@ secret_key = SECRET_KEY</code></pre>
 258081039, 123
 258081111, 456
 ...</code></pre>
+<p><strong>NOTE</strong>: Missing <code>flight_id</code> rows will get a <code>tow</code> of 0 (zero), as well as empty/null values for <code>tow</code>.</p>
 <p>Your submission file needs to be uploaded to the <code>submissions/</code> bucket in a file named</p>
 <p><code>&lt;team_name&gt;_v&lt;num&gt;_&lt;team_id&gt;.csv</code></p>
-<p>where you are responsible to increase <code>num</code> accordingly for each of your submissions:</p>
+<p>where you are responsible to increase <code>num</code> accordingly for each of your submissions (<code>dc24</code> alias as explained above):</p>
 <pre><code>$ team_name='team_warm_donkey'
 $ team_id='b8e3a438-d2f2-4a11-bf28-e7a8f84cf3db'
 $ num=3
 $ subfile=${team_name}_v${num}_${team_id}.csv
 $ mc cp ./my_submission.csv dc24/submissions/${subfile}</code></pre>
-<p>Here you use the <code>dc24</code> alias as explained above.</p>
 <p>The ranking job will be automatically run every 30 minutes and will use <a href="#acronyms_RMSE">Root Mean Square Error (RMSE)</a> to compare a submission for the 105959 flights in <code>submission_set.csv</code> with the (hidden) the ground truth.</p>
 <p>The final ranking will use an additional 52190 flights. See the <a href="rankings.html">Ranking page</a> for more details.</p>
 <p>The <a href="https://datacomp.opensky-network.org/results" title="PRC Data Challenge ranking page">leaderboard</a> will display the best ranked submissions per team.<br>

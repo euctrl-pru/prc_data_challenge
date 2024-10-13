@@ -216,11 +216,11 @@ Please consider re-downloading it.
 :::
 
 The submission file, `competition-data/submission_set.csv`, contains
-a flight list for which to estimate the \acr{TOW}; it has the same columns as
-the flight list (but of course empty `tow`.)
+a flight list for which to estimate the \acr{TOW}; it has
+two columns, namely `flight_id` and `tow` (but of course empty `tow`.)
   
-The relevant trajectories are part of the ones provided in the Trajectory
-dataset.
+The relevant trajectories associated to the `flight_id`'s are part of
+the ones provided in the Trajectory dataset.
 
 
 
@@ -432,13 +432,16 @@ flight_id, tow
 ...
 ```
 
+**NOTE**: Missing `flight_id` rows will get a `tow` of 0 (zero),
+as well as empty/null values for `tow`. 
+
 Your submission file needs to be uploaded to the `submissions/` bucket in a
 file named
 
 `<team_name>_v<num>_<team_id>.csv`
 
 where you are responsible to increase `num` accordingly for each of your
-submissions:
+submissions (`dc24` alias as explained above):
 
 ```
 $ team_name='team_warm_donkey'
@@ -447,8 +450,6 @@ $ num=3
 $ subfile=${team_name}_v${num}_${team_id}.csv
 $ mc cp ./my_submission.csv dc24/submissions/${subfile}
 ```
-
-Here you use the `dc24` alias as explained above.
 
 The ranking job will be automatically run every 30 minutes and will
 use \acr{RMSE} to compare a submission for the 105959 flights in
