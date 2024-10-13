@@ -84,7 +84,7 @@
     "href": "data.html#dataset-for-submission",
     "title": "2  Data",
     "section": "Dataset for submission",
-    "text": "Dataset for submission\n\n\n\n\n\n\nAttention\n\n\n\nRefreshed submission_set.csv on 8th Aug 2024\nsubmission_set.csv now contains all columns and not just flight_id and tow.\nPlease consider re-downloading it.\n\n\nThe submission file, competition-data/submission_set.csv, contains a flight list for which to estimate the TOW; it has two columns, namely flight_id and tow (but of course empty tow.)\nThe relevant trajectories associated to the flight_id’s are part of the ones provided in the Trajectory dataset.",
+    "text": "Dataset for submission\n\n\n\n\n\n\nAttention\n\n\n\nRefreshed submission_set.csv on 8th Aug 2024\nsubmission_set.csv now contains all columns and not just flight_id and tow.\nPlease consider re-downloading it.\n\n\nThe submission file, competition-data/submission_set.csv, contains a flight list for which to estimate the TOW; it has the same columns as the flight list (but of course empty tow.)\nThe relevant trajectories associated to the flight_id’s are part of the ones provided in the Trajectory dataset.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data</span>"
     ]

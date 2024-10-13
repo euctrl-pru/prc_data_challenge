@@ -216,9 +216,9 @@ Please consider re-downloading it.
 :::
 
 The submission file, `competition-data/submission_set.csv`, contains
-a flight list for which to estimate the \acr{TOW}; it has
-two columns, namely `flight_id` and `tow` (but of course empty `tow`.)
-  
+a flight list for which to estimate the \acr{TOW}; 
+it has the same columns as the flight list (but of course empty `tow`.)
+
 The relevant trajectories associated to the `flight_id`'s are part of
 the ones provided in the Trajectory dataset.
 
