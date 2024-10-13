@@ -1,0 +1,8 @@
+## team_exuberant_hippo
+
+### Description
+not a data scientist but a passionate of aircraft trajectory prediction
+
+### Rationale for participation
+willing to understand key contributors to the estimation of an uncertainty such as TakeOff Weight in the jet aircraft trajectory prediction
+

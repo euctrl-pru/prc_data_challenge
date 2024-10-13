@@ -25,6 +25,7 @@
 {{< include teams/team_elegant_piano.qmd >}}
 {{< include teams/team_energetic_quiver.qmd >}}
 {{< include teams/team_enthusiastic_jungle.qmd >}}
+{{< include teams/team_exuberant_hippo.qmd >}}
 {{< include teams/team_exuberant_scooter.qmd >}}
 {{< include teams/team_faithful_engine.qmd >}}
 {{< include teams/team_faithful_napkin.qmd >}}
