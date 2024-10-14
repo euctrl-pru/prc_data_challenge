@@ -13,19 +13,64 @@ The following table shows the best result per team's submission.
 To see all submissions's `RMSE`'s please use 
 <https://datacomp.opensky-network.org/api/stats>
 
+To see all rankings (in case the table below doesn't work/refresh) please use
+<https://datacomp.opensky-network.org/api/rankings>
+
 (Submissions are processed automatically every **30 minutes**.)
 
-<div id="observablehq-ranking_table-b4294d79"></div>
+```{ojs}
+//| echo: false
+ranking_url = "https://datacomp.opensky-network.org/api/rankings"
+ranking = await aq.loadJSON(ranking_url)
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
-<script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-import define from "https://api.observablehq.com/@espinielli/prc-data-challenge-2024-rankings.js?v=4";
-new Runtime().module(define, name => {
-  if (name === "ranking_table") return new Inspector(document.querySelector("#observablehq-ranking_table-b4294d79"));
-});
-</script>
+thresholds = [
+  { percent: 0.01, threshold: 956.5586 },
+  { percent: 0.02, threshold: 1913.117 },
+  { percent: 0.03, threshold: 2869.676 },
+  { percent: 0.05, threshold: 4782.793 },
+  { percent: 0.1, threshold: 9565.586 },
+  { percent: 0.15, threshold: 14348.38 }
+]
+ll = new Map(thresholds.map((i) => [100 * i.percent, i.threshold]))
+formatTime = d3.utcFormat("%Y-%m-%d %H:%M");
 
+Inputs.table(ranking
+    .orderby("rank")
+    .select({ team_name: "team" }, "rank", { file_version: "version" }, "rmse", { submission_date: "date"})
+    .derive({ date: (d) => aq.op.parse_date(d.date) })
+    .derive({ version: (d) => +aq.op.replace(d.version, "v", "") })
+    .derive({
+      mean_error: aq.escape((d) => {
+        if (0 <= d.rmse && d.rmse < ll.get(1)) return 1;
+        if (ll.get(1) <= d.rmse && d.rmse < ll.get(2)) return 2;
+        if (ll.get(2) <= d.rmse && d.rmse < ll.get(3)) return 3;
+        if (ll.get(3) <= d.rmse && d.rmse < ll.get(5)) return 5;
+        if (ll.get(5) <= d.rmse && d.rmse < ll.get(10)) return 10;
+        if (ll.get(10) <= d.rmse && d.rmse < ll.get(15)) return 15;
+        return 16;
+      })
+    })
+    .derive({
+      error: aq.escape((d) => {
+        if (d.mean_error > 15) return "> 15%";
+        return "≤ " + d.mean_error + "%";
+      })
+    })
+    .select("team", "rank", "version", "rmse", "error", "date"),
+  {
+    rows: 50,
+    maxWidth: 960,
+    // remove checkboxes to select rows
+    select: false,
+    format: {
+      team: (name) =>
+        htl.html`<a href="https://ansperformance.eu/study/data-challenge/teams.html#${encodeURIComponent(
+          name
+        )}" target="_blank">${name}</a>`
+    }
+  }
+)
+```
 
 ## Criteria for Ranking Intermediate Submissions
 

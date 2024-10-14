@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -68,6 +102,8 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="styles.css">
@@ -427,18 +463,102 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="leaderboard">Leaderboard</h2>
 <p>The following table shows the best result per team’s submission.</p>
 <p>To see all submissions’s <code>RMSE</code>’s please use <a href="https://datacomp.opensky-network.org/api/stats" class="uri">https://datacomp.opensky-network.org/api/stats</a></p>
+<p>To see all rankings (in case the table below doesn’t work/refresh) please use <a href="https://datacomp.opensky-network.org/api/rankings" class="uri">https://datacomp.opensky-network.org/api/rankings</a></p>
 <p>(Submissions are processed automatically every <strong>30 minutes</strong>.)</p>
-<div id="observablehq-ranking_table-b4294d79">
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="23" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 22;"><span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>ranking_url <span class="op">=</span> <span class="st">"https://datacomp.opensky-network.org/api/rankings"</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>ranking <span class="op">=</span> <span class="cf">await</span> aq<span class="op">.</span><span class="fu">loadJSON</span>(ranking_url)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>thresholds <span class="op">=</span> [</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">percent</span><span class="op">:</span> <span class="fl">0.01</span><span class="op">,</span> <span class="dt">threshold</span><span class="op">:</span> <span class="fl">956.5586</span> }<span class="op">,</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">percent</span><span class="op">:</span> <span class="fl">0.02</span><span class="op">,</span> <span class="dt">threshold</span><span class="op">:</span> <span class="fl">1913.117</span> }<span class="op">,</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">percent</span><span class="op">:</span> <span class="fl">0.03</span><span class="op">,</span> <span class="dt">threshold</span><span class="op">:</span> <span class="fl">2869.676</span> }<span class="op">,</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">percent</span><span class="op">:</span> <span class="fl">0.05</span><span class="op">,</span> <span class="dt">threshold</span><span class="op">:</span> <span class="fl">4782.793</span> }<span class="op">,</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">percent</span><span class="op">:</span> <span class="fl">0.1</span><span class="op">,</span> <span class="dt">threshold</span><span class="op">:</span> <span class="fl">9565.586</span> }<span class="op">,</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">percent</span><span class="op">:</span> <span class="fl">0.15</span><span class="op">,</span> <span class="dt">threshold</span><span class="op">:</span> <span class="fl">14348.38</span> }</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>ll <span class="op">=</span> <span class="kw">new</span> <span class="bu">Map</span>(thresholds<span class="op">.</span><span class="fu">map</span>((i) <span class="kw">=&gt;</span> [<span class="dv">100</span> <span class="op">*</span> i<span class="op">.</span><span class="at">percent</span><span class="op">,</span> i<span class="op">.</span><span class="at">threshold</span>]))</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>formatTime <span class="op">=</span> d3<span class="op">.</span><span class="fu">utcFormat</span>(<span class="st">"%Y-%m-%d %H:%M"</span>)<span class="op">;</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(ranking</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">orderby</span>(<span class="st">"rank"</span>)</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">select</span>({ <span class="dt">team_name</span><span class="op">:</span> <span class="st">"team"</span> }<span class="op">,</span> <span class="st">"rank"</span><span class="op">,</span> { <span class="dt">file_version</span><span class="op">:</span> <span class="st">"version"</span> }<span class="op">,</span> <span class="st">"rmse"</span><span class="op">,</span> { <span class="dt">submission_date</span><span class="op">:</span> <span class="st">"date"</span>})</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">derive</span>({ <span class="dt">date</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> aq<span class="op">.</span><span class="at">op</span><span class="op">.</span><span class="fu">parse_date</span>(d<span class="op">.</span><span class="at">date</span>) })</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">derive</span>({ <span class="dt">version</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> <span class="op">+</span>aq<span class="op">.</span><span class="at">op</span><span class="op">.</span><span class="fu">replace</span>(d<span class="op">.</span><span class="at">version</span><span class="op">,</span> <span class="st">"v"</span><span class="op">,</span> <span class="st">""</span>) })</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">derive</span>({</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>      <span class="dt">mean_error</span><span class="op">:</span> aq<span class="op">.</span><span class="fu">escape</span>((d) <span class="kw">=&gt;</span> {</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (<span class="dv">0</span> <span class="op">&lt;=</span> d<span class="op">.</span><span class="at">rmse</span> <span class="op">&amp;&amp;</span> d<span class="op">.</span><span class="at">rmse</span> <span class="op">&lt;</span> ll<span class="op">.</span><span class="fu">get</span>(<span class="dv">1</span>)) <span class="cf">return</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (ll<span class="op">.</span><span class="fu">get</span>(<span class="dv">1</span>) <span class="op">&lt;=</span> d<span class="op">.</span><span class="at">rmse</span> <span class="op">&amp;&amp;</span> d<span class="op">.</span><span class="at">rmse</span> <span class="op">&lt;</span> ll<span class="op">.</span><span class="fu">get</span>(<span class="dv">2</span>)) <span class="cf">return</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (ll<span class="op">.</span><span class="fu">get</span>(<span class="dv">2</span>) <span class="op">&lt;=</span> d<span class="op">.</span><span class="at">rmse</span> <span class="op">&amp;&amp;</span> d<span class="op">.</span><span class="at">rmse</span> <span class="op">&lt;</span> ll<span class="op">.</span><span class="fu">get</span>(<span class="dv">3</span>)) <span class="cf">return</span> <span class="dv">3</span><span class="op">;</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (ll<span class="op">.</span><span class="fu">get</span>(<span class="dv">3</span>) <span class="op">&lt;=</span> d<span class="op">.</span><span class="at">rmse</span> <span class="op">&amp;&amp;</span> d<span class="op">.</span><span class="at">rmse</span> <span class="op">&lt;</span> ll<span class="op">.</span><span class="fu">get</span>(<span class="dv">5</span>)) <span class="cf">return</span> <span class="dv">5</span><span class="op">;</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (ll<span class="op">.</span><span class="fu">get</span>(<span class="dv">5</span>) <span class="op">&lt;=</span> d<span class="op">.</span><span class="at">rmse</span> <span class="op">&amp;&amp;</span> d<span class="op">.</span><span class="at">rmse</span> <span class="op">&lt;</span> ll<span class="op">.</span><span class="fu">get</span>(<span class="dv">10</span>)) <span class="cf">return</span> <span class="dv">10</span><span class="op">;</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (ll<span class="op">.</span><span class="fu">get</span>(<span class="dv">10</span>) <span class="op">&lt;=</span> d<span class="op">.</span><span class="at">rmse</span> <span class="op">&amp;&amp;</span> d<span class="op">.</span><span class="at">rmse</span> <span class="op">&lt;</span> ll<span class="op">.</span><span class="fu">get</span>(<span class="dv">15</span>)) <span class="cf">return</span> <span class="dv">15</span><span class="op">;</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">16</span><span class="op">;</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>      })</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">derive</span>({</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>      <span class="dt">error</span><span class="op">:</span> aq<span class="op">.</span><span class="fu">escape</span>((d) <span class="kw">=&gt;</span> {</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (d<span class="op">.</span><span class="at">mean_error</span> <span class="op">&gt;</span> <span class="dv">15</span>) <span class="cf">return</span> <span class="st">"&gt; 15%"</span><span class="op">;</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"≤ "</span> <span class="op">+</span> d<span class="op">.</span><span class="at">mean_error</span> <span class="op">+</span> <span class="st">"%"</span><span class="op">;</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>      })</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">select</span>(<span class="st">"team"</span><span class="op">,</span> <span class="st">"rank"</span><span class="op">,</span> <span class="st">"version"</span><span class="op">,</span> <span class="st">"rmse"</span><span class="op">,</span> <span class="st">"error"</span><span class="op">,</span> <span class="st">"date"</span>)<span class="op">,</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>    <span class="dt">rows</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>    <span class="dt">maxWidth</span><span class="op">:</span> <span class="dv">960</span><span class="op">,</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>    <span class="co">// remove checkboxes to select rows</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>    <span class="dt">select</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>    <span class="dt">format</span><span class="op">:</span> {</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>      <span class="dt">team</span><span class="op">:</span> (name) <span class="kw">=&gt;</span></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>        htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;a href="https://ansperformance.eu/study/data-challenge/teams.html#</span><span class="sc">${</span><span class="pp">encodeURIComponent</span>(</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>          name</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>        )<span class="sc">}</span><span class="vs">" target="_blank"&gt;</span><span class="sc">${</span>name<span class="sc">}</span><span class="vs">&lt;/a&gt;`</span></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
 
 </div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
-<script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-import define from "https://api.observablehq.com/@espinielli/prc-data-challenge-2024-rankings.js?v=4";
-new Runtime().module(define, name => {
-  if (name === "ranking_table") return new Inspector(document.querySelector("#observablehq-ranking_table-b4294d79"));
-});
-</script>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-6" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="criteria-for-ranking-intermediate-submissions" class="level2">
 <h2 class="anchored" data-anchor-id="criteria-for-ranking-intermediate-submissions">Criteria for Ranking Intermediate Submissions</h2>
@@ -475,6 +595,17 @@ new Runtime().module(define, name => {
 </section>
 
 </main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InJhbmtpbmdfdXJsID0gXCJodHRwczovL2RhdGFjb21wLm9wZW5za3ktbmV0d29yay5vcmcvYXBpL3JhbmtpbmdzXCJcbnJhbmtpbmcgPSBhd2FpdCBhcS5sb2FkSlNPTihyYW5raW5nX3VybClcblxudGhyZXNob2xkcyA9IFtcbiAgeyBwZXJjZW50OiAwLjAxLCB0aHJlc2hvbGQ6IDk1Ni41NTg2IH0sXG4gIHsgcGVyY2VudDogMC4wMiwgdGhyZXNob2xkOiAxOTEzLjExNyB9LFxuICB7IHBlcmNlbnQ6IDAuMDMsIHRocmVzaG9sZDogMjg2OS42NzYgfSxcbiAgeyBwZXJjZW50OiAwLjA1LCB0aHJlc2hvbGQ6IDQ3ODIuNzkzIH0sXG4gIHsgcGVyY2VudDogMC4xLCB0aHJlc2hvbGQ6IDk1NjUuNTg2IH0sXG4gIHsgcGVyY2VudDogMC4xNSwgdGhyZXNob2xkOiAxNDM0OC4zOCB9XG5dXG5sbCA9IG5ldyBNYXAodGhyZXNob2xkcy5tYXAoKGkpID0+IFsxMDAgKiBpLnBlcmNlbnQsIGkudGhyZXNob2xkXSkpXG5mb3JtYXRUaW1lID0gZDMudXRjRm9ybWF0KFwiJVktJW0tJWQgJUg6JU1cIik7XG5cbklucHV0cy50YWJsZShyYW5raW5nXG4gICAgLm9yZGVyYnkoXCJyYW5rXCIpXG4gICAgLnNlbGVjdCh7IHRlYW1fbmFtZTogXCJ0ZWFtXCIgfSwgXCJyYW5rXCIsIHsgZmlsZV92ZXJzaW9uOiBcInZlcnNpb25cIiB9LCBcInJtc2VcIiwgeyBzdWJtaXNzaW9uX2RhdGU6IFwiZGF0ZVwifSlcbiAgICAuZGVyaXZlKHsgZGF0ZTogKGQpID0+IGFxLm9wLnBhcnNlX2RhdGUoZC5kYXRlKSB9KVxuICAgIC5kZXJpdmUoeyB2ZXJzaW9uOiAoZCkgPT4gK2FxLm9wLnJlcGxhY2UoZC52ZXJzaW9uLCBcInZcIiwgXCJcIikgfSlcbiAgICAuZGVyaXZlKHtcbiAgICAgIG1lYW5fZXJyb3I6IGFxLmVzY2FwZSgoZCkgPT4ge1xuICAgICAgICBpZiAoMCA8PSBkLnJtc2UgJiYgZC5ybXNlIDwgbGwuZ2V0KDEpKSByZXR1cm4gMTtcbiAgICAgICAgaWYgKGxsLmdldCgxKSA8PSBkLnJtc2UgJiYgZC5ybXNlIDwgbGwuZ2V0KDIpKSByZXR1cm4gMjtcbiAgICAgICAgaWYgKGxsLmdldCgyKSA8PSBkLnJtc2UgJiYgZC5ybXNlIDwgbGwuZ2V0KDMpKSByZXR1cm4gMztcbiAgICAgICAgaWYgKGxsLmdldCgzKSA8PSBkLnJtc2UgJiYgZC5ybXNlIDwgbGwuZ2V0KDUpKSByZXR1cm4gNTtcbiAgICAgICAgaWYgKGxsLmdldCg1KSA8PSBkLnJtc2UgJiYgZC5ybXNlIDwgbGwuZ2V0KDEwKSkgcmV0dXJuIDEwO1xuICAgICAgICBpZiAobGwuZ2V0KDEwKSA8PSBkLnJtc2UgJiYgZC5ybXNlIDwgbGwuZ2V0KDE1KSkgcmV0dXJuIDE1O1xuICAgICAgICByZXR1cm4gMTY7XG4gICAgICB9KVxuICAgIH0pXG4gICAgLmRlcml2ZSh7XG4gICAgICBlcnJvcjogYXEuZXNjYXBlKChkKSA9PiB7XG4gICAgICAgIGlmIChkLm1lYW5fZXJyb3IgPiAxNSkgcmV0dXJuIFwiPiAxNSVcIjtcbiAgICAgICAgcmV0dXJuIFwi4omkIFwiICsgZC5tZWFuX2Vycm9yICsgXCIlXCI7XG4gICAgICB9KVxuICAgIH0pXG4gICAgLnNlbGVjdChcInRlYW1cIiwgXCJyYW5rXCIsIFwidmVyc2lvblwiLCBcInJtc2VcIiwgXCJlcnJvclwiLCBcImRhdGVcIiksXG4gIHtcbiAgICByb3dzOiA1MCxcbiAgICBtYXhXaWR0aDogOTYwLFxuICAgIC8vIHJlbW92ZSBjaGVja2JveGVzIHRvIHNlbGVjdCByb3dzXG4gICAgc2VsZWN0OiBmYWxzZSxcbiAgICBmb3JtYXQ6IHtcbiAgICAgIHRlYW06IChuYW1lKSA9PlxuICAgICAgICBodGwuaHRtbGA8YSBocmVmPVwiaHR0cHM6Ly9hbnNwZXJmb3JtYW5jZS5ldS9zdHVkeS9kYXRhLWNoYWxsZW5nZS90ZWFtcy5odG1sIyR7ZW5jb2RlVVJJQ29tcG9uZW50KFxuICAgICAgICAgIG5hbWVcbiAgICAgICAgKX1cIiB0YXJnZXQ9XCJfYmxhbmtcIj4ke25hbWV9PC9hPmBcbiAgICB9XG4gIH1cbilcbiJ9XX0=
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
