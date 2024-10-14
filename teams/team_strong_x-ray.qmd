@@ -1,0 +1,8 @@
+## team_strong_x-ray
+
+### Description
+Data science researcher in Saxion University
+
+### Rationale for participation
+I am a data enthusiast eager to explore diverse applications of data in real-world scenarios. Participating in the PRC Data Challenge will offer me a unique opportunity to expand my knowledge and skills in data analysis. I am excited to learn new techniques and contribute to solving meaningful problems through data-driven insights
+

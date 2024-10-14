@@ -97,6 +97,7 @@
 {{< include teams/team_sociable_river.qmd >}}
 {{< include teams/team_spirited_eel.qmd >}}
 {{< include teams/team_strong_fossil.qmd >}}
+{{< include teams/team_strong_x-ray.qmd >}}
 {{< include teams/team_thoughtful_anchor.qmd >}}
 {{< include teams/team_thoughtful_quicksand.qmd >}}
 {{< include teams/team_tidy_kitten.qmd >}}
