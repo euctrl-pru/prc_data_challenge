@@ -1,0 +1,8 @@
+## team_silly_jigsaw
+
+### Description
+We are a team from Northeastern University, focusing on data modeling and fault diagnosis using deep neural networks. I am currently a Ph.D. candidate researching aircraft trajectory prediction using AI methods
+
+### Rationale for participation
+This challenge is highly relevant to our research interests. We believe we can contribute interesting and valuable work to the community by participating in this challenge. We are excited to share our findings and learn from other participants
+

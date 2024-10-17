@@ -92,6 +92,7 @@
 {{< include teams/team_respectful_kangaroo.qmd >}}
 {{< include teams/team_sensible_ladder.qmd >}}
 {{< include teams/team_sensible_robot.qmd >}}
+{{< include teams/team_silly_jigsaw.qmd >}}
 {{< include teams/team_sincere_iguana.qmd >}}
 {{< include teams/team_sincere_quicksand.qmd >}}
 {{< include teams/team_sociable_river.qmd >}}
