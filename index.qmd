@@ -24,6 +24,11 @@ final prize ranking.
 See the [Data page](data.html) for more details.
 
 ::: {.callout-warning title="Attention"}
+#### 2024-10-17T18:16Z Final phase has started!
+Submission shall be send for the 158149 `flight_id`'s as in
+
+> `competition-data/final_submission_set.csv`
+
 
 #### Updated trajectories on **9th Oct 2024**
 **9thth Oct 2024**: trajectory files have been re-extracted (again) for the whole 2022.  
