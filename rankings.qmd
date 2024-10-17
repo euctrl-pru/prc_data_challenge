@@ -8,6 +8,18 @@ acronyms:
 ---
 
 ## Leaderboard
+
+::: {.callout-warning title="Attention"}
+#### 2024-10-17T18:16Z Final phase has started!
+Submission shall be send for the 158149 `flight_id`'s as in
+
+> `competition-data/final_submission_set.csv`
+
+for eligibility to final prize.
+
+:::
+
+
 The following table shows the best result per team's submission.  
 
 To see all submissions's `RMSE`'s please use 
