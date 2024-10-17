@@ -1,0 +1,8 @@
+## team_amiable_x-ray
+
+### Description
+We are a team of professionals from the aviation and data science field, passionate about using data-driven solutions to address real-world challenges in aviation safety and efficiency
+
+### Rationale for participation
+We aim to leverage our expertise in both data science and aviation to contribute to the challenge while enhancing our knowledge and collaboration in the community
+

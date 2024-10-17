@@ -3,6 +3,7 @@
 {{< include teams/team_affectionate_whistle.qmd >}}
 {{< include teams/team_amazing_forest.qmd >}}
 {{< include teams/team_amiable_garden.qmd >}}
+{{< include teams/team_amiable_x-ray.qmd >}}
 {{< include teams/team_athletic_glacier.qmd >}}
 {{< include teams/team_bold_dinosaur.qmd >}}
 {{< include teams/team_bold_emu.qmd >}}
