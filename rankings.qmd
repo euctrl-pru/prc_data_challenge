@@ -10,6 +10,10 @@ acronyms:
 ## Leaderboard
 
 ::: {.callout-warning title="Attention"}
+#### 2024-10-20 Ranking jobs has issues...
+Please bear with us, we are reparing it.
+
+
 #### 2024-10-17T18:16Z Final phase has started!
 Submission shall be send for the 158149 `flight_id`'s as in
 
