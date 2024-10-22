@@ -10,6 +10,10 @@ acronyms:
 ## Leaderboard
 
 ::: {.callout-warning title="Attention"}
+#### 2024-10-22: Code and Documentation
+For eligibility to final prizes, please prepare your repo/code and documentation.  
+(See email sent to team leaders)
+
 #### 2024-10-17T18:16Z Final phase has started!
 Submission shall be send for the 158149 `flight_id`'s as in
 
