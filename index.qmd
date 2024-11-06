@@ -33,19 +33,19 @@ contributions towards solving the posed challenge problem.
 Winners' announcements will take place at the [12th edition of OpenSky Symposium][osnsym]
 in Hamburg on 7th--8th November 2024.
 
-The submission deadline is (intermediary submissions are possible and welcome):  
-[**`2024-10-28T00:00:00Z`**]{.hugedate}.
+The submission deadline was on: [**`2024-10-28T00:00:00Z`**]{.hugedate}.
 
 ::: {.callout-warning title="Attention"}
 
-#### Code and docs from participating teams is available
+## Code and docs
 
-We have collected (forked) all public repos from participating teams
-in a GitHub organization
+Code and documentation from participating teams is available and collected
+(forked) from all public repos of participating teams.
+We grouped them in a GitHub organization
 
-> https://github.com/prc-data-challenge-2024
+<https://github.com/prc-data-challenge-2024>
 
-In the near future we plan to add further analysis and relevant material.
+In the near future we plan to add further material.
 
 :::
 
