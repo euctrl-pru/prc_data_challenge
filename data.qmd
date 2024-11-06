@@ -4,6 +4,8 @@ format:
   html: 
     toc: true
     toc-depth: 2
+filters:
+  - acronyms
 acronyms:
   loa_title: "List of Acronyms"
   include_unused: false

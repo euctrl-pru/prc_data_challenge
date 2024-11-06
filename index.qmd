@@ -23,34 +23,6 @@ final prize ranking.
 
 See the [Data page](data.html) for more details.
 
-::: {.callout-warning title="Attention"}
-#### 2024-10-17T18:16Z Final phase has started!
-Submission shall be send for the 158149 `flight_id`'s as in
-
-> `competition-data/final_submission_set.csv`
-
-
-#### Updated trajectories on **9th Oct 2024**
-**9thth Oct 2024**: trajectory files have been re-extracted (again) for the whole 2022.  
-We haven't filtered against OSN flight list but retrieved all
-that is available for the relevant flights (and more to be frank).  
-*Please consider re-downloading them*.
-
-#### Updated trajectories on 24th Sep 2024
-Trajectory files have been reprocessed and updated.  
-
-#### Updated `challenge_set.csv` on 16th Aug 2024
-
-`challenge_set.csv` now contains fixes for `tow` originally below minimum mass
-for the relevant aircraft types.
-
-#### Refreshed `submission_set.csv` on 8th Aug 2024
-
-`submission_set.csv` now contains all columns and not just `flight_id` and `tow`.
-
-Please consider re-downloading.
-:::
-
 
 ## The Prize
 
@@ -63,6 +35,20 @@ in Hamburg on 7th--8th November 2024.
 
 The submission deadline is (intermediary submissions are possible and welcome):  
 [**`2024-10-28T00:00:00Z`**]{.hugedate}.
+
+::: {.callout-warning title="Attention"}
+
+#### Code and docs from participating teams is available
+
+We have collected (forked) all public repos from participating teams
+in a GitHub organization
+
+> https://github.com/prc-data-challenge-2024
+
+In the near future we plan to add further analysis and relevant material.
+
+:::
+
 
 
 [osnsym]: <https://symposium.opensky-network.org/> "12th OpenSky Symposium, 7--8 Nov 2024"
