@@ -30,10 +30,10 @@ A total prize of $5000$ EUR will be distributed among the finalists' teams.
 Each finalist will receive a prize to acknowledge their innovative ideas and
 contributions towards solving the posed challenge problem.  
 
-Winners' announcements will take place at the [12th edition of OpenSky Symposium][osnsym]
-in Hamburg on 7th--8th November 2024.
-
 The submission deadline was on: [**`2024-10-28T00:00:00Z`**]{.hugedate}.
+
+Winners' announcements took place at the [12th edition of OpenSky Symposium][osnsym]
+in Hamburg on 7th--8th November 2024.
 
 ::: {.callout-warning title="Attention"}
 
@@ -50,8 +50,35 @@ In the near future we plan to add further material.
 :::
 
 
-
 [osnsym]: <https://symposium.opensky-network.org/> "12th OpenSky Symposium, 7--8 Nov 2024"
+
+## And the Winners are...
+
+1. [team_likable_jelly](teams.html#team_likable_jelly)
+    - Richard Alligier
+    - David Gianazza
+   
+   Professors at Ecole Nationale de l'Aviation Civile (ENAC),Toulouse, France
+
+2. [team_gentle_elephant](teams.html#team_gentle_elephant)  
+   - Mayara C. R. Murça
+   - Carolina R. Lima
+   - Gabriel A. Melo
+   - João B. T. Szenczuk
+   - João P. A. Dantas
+   - Lucas O. Carvalho
+   - Marcos R. O. A. Máximo
+   
+   Professors and graduate students affiliated with the
+   Aeronautics Institute of Technology (ITA), Brazil
+
+3. [team_brave_pillow](teams.html#team_brave_pillow)
+   - Aidana Tassanbi
+   - M. F. Rahman
+   - Bintang A.S.W.A.M
+   
+   TU Delft students
+
 
 ## The why of Why
 

@@ -14,7 +14,7 @@
     "href": "index.html#the-prize",
     "title": "PRC Data Challenge",
     "section": "The Prize",
-    "text": "The Prize\nA total prize of \\(5000\\) EUR will be distributed among the finalists’ teams.\nEach finalist will receive a prize to acknowledge their innovative ideas and contributions towards solving the posed challenge problem.\nWinners’ announcements will take place at the 12th edition of OpenSky Symposium in Hamburg on 7th–8th November 2024.\nThe submission deadline was on: 2024-10-28T00:00:00Z.\n\n\n\n\n\n\nAttention\n\n\n\nCode and docs\nCode and documentation from participating teams is available. We forked all public repositories of participating teams and grouped them in a GitHub organization\nhttps://github.com/prc-data-challenge-2024\nIn the near future we plan to add further material.",
+    "text": "The Prize\nA total prize of \\(5000\\) EUR will be distributed among the finalists’ teams.\nEach finalist will receive a prize to acknowledge their innovative ideas and contributions towards solving the posed challenge problem.\nThe submission deadline was on: 2024-10-28T00:00:00Z.\nWinners’ announcements took place at the 12th edition of OpenSky Symposium in Hamburg on 7th–8th November 2024.\n\n\n\n\n\n\nAttention\n\n\n\nCode and docs\nCode and documentation from participating teams is available. We forked all public repositories of participating teams and grouped them in a GitHub organization\nhttps://github.com/prc-data-challenge-2024\nIn the near future we plan to add further material.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>PRC Data Challenge</span>"
     ]
@@ -25,6 +25,16 @@
     "title": "PRC Data Challenge",
     "section": "Code and docs",
     "text": "Code and docs\nCode and documentation from participating teams is available. We forked all public repositories of participating teams and grouped them in a GitHub organization\nhttps://github.com/prc-data-challenge-2024\nIn the near future we plan to add further material.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>PRC Data Challenge</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#and-the-winners-are",
+    "href": "index.html#and-the-winners-are",
+    "title": "PRC Data Challenge",
+    "section": "And the Winners are…",
+    "text": "And the Winners are…\n\nteam_likable_jelly\n\nRichard Alligier\nDavid Gianazza\n\nProfessors at Ecole Nationale de l’Aviation Civile (ENAC),\u000bToulouse, France\nteam_gentle_elephant\n\nMayara C. R. Murça\nCarolina R. Lima\nGabriel A. Melo\nJoão B. T. Szenczuk\nJoão P. A. Dantas\nLucas O. Carvalho\nMarcos R. O. A. Máximo\n\nProfessors and graduate students affiliated with the Aeronautics Institute of Technology (ITA), Brazil\nteam_brave_pillow\n\nAidana Tassanbi\nM. F. Rahman\nBintang A.S.W.A.M\n\nTU Delft students",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>PRC Data Challenge</span>"
     ]

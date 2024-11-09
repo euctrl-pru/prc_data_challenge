@@ -41,9 +41,11 @@ cumulative_counts_in_time <- counts_in_time |>
 There are `{r} number_of_teams` active teams!
 
 Here is the cumulative sum of created (active) teams 
-(as of `{r} format(today(), "%b %d, %Y")`):
+(as of the deadline, 2024-10-28):
 
-```{r cum-plot, echo=FALSE}
+![teams' registration timeline](media/teams_cumulative.png)
+
+```{r cum-plot, echo=FALSE, eval=FALSE}
 cumulative_counts_in_time |> 
   ggplot() +
   geom_step(aes(x = registration_date,
@@ -63,6 +65,17 @@ cumulative_counts_in_time |>
       legend.position = "none",
       NULL)
 ```
+
+A little bit of metadata about the teams:
+
+* 132 officially registered teams
+* 1 rejected team registration (Russian team, due to invasion of Ukraine)
+* 43 teams submissions in the final phase
+* 261 team members
+
+and a little bit of geographical location:
+
+![](media/teams_geo.png)
 
 
 {{< include _teams.qmd >}}
