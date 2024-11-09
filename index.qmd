@@ -59,6 +59,8 @@ In the near future we plan to add further material.
     - David Gianazza
    
    Professors at Ecole Nationale de l'Aviation Civile (ENAC),Toulouse, France
+   
+   Spending voucher: **2500 EUR**
 
 2. [team_gentle_elephant](teams.html#team_gentle_elephant)  
    - Mayara C. R. Murça
@@ -71,6 +73,8 @@ In the near future we plan to add further material.
    
    Professors and graduate students affiliated with the
    Aeronautics Institute of Technology (ITA), Brazil
+   
+   Spending voucher: **1750 EUR**
 
 3. [team_brave_pillow](teams.html#team_brave_pillow)
    - Aidana Tassanbi
@@ -78,6 +82,8 @@ In the near future we plan to add further material.
    - Bintang A.S.W.A.M
    
    TU Delft students
+   
+   Spending voucher: **750 EUR**
 
 
 ## The why of Why
