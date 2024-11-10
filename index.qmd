@@ -54,7 +54,7 @@ In the near future we plan to add further material.
 
 ## And the Winners are...
 
-1. [team_likable_jelly](teams.html#team_likable_jelly)
+1. **[team_likable_jelly](teams.html#team_likable_jelly)**
     - Richard Alligier
     - David Gianazza
    
@@ -62,7 +62,7 @@ In the near future we plan to add further material.
    
    Spending voucher: **2500 EUR**
 
-2. [team_gentle_elephant](teams.html#team_gentle_elephant)  
+2. **[team_tiny_rainbow](teams.html#team_tiny_rainbow)**
    - Mayara C. R. Murça
    - Carolina R. Lima
    - Gabriel A. Melo
@@ -76,7 +76,7 @@ In the near future we plan to add further material.
    
    Spending voucher: **1750 EUR**
 
-3. [team_brave_pillow](teams.html#team_brave_pillow)
+3. **[team_brave_pillow](teams.html#team_brave_pillow)**
    - Aidana Tassanbi
    - M. F. Rahman
    - Bintang A.S.W.A.M
@@ -160,23 +160,31 @@ to participate to the PRC Data Challenge.
 
 We would like to praise the following organisations, companies
 and individuals for their participation and support in the provision of
-advise,  data and infrastructure for the challenge:
+advise, data and infrastructure for the challenge.
 
-* Airlines:
-  - Austrian Airlines
-  - Swiss
-  - Vueling
-* OpenSky Network: \acr{ADS-B} trajectories, hosting of the challenge infrastructure.
+* Airlines: for willingness to collaborate and support for the initiative
+  - [Austrian Airlines](https://www.austrian.com/)
+  - [Swiss](https://www.swiss.com/)
+  - [Vueling](https://www.vueling.com/)
+* [OpenSky Network][osnhome]: for collection and making available \acr{ADS-B}
+  trajectories and hosting of the challenge infrastructure.
   (John Fitzgerald, Allan Tart, Martin Strohmeier, Vincent Lenders)
-* Prof Junzi Sun (TU Delft): for wisely pre-processing, enhancing (meteorological data via
-  [fastmeteo][fm]), locally storing OSN trajectories and then making them
-  available for the challenge
-* Dr Xavier Olive (ONERA): for advise and the invaluable [traffic][traffic] library
+* Prof [Junzi Sun][junzisun] (TU Delft): for wisely pre-processing,
+  enhancing (meteorological data via [fastmeteo][fm]),
+  locally storing OSN trajectories and then making them available for the challenge
+* Dr [Xavier Olive][xavier] (ONERA): for advise and the invaluable
+  [traffic][traffic] library
 * EUROCONTROL: for providing the relevant flight list (via Network Manager) and
-               estimating \acr{TOW} (Aviation Intelligence Unit).
-* José Miguel de PABLO GUERRERO (PRC Commissioner): for supporting and pushing
-  for this initiative.
+  estimating \acr{TOW} (Aviation Intelligence Unit).  
+  **Special thanks** to AIU colleagues that helped with conception and setup
+  (Rainer KOELLE), data collection (Yves DE WANDELER) and evaluation (Quinten GOENS).
+* [José Miguel de PABLO GUERRERO][jmg] (\acr{PRC} Commissioner): for supporting and
+  pushing for this initiative.
 
 
 [fm]: <https://github.com/open-aviation/fastmeteo> "fastmeteo Python library"
 [traffic]: <https://github.com/open-aviation/fastmeteo> "traffic Python library"
+[osnhome]: <https://opensky-network.org/> "OpenSky Network home page"
+[junzi]: <https://junzis.com/> "Junzi SUN home page"
+[xavier]: <https://www.xoolive.org/> "Xavier OLIVE home page"
+[jmg]: <https://ansperformance.eu/about/prc_jpg/> "José Miguel de PABLO GUERRERO, Performance Review Commission commissioner"
