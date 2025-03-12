@@ -185,6 +185,6 @@ advise, data and infrastructure for the challenge.
 [fm]: <https://github.com/open-aviation/fastmeteo> "fastmeteo Python library"
 [traffic]: <https://github.com/open-aviation/fastmeteo> "traffic Python library"
 [osnhome]: <https://opensky-network.org/> "OpenSky Network home page"
-[junzi]: <https://junzis.com/> "Junzi SUN home page"
+[junzisun]: <https://junzis.com/> "Junzi SUN home page"
 [xavier]: <https://www.xoolive.org/> "Xavier OLIVE home page"
 [jmg]: <https://ansperformance.eu/about/prc_jpg/> "José Miguel de PABLO GUERRERO, Performance Review Commission commissioner"

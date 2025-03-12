@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.41">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -70,10 +70,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-48ffa3e5b9d089919c6712c39e5b00f2.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-f82b2d5db5a75a10edb1658379e071d6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -146,7 +146,6 @@ window.Quarto = {
     <img src="./media/EUROCONTROL-logo-standard-rgb.svg" alt="" class="navbar-logo">
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -629,7 +628,7 @@ Note
 <li><a href="https://www.vueling.com/">Vueling</a></li>
 </ul></li>
 <li><a href="https://opensky-network.org/" title="OpenSky Network home page">OpenSky Network</a>: for collection and making available <a href="#acronyms_ADS-B">Automatic Dependent Surveillance–Broadcast (ADS-B)</a> trajectories and hosting of the challenge infrastructure. (John Fitzgerald, Allan Tart, Martin Strohmeier, Vincent Lenders)</li>
-<li>Prof [Junzi Sun][junzisun] (TU Delft): for wisely pre-processing, enhancing (meteorological data via <a href="https://github.com/open-aviation/fastmeteo" title="fastmeteo Python library">fastmeteo</a>), locally storing OSN trajectories and then making them available for the challenge</li>
+<li>Prof <a href="https://junzis.com/" title="Junzi SUN home page">Junzi Sun</a> (TU Delft): for wisely pre-processing, enhancing (meteorological data via <a href="https://github.com/open-aviation/fastmeteo" title="fastmeteo Python library">fastmeteo</a>), locally storing OSN trajectories and then making them available for the challenge</li>
 <li>Dr <a href="https://www.xoolive.org/" title="Xavier OLIVE home page">Xavier Olive</a> (ONERA): for advise and the invaluable <a href="https://github.com/open-aviation/fastmeteo" title="traffic Python library">traffic</a> library</li>
 <li>EUROCONTROL: for providing the relevant flight list (via Network Manager) and estimating <a href="#acronyms_TOW">TOW</a> (Aviation Intelligence Unit).<br>
 <strong>Special thanks</strong> to AIU colleagues that helped with conception and setup (Rainer KOELLE), data collection (Yves DE WANDELER) and evaluation (Quinten GOENS).</li>
@@ -735,8 +734,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -847,7 +844,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
