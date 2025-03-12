@@ -28,6 +28,9 @@ teams_file := justfile_directory() + "/media/teams_private.json"
 @teams-email:
   cat {{teams_file}} | jq -r '.[] | .members[] | select(.leader == true) | .email'
 
+# check leaders' emails: output duplicated ones
+@teams-emails-check:
+  just teams-email | sort | uniq -cd
 
 # team for team's name
 @team-of-name team_name:
