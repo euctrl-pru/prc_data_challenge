@@ -24,7 +24,67 @@ for eligibility to final prize.
 :::
 
 
-The following table shows the best result per team's submission.  
+The following table shows the best result per team's submission at the deadline.
+
+```{r}
+#| echo: false
+#| warning: false
+library(tidyverse)
+library(ggplot2)
+library(jsonlite)
+library(here)
+library(gt)
+
+thresholds <- tribble(
+  ~percent, ~threshold,
+      0.01, 956.5586,
+      0.02, 1913.117,
+      0.03, 2869.676,
+      0.05, 4782.793,
+       0.1, 9565.586,
+      0.15, 14348.38
+  )
+
+
+rankings <- here("data", "rankings_20241028T1500Z.json") |> 
+  fromJSON() |> 
+  as_tibble() |>
+  mutate(
+    submission_date = as_datetime(submission_date),
+    # fmt: skip
+    mean_error = case_when(
+       956.5586 <= rmse & rmse <  1913.117  ~  "< 2%",
+      1913.1170 <= rmse & rmse <  2869.676  ~  "< 3%",
+      2869.6760 <= rmse & rmse <  4782.793   ~ "< 5%",
+      4782.7930 <= rmse & rmse <  9565.586  ~  "< 10%",
+      9565.5860 <= rmse & rmse < 14348.380  ~  "< 15%",
+      14348.380 <= rmse                     ~ "≥ 15%",
+      .default = "≥ 15%"
+    ),
+    version = str_remove(file_version, "^v") |> as.integer()
+  ) |> 
+  arrange(rank) |> 
+  select(-c("file_version"))
+  
+
+rankings |> 
+  gt() |> 
+  cols_label(
+    rmse = md("**RMSE**"),
+    rank = md("**Rank**"),
+    team_name = md("**Team**"),
+    submission_date = md("**Date**"),
+    mean_error = md("**Error**"),
+    version = md("**Version**")
+  ) |> 
+  fmt_datetime(columns = submission_date) |> 
+  cols_move(rmse, after = mean_error) |> 
+  cols_move_to_end(submission_date)
+
+
+```
+
+
 
 To see all submissions's `RMSE`'s please use 
 <https://datacomp.opensky-network.org/api/stats>
@@ -32,10 +92,11 @@ To see all submissions's `RMSE`'s please use
 To see all rankings (in case the table below doesn't work/refresh) please use
 <https://datacomp.opensky-network.org/api/rankings>
 
-(Submissions are processed automatically every **30 minutes**.)
+(Submissions were processed automatically every **30 minutes**.)
 
 ```{ojs}
 //| echo: false
+//| eval: false
 ranking_url = "https://datacomp.opensky-network.org/api/rankings"
 ranking = await aq.loadJSON(ranking_url)
 

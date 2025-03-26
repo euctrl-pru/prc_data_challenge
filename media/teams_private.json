@@ -1297,7 +1297,23 @@
     "description": "Aviation enthusiasts in their early careers in the aviation industry",
     "rationale": "Applying our knowledge to see what we can learn from data. And more importantly, having fun!",
     "active": true,
-    "members": [],
+    "members": [
+      {
+        "leader": true,
+        "member_name": "Er Hai Fang",
+        "email": "erhai.fang.leo@gmail.com"
+      },
+      {
+        "leader": false,
+        "member_name": "Liwei Lu",
+        "email": ""
+      },
+      {
+        "leader": false,
+        "member_name": "Jerry (Jong-Yu) Chang",
+        "email": ""
+      }
+    ],
     "team_name": "team_jolly_koala",
     "registration_date": "2024-08-23"
   },
@@ -2419,5 +2435,61 @@
     ],
     "team_name": "team_elegant_piano",
     "registration_date": "2024-10-13"
+  },
+  {
+    "description": "not a data scientist but a passionate of aircraft trajectory prediction",
+    "rationale": "willing to understand key contributors to the estimation of an uncertainty such as TakeOff Weight in the jet aircraft trajectory prediction",
+    "active": true,
+    "members": [
+      {
+        "leader": true,
+        "member_name": "Robert Pastor",
+        "email": "robert.pastor0691@gmail.com"
+      }
+    ],
+    "team_name": "team_exuberant_hippo",
+    "registration_date": "2024-10-13"
+  },
+  {
+    "description": "Data science researcher in Saxion University",
+    "rationale": "I am a data enthusiast eager to explore diverse applications of data in real-world scenarios. Participating in the PRC Data Challenge will offer me a unique opportunity to expand my knowledge and skills in data analysis. I am excited to learn new techniques and contribute to solving meaningful problems through data-driven insights",
+    "active": true,
+    "members": [
+      {
+        "leader": true,
+        "member_name": "Nilay Swarge",
+        "email": "n.n.swarge@gmail.com"
+      }
+    ],
+    "team_name": "team_strong_x-ray",
+    "registration_date": "2024-10-14"
+  },
+  {
+    "description": "We are a team from Northeastern University, focusing on data modeling and fault diagnosis using deep neural networks. I am currently a Ph.D. candidate researching aircraft trajectory prediction using AI methods",
+    "rationale": "This challenge is highly relevant to our research interests. We believe we can contribute interesting and valuable work to the community by participating in this challenge. We are excited to share our findings and learn from other participants",
+    "active": true,
+    "members": [
+      {
+        "leader": true,
+        "member_name": "Junguo Song",
+        "email": "327628248@qq.com"
+      }
+    ],
+    "team_name": "team_silly_jigsaw",
+    "registration_date": "2024-10-17"
+  },
+  {
+    "description": "We are a team of professionals from the aviation and data science field, passionate about using data-driven solutions to address real-world challenges in aviation safety and efficiency",
+    "rationale": "We aim to leverage our expertise in both data science and aviation to contribute to the challenge while enhancing our knowledge and collaboration in the community",
+    "active": true,
+    "members": [
+      {
+        "leader": true,
+        "member_name": "Ayman Almousa",
+        "email": "ayman.almousa@ilent.nl"
+      }
+    ],
+    "team_name": "team_amiable_x-ray",
+    "registration_date": "2024-10-17"
   }
 ]
