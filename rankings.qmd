@@ -9,21 +9,6 @@ acronyms:
 
 ## Leaderboard
 
-::: {.callout-warning title="Attention"}
-#### 2024-10-22: Code and Documentation
-For eligibility to final prizes, please prepare your repo/code and documentation.  
-(See email sent to team leaders)
-
-#### 2024-10-17T18:16Z Final phase has started!
-Submission shall be send for the 158149 `flight_id`'s as in
-
-> `competition-data/final_submission_set.csv`
-
-for eligibility to final prize.
-
-:::
-
-
 The following table shows the best result per team's submission at the deadline.
 
 ```{r}
@@ -151,14 +136,6 @@ Inputs.table(ranking
 
 ## Criteria for Ranking Intermediate Submissions
 
-::: {.callout-warning title="Attention"}
-#### 2024-10-17T18:16Z Final phase has started!
-Submission shall be send for the 158149 `flight_id`'s as in
-
-> `competition-data/final_submission_set.csv`
-
-:::
-
 Intermediate submissions are ranked on RMSE of the submitted `tow` with respect
 to the (hidden) "ground truth for the `flight_id`'s in `submission_set.csv` ".
 
@@ -166,15 +143,6 @@ There are 105959 `flight_id`'s in `submission_set.csv`.
 
 
 ## Criteria for Ranking of Final Submission
-
-::: {.callout-warning title="Attention"}
-#### 2024-10-17T18:16Z Final phase has started!
-Submission shall be send for the 158149 `flight_id`'s as in
-
-> `competition-data/final_submission_set.csv`
-
-:::
-
 
 Final ranking will be based on 
 

@@ -38,23 +38,12 @@ nevertheless it is present for submission and ranking, see the [Ranking](#rankin
 
 ## Data for modeling {#data-for-modeling}
 
-::: {.callout-warning title="Attention"}
+::: {.callout-important title="Important"}
 
-#### Updated trajectories on **9th Oct 2024**
-**9thth Oct 2024**: trajectory files have been re-extracted (again) for the whole 2022.  
-We haven't filtered against OSN flight list but retrieved all
-that is available for the relevant flights (and more to be frank).  
-*Please consider re-downloading them*.
+The dataset and the companion paper are available as follows:
 
-#### Updated trajectories on **24th Sep 2024**
-
-**24th Sep 2024**: trajectory files have been reprocessed (weird constant altitudes
-and midnight crossing issues).  
-*Please consider re-downloading them*.
-
-**16th Aug 2024**: `challenge_set.csv` now contains fixes for `tow` 
-originally below minimum mass for the relevant aircraft types.  
-Please consider re-downloading it.
+* dataset: <https://doi.org/10.4121/8CB8484B-DBE7-4750-8B87-A5B1DBC621B4>
+* data paper: <https://doi.org/10.59490/joas.2025.8252>
 
 :::
 
@@ -207,15 +196,6 @@ included in the [Data for modeling](#data-for-modeling) dataset.
 
 
 ## Dataset for submission
-
-::: {.callout-warning title="Attention"}
-
-#### Refreshed `submission_set.csv` on 8th Aug 2024
-
-`submission_set.csv` now contains all columns and not just `flight_id` and `tow`.
-
-Please consider re-downloading it.
-:::
 
 The submission file, `competition-data/submission_set.csv`, contains
 a flight list for which to estimate the \acr{TOW}; 
