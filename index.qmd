@@ -23,6 +23,15 @@ final prize ranking.
 
 See the [Data page](data.html) for more details.
 
+::: {.callout-important title="Important"}
+
+The dataset and the companion paper are available as follows:
+
+* dataset: <https://doi.org/10.4121/8CB8484B-DBE7-4750-8B87-A5B1DBC621B4>
+* data paper: <https://doi.org/10.59490/joas.2025.8252>
+
+:::
+
 
 ## The Prize
 
@@ -85,17 +94,6 @@ the Symposium.
    TU Delft students
    
    Spending voucher: **750 EUR**
-
-
-::: {.callout-important title="Important"}
-
-The dataset and the companion paper are available as follows:
-
-* dataset: <https://doi.org/10.4121/8CB8484B-DBE7-4750-8B87-A5B1DBC621B4>
-* data paper: <https://doi.org/10.59490/joas.2025.8252>
-
-:::
-
 
 
 ## The why of Why
